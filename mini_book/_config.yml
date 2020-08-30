@@ -14,11 +14,15 @@ execute:
   execute_notebooks           : auto
   exclude_patterns:
     - 'analyze/**'
+    - 'mini_book/notebooks/references/stock_predictions.ipynb'
 
 #######################################################################################
 # HTML-specific settings
 html:
   home_page_in_navbar         : false
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
 
 # #######################################################################################
 # Interact link settings

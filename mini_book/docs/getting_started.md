@@ -352,3 +352,12 @@ icon.
 Save it somewhere, navigate to it from the Jupyter dashboard and then
 run as discussed above.
 
+
+
+### Testing Notebooks
+
+[a link to a notebook in a subdirectory](../notebooks/references/Performance.ipynb)
+
+.. include:: Performance.Rmd
+
+.. include:: Performance.md
