@@ -14,6 +14,7 @@ execute:
   execute_notebooks           : auto
   exclude_patterns:
     - 'analyze/**'
+    - 'mini_book/notebooks/references/stock_predictions.ipynb'
 
 #######################################################################################
 # HTML-specific settings

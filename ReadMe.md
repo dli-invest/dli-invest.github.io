@@ -1,5 +1,15 @@
 ### Overview
 
+Build sphinx files
+
+```
+jb build mini_book/
+```
+
+```
+jupytext CorrelationExamples.ipynb --to rmarkdown
+```
+
 * Risk of Returns
 * Price Prediction (Practically useless for what I buy)
 * Online Portoflio Selection (Just for Verification/Validation)
