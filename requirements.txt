@@ -1,0 +1,5 @@
+sphinx == 2.4.4
+mlfinlab == 0.12.3
+pandas
+matplotlib
+jupyter-book
