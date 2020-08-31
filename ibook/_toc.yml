@@ -6,7 +6,3 @@
     - file: docs/python_by_example
     - file: docs/learn_more
     - file: docs/performance
-
-- file: testing
-  sections:
-    - file: trial-2/performance

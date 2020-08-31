@@ -11,6 +11,8 @@ jupyter:
     name: python3
 ---
 
+# Performance output 
+
 <!-- #region id="view-in-github" colab_type="text" -->
 <a href="https://colab.research.google.com/github/dli-invest/iref-book/ibook/blob/master/notebooks/references/Performance.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 <!-- #endregion -->
