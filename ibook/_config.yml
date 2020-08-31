@@ -32,7 +32,7 @@ notebook_interface            : "notebook"
 # Launch button settings
 repository:
   url                         : https://github.com/dli-invest/iref-book
-  path_to_book                : "mini_book"
+  path_to_book                : "ibook"
 
 binder:
   binderhub_url               : "https://mybinder.org"
