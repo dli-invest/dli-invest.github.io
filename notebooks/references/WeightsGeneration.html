@@ -224,56 +224,54 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlfinlab in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (0.12.3)
-Requirement already satisfied: statsmodels==0.11.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (0.11.1)
-Requirement already satisfied: numba==0.49.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (0.49.1)
-Requirement already satisfied: pandas==1.0.4 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.0.4)
-Requirement already satisfied: numpy==1.18.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.18.5)
-Requirement already satisfied: scikit-learn==0.23.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (0.23.1)
-Requirement already satisfied: matplotlib==3.2.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (3.2.1)
-Requirement already satisfied: cvxpy==1.1.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.1.1)
 </pre></div>
 </div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy==1.4.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.4.1)
-Requirement already satisfied: patsy&gt;=0.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from statsmodels==0.11.1-&gt;mlfinlab) (0.5.1)
-Requirement already satisfied: llvmlite&lt;=0.33.0.dev0,&gt;=0.31.0.dev0 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from numba==0.49.1-&gt;mlfinlab) (0.32.1)
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numba==0.49.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (0.49.1)
+Requirement already satisfied: numpy==1.18.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.18.5)
+Requirement already satisfied: matplotlib==3.2.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (3.2.1)
+Requirement already satisfied: scikit-learn==0.23.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (0.23.1)
+Requirement already satisfied: pandas==1.0.4 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.0.4)
+Requirement already satisfied: cvxpy==1.1.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.1.1)
+Requirement already satisfied: statsmodels==0.11.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (0.11.1)
+Requirement already satisfied: scipy==1.4.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from mlfinlab) (1.4.1)
 Requirement already satisfied: setuptools in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from numba==0.49.1-&gt;mlfinlab) (49.6.0.post20200814)
-Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from pandas==1.0.4-&gt;mlfinlab) (2020.1)
-Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from pandas==1.0.4-&gt;mlfinlab) (2.8.1)
+</pre></div>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: llvmlite&lt;=0.33.0.dev0,&gt;=0.31.0.dev0 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from numba==0.49.1-&gt;mlfinlab) (0.32.1)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (0.10.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (1.2.0)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.8.1)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.4.7)
 Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from scikit-learn==0.23.1-&gt;mlfinlab) (2.1.0)
 Requirement already satisfied: joblib&gt;=0.11 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from scikit-learn==0.23.1-&gt;mlfinlab) (0.16.0)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.4.7)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (1.2.0)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (0.10.0)
+Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from pandas==1.0.4-&gt;mlfinlab) (2020.1)
 Requirement already satisfied: scs&gt;=1.1.3 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (2.1.2)
-Requirement already satisfied: ecos&gt;=2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (2.0.7.post1)
 Requirement already satisfied: osqp&gt;=0.4.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (0.6.1)
-Requirement already satisfied: six in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from patsy&gt;=0.5-&gt;statsmodels==0.11.1-&gt;mlfinlab) (1.15.0)
+Requirement already satisfied: ecos&gt;=2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (2.0.7.post1)
+Requirement already satisfied: patsy&gt;=0.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from statsmodels==0.11.1-&gt;mlfinlab) (0.5.1)
+Requirement already satisfied: six in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from cycler&gt;=0.10-&gt;matplotlib==3.2.1-&gt;mlfinlab) (1.15.0)
 Requirement already satisfied: future in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from osqp&gt;=0.4.1-&gt;cvxpy==1.1.1-&gt;mlfinlab) (0.18.2)
 </pre></div>
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting yfinance
-</pre></div>
-</div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>  Downloading yfinance-0.1.54.tar.gz (19 kB)
+  Downloading yfinance-0.1.54.tar.gz (19 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas&gt;=0.24 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from yfinance) (1.0.4)
-</pre></div>
-</div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from yfinance) (1.18.5)
+Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from yfinance) (1.18.5)
 Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from yfinance) (2.24.0)
-Collecting multitasking&gt;=0.0.7
 </pre></div>
 </div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>  Downloading multitasking-0.0.9.tar.gz (8.1 kB)
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting multitasking&gt;=0.0.7
+  Downloading multitasking-0.0.9.tar.gz (8.1 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2020.1)
 Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2.8.1)
-Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (3.0.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2020.6.20)
-Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2.10)
 Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (1.25.10)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2.10)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (3.0.4)
 Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas&gt;=0.24-&gt;yfinance) (1.15.0)
 Building wheels for collected packages: yfinance, multitasking
 </pre></div>
@@ -282,7 +280,7 @@ Building wheels for collected packages: yfinance, multitasking
 </pre></div>
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span> done
-[?25h  Created wheel for yfinance: filename=yfinance-0.1.54-py2.py3-none-any.whl size=22409 sha256=ba19b73f921ef3e0dee12aa04483afa112da78cc7111550a76d9b49233e4aaa9
+[?25h  Created wheel for yfinance: filename=yfinance-0.1.54-py2.py3-none-any.whl size=22409 sha256=9f82c03636e882956f231e0e7925572c24998e44fdbded5c9c58918f42263a07
   Stored in directory: /home/runner/.cache/pip/wheels/28/79/3c/08a301b673366fe664fe2853e136eb2acc1bb752045c11c6a1
 </pre></div>
 </div>
@@ -290,7 +288,7 @@ Building wheels for collected packages: yfinance, multitasking
 </pre></div>
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span> done
-[?25h  Created wheel for multitasking: filename=multitasking-0.0.9-py3-none-any.whl size=8367 sha256=eb5c2ec1284ef040e794469a7948a4a0d3a44d63d0d03312356420d53d77f6ba
+[?25h  Created wheel for multitasking: filename=multitasking-0.0.9-py3-none-any.whl size=8367 sha256=748aa6430a2de859fee46d7244e0fb930faa88027762df21fa5eeae4ecfd14d2
   Stored in directory: /home/runner/.cache/pip/wheels/ae/25/47/4d68431a7ec1b6c4b5233365934b74c1d4e665bf5f968d363a
 Successfully built yfinance multitasking
 </pre></div>
@@ -365,10 +363,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>
 [**********************60%****                   ]  6 of 10 completed
-</pre></div>
-</div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>
-[**********************70%*********              ]  7 of 10 completed
+[**********************60%****                   ]  6 of 10 completed
 </pre></div>
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>
@@ -377,6 +372,9 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>
 [**********************90%******************     ]  9 of 10 completed
+</pre></div>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>
 [*********************100%***********************]  10 of 10 completed
 </pre></div>
 </div>
