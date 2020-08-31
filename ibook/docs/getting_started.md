@@ -356,11 +356,10 @@ run as discussed above.
 
 ### Testing Notebooks
 
-[a link to a notebook in a subdirectory](../notebooks/references/Performance.ipynb)
+[Performance](../notebooks/references/Performance.ipynb)
 
-.. include:: ./Performance.Rmd
+[Returns](../notebooks/references/Returns.ipynb)
 
-.. include:: ./Performance.md
+[Weights Generation](../notebooks/references/WeightsGeneration.ipynb)
 
-
-.. include:: ../notebooks/references/Performance.ipynb
+[Correlation Examples](../notebooks/references/CorrelationExamples.ipynb)

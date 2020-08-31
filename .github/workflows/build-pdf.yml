@@ -51,9 +51,9 @@ jobs:
         run: |
           echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
           source ~/.bash_profile
-          jb build mini_book/ --builder pdflatex
+          jb build ibook/ --builder pdflatex
 
       - uses: actions/upload-artifact@v2
         with:
           name: pdf
-          path: mini_book/_build/latex/book.pdf
+          path: ibook/_build/latex/book.pdf
