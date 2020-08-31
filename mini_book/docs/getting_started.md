@@ -358,6 +358,9 @@ run as discussed above.
 
 [a link to a notebook in a subdirectory](../notebooks/references/Performance.ipynb)
 
-.. include:: Performance.Rmd
+.. include:: ./Performance.Rmd
 
-.. include:: Performance.md
+.. include:: ./Performance.md
+
+
+.. include:: ../notebooks/references/Performance.ipynb
