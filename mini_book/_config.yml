@@ -23,7 +23,6 @@ html:
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
-  baseurl                   : "https://github.com/dli-invest/iref-book"
 
 # #######################################################################################
 # Interact link settings
