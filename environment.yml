@@ -11,3 +11,4 @@ dependencies:
   - pip:
     - jupyter-book
     - mlfinlab==0.12.3
+    - sympy
