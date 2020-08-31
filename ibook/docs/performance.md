@@ -3,7 +3,7 @@ jupyter:
   jupytext:
     text_representation:
       extension: .md
-      format_name: markdown
+      format_name: myst
       format_version: '1.2'
       jupytext_version: 1.5.2
   kernelspec:
@@ -11,10 +11,12 @@ jupyter:
     name: python3
 ---
 
+(performance)=
+
 # Performance output 
 
 <!-- #region id="view-in-github" colab_type="text" -->
-<a href="https://colab.research.google.com/github/dli-invest/iref-book/ibook/blob/master/notebooks/references/Performance.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/dli-invest/iref-book/blob/ibook/master/notebooks/references/Performance.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 <!-- #endregion -->
 
 ```python id="B0YB7h3YkJyA" colab_type="code" colab={"base_uri": "https://localhost:8080/", "height": 459} outputId="0fa1af10-b7de-4305-e630-f5ddea5b805f"
