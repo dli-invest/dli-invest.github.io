@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -107,6 +105,10 @@
 </nav>
 
  <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -229,7 +231,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlfinlab in /usr/local/lib/python3.6/dist-packages (0.11.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlfinlab in /usr/local/lib/python3.6/dist-packages (0.11.0)
 Requirement already satisfied: cvxpy&gt;=1.0.25 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (1.0.31)
 Requirement already satisfied: pandas==0.25.3 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (0.25.3)
 Requirement already satisfied: xmlrunner==1.7.7 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (1.7.7)
@@ -355,7 +357,7 @@ xvfb is already the newest version (2:1.19.6-1ubuntu4.4).
         });
         }
         </script>
-</div><div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
 </pre></div>
 </div>
 <img alt="../../_images/Performance_06-01-2020_2_3.svg" src="../../_images/Performance_06-01-2020_2_3.svg" /></div>
@@ -369,7 +371,7 @@ xvfb is already the newest version (2:1.19.6-1ubuntu4.4).
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
 </pre></div>
 </div>
 <img alt="../../_images/Performance_06-01-2020_3_1.svg" src="../../_images/Performance_06-01-2020_3_1.svg" /></div>
@@ -382,7 +384,7 @@ xvfb is already the newest version (2:1.19.6-1ubuntu4.4).
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
 </pre></div>
 </div>
 <img alt="../../_images/Performance_06-01-2020_4_1.svg" src="../../_images/Performance_06-01-2020_4_1.svg" /></div>
@@ -397,7 +399,7 @@ xvfb is already the newest version (2:1.19.6-1ubuntu4.4).
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  9 of 9 completed
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  9 of 9 completed
 </pre></div>
 </div>
 <img alt="../../_images/Performance_06-01-2020_5_1.svg" src="../../_images/Performance_06-01-2020_5_1.svg" /></div>
@@ -411,7 +413,7 @@ xvfb is already the newest version (2:1.19.6-1ubuntu4.4).
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  9 of 9 completed
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  9 of 9 completed
 </pre></div>
 </div>
 <img alt="../../_images/Performance_06-01-2020_6_1.svg" src="../../_images/Performance_06-01-2020_6_1.svg" /></div>

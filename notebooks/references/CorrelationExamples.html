@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -107,6 +105,10 @@
 </nav>
 
  <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -253,7 +255,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  2 of 2 completed
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  2 of 2 completed
             IP.CN  NTAR.CN
 Date                      
 2020-03-02  0.055     1.62
@@ -284,119 +286,119 @@ Date
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting mlfinlab
-[?25l  Downloading https://files.pythonhosted.org/packages/48/76/00bf9715ca24b772ea0f3233403719390a8cf49e7564adae4713d68a025a/mlfinlab-0.12.3-py3-none-any.whl (851kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mlfinlab
+?25l  Downloading https://files.pythonhosted.org/packages/48/76/00bf9715ca24b772ea0f3233403719390a8cf49e7564adae4713d68a025a/mlfinlab-0.12.3-py3-none-any.whl (851kB)
 
-[K     |▍                               | 10kB 16.7MB/s eta 0:00:01
-[K     |▊                               | 20kB 1.7MB/s eta 0:00:01
-[K     |█▏                              | 30kB 2.2MB/s eta 0:00:01
-[K     |█▌                              | 40kB 2.5MB/s eta 0:00:01
-[K     |██                              | 51kB 2.0MB/s eta 0:00:01
-[K     |██▎                             | 61kB 2.2MB/s eta 0:00:01
-[K     |██▊                             | 71kB 2.5MB/s eta 0:00:01
-[K     |███                             | 81kB 2.7MB/s eta 0:00:01
-[K     |███▌                            | 92kB 2.9MB/s eta 0:00:01
-[K     |███▉                            | 102kB 2.8MB/s eta 0:00:01
-[K     |████▎                           | 112kB 2.8MB/s eta 0:00:01
-[K     |████▋                           | 122kB 2.8MB/s eta 0:00:01
-[K     |█████                           | 133kB 2.8MB/s eta 0:00:01
-[K     |█████▍                          | 143kB 2.8MB/s eta 0:00:01
-[K     |█████▊                          | 153kB 2.8MB/s eta 0:00:01
-[K     |██████▏                         | 163kB 2.8MB/s eta 0:00:01
-[K     |██████▌                         | 174kB 2.8MB/s eta 0:00:01
-[K     |███████                         | 184kB 2.8MB/s eta 0:00:01
-[K     |███████▎                        | 194kB 2.8MB/s eta 0:00:01
-[K     |███████▊                        | 204kB 2.8MB/s eta 0:00:01
-[K     |████████                        | 215kB 2.8MB/s eta 0:00:01
-[K     |████████▌                       | 225kB 2.8MB/s eta 0:00:01
-[K     |████████▉                       | 235kB 2.8MB/s eta 0:00:01
-[K     |█████████▎                      | 245kB 2.8MB/s eta 0:00:01
-[K     |█████████▋                      | 256kB 2.8MB/s eta 0:00:01
-[K     |██████████                      | 266kB 2.8MB/s eta 0:00:01
-[K     |██████████▍                     | 276kB 2.8MB/s eta 0:00:01
-[K     |██████████▊                     | 286kB 2.8MB/s eta 0:00:01
-[K     |███████████▏                    | 296kB 2.8MB/s eta 0:00:01
-[K     |███████████▌                    | 307kB 2.8MB/s eta 0:00:01
-[K     |████████████                    | 317kB 2.8MB/s eta 0:00:01
-[K     |████████████▎                   | 327kB 2.8MB/s eta 0:00:01
-[K     |████████████▊                   | 337kB 2.8MB/s eta 0:00:01
-[K     |█████████████                   | 348kB 2.8MB/s eta 0:00:01
-[K     |█████████████▌                  | 358kB 2.8MB/s eta 0:00:01
-[K     |█████████████▉                  | 368kB 2.8MB/s eta 0:00:01
-[K     |██████████████▎                 | 378kB 2.8MB/s eta 0:00:01
-[K     |██████████████▋                 | 389kB 2.8MB/s eta 0:00:01
-[K     |███████████████                 | 399kB 2.8MB/s eta 0:00:01
-[K     |███████████████▍                | 409kB 2.8MB/s eta 0:00:01
-[K     |███████████████▊                | 419kB 2.8MB/s eta 0:00:01
-[K     |████████████████▏               | 430kB 2.8MB/s eta 0:00:01
-[K     |████████████████▌               | 440kB 2.8MB/s eta 0:00:01
-[K     |█████████████████               | 450kB 2.8MB/s eta 0:00:01
-[K     |█████████████████▎              | 460kB 2.8MB/s eta 0:00:01
-[K     |█████████████████▊              | 471kB 2.8MB/s eta 0:00:01
-[K     |██████████████████              | 481kB 2.8MB/s eta 0:00:01
-[K     |██████████████████▌             | 491kB 2.8MB/s eta 0:00:01
-[K     |██████████████████▉             | 501kB 2.8MB/s eta 0:00:01
-[K     |███████████████████▎            | 512kB 2.8MB/s eta 0:00:01
-[K     |███████████████████▋            | 522kB 2.8MB/s eta 0:00:01
-[K     |████████████████████            | 532kB 2.8MB/s eta 0:00:01
-[K     |████████████████████▍           | 542kB 2.8MB/s eta 0:00:01
-[K     |████████████████████▊           | 552kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████▏          | 563kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████▌          | 573kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████          | 583kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████▎         | 593kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████▊         | 604kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████         | 614kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████▌        | 624kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████▉        | 634kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████▎       | 645kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████▋       | 655kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████████       | 665kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████████▍      | 675kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████████▊      | 686kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████████▏     | 696kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████████▌     | 706kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████████     | 716kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████████▎    | 727kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████████▊    | 737kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████████    | 747kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████████▌   | 757kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████████▉   | 768kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████████████▎  | 778kB 2.8MB/s eta 0:00:01
-[K     |█████████████████████████████▋  | 788kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████████████  | 798kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████████████▍ | 808kB 2.8MB/s eta 0:00:01
-[K     |██████████████████████████████▊ | 819kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████████████▏| 829kB 2.8MB/s eta 0:00:01
-[K     |███████████████████████████████▌| 839kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████████████| 849kB 2.8MB/s eta 0:00:01
-[K     |████████████████████████████████| 860kB 2.8MB/s 
-[?25hCollecting yfinance
+     |▍                               | 10kB 16.7MB/s eta 0:00:01
+     |▊                               | 20kB 1.7MB/s eta 0:00:01
+     |█▏                              | 30kB 2.2MB/s eta 0:00:01
+     |█▌                              | 40kB 2.5MB/s eta 0:00:01
+     |██                              | 51kB 2.0MB/s eta 0:00:01
+     |██▎                             | 61kB 2.2MB/s eta 0:00:01
+     |██▊                             | 71kB 2.5MB/s eta 0:00:01
+     |███                             | 81kB 2.7MB/s eta 0:00:01
+     |███▌                            | 92kB 2.9MB/s eta 0:00:01
+     |███▉                            | 102kB 2.8MB/s eta 0:00:01
+     |████▎                           | 112kB 2.8MB/s eta 0:00:01
+     |████▋                           | 122kB 2.8MB/s eta 0:00:01
+     |█████                           | 133kB 2.8MB/s eta 0:00:01
+     |█████▍                          | 143kB 2.8MB/s eta 0:00:01
+     |█████▊                          | 153kB 2.8MB/s eta 0:00:01
+     |██████▏                         | 163kB 2.8MB/s eta 0:00:01
+     |██████▌                         | 174kB 2.8MB/s eta 0:00:01
+     |███████                         | 184kB 2.8MB/s eta 0:00:01
+     |███████▎                        | 194kB 2.8MB/s eta 0:00:01
+     |███████▊                        | 204kB 2.8MB/s eta 0:00:01
+     |████████                        | 215kB 2.8MB/s eta 0:00:01
+     |████████▌                       | 225kB 2.8MB/s eta 0:00:01
+     |████████▉                       | 235kB 2.8MB/s eta 0:00:01
+     |█████████▎                      | 245kB 2.8MB/s eta 0:00:01
+     |█████████▋                      | 256kB 2.8MB/s eta 0:00:01
+     |██████████                      | 266kB 2.8MB/s eta 0:00:01
+     |██████████▍                     | 276kB 2.8MB/s eta 0:00:01
+     |██████████▊                     | 286kB 2.8MB/s eta 0:00:01
+     |███████████▏                    | 296kB 2.8MB/s eta 0:00:01
+     |███████████▌                    | 307kB 2.8MB/s eta 0:00:01
+     |████████████                    | 317kB 2.8MB/s eta 0:00:01
+     |████████████▎                   | 327kB 2.8MB/s eta 0:00:01
+     |████████████▊                   | 337kB 2.8MB/s eta 0:00:01
+     |█████████████                   | 348kB 2.8MB/s eta 0:00:01
+     |█████████████▌                  | 358kB 2.8MB/s eta 0:00:01
+     |█████████████▉                  | 368kB 2.8MB/s eta 0:00:01
+     |██████████████▎                 | 378kB 2.8MB/s eta 0:00:01
+     |██████████████▋                 | 389kB 2.8MB/s eta 0:00:01
+     |███████████████                 | 399kB 2.8MB/s eta 0:00:01
+     |███████████████▍                | 409kB 2.8MB/s eta 0:00:01
+     |███████████████▊                | 419kB 2.8MB/s eta 0:00:01
+     |████████████████▏               | 430kB 2.8MB/s eta 0:00:01
+     |████████████████▌               | 440kB 2.8MB/s eta 0:00:01
+     |█████████████████               | 450kB 2.8MB/s eta 0:00:01
+     |█████████████████▎              | 460kB 2.8MB/s eta 0:00:01
+     |█████████████████▊              | 471kB 2.8MB/s eta 0:00:01
+     |██████████████████              | 481kB 2.8MB/s eta 0:00:01
+     |██████████████████▌             | 491kB 2.8MB/s eta 0:00:01
+     |██████████████████▉             | 501kB 2.8MB/s eta 0:00:01
+     |███████████████████▎            | 512kB 2.8MB/s eta 0:00:01
+     |███████████████████▋            | 522kB 2.8MB/s eta 0:00:01
+     |████████████████████            | 532kB 2.8MB/s eta 0:00:01
+     |████████████████████▍           | 542kB 2.8MB/s eta 0:00:01
+     |████████████████████▊           | 552kB 2.8MB/s eta 0:00:01
+     |█████████████████████▏          | 563kB 2.8MB/s eta 0:00:01
+     |█████████████████████▌          | 573kB 2.8MB/s eta 0:00:01
+     |██████████████████████          | 583kB 2.8MB/s eta 0:00:01
+     |██████████████████████▎         | 593kB 2.8MB/s eta 0:00:01
+     |██████████████████████▊         | 604kB 2.8MB/s eta 0:00:01
+     |███████████████████████         | 614kB 2.8MB/s eta 0:00:01
+     |███████████████████████▌        | 624kB 2.8MB/s eta 0:00:01
+     |███████████████████████▉        | 634kB 2.8MB/s eta 0:00:01
+     |████████████████████████▎       | 645kB 2.8MB/s eta 0:00:01
+     |████████████████████████▋       | 655kB 2.8MB/s eta 0:00:01
+     |█████████████████████████       | 665kB 2.8MB/s eta 0:00:01
+     |█████████████████████████▍      | 675kB 2.8MB/s eta 0:00:01
+     |█████████████████████████▊      | 686kB 2.8MB/s eta 0:00:01
+     |██████████████████████████▏     | 696kB 2.8MB/s eta 0:00:01
+     |██████████████████████████▌     | 706kB 2.8MB/s eta 0:00:01
+     |███████████████████████████     | 716kB 2.8MB/s eta 0:00:01
+     |███████████████████████████▎    | 727kB 2.8MB/s eta 0:00:01
+     |███████████████████████████▊    | 737kB 2.8MB/s eta 0:00:01
+     |████████████████████████████    | 747kB 2.8MB/s eta 0:00:01
+     |████████████████████████████▌   | 757kB 2.8MB/s eta 0:00:01
+     |████████████████████████████▉   | 768kB 2.8MB/s eta 0:00:01
+     |█████████████████████████████▎  | 778kB 2.8MB/s eta 0:00:01
+     |█████████████████████████████▋  | 788kB 2.8MB/s eta 0:00:01
+     |██████████████████████████████  | 798kB 2.8MB/s eta 0:00:01
+     |██████████████████████████████▍ | 808kB 2.8MB/s eta 0:00:01
+     |██████████████████████████████▊ | 819kB 2.8MB/s eta 0:00:01
+     |███████████████████████████████▏| 829kB 2.8MB/s eta 0:00:01
+     |███████████████████████████████▌| 839kB 2.8MB/s eta 0:00:01
+     |████████████████████████████████| 849kB 2.8MB/s eta 0:00:01
+     |████████████████████████████████| 860kB 2.8MB/s 
+?25hCollecting yfinance
   Downloading https://files.pythonhosted.org/packages/c2/31/8b374a12b90def92a4e27d0fc595fc43635f395984e36a075244d98bd265/yfinance-0.1.54.tar.gz
 Requirement already satisfied: numpy==1.18.5 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (1.18.5)
 Collecting matplotlib==3.2.1
-[?25l  Downloading https://files.pythonhosted.org/packages/93/4b/52da6b1523d5139d04e02d9e26ceda6146b48f2a4e5d2abfdf1c7bac8c40/matplotlib-3.2.1-cp36-cp36m-manylinux1_x86_64.whl (12.4MB)
-[K     |████████████████████████████████| 12.4MB 309kB/s 
-[?25hCollecting pandas==1.0.4
-[?25l  Downloading https://files.pythonhosted.org/packages/8e/86/c14387d6813ebadb7bf61b9ad270ffff111c8b587e4d266e07de774e385e/pandas-1.0.4-cp36-cp36m-manylinux1_x86_64.whl (10.1MB)
-[K     |████████████████████████████████| 10.1MB 47.7MB/s 
-[?25hRequirement already satisfied: scipy==1.4.1 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (1.4.1)
+?25l  Downloading https://files.pythonhosted.org/packages/93/4b/52da6b1523d5139d04e02d9e26ceda6146b48f2a4e5d2abfdf1c7bac8c40/matplotlib-3.2.1-cp36-cp36m-manylinux1_x86_64.whl (12.4MB)
+     |████████████████████████████████| 12.4MB 309kB/s 
+?25hCollecting pandas==1.0.4
+?25l  Downloading https://files.pythonhosted.org/packages/8e/86/c14387d6813ebadb7bf61b9ad270ffff111c8b587e4d266e07de774e385e/pandas-1.0.4-cp36-cp36m-manylinux1_x86_64.whl (10.1MB)
+     |████████████████████████████████| 10.1MB 47.7MB/s 
+?25hRequirement already satisfied: scipy==1.4.1 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (1.4.1)
 Collecting statsmodels==0.11.1
-[?25l  Downloading https://files.pythonhosted.org/packages/cb/83/540fd83238a18abe6c2d280fa8e489ac5fcefa1f370f0ca1acd16ae1b860/statsmodels-0.11.1-cp36-cp36m-manylinux1_x86_64.whl (8.7MB)
-[K     |████████████████████████████████| 8.7MB 42.7MB/s 
-[?25hCollecting cvxpy==1.1.1
-[?25l  Downloading https://files.pythonhosted.org/packages/fa/89/6e4f99b36ce2d002f2792529b130fd8ed5d7004c92ce8ae7d56496f51426/cvxpy-1.1.1.tar.gz (990kB)
-[K     |████████████████████████████████| 993kB 42.0MB/s 
-[?25h  Installing build dependencies ... [?25l[?25hdone
-  Getting requirements to build wheel ... [?25l[?25hdone
-    Preparing wheel metadata ... [?25l[?25hdone
+?25l  Downloading https://files.pythonhosted.org/packages/cb/83/540fd83238a18abe6c2d280fa8e489ac5fcefa1f370f0ca1acd16ae1b860/statsmodels-0.11.1-cp36-cp36m-manylinux1_x86_64.whl (8.7MB)
+     |████████████████████████████████| 8.7MB 42.7MB/s 
+?25hCollecting cvxpy==1.1.1
+?25l  Downloading https://files.pythonhosted.org/packages/fa/89/6e4f99b36ce2d002f2792529b130fd8ed5d7004c92ce8ae7d56496f51426/cvxpy-1.1.1.tar.gz (990kB)
+     |████████████████████████████████| 993kB 42.0MB/s 
+?25h  Installing build dependencies ... ?25l?25hdone
+  Getting requirements to build wheel ... ?25l?25hdone
+    Preparing wheel metadata ... ?25l?25hdone
 Collecting scikit-learn==0.23.1
-[?25l  Downloading https://files.pythonhosted.org/packages/d9/3a/eb8d7bbe28f4787d140bb9df685b7d5bf6115c0e2a969def4027144e98b6/scikit_learn-0.23.1-cp36-cp36m-manylinux1_x86_64.whl (6.8MB)
-[K     |████████████████████████████████| 6.9MB 32.7MB/s 
-[?25hCollecting numba==0.49.1
-[?25l  Downloading https://files.pythonhosted.org/packages/56/dc/0e3d3732fd62c73fbb3317fc7bba22574832ab7a8e075620557bd4311641/numba-0.49.1-cp36-cp36m-manylinux2014_x86_64.whl (3.6MB)
-[K     |████████████████████████████████| 3.6MB 33.9MB/s 
-[?25hRequirement already satisfied: requests&gt;=2.20 in /usr/local/lib/python3.6/dist-packages (from yfinance) (2.23.0)
+?25l  Downloading https://files.pythonhosted.org/packages/d9/3a/eb8d7bbe28f4787d140bb9df685b7d5bf6115c0e2a969def4027144e98b6/scikit_learn-0.23.1-cp36-cp36m-manylinux1_x86_64.whl (6.8MB)
+     |████████████████████████████████| 6.9MB 32.7MB/s 
+?25hCollecting numba==0.49.1
+?25l  Downloading https://files.pythonhosted.org/packages/56/dc/0e3d3732fd62c73fbb3317fc7bba22574832ab7a8e075620557bd4311641/numba-0.49.1-cp36-cp36m-manylinux2014_x86_64.whl (3.6MB)
+     |████████████████████████████████| 3.6MB 33.9MB/s 
+?25hRequirement already satisfied: requests&gt;=2.20 in /usr/local/lib/python3.6/dist-packages (from yfinance) (2.23.0)
 Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/local/lib/python3.6/dist-packages (from yfinance) (0.0.9)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.6/dist-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.8.1)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/local/lib/python3.6/dist-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.4.7)
@@ -419,16 +421,16 @@ Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in 
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-packages (from python-dateutil&gt;=2.1-&gt;matplotlib==3.2.1-&gt;mlfinlab) (1.15.0)
 Requirement already satisfied: future in /usr/local/lib/python3.6/dist-packages (from osqp&gt;=0.4.1-&gt;cvxpy==1.1.1-&gt;mlfinlab) (0.16.0)
 Building wheels for collected packages: cvxpy
-  Building wheel for cvxpy (PEP 517) ... [?25l[?25hdone
+  Building wheel for cvxpy (PEP 517) ... ?25l?25hdone
   Created wheel for cvxpy: filename=cvxpy-1.1.1-cp36-cp36m-linux_x86_64.whl size=2654188 sha256=a26a6bc4f5d1fd6c94fb0f8e6d7dc682cb1a0b40165cb1ce6e92e89c9d4f1d9c
   Stored in directory: /root/.cache/pip/wheels/06/db/59/b5af93d86703e0903b9b94ccc300ac70daf9d273f13e6c0350
 Successfully built cvxpy
 Building wheels for collected packages: yfinance
-  Building wheel for yfinance (setup.py) ... [?25l[?25hdone
+  Building wheel for yfinance (setup.py) ... ?25l?25hdone
   Created wheel for yfinance: filename=yfinance-0.1.54-py2.py3-none-any.whl size=22409 sha256=c03517340ca865ab65213b423dde5625b362067eb62c54f5dcca90c92c2dbeae
   Stored in directory: /root/.cache/pip/wheels/f9/e3/5b/ec24dd2984b12d61e0abf26289746c2436a0e7844f26f2515c
 Successfully built yfinance
-[31mERROR: albumentations 0.1.12 has requirement imgaug&lt;0.2.7,&gt;=0.2.5, but you&#39;ll have imgaug 0.2.9 which is incompatible.[0m
+<span class=" -Color -Color-Red">ERROR: albumentations 0.1.12 has requirement imgaug&lt;0.2.7,&gt;=0.2.5, but you&#39;ll have imgaug 0.2.9 which is incompatible.</span>
 Installing collected packages: matplotlib, pandas, statsmodels, cvxpy, threadpoolctl, scikit-learn, numba, mlfinlab, yfinance
   Found existing installation: matplotlib 3.2.2
     Uninstalling matplotlib-3.2.2:

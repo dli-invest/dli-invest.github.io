@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -107,6 +105,10 @@
 </nav>
 
  <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -224,7 +226,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlfinlab in /usr/local/lib/python3.6/dist-packages (0.11.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlfinlab in /usr/local/lib/python3.6/dist-packages (0.11.0)
 Requirement already satisfied: pandas==0.25.3 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (0.25.3)
 Requirement already satisfied: matplotlib&gt;=3.1.1 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (3.2.1)
 Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.6/dist-packages (from mlfinlab) (1.18.4)
@@ -265,7 +267,7 @@ Requirement already satisfied: future in /usr/local/lib/python3.6/dist-packages 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /usr/local/lib/python3.6/dist-packages (0.1.54)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /usr/local/lib/python3.6/dist-packages (0.1.54)
 Requirement already satisfied: pandas&gt;=0.24 in /usr/local/lib/python3.6/dist-packages (from yfinance) (0.25.3)
 Requirement already satisfied: requests&gt;=2.20 in /usr/local/lib/python3.6/dist-packages (from yfinance) (2.23.0)
 Requirement already satisfied: numpy&gt;=1.15 in /usr/local/lib/python3.6/dist-packages (from yfinance) (1.18.4)
@@ -413,7 +415,7 @@ Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
         });
         }
         </script>
-</div><div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  2 of 2 completed
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  2 of 2 completed
               NEXCF      ACB.TO
 Date                           
 2019-06-03  0.45000  115.680000

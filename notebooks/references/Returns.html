@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -24,12 +24,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/mystnb.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -107,6 +105,10 @@
 </nav>
 
  <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -229,25 +231,25 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting mlfinlab
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mlfinlab
   Using cached https://files.pythonhosted.org/packages/a9/9b/d6a2e5ec3818c9294d6e9e34a522c6ca7746efd4bd4e9640bbc4233ab2f0/mlfinlab-0.11.2-py3-none-any.whl
 Collecting statsmodels==0.11.1
-[?25l  Downloading https://files.pythonhosted.org/packages/cb/83/540fd83238a18abe6c2d280fa8e489ac5fcefa1f370f0ca1acd16ae1b860/statsmodels-0.11.1-cp36-cp36m-manylinux1_x86_64.whl (8.7MB)
-[K     |████████████████████████████████| 8.7MB 2.5MB/s 
-[?25hCollecting matplotlib==3.1.1
+?25l  Downloading https://files.pythonhosted.org/packages/cb/83/540fd83238a18abe6c2d280fa8e489ac5fcefa1f370f0ca1acd16ae1b860/statsmodels-0.11.1-cp36-cp36m-manylinux1_x86_64.whl (8.7MB)
+     |████████████████████████████████| 8.7MB 2.5MB/s 
+?25hCollecting matplotlib==3.1.1
   Using cached https://files.pythonhosted.org/packages/57/4f/dd381ecf6c6ab9bcdaa8ea912e866dedc6e696756156d8ecc087e20817e2/matplotlib-3.1.1-cp36-cp36m-manylinux1_x86_64.whl
 Collecting pandas==0.25.3
-[?25l  Downloading https://files.pythonhosted.org/packages/52/3f/f6a428599e0d4497e1595030965b5ba455fd8ade6e977e3c819973c4b41d/pandas-0.25.3-cp36-cp36m-manylinux1_x86_64.whl (10.4MB)
-[K     |████████████████████████████████| 10.4MB 44.8MB/s 
-[?25hCollecting xmlrunner==1.7.7
+?25l  Downloading https://files.pythonhosted.org/packages/52/3f/f6a428599e0d4497e1595030965b5ba455fd8ade6e977e3c819973c4b41d/pandas-0.25.3-cp36-cp36m-manylinux1_x86_64.whl (10.4MB)
+     |████████████████████████████████| 10.4MB 44.8MB/s 
+?25hCollecting xmlrunner==1.7.7
   Downloading https://files.pythonhosted.org/packages/57/c0/a19e29bc6038a56bb690549573af6ea11a9d2a5c07aff2e27ed308c2cab9/xmlrunner-1.7.7.tar.gz
 Collecting cvxpy==1.0.25
-[?25l  Downloading https://files.pythonhosted.org/packages/d9/ed/90e0a13ad7ac4e7cdc2aeaefed26cebb4922f205bb778199268863fa2fbe/cvxpy-1.0.25.tar.gz (906kB)
-[K     |████████████████████████████████| 911kB 13.4MB/s 
-[?25hCollecting scipy==1.3.1
-[?25l  Downloading https://files.pythonhosted.org/packages/29/50/a552a5aff252ae915f522e44642bb49a7b7b31677f9580cfd11bcc869976/scipy-1.3.1-cp36-cp36m-manylinux1_x86_64.whl (25.2MB)
-[K     |████████████████████████████████| 25.2MB 1.7MB/s 
-[?25hCollecting numpy==1.17.3
+?25l  Downloading https://files.pythonhosted.org/packages/d9/ed/90e0a13ad7ac4e7cdc2aeaefed26cebb4922f205bb778199268863fa2fbe/cvxpy-1.0.25.tar.gz (906kB)
+     |████████████████████████████████| 911kB 13.4MB/s 
+?25hCollecting scipy==1.3.1
+?25l  Downloading https://files.pythonhosted.org/packages/29/50/a552a5aff252ae915f522e44642bb49a7b7b31677f9580cfd11bcc869976/scipy-1.3.1-cp36-cp36m-manylinux1_x86_64.whl (25.2MB)
+     |████████████████████████████████| 25.2MB 1.7MB/s 
+?25hCollecting numpy==1.17.3
   Using cached https://files.pythonhosted.org/packages/0e/46/ae6773894f7eacf53308086287897ec568eac9768918d913d5b9d366c5db/numpy-1.17.3-cp36-cp36m-manylinux1_x86_64.whl
 Collecting numba==0.49.1
   Using cached https://files.pythonhosted.org/packages/56/dc/0e3d3732fd62c73fbb3317fc7bba22574832ab7a8e075620557bd4311641/numba-0.49.1-cp36-cp36m-manylinux2014_x86_64.whl
@@ -270,17 +272,17 @@ Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.6/dist-
 Requirement already satisfied: future in /usr/local/lib/python3.6/dist-packages (from osqp&gt;=0.4.1-&gt;cvxpy==1.0.25-&gt;mlfinlab) (0.16.0)
 Requirement already satisfied: dill&gt;=0.3.1 in /usr/local/lib/python3.6/dist-packages (from multiprocess-&gt;cvxpy==1.0.25-&gt;mlfinlab) (0.3.1.1)
 Building wheels for collected packages: xmlrunner, cvxpy
-  Building wheel for xmlrunner (setup.py) ... [?25l[?25hdone
+  Building wheel for xmlrunner (setup.py) ... ?25l?25hdone
   Created wheel for xmlrunner: filename=xmlrunner-1.7.7-cp36-none-any.whl size=6235 sha256=75cb0b6de31da6e7e7e44dae9bfb4c4fe26332e7afbc8923ce271323d880aa99
   Stored in directory: /root/.cache/pip/wheels/c8/0e/05/28e4ff5b683c7a319756b412c7f4dc508a7ffa654e12c54ef5
-  Building wheel for cvxpy (setup.py) ... [?25l[?25hdone
+  Building wheel for cvxpy (setup.py) ... ?25l?25hdone
   Created wheel for cvxpy: filename=cvxpy-1.0.25-cp36-cp36m-linux_x86_64.whl size=2044785 sha256=af0f5f1f5c097ee4e8b1b6338df6874b34e3de574b331a13a8b2bb47a58ec38c
   Stored in directory: /root/.cache/pip/wheels/f1/b0/c3/0d3e98435c5070047e033ead500eb4f93a87c4f3ab6ea6dc1e
 Successfully built xmlrunner cvxpy
-[31mERROR: tensorflow 2.2.0 has requirement scipy==1.4.1; python_version &gt;= &quot;3&quot;, but you&#39;ll have scipy 1.3.1 which is incompatible.[0m
-[31mERROR: google-colab 1.0.0 has requirement pandas~=1.0.0; python_version &gt;= &quot;3.0&quot;, but you&#39;ll have pandas 0.25.3 which is incompatible.[0m
-[31mERROR: datascience 0.10.6 has requirement folium==0.2.1, but you&#39;ll have folium 0.8.3 which is incompatible.[0m
-[31mERROR: albumentations 0.1.12 has requirement imgaug&lt;0.2.7,&gt;=0.2.5, but you&#39;ll have imgaug 0.2.9 which is incompatible.[0m
+<span class=" -Color -Color-Red">ERROR: tensorflow 2.2.0 has requirement scipy==1.4.1; python_version &gt;= &quot;3&quot;, but you&#39;ll have scipy 1.3.1 which is incompatible.</span>
+<span class=" -Color -Color-Red">ERROR: google-colab 1.0.0 has requirement pandas~=1.0.0; python_version &gt;= &quot;3.0&quot;, but you&#39;ll have pandas 0.25.3 which is incompatible.</span>
+<span class=" -Color -Color-Red">ERROR: datascience 0.10.6 has requirement folium==0.2.1, but you&#39;ll have folium 0.8.3 which is incompatible.</span>
+<span class=" -Color -Color-Red">ERROR: albumentations 0.1.12 has requirement imgaug&lt;0.2.7,&gt;=0.2.5, but you&#39;ll have imgaug 0.2.9 which is incompatible.</span>
 Installing collected packages: numpy, scipy, pandas, statsmodels, matplotlib, xmlrunner, cvxpy, numba, scikit-learn, mlfinlab
   Found existing installation: numpy 1.18.4
     Can&#39;t uninstall &#39;numpy&#39;. No files were found to uninstall.
@@ -306,7 +308,7 @@ Installing collected packages: numpy, scipy, pandas, statsmodels, matplotlib, xm
 Successfully installed cvxpy-1.0.25 matplotlib-3.1.1 mlfinlab-0.11.2 numba-0.49.1 numpy-1.17.3 pandas-0.25.3 scikit-learn-0.21.3 scipy-1.3.1 statsmodels-0.11.1 xmlrunner-1.7.7
 </pre></div>
 </div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Collecting yfinance
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting yfinance
   Downloading https://files.pythonhosted.org/packages/c2/31/8b374a12b90def92a4e27d0fc595fc43635f395984e36a075244d98bd265/yfinance-0.1.54.tar.gz
 Requirement already satisfied: pandas&gt;=0.24 in /usr/local/lib/python3.6/dist-packages (from yfinance) (0.25.3)
 Requirement already satisfied: numpy&gt;=1.15 in /usr/local/lib/python3.6/dist-packages (from yfinance) (1.17.3)
@@ -320,7 +322,7 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.6
 Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.6/dist-packages (from requests&gt;=2.20-&gt;yfinance) (3.0.4)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.6/dist-packages (from python-dateutil&gt;=2.6.1-&gt;pandas&gt;=0.24-&gt;yfinance) (1.12.0)
 Building wheels for collected packages: yfinance
-  Building wheel for yfinance (setup.py) ... [?25l[?25hdone
+  Building wheel for yfinance (setup.py) ... ?25l?25hdone
   Created wheel for yfinance: filename=yfinance-0.1.54-py2.py3-none-any.whl size=22409 sha256=9d64574defb8d37072a024bf94977d03f666b6efbdb17141c96a0b0ae68ef864
   Stored in directory: /root/.cache/pip/wheels/f9/e3/5b/ec24dd2984b12d61e0abf26289746c2436a0e7844f26f2515c
 Successfully built yfinance
@@ -466,7 +468,7 @@ Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
         });
         }
         </script>
-</div><div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  10 of 10 completed
                NEXCF    ACB.TO     BB.TO  ...    HIVE.V     AC.TO    CVE.TO
 Date                                      ...                              
 2019-03-04  0.006036 -0.012346 -0.001715  ... -0.111111 -0.011765 -0.056743
