@@ -74,6 +74,11 @@ When asked what keeps most individual investors from succeeding, Graham had a co
 much attention to what the stock market is doing currently" {cite}`book:233946`.
 ```
 
+```{tip}
+Among the "few prudent principles" that investors forgot were such market
+clichés as "Trees don’t grow to the sky" and “Bulls make money, bears make
+money, but pigs get slaughtered.
+```
 
-```{bibliography} ../_bibliography/investing.bib
+```{bibliography} ../_bibliography/references.bib
 ```
