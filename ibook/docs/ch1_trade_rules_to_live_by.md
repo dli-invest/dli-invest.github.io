@@ -60,6 +60,13 @@ protect themselves against future price gains.
 
 #### Things to remember when buying stocks
 
+
+```{caution}
+* Margin of safety
+* Area of expertity
+* Something you understand
+```
+
 ```{caution}
 Never buy a stock immediately after a substantial rise or
 sell one immediately after a substantial drop - {cite}`book:233946`.
