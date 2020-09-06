@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - feature/*
 jobs:
   build-html-and-deploy:
     runs-on: ubuntu-latest
