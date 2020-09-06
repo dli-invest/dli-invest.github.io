@@ -51,7 +51,7 @@ jobs:
         run: |
           echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
           source ~/.bash_profile
-          jb build ibook/ --builder pdflatex
+          jb build ibook/ --builder pdflatex --f -interaction=nonstopmode
 
       - uses: actions/upload-artifact@v2
         with:

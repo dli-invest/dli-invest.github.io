@@ -9,7 +9,9 @@
     - file: notebooks/references/ReadMe
       sections:
         - file: notebooks/references/Returns
+          title: Returns
         - file: notebooks/references/WeightsGeneration
+          title: Weights Generation
 
 
 - part: Legacy Content
