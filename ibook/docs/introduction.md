@@ -11,10 +11,12 @@ jupyter:
     name: python3
 ---
 
+% Link all references to use them in other directories
+
 # Summary
 
 ```{note}
-As an investor, I decided to document my journal from a software engineer to yoloing the market like in wall street bets.
+As an investor, I decided to document my journal from a software engineer to yoloing the market like in `/r/wallstreetbets`.
 
 Since I am a prudent person, I will not disclose actually dollar amount, but will leave all the helpful code snippets I developed in here. The main programming languages at the moment are python, some deno scripts, rust/go (for speed) and ipynb notebooks.
 ```

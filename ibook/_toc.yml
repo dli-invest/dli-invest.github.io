@@ -1,7 +1,19 @@
-# - file: README
-- file: docs/index
-  sections:
+- file: ReadMe
+
+
+- part: Custom Content
+  chapters:
+    - file: docs/index
     - file: docs/introduction
+    - file: docs/ch1_trade_rules_to_live_by
+    - file: notebooks/references/ReadMe
+      sections:
+        - file: notebooks/references/Returns
+        - file: notebooks/references/WeightsGeneration
+
+
+- part: Legacy Content
+  chapters:
     - file: docs/about_py
     - file: docs/getting_started
     - file: docs/python_by_example
