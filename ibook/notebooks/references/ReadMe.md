@@ -19,4 +19,7 @@ Each notebook will need a title to show up in the toc, so each notebook from now
 
 {cite}`book:233946`
 
-adsas
+```{bibliography} ../../docs/_bibliography/references.bib
+:style: unsrt
+:filter: docname in docnames
+```
