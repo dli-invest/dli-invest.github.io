@@ -3,7 +3,6 @@
 
 - part: Custom Content
   chapters:
-    - file: docs/index
     - file: docs/introduction
     - file: docs/ch1_trade_rules_to_live_by
     - file: notebooks/references/ReadMe
