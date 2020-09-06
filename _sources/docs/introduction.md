@@ -28,7 +28,9 @@ Since I am a prudent person, I will not disclose actually dollar amount, but wil
 
 ### Books
 
-* TODO ADD CONTENT
+I have reference various technical and investing books to learn how to trade. Ultimately, I should invest in what I think is best.
+
+* Machine Learning for Algorithm Trading {cite}`github:ml-for-trading`
 
 ### Sources of Information
 * iex
