@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Scientific Python QuickStart &#8212; Investing Reference Book</title>
+    <title>Pandas Functions &#8212; Investing Reference Book</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -162,9 +162,12 @@
     
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        
+        <a class="dropdown-buttons"
+            href="../_sources/docs/ch2_useful_pd_functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/ch2_useful_pd_functions.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -184,10 +187,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/dli-invest/iref-book/issues/new?title=Issue%20on%20page%20%2Fdocs/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/dli-invest/iref-book/issues/new?title=Issue%20on%20page%20%2Fdocs/ch2_useful_pd_functions.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/dli-invest/iref-book/edit/master/ibook/docs/index.md"><button
+        <a class="edit-button" href="https://github.com/dli-invest/iref-book/edit/master/ibook/docs/ch2_useful_pd_functions.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -200,6 +203,23 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dli-invest/iref-book/master?urlpath=lab/tree/ibook/docs/ch2_useful_pd_functions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -218,28 +238,34 @@
         
               <div>
                 
-  <div class="section" id="scientific-python-quickstart">
-<h1>Scientific Python QuickStart<a class="headerlink" href="#scientific-python-quickstart" title="Permalink to this headline">¶</a></h1>
-<p>This is a short sequence of lectures on Python programming for scientific
-work, written by <a class="reference external" href="http://www.tomsargent.com/">Thomas J.  Sargent</a> and <a class="reference external" href="https://johnstachurski.net/">John
-Stachurski</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These lectures were built using the new Sphinx-based <a class="reference external" href="https://beta.jupyterbook.org/intro.html">Jupyter Book
-2.0</a> tool set, as part of the
-<a class="reference external" href="https://ebp.jupyterbook.org/en/latest/">ExecutableBookProject</a>.  They are
-intended mainly as a demonstration of these tools.
-Instructions for how to build them from source can be found in the Jupyter
-Book documentation.</p>
+  <div class="section" id="pandas-functions">
+<span id="pd-functions"></span><h1>Pandas Functions<a class="headerlink" href="#pandas-functions" title="Permalink to this headline">¶</a></h1>
+<p>Pandas is an excellent library for analyzing and dealing with data.</p>
+<p>In order to calculate profits and how much money to I put into the market, I use a formula after downloading my data from RBC direct investing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Activity&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Buy&quot;</span><span class="p">,</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Buy&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Withdrawals &amp; De-registrations&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;Symbol&quot;</span><span class="p">:</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;BB&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;RBF556&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;RBF558&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="o">-</span><span class="mf">100.95</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="o">-</span><span class="mf">2328.24</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="o">-</span><span class="mf">14000.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">15000.0</span><span class="p">},</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">deposit_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">]</span>
+<span class="n">divid_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Dividends&quot;</span><span class="p">]</span>
+<span class="n">with_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Withdrawals &amp; De-registrations&quot;</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">deposit_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">with_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
 </div>
-<p>These lectures are a mini-version of a <a class="reference external" href="https://executablebooks.github.io/quantecon-example/docs/index.html">longer
-series</a>
-of lectures, also built using Jupyter Book 2.0.  That series contains more
-features and applications but also requires more libraries and takes longer to
-run.</p>
-<p>Both lecture series are taken from a <a class="reference external" href="https://python.quantecon.org">more complete set of
-lectures</a> on open source computing hosted by
-<a class="reference external" href="https://quantecon.org">QuantEcon</a>.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -13,10 +13,11 @@ jupyter:
 
 ## Notebooks
 
-Each notebook will need a title to show up in the toc, so each notebook from now on needs a title cell. asda
+Each notebook will need a title to show up in the toc, so each notebook from now on needs a title cell. A lot of code examples are available at {cite}`github:ml-for-trading`.
 
-{cite}`github:ml-for-trading` 
+As for implementing the the mechanisms in {cite}`book:233946`, it is unlikely that numbers would work as machine learning can handle all the stuff.
 
-{cite}`book:233946`
-
-adsas
+```{bibliography} ../../docs/_bibliography/references.bib
+:style: unsrt
+:filter: docname in docnames
+```

@@ -1,14 +1,12 @@
 ---
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: myst
-      format_version: '1.2'
-      jupytext_version: 1.5.2
-  kernelspec:
-    display_name: Python 3
-    name: python3
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
 (trading_rules)=
@@ -60,6 +58,13 @@ protect themselves against future price gains.
 
 #### Things to remember when buying stocks
 
+
+```{caution}
+* Margin of safety
+* Area of experticity
+* Something you understand
+```
+
 ```{caution}
 Never buy a stock immediately after a substantial rise or
 sell one immediately after a substantial drop - {cite}`book:233946`.
@@ -74,6 +79,13 @@ When asked what keeps most individual investors from succeeding, Graham had a co
 much attention to what the stock market is doing currently" {cite}`book:233946`.
 ```
 
+```{tip}
+Among the "few prudent principles" that investors forgot were such market
+clichés as "Trees don’t grow to the sky" and “Bulls make money, bears make
+money, but pigs get slaughtered.
+```
 
-```{bibliography} ../_bibliography/investing.bib
+```{bibliography} ../_bibliography/references.bib
+:style: unsrt
+:filter: docname in docnames
 ```
