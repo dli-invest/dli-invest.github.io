@@ -17,6 +17,8 @@
           title: Returns
         - file: notebooks/references/WeightsGeneration
           title: Weights Generation
+        - file: notebooks/references/Performance
+          title: Performance
 
 
 - part: Legacy Content
@@ -25,4 +27,3 @@
     - file: docs/getting_started
     - file: docs/python_by_example
     - file: docs/learn_more
-    - file: docs/performance
