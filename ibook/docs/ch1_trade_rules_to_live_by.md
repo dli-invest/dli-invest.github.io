@@ -1,14 +1,12 @@
 ---
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: myst
-      format_version: '1.2'
-      jupytext_version: 1.5.2
-  kernelspec:
-    display_name: Python 3
-    name: python3
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
 ---
 
 (trading_rules)=
@@ -63,7 +61,7 @@ protect themselves against future price gains.
 
 ```{caution}
 * Margin of safety
-* Area of expertity
+* Area of experticity
 * Something you understand
 ```
 

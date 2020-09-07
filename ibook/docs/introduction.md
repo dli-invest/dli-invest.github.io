@@ -43,7 +43,7 @@ Signing up for newsletters and never forget wallstreetbets
 
 
 ### Github Projects
-* cad_tickers
+* cad_tickers - personal finance package [Cad Tickers](https://pypi.org/project/cad-tickers/) which can fetch all the canadian stock tickers.
 * stock_screener
 * ytube_nlp - automatically getting youtube investing videos and analyzing them, 
 while making it easy to jump to points of interest. With AWS DyanmioDB, I'll
