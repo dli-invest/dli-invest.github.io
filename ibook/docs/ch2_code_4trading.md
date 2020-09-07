@@ -31,7 +31,7 @@ data = {
 }
 df = pd.DataFrame.from_dict(data)
 
-print(df.to_html())
+print(df)
 
 deposit_df = df[df.Activity == "Deposits & Contributions"]
 divid_df = df[df.Activity == "Dividends"]
