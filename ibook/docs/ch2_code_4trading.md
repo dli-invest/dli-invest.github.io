@@ -10,7 +10,7 @@ kernelspec:
 ---
 
 (pd_functions)=
-# Pandas Functions
+# Code For Trading
 
 Pandas is an excellent library for analyzing and dealing with data.
 
