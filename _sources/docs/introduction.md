@@ -28,9 +28,7 @@ Since I am a prudent person, I will not disclose actually dollar amount, but wil
 
 ### Books
 
-I have reference various technical and investing books to learn how to trade. Ultimately, I should invest in what I think is best.
-
-* Machine Learning for Algorithm Trading {cite}`github:ml-for-trading`
+* TODO ADD CONTENT
 
 ### Sources of Information
 * iex
@@ -87,6 +85,4 @@ Technical strategies tend to focus on endogenous factors and
 event-driven strategies focus on exogenous factors.
 
 ```{bibliography} ../_bibliography/references.bib
-:style: unsrt
-:filter: docname in docnames
 ```
