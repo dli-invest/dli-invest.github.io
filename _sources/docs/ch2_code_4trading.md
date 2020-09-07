@@ -15,6 +15,7 @@ kernelspec:
 Pandas is an excellent library for analyzing and dealing with data.
 
 In order to calculate profits and how much money to I put into the market, I use a formula after downloading my data from RBC direct investing.
+
 ```{code-cell} ipython3
 import pandas as pd
 data = {
@@ -30,8 +31,11 @@ data = {
 }
 df = pd.DataFrame.from_dict(data)
 
+df.head()
+
 deposit_df = df[df.Activity == "Deposits & Contributions"]
 divid_df = df[df.Activity == "Dividends"]
 with_df = df[df.Activity == "Withdrawals & De-registrations"]
 total = deposit_df['Value'].sum() + with_df['Value'].sum()
+print(total)
 ```

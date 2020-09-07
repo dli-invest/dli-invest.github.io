@@ -277,10 +277,18 @@
 <span class="p">}</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
 <span class="n">deposit_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">]</span>
 <span class="n">divid_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Dividends&quot;</span><span class="p">]</span>
 <span class="n">with_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Withdrawals &amp; De-registrations&quot;</span><span class="p">]</span>
 <span class="n">total</span> <span class="o">=</span> <span class="n">deposit_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">with_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2000.0
 </pre></div>
 </div>
 </div>
