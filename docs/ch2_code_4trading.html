@@ -277,7 +277,7 @@
 <span class="p">}</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 <span class="n">deposit_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">]</span>
 <span class="n">divid_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Dividends&quot;</span><span class="p">]</span>
@@ -288,48 +288,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr style=&quot;text-align: right;&quot;&gt;
-      &lt;th&gt;&lt;/th&gt;
-      &lt;th&gt;Activity&lt;/th&gt;
-      &lt;th&gt;Symbol&lt;/th&gt;
-      &lt;th&gt;Value&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;0&lt;/th&gt;
-      &lt;td&gt;Buy&lt;/td&gt;
-      &lt;td&gt;BB&lt;/td&gt;
-      &lt;td&gt;-100.95&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1&lt;/th&gt;
-      &lt;td&gt;Buy&lt;/td&gt;
-      &lt;td&gt;RBF556&lt;/td&gt;
-      &lt;td&gt;-2328.24&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;2&lt;/th&gt;
-      &lt;td&gt;Deposits &amp;amp; Contributions&lt;/td&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;td&gt;1000.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;3&lt;/th&gt;
-      &lt;td&gt;Withdrawals &amp;amp; De-registrations&lt;/td&gt;
-      &lt;td&gt;RBF558&lt;/td&gt;
-      &lt;td&gt;-14000.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;4&lt;/th&gt;
-      &lt;td&gt;Deposits &amp;amp; Contributions&lt;/td&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;td&gt;15000.00&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Activity  Symbol     Value
+0                             Buy      BB   -100.95
+1                             Buy  RBF556  -2328.24
+2        Deposits &amp; Contributions           1000.00
+3  Withdrawals &amp; De-registrations  RBF558 -14000.00
+4        Deposits &amp; Contributions          15000.00
 2000.0
 </pre></div>
 </div>
