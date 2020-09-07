@@ -33,5 +33,7 @@ df = pd.DataFrame.from_dict(data)
 deposit_df = df[df.Activity == "Deposits & Contributions"]
 divid_df = df[df.Activity == "Dividends"]
 with_df = df[df.Activity == "Withdrawals & De-registrations"]
+print(with_df)
 total = deposit_df['Value'].sum() + with_df['Value'].sum()
+print(total)
 ```
