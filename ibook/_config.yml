@@ -1,12 +1,12 @@
 #######################################################################################
 # Book settings
 title : Investing Reference Book
-author: Thomas J. Sargent and John Stachurski
-logo: 'qe-logo-large.png'
+author: David Li
+logo: 'investing.svg'
 
 # Information about where the book exists on the web
 description: >-
-  A brief introduction to Python programming for scientific applications.
+  A complication of my efforts to learn the stock market and obtain financial independence.
 
 #######################################################################################
 # Execution settings

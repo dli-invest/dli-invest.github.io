@@ -28,7 +28,9 @@ Since I am a prudent person, I will not disclose actually dollar amount, but wil
 
 ### Books
 
-* TODO ADD CONTENT
+I have reference various technical and investing books to learn how to trade. Ultimately, I should invest in what I think is best.
+
+* Machine Learning for Algorithm Trading {cite}`github:ml-for-trading`
 
 ### Sources of Information
 * iex
@@ -41,7 +43,7 @@ Signing up for newsletters and never forget wallstreetbets
 
 
 ### Github Projects
-* cad_tickers
+* cad_tickers - personal finance package [Cad Tickers](https://pypi.org/project/cad-tickers/) which can fetch all the canadian stock tickers.
 * stock_screener
 * ytube_nlp - automatically getting youtube investing videos and analyzing them, 
 while making it easy to jump to points of interest. With AWS DyanmioDB, I'll
@@ -85,4 +87,6 @@ Technical strategies tend to focus on endogenous factors and
 event-driven strategies focus on exogenous factors.
 
 ```{bibliography} ../_bibliography/references.bib
+:style: unsrt
+:filter: docname in docnames
 ```
