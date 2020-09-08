@@ -308,3 +308,38 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+For an example glossary file with the contents 
+
+
+```tex
+\newglossaryentry{DebtToEquity}
+{
+	name={Debt To Equity},
+	description={
+		The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its assets relative to the value of shareholders' equity.
+	}
+}
+
+\newglossaryentry{DeadCatBounce}
+{
+	name={Dead Cat Bounce},
+	description={
+		Dead cat bounce is a small, brief recovery in the price of a declining stock.
+	}
+}
+```
+
+We would expect this script to output, this is really only useful if you are seeking to produce/convert jupyterbook content.
+
+```tex
+\`\`\`{glossary}
+DeadCatBounce
+        Dead cat bounce is a small, brief recovery in the price of a declining stock.
+
+DebtToEquity
+        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its 
+assets relative to the value of shareholders' equity.
+\`\`\`
+```
+
