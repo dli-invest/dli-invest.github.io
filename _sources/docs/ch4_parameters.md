@@ -47,3 +47,5 @@ kernelspec:
     |Dividend yield                               |The current annualized dividend divided by the last close price. Discounted cash flow valuation assumes a company's market value equates to the present value of its future cash flows.                                                                                                                                            |
     +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
+
+Other important terms include {term}`api`
