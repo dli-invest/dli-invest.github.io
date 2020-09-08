@@ -122,4 +122,4 @@ if __name__ == "__main__":
 
 The following utility scripts uses camelot to extract tables from pdf and then save them in `rst` format, it has difficult merging tables split around 2 pages which is why I save the individual `csvs` files.
 
-Some sample output can be seen at {ref}`some_value_factors`
+Some sample output can be seen at {ref}`some_value_factors`, {numref}`some_value_factors`
