@@ -542,7 +542,8 @@
     <span class="n">entries</span> <span class="o">=</span> <span class="n">sort_entries</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">label_sort</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">label_sort</span><span class="p">)</span>
     <span class="n">descriptions</span> <span class="o">=</span> <span class="n">dict_with_descr</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
     <span class="n">glossary_str</span> <span class="o">=</span> <span class="n">make_glossary</span><span class="p">(</span><span class="n">descriptions</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">glossary_str</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;glossary_data.md&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">_f</span><span class="p">:</span>
+        <span class="n">_f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">glossary_str</span><span class="p">)</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -573,8 +574,7 @@ DeadCatBounce
         Dead cat bounce is a small, brief recovery in the price of a declining stock.
 
 DebtToEquity
-        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its 
-assets relative to the value of shareholders&#39; equity.
+        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its assets relative to the value of shareholders&#39; equity.
 <span class="k">\`\`\`</span>
 </pre></div>
 </div>
