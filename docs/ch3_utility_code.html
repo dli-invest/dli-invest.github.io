@@ -369,6 +369,215 @@
 </div>
 <p>The following utility scripts uses camelot to extract tables from pdf and then save them in <code class="docutils literal notranslate"><span class="pre">rst</span></code> format, it has difficult merging tables split around 2 pages which is why I save the individual <code class="docutils literal notranslate"><span class="pre">csvs</span></code> files.</p>
 <p>Some sample output can be seen at <span class="xref std std-ref">some_value_factors</span>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">some_value_factors</span></code></p>
+<p>Another script that I have used is for converting glossary for the latex format to something that jupyterbook can understand, the script is very rough and does not work with references to terms within terms. <code class="docutils literal notranslate"><span class="pre">\glsapi{}</span></code> will be inputted as raw latex, I am expecting the excecutable book project to eventually produce a better solution, but in the interim this script looks for my purposes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Converts a tex glossary into a format jupyterbook can understand</span>
+
+<span class="sd">Extended from https://tex.stackexchange.com/questions/529971/how-do-i-sort-all-of-the-glossary-entries-in-a-tex-file</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+
+<span class="n">commands</span> <span class="o">=</span> <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">newglossaryentry&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">newabbreviation&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">newacronym&quot;</span><span class="p">)</span>
+<span class="n">startcmd_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;(?:&quot;</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">commands</span><span class="p">)</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)\s*\r?\n?\s*\{(.+?)\}\s*\r?\n?\s*\{&quot;</span>
+<span class="p">)</span>
+<span class="n">brace_regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;!</span><span class="se">\\</span><span class="s2">)(?:</span><span class="se">\\\\</span><span class="s2">)*(\{|\})&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">UnreachableError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;https://xkcd.com/2200/&quot;</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="s2">&quot;The code is in what I thought was an unreachable state.&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">ParseError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">scan_file</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scan a file and separate it into entries and outer code.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fname : str</span>
+<span class="sd">        The file name.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ParseError</span>
+<span class="sd">        If the end of an entry cannot be found.</span>
+<span class="sd">    UnreachableError</span>
+<span class="sd">        If a state is reached that should be unreachable.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    entries : dict</span>
+<span class="sd">        The entries.</span>
+<span class="sd">        entries[None] always containes the collected outer code.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">rf</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">open_braces</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="p">{</span><span class="kc">None</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">}</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">while</span> <span class="n">text</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Look for next entry.</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">startcmd_regex</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">piece</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">piece</span><span class="p">:</span>
+                    <span class="n">entries</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="n">piece</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">piece</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">piece</span><span class="p">:</span>
+                    <span class="n">entries</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="n">piece</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">label</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+                    <span class="n">entries</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">entries</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">entries</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+                <span class="n">open_braces</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span> <span class="p">:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Look for next brace.</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">brace_regex</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span>
+                    <span class="s2">&quot;I could not find all closing braces in &quot;</span>
+                    <span class="o">+</span> <span class="s2">&quot;&#39;</span><span class="si">{}</span><span class="s2">&#39; (</span><span class="si">{}</span><span class="s2"> open braces)!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">open_braces</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">entries</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="n">text</span><span class="p">[:</span> <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()]</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">()</span> <span class="p">:]</span>
+                <span class="n">brace</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">brace</span> <span class="o">==</span> <span class="s2">&quot;{&quot;</span><span class="p">:</span>
+                    <span class="n">open_braces</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">brace</span> <span class="o">==</span> <span class="s2">&quot;}&quot;</span><span class="p">:</span>
+                    <span class="n">open_braces</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">UnreachableError</span>
+                <span class="k">if</span> <span class="n">open_braces</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># This entry is done.</span>
+                    <span class="n">label</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">elif</span> <span class="n">open_braces</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">UnreachableError</span>
+    <span class="k">return</span> <span class="n">entries</span>
+
+
+<span class="k">def</span> <span class="nf">sort_entries</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">label_sort</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sort all the entries in the source file and returns and dict</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    source : str</span>
+<span class="sd">        The name of the source file.</span>
+<span class="sd">    label_sort : bool, optional</span>
+<span class="sd">        If True, the entries are sorted by their label, otherwise they are</span>
+<span class="sd">        sorted by their definition (including the definition command).</span>
+<span class="sd">        The default is False.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        If the source file cannot be found.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">present_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">source</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">present_files</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;I cannot find the file &#39;</span><span class="si">{}</span><span class="s2">&#39;!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source</span><span class="p">))</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">scan_file</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">entries</span>
+
+
+<span class="k">def</span> <span class="nf">dict_with_descr</span><span class="p">(</span><span class="n">entries</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="n">new_entries</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glossary_entry</span> <span class="o">=</span> <span class="n">entries</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">split_content</span> <span class="o">=</span> <span class="n">glossary_entry</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="c1"># replace { } and \t \n</span>
+            <span class="n">cleaned_content</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;{|}|</span><span class="se">\\</span><span class="s2">t|</span><span class="se">\\</span><span class="s2">n|=&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">split_content</span><span class="p">)</span>
+            <span class="c1"># to extract words from string</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="n">cleaned_content</span>
+            <span class="n">new_entries</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+
+    <span class="k">return</span> <span class="n">new_entries</span>
+
+
+<span class="k">def</span> <span class="nf">make_glossary</span><span class="p">(</span><span class="n">descriptions</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="n">gloss_open</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;```</span><span class="si">{glossary}</span><span class="s2">&quot;</span>
+    <span class="n">gloss_end</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;```&quot;</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="c1"># sort keys first</span>
+    <span class="k">for</span> <span class="n">desc_key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">descriptions</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">body</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">desc_key</span><span class="si">}</span><span class="se">\n\t</span><span class="si">{</span><span class="n">descriptions</span><span class="p">[</span><span class="n">desc_key</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">body</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">gloss_open</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">body</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">gloss_end</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Sort the glossary entries in a file.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-l&quot;</span><span class="p">,</span> <span class="s2">&quot;--label-sort&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The source file.&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">sort_entries</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">label_sort</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">label_sort</span><span class="p">)</span>
+    <span class="n">descriptions</span> <span class="o">=</span> <span class="n">dict_with_descr</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span>
+    <span class="n">glossary_str</span> <span class="o">=</span> <span class="n">make_glossary</span><span class="p">(</span><span class="n">descriptions</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">glossary_str</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>For an example glossary file with the contents</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\newglossaryentry</span><span class="nb">{</span>DebtToEquity<span class="nb">}</span>
+<span class="nb">{</span>
+	name=<span class="nb">{</span>Debt To Equity<span class="nb">}</span>,
+	description=<span class="nb">{</span>
+		The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its assets relative to the value of shareholders&#39; equity.
+	<span class="nb">}</span>
+<span class="nb">}</span>
+
+<span class="k">\newglossaryentry</span><span class="nb">{</span>DeadCatBounce<span class="nb">}</span>
+<span class="nb">{</span>
+	name=<span class="nb">{</span>Dead Cat Bounce<span class="nb">}</span>,
+	description=<span class="nb">{</span>
+		Dead cat bounce is a small, brief recovery in the price of a declining stock.
+	<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+<p>We would expect this script to output, this is really only useful if you are seeking to produce/convert jupyterbook content.</p>
+<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span><span class="k">\`\`\`</span><span class="nb">{</span>glossary<span class="nb">}</span>
+DeadCatBounce
+        Dead cat bounce is a small, brief recovery in the price of a declining stock.
+
+DebtToEquity
+        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its 
+assets relative to the value of shareholders&#39; equity.
+<span class="k">\`\`\`</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
