@@ -17,8 +17,7 @@ DeadCatBounce
         Dead cat bounce is a small, brief recovery in the price of a declining stock.
 
 DebtToEquity
-        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its 
-assets relative to the value of shareholders' equity.
+        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its assets relative to the value of shareholders' equity.
 
 
 ```

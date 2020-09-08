@@ -302,7 +302,8 @@ def main():
     entries = sort_entries(args.source, label_sort=args.label_sort)
     descriptions = dict_with_descr(entries)
     glossary_str = make_glossary(descriptions)
-    print(glossary_str)
+    with open('glossary_data.md', 'w') as _f:
+        _f.write(glossary_str)
 
 
 if __name__ == "__main__":
@@ -338,8 +339,7 @@ DeadCatBounce
         Dead cat bounce is a small, brief recovery in the price of a declining stock.
 
 DebtToEquity
-        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its 
-assets relative to the value of shareholders' equity.
+        The debt-to-equity (D/E) ratio indicates how much debt a company is using to finance its assets relative to the value of shareholders' equity.
 \`\`\`
 ```
 
