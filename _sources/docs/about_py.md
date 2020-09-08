@@ -132,3 +132,8 @@ It\'s either the dominant player or a major player in
 -   [meteorology](https://pypi.org/project/meteorology/)
 
 Its popularity in economics is also beginning to rise.
+
+```{bibliography} ../_bibliography/references.bib
+:style: unsrt
+:filter: docname in docnames
+```
