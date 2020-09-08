@@ -12,7 +12,7 @@
           title: Performance analyze as of 06/01/2020
         - file: notebooks/analyze/RISK_06-05-2020
           title: Risk Analyze 06/05/2020
-    - file: docs/ch4_parameters
+    - file: docs/ch4_parasmeters
     - file: notebooks/references/ReadMe
       sections:
         - file: notebooks/references/Returns
@@ -21,6 +21,8 @@
           title: Weights Generation
         - file: notebooks/references/Performance
           title: Performance
+    - file: docs/glossary
+      title: Glossary
 
 
 - part: Legacy Content
