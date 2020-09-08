@@ -39,3 +39,5 @@ with_df = df[df.Activity == "Withdrawals & De-registrations"]
 total = deposit_df['Value'].sum() + with_df['Value'].sum()
 print(total)
 ```
+
+% Continue on with pandas examples
