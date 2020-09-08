@@ -7,6 +7,7 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
+
 ---
 
 (trading_rules)=
@@ -57,6 +58,7 @@ protect themselves against future price gains.
 {cite}`book:2401727`
 
 #### Things to remember when buying stocks
+
 
 
 ```{caution}
