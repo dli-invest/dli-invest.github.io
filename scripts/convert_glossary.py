@@ -1,5 +1,7 @@
 """
 Converts a tex glossary into a format jupyterbook can understand
+
+Extended from https://tex.stackexchange.com/questions/529971/how-do-i-sort-all-of-the-glossary-entries-in-a-tex-file
 """
 
 import argparse
@@ -104,9 +106,7 @@ def scan_file(fname):
 
 def sort_entries(source, *, label_sort=False):
     """
-    Sort all the entries in the source file and write them to the target file.
-
-    If target is None, the source file is backed up and target is set to source.
+    Sort all the entries in the source file and returns and dict
 
     Parameters
     ----------

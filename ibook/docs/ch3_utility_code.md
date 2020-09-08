@@ -18,6 +18,8 @@ Oftentimes, there is data available on the internet and/or in files in which you
 
 As someone who has gone through university using latex, it was only natural for me to want to convert content locked in pdf into formats useful to me.
 
+% Consider adding this code to appendix
+
 ```python
 """
 extractTables.py
