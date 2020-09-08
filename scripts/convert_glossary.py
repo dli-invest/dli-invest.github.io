@@ -155,7 +155,8 @@ def make_glossary(descriptions: dict):
     gloss_open = r"```{glossary}"
     gloss_end = r"```"
     body = ""
-    for desc_key in descriptions:
+    # sort keys first
+    for desc_key in sorted(descriptions.keys()):
         body = body + f"{desc_key}\n\t{descriptions[desc_key]}"
         body = body + "\n\n"
     return f"{gloss_open}\n{body}\n{gloss_end}"
