@@ -13,3 +13,4 @@ dependencies:
     - mlfinlab==0.12.3
     - sympy
     - mplfinance
+    - yfinance
