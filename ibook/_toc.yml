@@ -13,6 +13,7 @@
         - file: notebooks/analyze/RISK_06-05-2020
           title: Risk Analyze 06/05/2020
     - file: docs/ch4_parameters
+    - file: docs/ch5_afterthoughts
     - file: notebooks/references/ReadMe
       sections:
         - file: notebooks/references/Returns
