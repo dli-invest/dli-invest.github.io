@@ -1,6 +1,6 @@
 - file: ReadMe
 
-# Eventually sergregate the code and the stock advice
+
 - part: Custom Content
   chapters:
     - file: docs/introduction
