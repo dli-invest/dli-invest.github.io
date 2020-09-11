@@ -120,7 +120,7 @@ jobs:
         path: dist
     - name: Gzip files
       run: |
-        zip --junk-paths my-artifact dist
+        zip -r my-artifact dist
         ls
     - name: Create release
       id: create_release
@@ -140,5 +140,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
         asset_path: ./my-artifact
-        asset_name: test artifact
+        asset_name: test_artifact
         asset_content_type: application/zip
