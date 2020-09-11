@@ -136,9 +136,6 @@ jobs:
       uses: Roang-zero1/github-upload-release-artifacts-action@master
       with:
         args:
-          - dist
-          - dist/book.pdf
-          - dist/html
-          - dist/latex
+          - dist/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
