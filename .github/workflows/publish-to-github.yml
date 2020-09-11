@@ -74,13 +74,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-      
         uses: actions/checkout@v2
         with:
           persist-credentials: false
 
       - name: Setup Miniconda
-
         uses: goanpeca/setup-miniconda@v1
         with:
           auto-update-conda: true
@@ -89,16 +87,12 @@ jobs:
           python-version: 3.7
           environment-file: environment.yml
           activate-environment: qe-mini-example
-
       - name: Install jupyter_book
-
         shell: bash -l {0}
         run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
-
       - name: Build IBook
         shell: bash -l {0}
         run: jb build ibook/
-
       - uses: actions/upload-artifact@v2
         with:
           name: html_files
@@ -109,25 +103,21 @@ jobs:
     needs: [build-pdf, build-html]
     steps:
     - uses: actions/checkout@master
-
     - name: Download html
       uses: actions/download-artifact@v2
       with:
         name: html_files
         path: dist/html
-
     - name: Download Latex
       uses: actions/download-artifact@v2
       with:
         name: tex_files
         path: dist/latex
-
     - name: Download Book Pdf
       uses: actions/download-artifact@v2
       with:
         name: book_pdf
         path: dist
-
     - name: Create release
       uses: Roang-zero1/github-create-release-action@master
       env:
@@ -136,6 +126,7 @@ jobs:
       uses: Roang-zero1/github-upload-release-artifacts-action@master
       with:
         args:
-          - dist/
+        - dist/
+        - dist/latex
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
