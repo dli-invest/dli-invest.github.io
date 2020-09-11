@@ -1,0 +1,145 @@
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - release/alpha
+    tags:        
+      - '*'          
+      - '**'
+
+name: Publish Book To Github
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install Fonts
+        run: |
+          sudo apt-get install -y fonts-liberation
+          sudo apt-get install -y fonts-cmu
+      - name: TexLive Cache
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: /tmp/texlive
+          key: cache-texlive
+      - name: Install & Update TexLive
+        shell: bash -l {0}
+        run: |
+          bash scripts/install_latex.sh
+          echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
+          source ~/.bash_profile
+          xelatex --version
+
+      - name: Setup Miniconda
+        uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          auto-activate-base: false
+          miniconda-version: 'latest'
+          python-version: 3.7
+          environment-file: environment.yml
+          activate-environment: qe-mini-example
+
+      - name: Install jupyter_book
+        shell: bash -l {0}
+        run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+
+      - name: Build Book
+        shell: bash -l {0}
+        run: |
+          echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
+          source ~/.bash_profile
+          jb build ibook/ --builder pdflatex
+          jb build ibook/ --builder latex
+          ls ibook/_build
+          ls ibook/_build/latex
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: book_pdf
+          path: ibook/_build/latex/book.pdf
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: tex_files
+          path: ibook/_build/latex/
+
+  build-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+      
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Setup Miniconda
+
+        uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          auto-activate-base: false
+          miniconda-version: 'latest'
+          python-version: 3.7
+          environment-file: environment.yml
+          activate-environment: qe-mini-example
+
+      - name: Install jupyter_book
+
+        shell: bash -l {0}
+        run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+
+      - name: Build IBook
+        shell: bash -l {0}
+        run: jb build ibook/
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: html_files
+          path: ibook/_build/html
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [build-pdf, build-html]
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Download html
+      uses: actions/download-artifact@v2
+      with:
+        name: html_files
+        path: dist/html
+
+    - name: Download Latex
+      uses: actions/download-artifact@v2
+      with:
+        name: tex_files
+        path: dist/latex
+
+    - name: Download Book Pdf
+      uses: actions/download-artifact@v2
+      with:
+        name: book_pdf
+        path: dist
+
+    - name: Create release
+      uses: Roang-zero1/github-create-release-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create GitHub release
+      uses: Roang-zero1/github-upload-release-artifacts-action@master
+      with:
+        args:
+        - dist/**
+        - dist/book.pdf
+        - dist/html
+        - dist/latex
+        - dist/**/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
