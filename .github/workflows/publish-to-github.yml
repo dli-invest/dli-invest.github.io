@@ -136,7 +136,7 @@ jobs:
       uses: Roang-zero1/github-upload-release-artifacts-action@master
       with:
         args:
-          - dist/
+          - dist
           - dist/book.pdf
           - dist/html
           - dist/latex
