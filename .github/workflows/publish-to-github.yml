@@ -133,7 +133,7 @@ jobs:
         prerelease: false
 
     - name: Upload Files
-      id: upload-release-asset 
+      id: upload-files
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -144,7 +144,7 @@ jobs:
         asset_content_type: application/zip
 
     - name: Upload Book
-      id: upload-release-asset 
+      id: upload-book
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
