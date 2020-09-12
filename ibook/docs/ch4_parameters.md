@@ -51,3 +51,13 @@ kernelspec:
 Other important terms include {term}`DeadCatBounce`.
 
 In addition there are certain quality factors that indicate a company will perform well. For example, they are cash flow positive and no longer need to dilute shareholder value by selling sells. This may indicate they have low finance risk and will not go bankrupt.
+
+|Factor                |Description                                                                                                                             |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+|Asset turnover        |This factor measures how efficiently a company uses its assets, which require capital, to produce revenue and is calculated by dividing sales by total assets. A higher turnover is better.|
+|Asset turnover 12-month change|This factor measures a change in management's efficiency in using assets to produce revenue over the last year. Stocks with the highest level of efficiency improvements are typically expected to outperform.|
+|Current ratio         |The current ratio is a liquidity metric that measures a company's ability to pay short-term obligations. It compares a company's current assets to its current liabilities, and a higher current ratio is better from a quality perspective.|
+|Interest coverage     |This factor measures how easily a company will be able to pay interest on its debt. It is calculated by dividing a company's earnings before interest and taxes (EBIT) by its interest expense. A higher ratio is desirable.|
+|Leverage              |A firm with significantly more debt than equity is considered to be highly leveraged. The debt-to-equity ratio is typically inversely related to prospects, with lower leverage being better.|
+|Payout ratio          |The share of earnings paid out in dividends to shareholders. Stocks with higher payout ratios are ranked higher.                        |
+|Return on equity (ROE)|ROE is computed as the ratio of net income to shareholders' equity. Equities with higher historical returns on equity are ranked higher.|
