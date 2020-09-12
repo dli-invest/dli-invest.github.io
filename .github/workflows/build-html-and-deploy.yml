@@ -33,6 +33,10 @@ jobs:
         shell: bash -l {0}
         run: jb build ibook/
 
+      - name: Add adsense
+        shell: bash -l {0}
+        run: chmod +x scripts/insert_adsense.sh && scripts/insert_adsense.sh
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
