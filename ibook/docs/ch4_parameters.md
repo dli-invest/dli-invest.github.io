@@ -48,4 +48,6 @@ kernelspec:
     +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Other important terms include {term}`DeadCatBounce`
+Other important terms include {term}`DeadCatBounce`.
+
+In addition there are certain quality factors that indicate a company will perform well. For example, they are cash flow positive and no longer need to dilute shareholder value by selling sells. This may indicate they have low finance risk and will not go bankrupt.
