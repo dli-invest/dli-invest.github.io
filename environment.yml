@@ -10,5 +10,5 @@ dependencies:
   - matplotlib=3.2.1
   - pip:
     - jupyter-book
-    - mlfinlab==0.12.3
+    - mlfinlab==0.13.4
     - sympy
