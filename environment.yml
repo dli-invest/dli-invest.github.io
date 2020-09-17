@@ -12,3 +12,5 @@ dependencies:
     - jupyter-book
     - mlfinlab==0.13.4
     - sympy
+    - mplfinance
+    - yfinance
