@@ -1,0 +1,155 @@
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - release/alpha
+    tags:        
+      - '*'          
+      - '**'
+
+name: Publish Book To Github
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install Fonts
+        run: |
+          sudo apt-get install -y fonts-liberation
+          sudo apt-get install -y fonts-cmu
+      - name: TexLive Cache
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: /tmp/texlive
+          key: cache-texlive
+      - name: Install & Update TexLive
+        shell: bash -l {0}
+        run: |
+          bash scripts/install_latex.sh
+          echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
+          source ~/.bash_profile
+          xelatex --version
+
+      - name: Setup Miniconda
+        uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          auto-activate-base: false
+          miniconda-version: 'latest'
+          python-version: 3.7
+          environment-file: environment.yml
+          activate-environment: qe-mini-example
+
+      - name: Install jupyter_book
+        shell: bash -l {0}
+        run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+
+      - name: Build Book
+        shell: bash -l {0}
+        run: |
+          echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
+          source ~/.bash_profile
+          jb build ibook/ --builder pdflatex
+          jb build ibook/ --builder latex
+          ls ibook/_build
+          ls ibook/_build/latex
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: book_pdf
+          path: ibook/_build/latex/book.pdf
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: tex_files
+          path: ibook/_build/latex/
+
+  build-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Setup Miniconda
+        uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          auto-activate-base: false
+          miniconda-version: 'latest'
+          python-version: 3.7
+          environment-file: environment.yml
+          activate-environment: qe-mini-example
+      - name: Install jupyter_book
+        shell: bash -l {0}
+        run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
+      - name: Build IBook
+        shell: bash -l {0}
+        run: jb build ibook/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: html_files
+          path: ibook/_build/html
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [build-pdf, build-html]
+    steps:
+    - uses: actions/checkout@master
+    - name: Download html
+      uses: actions/download-artifact@v2
+      with:
+        name: html_files
+        path: dist/html
+    - name: Download Latex
+      uses: actions/download-artifact@v2
+      with:
+        name: tex_files
+        path: dist/latex
+    - name: Download Book Pdf
+      uses: actions/download-artifact@v2
+      with:
+        name: book_pdf
+        path: dist
+    - name: Gzip files
+      run: |
+        zip -r publish_files dist
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Files
+      id: upload-files
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./publish_files.zip
+        asset_name: book_files.zip
+        asset_content_type: application/zip
+
+    - name: Upload Book
+      id: upload-book
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./dist/book.pdf
+        asset_name: book.pdf
+        asset_content_type: application/pdf

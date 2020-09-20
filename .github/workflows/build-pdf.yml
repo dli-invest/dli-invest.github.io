@@ -48,14 +48,20 @@ jobs:
         shell: bash -l {0}
         run: pip install git+https://github.com/ExecutableBookProject/jupyter-book.git@master
 
-      - name: Build QuantEcon Mini Example
+      - name: Build Book
         shell: bash -l {0}
         run: |
           echo 'export PATH=/tmp/texlive/bin/x86_64-linux:$PATH' >> ~/.bash_profile
           source ~/.bash_profile
           jb build ibook/ --builder pdflatex
+          jb build ibook/ --builder latex
 
       - uses: actions/upload-artifact@v2
         with:
           name: pdf
           path: ibook/_build/latex/book.pdf
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: tex_file
+          path: ibook/_build/latex/
