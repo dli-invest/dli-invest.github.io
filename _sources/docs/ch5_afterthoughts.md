@@ -46,3 +46,21 @@ The first few purchases on August 26 and September 03 were profitable, after the
 My brief calculations of the covid-19 test selling well make me think if they sell well (80 \%), the stock will continue the rise.
 
 The combination of covid-19 increasing, the need to know if you were previously infected for health care workers perhaps even vaccines, make me think that the stock will go up in the short term in the next few months.
+
+**9/13/2020**
+KUU MIGHT BEINSOVLENT
+Wait on BYL for 5G
+
+Think about VIS.V if it makes 334,250 as projected in Q4
+
+The stocks I looked at recently that were interesting as of 15/09/2020
+
+| Ticker   | Long Name                       |
+| :---     | ---:                            |
+| PAI      | Predictiv AI Inc.               |
+| RW       | RenoWorks Software Inc          |
+| DFT      | Dimension Five Technologies Inc |
+| KUU      | Kuuhubb Inc                     |
+| BYL      | Baylin Technology Inc           |
+| CMC      | Cielo Waste Solutions Inc       |
+
