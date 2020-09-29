@@ -1,0 +1,97 @@
+Traceback (most recent call last):
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/nbclient/client.py", line 1082, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/nbclient/client.py", line 536, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/nbclient/client.py", line 827, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/nbclient/client.py", line 735, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Grouped Workers", show=False, direction="TB"):
+    ELB("lb") >> [EC2("worker1"),
+                  EC2("worker2"),
+                  EC2("worker3"),
+                  EC2("worker4"),
+                  EC2("worker5")] >> RDS("events")
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/graphviz/backend.py[0m in [0;36mrun[0;34m(cmd, input, capture_output, check, quiet, **kwargs)[0m
+[1;32m    158[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 159[0;31m         [0mproc[0m [0;34m=[0m [0msubprocess[0m[0;34m.[0m[0mPopen[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0mstartupinfo[0m[0;34m=[0m[0mget_startupinfo[0m[0;34m([0m[0;34m)[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    160[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/subprocess.py[0m in [0;36m__init__[0;34m(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)[0m
+[1;32m    799[0m                                 [0merrread[0m[0;34m,[0m [0merrwrite[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 800[0;31m                                 restore_signals, start_new_session)
+[0m[1;32m    801[0m         [0;32mexcept[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/subprocess.py[0m in [0;36m_execute_child[0;34m(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)[0m
+[1;32m   1550[0m                             [0merr_msg[0m [0;34m+=[0m [0;34m': '[0m [0;34m+[0m [0mrepr[0m[0;34m([0m[0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1551[0;31m                     [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merrno_num[0m[0;34m,[0m [0merr_msg[0m[0;34m,[0m [0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1552[0m                 [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merr_msg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'dot': 'dot'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mExecutableNotFound[0m                        Traceback (most recent call last)
+[0;32m<ipython-input-3-60ab9424f683>[0m in [0;36m<module>[0;34m[0m
+[1;32m      9[0m                   [0mEC2[0m[0;34m([0m[0;34m"worker3"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     10[0m                   [0mEC2[0m[0;34m([0m[0;34m"worker4"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 11[0;31m                   EC2("worker5")] >> RDS("events")
+[0m
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36m__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
+[1;32m    145[0m [0;34m[0m[0m
+[1;32m    146[0m     [0;32mdef[0m [0m__exit__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mexc_type[0m[0;34m,[0m [0mexc_value[0m[0;34m,[0m [0mtraceback[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 147[0;31m         [0mself[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    148[0m         [0;31m# Remove the graphviz file leaving only the image.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    149[0m         [0mos[0m[0;34m.[0m[0mremove[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36mrender[0;34m(self)[0m
+[1;32m    187[0m [0;34m[0m[0m
+[1;32m    188[0m     [0;32mdef[0m [0mrender[0m[0;34m([0m[0mself[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 189[0;31m         [0mself[0m[0;34m.[0m[0mdot[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0moutformat[0m[0;34m,[0m [0mview[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mshow[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    190[0m [0;34m[0m[0m
+[1;32m    191[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/graphviz/files.py[0m in [0;36mrender[0;34m(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view)[0m
+[1;32m    207[0m         rendered = backend.render(self._engine, format, filepath,
+[1;32m    208[0m                                   [0mrenderer[0m[0;34m=[0m[0mrenderer[0m[0;34m,[0m [0mformatter[0m[0;34m=[0m[0mformatter[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 209[0;31m                                   quiet=quiet)
+[0m[1;32m    210[0m [0;34m[0m[0m
+[1;32m    211[0m         [0;32mif[0m [0mcleanup[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/graphviz/backend.py[0m in [0;36mrender[0;34m(engine, format, filepath, renderer, formatter, quiet)[0m
+[1;32m    204[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    205[0m         [0mcwd[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 206[0;31m     [0mrun[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0mcapture_output[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0mcwd[0m[0;34m=[0m[0mcwd[0m[0;34m,[0m [0mcheck[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0mquiet[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    207[0m     [0;32mreturn[0m [0mrendered[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    208[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/graphviz/backend.py[0m in [0;36mrun[0;34m(cmd, input, capture_output, check, quiet, **kwargs)[0m
+[1;32m    160[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    161[0m         [0;32mif[0m [0me[0m[0;34m.[0m[0merrno[0m [0;34m==[0m [0merrno[0m[0;34m.[0m[0mENOENT[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 162[0;31m             [0;32mraise[0m [0mExecutableNotFound[0m[0;34m([0m[0mcmd[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    163[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    164[0m             [0;32mraise[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mExecutableNotFound[0m: failed to execute ['dot', '-Tpng', '-O', 'grouped_workers'], make sure the Graphviz executables are on your systems' PATH
+ExecutableNotFound: failed to execute ['dot', '-Tpng', '-O', 'grouped_workers'], make sure the Graphviz executables are on your systems' PATH
+
