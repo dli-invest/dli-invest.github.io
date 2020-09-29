@@ -64,3 +64,13 @@ The stocks I looked at recently that were interesting as of 15/09/2020
 | BYL      | Baylin Technology Inc           |
 | CMC      | Cielo Waste Solutions Inc       |
 
+
+
+### Cloud Archtecture V0
+
+As for sept 28 2020
+
+```{figure} /_static/diagrams/V0stockarch.png
+```
+
+my basic cloud archtecture was based on gcp. Primarily using google cloud build for automated deployed and the various serverless compute options. Aimed to stay within free tier but sometimes I paid cash for this (TODO make a blog post about my stocks hosting stuff).
