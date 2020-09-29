@@ -66,7 +66,7 @@ The stocks I looked at recently that were interesting as of 15/09/2020
 
 
 
-### Cloud Archtecture V0
+### Cloud Architecture V0
 
 As for sept 28 2020
 
