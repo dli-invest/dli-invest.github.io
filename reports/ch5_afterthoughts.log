@@ -72,6 +72,6 @@ mpf.plot(
 [0m[1;32m    172[0m     [0md2[0m [0;34m=[0m [0mdtseries[0m[0;34m.[0m[0mloc[0m[0;34m[[0m[0;34m:[0m[0mdate[0m[0;34m][0m[0;34m.[0m[0mindex[0m[0;34m[[0m[0;34m-[0m[0;36m1[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
 [1;32m    173[0m     [0;31m# If there are duplicate dates in the series, for example in a renko plot[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mValueError[0m: User specified line date "08-26-2020" is before (less than) range of plotted data (2020-08-28 00:00:00 to 2020-09-28 00:00:00).
-ValueError: User specified line date "08-26-2020" is before (less than) range of plotted data (2020-08-28 00:00:00 to 2020-09-28 00:00:00).
+[0;31mValueError[0m: User specified line date "08-26-2020" is before (less than) range of plotted data (2020-08-31 00:00:00 to 2020-09-29 00:00:00).
+ValueError: User specified line date "08-26-2020" is before (less than) range of plotted data (2020-08-31 00:00:00 to 2020-09-29 00:00:00).
 
