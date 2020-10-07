@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6e06a8c598f523c6e929",
-    "url": "/css/app.e8e3843f.css"
+    "revision": "d4d1d039032c2d0ef122",
+    "url": "/css/app.e90a83a1.css"
   },
   {
     "revision": "015f837ed15155347151",
@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/undraw_investment_xv9d.d197061a.svg"
   },
   {
-    "revision": "86261e47cc05d787dc5d92c9035f4cbc",
+    "revision": "91ff89c861dfdc13f263c83417c351d5",
     "url": "/index.html"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/about.7bb07914.js"
   },
   {
-    "revision": "6e06a8c598f523c6e929",
-    "url": "/js/app.f809a11e.js"
+    "revision": "d4d1d039032c2d0ef122",
+    "url": "/js/app.64e4122d.js"
   },
   {
     "revision": "015f837ed15155347151",
