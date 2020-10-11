@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "326be7a7c53d4036d476",
+    "revision": "e72c0bb7cead9fc79ee3",
     "url": "/css/about.ab9452d4.css"
   },
   {
-    "revision": "8c72ed95df331940efb5",
-    "url": "/css/app.5e325dae.css"
+    "revision": "f0dfbcc204db41d056f9",
+    "url": "/css/app.7f6dd510.css"
   },
   {
-    "revision": "a39e32db50920499d330",
-    "url": "/css/chunk-vendors.23b9afb7.css"
+    "revision": "8ef37c9d100582e399b1",
+    "url": "/css/chunk-vendors.b56bbe06.css"
   },
   {
     "revision": "159263bf4976843830365d52d1f94fba",
@@ -36,28 +36,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/primeicons.4e915114.svg"
   },
   {
+    "revision": "d489386a90e5e256c332056323fc9994",
+    "url": "/img/undraw_Artificial_intelligence_re_enpp.d489386a.svg"
+  },
+  {
     "revision": "d197061a49bedcf7b535e92363ec3fdd",
     "url": "/img/undraw_investment_xv9d.d197061a.svg"
+  },
+  {
+    "revision": "a7f9007647dcec4ee57ac9c8048c7d24",
+    "url": "/img/undraw_project_completed_w0oq.a7f90076.svg"
   },
   {
     "revision": "b3839a7cc278c023b86ad4597e70b137",
     "url": "/img/waves.b3839a7c.svg"
   },
   {
-    "revision": "f8ed81a01ea7b78ebdb51f798c287eda",
+    "revision": "d361bcfc94525106a4d8cd609254c9ae",
     "url": "/index.html"
   },
   {
-    "revision": "326be7a7c53d4036d476",
-    "url": "/js/about.f9c10be4.js"
+    "revision": "e72c0bb7cead9fc79ee3",
+    "url": "/js/about.84e25a72.js"
   },
   {
-    "revision": "8c72ed95df331940efb5",
-    "url": "/js/app.93a8e230.js"
+    "revision": "f0dfbcc204db41d056f9",
+    "url": "/js/app.c327c246.js"
   },
   {
-    "revision": "a39e32db50920499d330",
-    "url": "/js/chunk-vendors.492ae6f4.js"
+    "revision": "8ef37c9d100582e399b1",
+    "url": "/js/chunk-vendors.a9def2c2.js"
   },
   {
     "revision": "db31bf4807f47c668280a84a26a5bfcf",
