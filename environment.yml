@@ -10,7 +10,7 @@ dependencies:
   - matplotlib=3.2.1
   - pip:
     - jupyter-book
-    - mlfinlab==0.13.4
+    - mlfinlab==0.14.1
     - sympy
     - mplfinance
     - yfinance

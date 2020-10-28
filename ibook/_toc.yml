@@ -22,6 +22,7 @@
           title: Weights Generation
         - file: notebooks/references/Performance
           title: Performance
+    - file: docs/notes_from_courses
     - file: docs/glossary
       title: Glossary
 

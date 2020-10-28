@@ -25,6 +25,28 @@ One of my early purchase as an investor has been victory square.
 
 ## Stock Purchases Thoughts
 
+**10/28/2020**
+
+Stock market crashing dont feel like selling
+
+CMC.CN - Needs to hit targets and shit the facilities built
+PKK.CN - main focus on china not covid center spot
+IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
+MTRX.CN - contact tracing, if adopted should do well
+ART.V - business does well in covid19
+
+Can trim some loop on the uptick 10k shares, same with cielo, 40k shares
+
+**10/23/2020**
+Peak to aphria
+
+shouldn't have fucking sold
+
+Peak still growing
+
+Pot not tech, can't grow fast
+aphria thoughts, if biden wins, harris pot decriminalization in america, temp surge, dump aphria, buy arht?
+
 **10/11/2020**
 
 Doubling down on peak as some guy in ceo.ca/pkk posted an article about china growing. They have control of the virus, it makes sense to invest in a country that is growing that is not in the state, espeically if they believe they are severely undervalued with high margins and the opportunity to give a dividend.
@@ -32,8 +54,6 @@ Doubling down on peak as some guy in ceo.ca/pkk posted an article about china gr
 In addition, sheldon has a position in pkk.
 
 Cielo seems to be doing well, if production numbers are 1000 L/h (pretty high), I would expect 100x return sometime in the future. After all, they have done the work to start growing like crazy as plastic production is projected to increase and there is no solution as good as cielo at the moment.
-
-**09/11/2020**
 
 **09/13/2020**
 KUU MIGHT BEINSOVLENT
