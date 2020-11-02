@@ -81,7 +81,7 @@ import matplotlib.dates as mdates
 import mplfinance as mpf
 
 vst = yf.Ticker("VST.CN")
-data = vst.history(interval="1d", start_date="08-08-2020", end_date="09-08-2020")
+data = vst.history(interval="1d", start="08-08-2020", end="09-08-2020")
 mpf.plot(
     data,
     type="candle",
