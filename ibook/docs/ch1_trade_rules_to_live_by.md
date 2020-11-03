@@ -16,6 +16,9 @@ kernelspec:
 These are just quotes from legendary investors like Ray Dalio and Warren Buffett, I could rewrite this or take this section out if I publish this book and sell it.
 
 
+```{tip}
+
+
 #### Key Thoughts from Intelligent Investor
 
 * A stock is not just a ticker symbol or an electronic blip; it is an
