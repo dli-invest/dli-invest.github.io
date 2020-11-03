@@ -17,7 +17,8 @@ These are just quotes from legendary investors like Ray Dalio and Warren Buffett
 
 
 ```{tip}
-
+“If you don’t find a way to make money while you sleep, you will work until you die” — Warren Buffet
+```
 
 #### Key Thoughts from Intelligent Investor
 
