@@ -20,8 +20,60 @@ One of my early purchase as an investor has been victory square.
 3. Is this a good time to buy this stock and why (good news not realised, or no interest)
 4. Do I expect the stock to go up
 5. Is this stock industry going to be useful and do well
-6. Does the stock have good managemen
+6. Does the stock have good management.
 
+
+## Stock Purchases Thoughts
+
+**10/28/2020**
+
+Stock market crashing dont feel like selling
+
+CMC.CN - Needs to hit targets and shit the facilities built
+PKK.CN - main focus on china not covid center spot
+IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
+MTRX.CN - contact tracing, if adopted should do well
+ART.V - business does well in covid19
+
+Can trim some loop on the uptick 10k shares, same with cielo, 40k shares
+
+**10/23/2020**
+Peak to aphria
+
+shouldn't have fucking sold
+
+Peak still growing
+
+Pot not tech, can't grow fast
+aphria thoughts, if biden wins, harris pot decriminalization in america, temp surge, dump aphria, buy arht?
+
+**10/11/2020**
+
+Doubling down on peak as some guy in ceo.ca/pkk posted an article about china growing. They have control of the virus, it makes sense to invest in a country that is growing that is not in the state, espeically if they believe they are severely undervalued with high margins and the opportunity to give a dividend.
+
+In addition, sheldon has a position in pkk.
+
+Cielo seems to be doing well, if production numbers are 1000 L/h (pretty high), I would expect 100x return sometime in the future. After all, they have done the work to start growing like crazy as plastic production is projected to increase and there is no solution as good as cielo at the moment.
+
+**09/13/2020**
+KUU MIGHT BEINSOVLENT
+Wait on BYL for 5G
+
+Think about VIS.V if it makes 334,250 as projected in Q4
+
+The stocks I looked at recently that were interesting as of 09/15/2020
+
+| Ticker   | Long Name                       |
+| :---     | ---:                            |
+| PAI      | Predictiv AI Inc.               |
+| RW       | RenoWorks Software Inc          |
+| DFT      | Dimension Five Technologies Inc |
+| KUU      | Kuuhubb Inc                     |
+| BYL      | Baylin Technology Inc           |
+| CMC      | Cielo Waste Solutions Inc       |
+
+
+**09/08/2020**
 ```{code-cell} ipython3
 import yfinance as yf
 import matplotlib.pyplot as plt
@@ -29,7 +81,7 @@ import matplotlib.dates as mdates
 import mplfinance as mpf
 
 vst = yf.Ticker("VST.CN")
-data = vst.history(interval="1d", start_date="08-08-2020", end_date="09-08-2020")
+data = vst.history(interval="1d", start="08-08-2020", end="09-08-2020")
 mpf.plot(
     data,
     type="candle",
@@ -47,22 +99,6 @@ My brief calculations of the covid-19 test selling well make me think if they se
 
 The combination of covid-19 increasing, the need to know if you were previously infected for health care workers perhaps even vaccines, make me think that the stock will go up in the short term in the next few months.
 
-**9/13/2020**
-KUU MIGHT BEINSOVLENT
-Wait on BYL for 5G
-
-Think about VIS.V if it makes 334,250 as projected in Q4
-
-The stocks I looked at recently that were interesting as of 15/09/2020
-
-| Ticker   | Long Name                       |
-| :---     | ---:                            |
-| PAI      | Predictiv AI Inc.               |
-| RW       | RenoWorks Software Inc          |
-| DFT      | Dimension Five Technologies Inc |
-| KUU      | Kuuhubb Inc                     |
-| BYL      | Baylin Technology Inc           |
-| CMC      | Cielo Waste Solutions Inc       |
 
 
 

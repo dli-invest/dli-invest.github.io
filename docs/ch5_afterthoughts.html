@@ -7,7 +7,7 @@
 <script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <title>Afterthoughts &#8212; Investing Reference Book</title>
     
-  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -130,6 +130,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../notebooks/references/ReadMe.html">
    Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes_from_courses.html">
+   Course Notes
   </a>
  </li>
  <li class="toctree-l1">
@@ -241,7 +246,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -279,9 +285,16 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cloud-architecture-v0">
-   Cloud Architecture V0
+  <a class="reference internal nav-link" href="#stock-purchases-thoughts">
+   Stock Purchases Thoughts
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cloud-architecture-v0">
+     Cloud Architecture V0
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -305,81 +318,34 @@
 <li><p>Is this a good time to buy this stock and why (good news not realised, or no interest)</p></li>
 <li><p>Do I expect the stock to go up</p></li>
 <li><p>Is this stock industry going to be useful and do well</p></li>
-<li><p>Does the stock have good managemen</p></li>
+<li><p>Does the stock have good management.</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
-<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
-
-<span class="n">vst</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;VST.CN&quot;</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">vst</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;08-08-2020&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;09-08-2020&quot;</span><span class="p">)</span>
-<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">data</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;candle&quot;</span><span class="p">,</span>
-    <span class="n">mav</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Victory Square Purchases Dates&quot;</span><span class="p">,</span>
-    <span class="n">vlines</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-        <span class="n">vlines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;08-26-2020&quot;</span><span class="p">,</span> <span class="s2">&quot;09-03-2020&quot;</span><span class="p">,</span> <span class="s2">&quot;09-08-2020&quot;</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-    <span class="p">),</span>
-<span class="p">)</span>
-</pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="n">de8917a3bac</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Victory Square Purchases Dates&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">vlines</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-<span class="ne">---&gt; </span><span class="mi">14</span>         <span class="n">vlines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;08-26-2020&quot;</span><span class="p">,</span> <span class="s2">&quot;09-03-2020&quot;</span><span class="p">,</span> <span class="s2">&quot;09-08-2020&quot;</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="p">)</span>
-
-<span class="nn">/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/mplfinance/plotting.py</span> in <span class="ni">plot</span><span class="nt">(data, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">459</span>     <span class="n">line_collections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_construct_aline_collections</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;alines&#39;</span><span class="p">],</span> <span class="n">dtix</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">460</span>     <span class="n">line_collections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_construct_hline_collections</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;hlines&#39;</span><span class="p">],</span> <span class="n">minx</span><span class="p">,</span> <span class="n">maxx</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">461</span>     <span class="n">line_collections</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_construct_vline_collections</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;vlines&#39;</span><span class="p">],</span> <span class="n">dtix</span><span class="p">,</span> <span class="n">miny</span><span class="p">,</span> <span class="n">maxy</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">462</span>     <span class="n">tlines</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;tlines&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tlines</span><span class="p">,(</span><span class="nb">list</span><span class="p">,</span><span class="nb">tuple</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">([</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span><span class="nb">dict</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">tlines</span><span class="p">]):</span>
-
-<span class="nn">/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/mplfinance/_utils.py</span> in <span class="ni">_construct_vline_collections</span><span class="nt">(vlines, dtix, miny, maxy)</span>
-<span class="g g-Whitespace">    </span><span class="mi">985</span>         <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">[(</span><span class="n">val</span><span class="p">,</span><span class="n">miny</span><span class="p">),(</span><span class="n">val</span><span class="p">,</span><span class="n">maxy</span><span class="p">)]</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">986</span> 
-<span class="ne">--&gt; </span><span class="mi">987</span>     <span class="n">lines</span> <span class="o">=</span> <span class="n">_convert_segment_dates</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">dtix</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">988</span> 
-<span class="g g-Whitespace">    </span><span class="mi">989</span>     <span class="n">lw</span> <span class="o">=</span> <span class="n">vconfig</span><span class="p">[</span><span class="s1">&#39;linewidths&#39;</span><span class="p">]</span>
-
-<span class="nn">/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/mplfinance/_utils.py</span> in <span class="ni">_convert_segment_dates</span><span class="nt">(segments, dtindex)</span>
-<span class="g g-Whitespace">    </span><span class="mi">207</span>         <span class="k">for</span> <span class="n">dt</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">208</span>             <span class="k">if</span> <span class="n">dtindex</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">209</span>                 <span class="n">date</span> <span class="o">=</span> <span class="n">_date_to_iloc</span><span class="p">(</span><span class="n">dtseries</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>             <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span>                 <span class="n">date</span> <span class="o">=</span> <span class="n">_date_to_mdate</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
-
-<span class="nn">/usr/share/miniconda3/envs/qe-mini-example/lib/python3.7/site-packages/mplfinance/_utils.py</span> in <span class="ni">_date_to_iloc</span><span class="nt">(dtseries, date)</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">d2s</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>         <span class="n">sdtrange</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dtseries</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; to &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">dtseries</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="ne">--&gt; </span><span class="mi">171</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;User specified line date &quot;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&quot; is before (less than) range of plotted data (&#39;</span><span class="o">+</span><span class="n">sdtrange</span><span class="o">+</span><span class="s1">&#39;).&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="n">d2</span> <span class="o">=</span> <span class="n">dtseries</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="n">date</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">173</span>     <span class="c1"># If there are duplicate dates in the series, for example in a renko plot</span>
-
-<span class="ne">ValueError</span>: User specified line date &quot;08-26-2020&quot; is before (less than) range of plotted data (2020-09-02 00:00:00 to 2020-10-02 00:00:00).
-</pre></div>
-</div>
-<img alt="../_images/ch5_afterthoughts_1_1.png" src="../_images/ch5_afterthoughts_1_1.png" />
-</div>
-</div>
-<p>The first few purchases on August 26 and September 03 were profitable, after the failed Sept 08 purchases and surprise drop I emailed the investor relations guy asking about india approval.</p>
-<p>My brief calculations of the covid-19 test selling well make me think if they sell well (80 %), the stock will continue the rise.</p>
-<p>The combination of covid-19 increasing, the need to know if you were previously infected for health care workers perhaps even vaccines, make me think that the stock will go up in the short term in the next few months.</p>
-<p><strong>9/13/2020</strong>
+<div class="section" id="stock-purchases-thoughts">
+<h2>Stock Purchases Thoughts<a class="headerlink" href="#stock-purchases-thoughts" title="Permalink to this headline">¶</a></h2>
+<p><strong>10/28/2020</strong></p>
+<p>Stock market crashing dont feel like selling</p>
+<p>CMC.CN - Needs to hit targets and shit the facilities built
+PKK.CN - main focus on china not covid center spot
+IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
+MTRX.CN - contact tracing, if adopted should do well
+ART.V - business does well in covid19</p>
+<p>Can trim some loop on the uptick 10k shares, same with cielo, 40k shares</p>
+<p><strong>10/23/2020</strong>
+Peak to aphria</p>
+<p>shouldn’t have fucking sold</p>
+<p>Peak still growing</p>
+<p>Pot not tech, can’t grow fast
+aphria thoughts, if biden wins, harris pot decriminalization in america, temp surge, dump aphria, buy arht?</p>
+<p><strong>10/11/2020</strong></p>
+<p>Doubling down on peak as some guy in ceo.ca/pkk posted an article about china growing. They have control of the virus, it makes sense to invest in a country that is growing that is not in the state, espeically if they believe they are severely undervalued with high margins and the opportunity to give a dividend.</p>
+<p>In addition, sheldon has a position in pkk.</p>
+<p>Cielo seems to be doing well, if production numbers are 1000 L/h (pretty high), I would expect 100x return sometime in the future. After all, they have done the work to start growing like crazy as plastic production is projected to increase and there is no solution as good as cielo at the moment.</p>
+<p><strong>09/13/2020</strong>
 KUU MIGHT BEINSOVLENT
 Wait on BYL for 5G</p>
 <p>Think about VIS.V if it makes 334,250 as projected in Q4</p>
-<p>The stocks I looked at recently that were interesting as of 15/09/2020</p>
+<p>The stocks I looked at recently that were interesting as of 09/15/2020</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p>Ticker</p></th>
@@ -407,14 +373,75 @@ Wait on BYL for 5G</p>
 </tr>
 </tbody>
 </table>
+<p><strong>09/08/2020</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
+
+<span class="n">vst</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;VST.CN&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">vst</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;08-08-2020&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;09-08-2020&quot;</span><span class="p">)</span>
+<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;candle&quot;</span><span class="p">,</span>
+    <span class="n">mav</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Victory Square Purchases Dates&quot;</span><span class="p">,</span>
+    <span class="n">vlines</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">vlines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;08-26-2020&quot;</span><span class="p">,</span> <span class="s2">&quot;09-03-2020&quot;</span><span class="p">,</span> <span class="s2">&quot;09-08-2020&quot;</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">c9422a58bfcd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">vst</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;VST.CN&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">data</span> <span class="o">=</span> <span class="n">vst</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;08-08-2020&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;09-08-2020&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">data</span><span class="p">,</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/yfinance/base.py</span> in <span class="ni">history</span><span class="nt">(self, period, interval, start, end, prepost, actions, auto_adjust, back_adjust, proxy, rounding, tz, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span>                 <span class="n">start</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">_time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">122</span>                     <span class="n">_time</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">start</span><span class="p">),</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)))</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span>             <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>                 <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">_time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/_strptime.py</span> in <span class="ni">_strptime_time</span><span class="nt">(data_string, format)</span>
+<span class="g g-Whitespace">    </span><span class="mi">569</span>     <span class="sd">&quot;&quot;&quot;Return a time struct based on the input string and the</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span><span class="sd">     format string.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">571</span>     <span class="n">tt</span> <span class="o">=</span> <span class="n">_strptime</span><span class="p">(</span><span class="n">data_string</span><span class="p">,</span> <span class="nb">format</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span>     <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">struct_time</span><span class="p">(</span><span class="n">tt</span><span class="p">[:</span><span class="n">time</span><span class="o">.</span><span class="n">_STRUCT_TM_ITEMS</span><span class="p">])</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span> 
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/_strptime.py</span> in <span class="ni">_strptime</span><span class="nt">(data_string, format)</span>
+<span class="g g-Whitespace">    </span><span class="mi">357</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">358</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;time data </span><span class="si">%r</span><span class="s2"> does not match format </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="ne">--&gt; </span><span class="mi">359</span>                          <span class="p">(</span><span class="n">data_string</span><span class="p">,</span> <span class="nb">format</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">360</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_string</span><span class="p">)</span> <span class="o">!=</span> <span class="n">found</span><span class="o">.</span><span class="n">end</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">361</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;unconverted data remains: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+
+<span class="ne">ValueError</span>: time data &#39;08-08-2020&#39; does not match format &#39;%Y-%m-%d&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first few purchases on August 26 and September 03 were profitable, after the failed Sept 08 purchases and surprise drop I emailed the investor relations guy asking about india approval.</p>
+<p>My brief calculations of the covid-19 test selling well make me think if they sell well (80 %), the stock will continue the rise.</p>
+<p>The combination of covid-19 increasing, the need to know if you were previously infected for health care workers perhaps even vaccines, make me think that the stock will go up in the short term in the next few months.</p>
 <div class="section" id="cloud-architecture-v0">
-<h2>Cloud Architecture V0<a class="headerlink" href="#cloud-architecture-v0" title="Permalink to this headline">¶</a></h2>
+<h3>Cloud Architecture V0<a class="headerlink" href="#cloud-architecture-v0" title="Permalink to this headline">¶</a></h3>
 <p>As for sept 28 2020</p>
 <div class="figure align-default">
 <img alt="../_images/v0stockarch.png" src="../_images/v0stockarch.png" />
 </div>
 <p>my basic cloud archtecture was based on gcp. Primarily using google cloud build for automated deployed and the various serverless compute options. Aimed to stay within free tier but sometimes I paid cash for this (TODO make a blog post about my stocks hosting stuff).</p>
+</div>
 </div>
 </div>
 
@@ -467,7 +494,7 @@ Wait on BYL for 5G</p>
     </div>
 
     
-  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     
