@@ -23,7 +23,7 @@ jobs:
           miniconda-version: 'latest'
           python-version: 3.7
           environment-file: environment.yml
-          activate-environment: qe-mini-example
+          activate-environment: investing_book
 
       - name: Install jupyter_book
         shell: bash -l {0}
