@@ -88,7 +88,7 @@ mpf.plot(
     mav=4,
     title="Victory Square Purchases Dates",
     vlines=dict(
-        vlines=["08-26-2020", "09-03-2020", "09-08-2020"], linewidths=(0.5, 0.5, 0.5)
+        vlines=["2020-08-26", "2020-09-03", "2020-09-08"], linewidths=(0.5, 0.5, 0.5)
     ),
 )
 ```
