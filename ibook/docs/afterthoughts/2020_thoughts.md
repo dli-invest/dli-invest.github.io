@@ -33,11 +33,11 @@ Split advice by year eventually
 
 Stock market crashing dont feel like selling
 
-- [x] CMC.CN - Needs to hit targets and shit the facilities built
-- [x] PKK.CN - main focus on china not covid center spot
-- [x] IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
-- [x] MTRX.CN - contact tracing, if adopted should do well
-- [x] ART.V - business does well in covid19
+- CMC.CN - Needs to hit targets and shit the facilities built
+- PKK.CN - main focus on china not covid center spot
+- IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
+- MTRX.CN - contact tracing, if adopted should do well
+- ART.V - business does well in covid19
 
 Can trim some loop on the uptick 10k shares, same with cielo, 40k shares
 
