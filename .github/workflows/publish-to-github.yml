@@ -37,14 +37,14 @@ jobs:
           xelatex --version
 
       - name: Setup Miniconda
-        uses: goanpeca/setup-miniconda@v1
+        uses: goanpeca/setup-miniconda@v1.7.0
         with:
           auto-update-conda: true
           auto-activate-base: false
           miniconda-version: 'latest'
           python-version: 3.7
           environment-file: environment.yml
-          activate-environment: qe-mini-example
+          activate-environment: investing_book
 
       - name: Install jupyter_book
         shell: bash -l {0}
