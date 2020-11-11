@@ -25,6 +25,21 @@ One of my early purchase as an investor has been victory square.
 
 ## Stock Purchases Thoughts
 
+**11/11/2020**
+
+MTRX loop insights - spiked to 0.50 - shouldn't have sold
+DCM - epic report good buy
+PKK - went down a bunch still a decent buy with a zack report at 3.8 USD - 5.0 CAd
+
+**11/09/2020**
+
+MTRX loop insights video mentioning pfizer, why the heck did I sell it. Was this a good idea? probably not.
+
+Bought DCM - should be up 10x and peak should be up 10 x.
+
+Diversification - perhaps should have just spent more money instead.
+
+Split advice by year eventually
 **10/28/2020**
 
 Stock market crashing dont feel like selling
@@ -102,7 +117,11 @@ The combination of covid-19 increasing, the need to know if you were previously 
 
 
 
+
 ### Cloud Architecture V0
+
+Make this seperate chapter 
+
 
 As for sept 28 2020
 
