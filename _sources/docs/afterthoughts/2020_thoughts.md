@@ -13,12 +13,12 @@ kernelspec:
 
 **11/11/2020**
 
-MTRX loop insights - spiked to 0.50 - shouldn't have sold
-DCM - epic report good buy
-PKK - went down a bunch still a decent buy with a zack report at 3.8 USD - 5.0 CAD
-ART - down should be knee jerk reaction
-BEE - should recover with other pandemic stocks  looking promising 100% retention must have good product and good peope
-CGX - sold cause movie theatre - day trade
+* MTRX loop insights - spiked to 0.50 - shouldn't have sold
+* DCM - epic report good buy
+* PKK - went down a bunch still a decent buy with a zack report at 3.8 USD - 5.0 CAD
+* ART - down should be knee jerk reaction
+* BEE - should recover with other pandemic stocks  looking promising 100% retention must have good product and good peope
+* CGX - sold cause movie theatre - day trade
 
 **11/09/2020**
 
@@ -33,11 +33,11 @@ Split advice by year eventually
 
 Stock market crashing dont feel like selling
 
-CMC.CN - Needs to hit targets and shit the facilities built
-PKK.CN - main focus on china not covid center spot
-IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
-MTRX.CN - contact tracing, if adopted should do well
-ART.V - business does well in covid19
+- [x] CMC.CN - Needs to hit targets and shit the facilities built
+- [x] PKK.CN - main focus on china not covid center spot
+- [x] IDK.CN - nav of 0.41 usually stocks trade 2x nav and pkk.cn + mtrx doing well this year
+- [x] MTRX.CN - contact tracing, if adopted should do well
+- [x] ART.V - business does well in covid19
 
 Can trim some loop on the uptick 10k shares, same with cielo, 40k shares
 
