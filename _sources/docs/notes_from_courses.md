@@ -25,7 +25,9 @@ the direction of a price spread between
 two instruments. These forecasts are based on an observed price response
 to factors that you have identified as
 statistically significant in predicting changes in
-an instrument's price. Mean reversion strategies
+an instrument's price. 
+
+Mean reversion strategies
 depend on the stability or stationarity of an asset's price or spread relative
 to another asset. When the price risk
 spread gets too high, it becomes more likely
@@ -44,21 +46,33 @@ wants to purchase an unusually large
 quantity of stock. Now use an execution
 strategy that enters the trades in a
 way that is supposed to break up and hide the order but which unintentionally
-signals search strategy. Sophisticated traders
+signals search strategy.
+
+ Sophisticated traders
 have their own algorithms which are able to detect
 these stealth orders. They're able to use
 this information to jump in front of
 the large orders, and profit by driving
 prices up ahead of a buy order or down
-ahead of a sell order. Spoofing is where traders
+ahead of a sell order. 
+
+% Add this definition to glossary
+Spoofing is where traders
 attempt to mislead other traders by submitting
 orders to the market, order book that they
-don't intend to execute. Say a trading group needs to sell a stock and wants to
+don't intend to execute.
+
+Say a trading group needs to sell a stock and wants to
 get a better price. They can enter temporary
 large-sized buy orders below the current market
 bid to encourage other bidders to pay higher
 prices for the stock.
 
+Other potential applications of machine learning include 
+
+* clustering grouping stocks that are similar or disimilar
+* Various plots for clustering and filtering companies by criteria
+* Making a hierarchy  matrix.
 
 **Risk of Trading**
 
