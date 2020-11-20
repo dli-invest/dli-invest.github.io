@@ -35,7 +35,7 @@ jobs:
           xelatex --version
 
       - name: Setup Miniconda
-        uses: goanpeca/setup-miniconda@v1.7.0
+        uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
           auto-activate-base: false

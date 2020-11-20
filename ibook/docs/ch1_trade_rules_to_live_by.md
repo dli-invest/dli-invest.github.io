@@ -93,6 +93,5 @@ money, but pigs get slaughtered.
 ```
 
 ```{bibliography} ../_bibliography/references.bib
-:style: unsrt
 :filter: docname in docnames
 ```
