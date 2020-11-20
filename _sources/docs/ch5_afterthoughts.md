@@ -12,8 +12,6 @@ kernelspec:
 (Afterthoughts)=
 # Afterthoughts
 
-One of my early purchase as an investor has been victory square.
-
 ### Decision Making Framework
 1. Never buy a stock expecting to make money
 2. Does the stock have momentum
@@ -22,3 +20,12 @@ One of my early purchase as an investor has been victory square.
 5. Is this stock industry going to be useful and do well
 6. Does the stock have good management.
 
+### Exchange uplisting trading schedule
+
+When stocks are uplisted from the cse and/or tsxv to the tsx or otc to the nasdaq, they become eligible for the big institutions to invest in.
+
+This is a simple supply and demand curve happening, increasing the price.
+
+% analyze PYR stock on Nov 21th 2020
+
+One aspect of algorithmic trading assumes that the current price is a fair price, accounting for P/E ratios and earnings. This can be widely off for small cap stocks, which I have done quite well in.

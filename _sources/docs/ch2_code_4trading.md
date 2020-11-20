@@ -94,3 +94,12 @@ Which produces the following image
 ```
 
 If the vix is spiking way above the graph and the s&p500 is low, then it is an excellent time to buy.
+
+
+## Thoughts on algorithmic trading
+
+Some of the assumptions made during algorithmic trading are fairly interesting
+
+You can focus on either internal events or external events (like covid19).
+
+You assume the stock price fully prices in earnings and revenue projections (not always accurate), especially for small caps. 
