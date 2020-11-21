@@ -11,6 +11,8 @@ kernelspec:
 
 ## Stock Purchases Thoughts
 
+**11/20/2020**
+
 **11/11/2020**
 
 * MTRX loop insights - spiked to 0.50 - shouldn't have sold
