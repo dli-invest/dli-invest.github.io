@@ -17,6 +17,10 @@
       sections:
         - file: docs/afterthoughts/2020_thoughts.md
           title: 2020 Thoughts
+    - file: docs/ch6_predictions
+      sections:
+        - file: docs/predictions/2020_eoy_predictions.md
+          title: 2020 EOY predictions
     - file: notebooks/references/ReadMe
       sections:
         - file: notebooks/references/Returns
