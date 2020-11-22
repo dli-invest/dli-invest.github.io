@@ -6,6 +6,9 @@
     - file: docs/introduction
     - file: docs/ch1_trade_rules_to_live_by
     - file: docs/ch2_code_4trading
+      sections:
+        - file: docs/code/projects.md
+        - title: Projects
     - file: docs/ch3_utility_code
       sections:
         - file: notebooks/analyze/Performance_06-01-2020

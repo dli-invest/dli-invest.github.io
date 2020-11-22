@@ -103,3 +103,5 @@ Some of the assumptions made during algorithmic trading are fairly interesting
 You can focus on either internal events or external events (like covid19).
 
 You assume the stock price fully prices in earnings and revenue projections (not always accurate), especially for small caps. 
+
+An reinforcement algorithm only attempts to make the "right" decision and not predict the price.
