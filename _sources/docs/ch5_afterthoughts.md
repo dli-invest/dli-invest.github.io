@@ -29,3 +29,6 @@ This is a simple supply and demand curve happening, increasing the price.
 % analyze PYR stock on Nov 21th 2020
 
 One aspect of algorithmic trading assumes that the current price is a fair price, accounting for P/E ratios and earnings. This can be widely off for small cap stocks, which I have done quite well in.
+
+
+One of the questions I seek to find out are fund managers just lucky monkeys.
