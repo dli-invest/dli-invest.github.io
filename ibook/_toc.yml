@@ -6,6 +6,9 @@
     - file: docs/introduction
     - file: docs/ch1_trade_rules_to_live_by
     - file: docs/ch2_code_4trading
+      sections:
+        - file: docs/code/projects
+          title: Projects
     - file: docs/ch3_utility_code
       sections:
         - file: notebooks/analyze/Performance_06-01-2020
@@ -17,6 +20,10 @@
       sections:
         - file: docs/afterthoughts/2020_thoughts.md
           title: 2020 Thoughts
+    - file: docs/ch6_predictions
+      sections:
+        - file: docs/predictions/2020_eoy_predictions.md
+          title: 2020 EOY predictions
     - file: notebooks/references/ReadMe
       sections:
         - file: notebooks/references/Returns
