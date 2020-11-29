@@ -8,7 +8,7 @@
     - file: docs/ch2_code_4trading
       sections:
         - file: docs/code/projects
-        - title: Projects
+          title: Projects
     - file: docs/ch3_utility_code
       sections:
         - file: notebooks/analyze/Performance_06-01-2020
