@@ -58,18 +58,18 @@ During handling of the above exception, another exception occurred:
 [0;32m---> 11[0;31m                   EC2("worker5")] >> RDS("events")
 [0m
 [0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36m__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
-[1;32m    145[0m [0;34m[0m[0m
-[1;32m    146[0m     [0;32mdef[0m [0m__exit__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mexc_type[0m[0;34m,[0m [0mexc_value[0m[0;34m,[0m [0mtraceback[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 147[0;31m         [0mself[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    148[0m         [0;31m# Remove the graphviz file leaving only the image.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    149[0m         [0mos[0m[0;34m.[0m[0mremove[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    147[0m [0;34m[0m[0m
+[1;32m    148[0m     [0;32mdef[0m [0m__exit__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mexc_type[0m[0;34m,[0m [0mexc_value[0m[0;34m,[0m [0mtraceback[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 149[0;31m         [0mself[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    150[0m         [0;31m# Remove the graphviz file leaving only the image.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    151[0m         [0mos[0m[0;34m.[0m[0mremove[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36mrender[0;34m(self)[0m
-[1;32m    187[0m [0;34m[0m[0m
-[1;32m    188[0m     [0;32mdef[0m [0mrender[0m[0;34m([0m[0mself[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 189[0;31m         [0mself[0m[0;34m.[0m[0mdot[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0moutformat[0m[0;34m,[0m [0mview[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mshow[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    190[0m [0;34m[0m[0m
-[1;32m    191[0m [0;34m[0m[0m
+[1;32m    189[0m [0;34m[0m[0m
+[1;32m    190[0m     [0;32mdef[0m [0mrender[0m[0;34m([0m[0mself[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 191[0;31m         [0mself[0m[0;34m.[0m[0mdot[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0moutformat[0m[0;34m,[0m [0mview[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mshow[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    192[0m [0;34m[0m[0m
+[1;32m    193[0m [0;34m[0m[0m
 
 [0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/files.py[0m in [0;36mrender[0;34m(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view)[0m
 [1;32m    207[0m         rendered = backend.render(self._engine, format, filepath,
