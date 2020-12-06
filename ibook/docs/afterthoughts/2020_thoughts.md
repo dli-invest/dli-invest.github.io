@@ -14,6 +14,8 @@ kernelspec:
 **12/05/2020**
 If you have no idea what you are doing, rely on charts and TA, it can tell you a good time to sell.
 
+Never underestimate FOMO
+
 **11/11/2020**
 
 * MTRX loop insights - spiked to 0.50 - shouldn't have sold
