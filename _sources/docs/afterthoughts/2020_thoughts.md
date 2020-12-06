@@ -11,7 +11,8 @@ kernelspec:
 
 ## Stock Purchases Thoughts
 
-**11/20/2020**
+**12/05/2020**
+If you have no idea what you are doing, rely on charts and TA, it can tell you a good time to sell.
 
 **11/11/2020**
 
