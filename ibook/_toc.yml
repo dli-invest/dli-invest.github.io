@@ -11,7 +11,7 @@
           title: Projects
         - file: docs/code/task_list
           title: Task List
-    - file: docs/code/task_list
+    - file: docs/code/ch3_utility_code
       sections:
         - file: notebooks/analyze/Performance_06-01-2020
           title: Performance analyze as of 06/01/2020
