@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-# Stock Investing Projects
+## Stock Investing Projects
 
 Contains project overview and what I seek to accomplish in each project.
 
@@ -46,7 +46,6 @@ just look at all the stock prices of things I am interested in.
 
 * Output notifications from yahoo news, this only gets recent news, sometimes there is clutter from ads and/or random new items, but good enough for my purposes
 
-### 2021
 
 #### Bid analysis
 
