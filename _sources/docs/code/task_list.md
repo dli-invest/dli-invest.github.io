@@ -22,12 +22,13 @@ Move content to 2020 when done
 **Vacation**
 Get reddit data integrated and analysed - can have angular site that reads from faunadb via streaming and shows the latest reddit tweets
 Also consider getting bigquery hooked up to the subreddits of interest.
-
+- [x] Implement logic from https://medium.com/swlh/the-fractal-indicator-detecting-tops-bottoms-in-markets-1d8aac0269e8 with signals in trading and compute ema.
 
 **12/07 - 12/14**
 Dash technical analysis minute by minute with data from yahoo finance. In depth day by day decision making.
-Finish testing the zipline environment
-- [x] Setup pyfolio using github codespaces and jupyter notebook.
+Finish testing the zipline environment.
+- [ ] Fix youtube nlp discord notifications - annotations kinda bad, would like channel name or something.
+- [ ] Setup pyfolio using github codespaces and jupyter notebook.
 - [ ] Youtube transcription of videos via url. Need to get webhook implementation to have it work on gae (whatever spin up codespace) or use google cloud run (need better docker file). Ehh agoracom has transcripts now, no need to not auto nlp it.
 - [ ] Add social media data golang api.
 	- [x] twitter data
