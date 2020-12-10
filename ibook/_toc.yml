@@ -9,7 +9,9 @@
       sections:
         - file: docs/code/projects
           title: Projects
-    - file: docs/ch3_utility_code
+        - file: docs/code/task_list
+          title: Task List
+    - file: docs/code/task_list
       sections:
         - file: notebooks/analyze/Performance_06-01-2020
           title: Performance analyze as of 06/01/2020
