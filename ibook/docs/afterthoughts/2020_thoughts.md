@@ -111,6 +111,24 @@ The combination of covid-19 increasing, the need to know if you were previously 
 
 
 
+### Cloud Architecture V1
+
+Since diagrams added a bunch of nodes, I can now fully diagram my current stock market CI/CD pipelines and tools.
+
+To run on colab install graphviz
+```
+!pip install graphviz
+!apt-get install graphviz
+```
+
+Install the diagrams package
+```
+!pip install diagrams
+```
+
+```{figure} /_static/diagrams/v1stockarch.png
+```
+
 
 ### Cloud Architecture V0
 
