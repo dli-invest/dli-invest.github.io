@@ -1,0 +1,213 @@
+Traceback (most recent call last):
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from diagrams import Cluster, Diagram, Edge
+from diagrams.programming.language import Python, Csharp, Go
+from diagrams.onprem.vcs import Github, Git
+from diagrams.onprem.ci import GithubActions
+from diagrams.saas.chat import Discord
+from diagrams.gcp.compute import AppEngine, GCE, GCF, Run
+from diagrams.gcp.devtools import Code, Build
+from diagrams.elastic.elasticsearch import Elasticsearch
+from diagrams.generic.storage import Storage
+# blue - build/cron
+# purple - notification
+# green - data saving
+with Diagram("stock-arch-v2", show=False):
+  with Cluster ("Github Actions"):
+    monthly_job_ga = GithubActions('monthly job')
+    weekly_job_ga = GithubActions('weekly job')
+    monthly_job_ga - weekly_job_ga
+    daily_job_ga = GithubActions('daily_job')
+    weekly_job_ga - daily_job_ga
+    manual_job_ga = GithubActions('manual push')
+    
+  with Cluster("Discord"):
+    dis_alerts = Discord('alerts')
+    dis_investing = Discord('events')
+    dis_news_halts = Discord('news + halts')
+    dis_video = Discord('videos')
+    # Code status not particular helpful for high level diagram
+  # source = Git("source")
+  with Cluster("Code Sources"):
+      with Cluster("Github"):
+        account = Github("account")
+        dli_invest = Github("dli-invest")
+        workers = [account,
+                   dli_invest
+                  ]
+        # Personal repos related to stocks
+        with Cluster('account repos'):
+          stock_screener = Python('stock_screener')
+          cad_tickers_list = Git('cad_tickers_list')
+          cad_tickers = Python('cad_tickers')
+          stocks_app = Python('stocks_app')
+          news_app = Csharp('news app')
+          finfiber = Go('FinFiber')
+          gcf_functions = Git('Cloud Functions')
+          dash_stocks = Python('Dash Stocks')
+          account_repos = [stock_screener,
+                            cad_tickers,
+                            news_app,
+                           stocks_app,
+                           finfiber,
+                           gcf_functions,
+                           dash_stocks
+                    ]
+        with Cluster('dli-invest repos'):
+          with Cluster('ytube nlp'):
+            # grabbing youtube transcriptions
+            ytube_nlp = Python('Transcripts')
+            # Uses assembly AI and manually downloads videos
+            ytube_nlp_ai = Python('Manual NLP')
+            ytube = [ytube_nlp, ytube_nlp_ai]
+          # investing book
+          stock_scrapper = Python('stock-scrapper')
+          news_and_halts = Python('News and Halts')
+          earnings_calendar = Python('Earnings Calendar')
+          # notes 
+          with Cluster('Algorithmic Trading'):
+              zipline_experiments = Python('Zipline')
+          with Cluster('notes'):
+              investing_book = Python('Investing Book')
+              
+          # ytube - investing_book
+          # ytube - stock_scrapper
+
+  # Cluster for Google Cloud
+  with Cluster("Google Cloud Platform"):
+    gcp_build = Build("Auto Build")
+    sapp = Run("stocks app")
+    fstocks = Run('fstocks')
+    g_finfiber = AppEngine('finfiber')
+    utilities = GCF('utility')
+    gcp_serverless = [sapp,
+                  fstocks,
+                  g_finfiber
+                ]
+    gcp_build - gcp_serverless
+
+  # Links to google cloud platform
+  gcf_functions - Edge(label='manual deploy', color='orange') >> utilities
+  finfiber - Edge (color='orange', style='dashed') >> gcp_build
+  stocks_app - Edge (color='orange', style='dashed') >> gcp_build
+  dash_stocks - Edge(color='orange', style='dashed') >> gcp_build
+  # Other nodes
+  news_db = Elasticsearch('news_db')
+  fauna_db_halts_news = Storage('faunadb')
+
+  # Dependencies on cad_Tickers
+  cad_tickers - Edge(label="uses", color="purple", style='dotted') <<  [ stock_screener, cad_tickers_list]
+  cad_tickers_list - Edge(label="gets stocks", color='purple', style='dotted') << [
+      stock_scrapper
+  ]
+  # cad_tickers - Edge(label="uses", color='purple', style='dotted') << cad_tickers_list
+  # Git links
+  dli_invest >> ytube
+  account >> account_repos
+  
+  # Connecting to other nodes
+  news_app >> Edge(label='save data', color='green', style='dashed') >> news_db
+  fauna_db_halts_news >> Edge(labe='save data', color='green', style='dashed') >> news_and_halts
+  # repos calling github actions
+  cad_tickers_list >> Edge(color='blue') >> monthly_job_ga
+  monthly_job_ga >> Edge(label="update stocks", color='green', style="dashed") >> cad_tickers_list
+  # Discord links
+  # stock_screener >> Edge(color='purple') >> dis_alerts
+  stock_screener >> Edge(color='blue') >> daily_job_ga
+  stock_scrapper >> Edge(color='blue') >> weekly_job_ga
+  news_app >> Edge(color='blue') >> daily_job_ga
+  ytube_nlp >> Edge(color='blue') >> daily_job_ga
+  ytube_nlp_ai >> Edge(color='blue') >> manual_job_ga
+  investing_book >> Edge(color='blue') >> manual_job_ga
+  earnings_calendar >> Edge(color='blue') >> weekly_job_ga
+  # notifications sent out from github actions
+  daily_job_ga >> Edge(color='purple') >> dis_alerts
+  daily_job_ga >> Edge(color='purple') >> dis_news_halts
+  manual_job_ga >> Edge(color='purple') >> dis_video
+  daily_job_ga >> Edge(color='purple') >> dis_video
+  # cad_tickers_list_ga >> Edge(label="notification") >> code_status
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py[0m in [0;36mrun[0;34m(cmd, input, capture_output, check, quiet, **kwargs)[0m
+[1;32m    158[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 159[0;31m         [0mproc[0m [0;34m=[0m [0msubprocess[0m[0;34m.[0m[0mPopen[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0mstartupinfo[0m[0;34m=[0m[0mget_startupinfo[0m[0;34m([0m[0;34m)[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    160[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py[0m in [0;36m__init__[0;34m(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)[0m
+[1;32m    799[0m                                 [0merrread[0m[0;34m,[0m [0merrwrite[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 800[0;31m                                 restore_signals, start_new_session)
+[0m[1;32m    801[0m         [0;32mexcept[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py[0m in [0;36m_execute_child[0;34m(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)[0m
+[1;32m   1550[0m                             [0merr_msg[0m [0;34m+=[0m [0;34m': '[0m [0;34m+[0m [0mrepr[0m[0;34m([0m[0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1551[0;31m                     [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merrno_num[0m[0;34m,[0m [0merr_msg[0m[0;34m,[0m [0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1552[0m                 [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merr_msg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'dot': 'dot'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mExecutableNotFound[0m                        Traceback (most recent call last)
+[0;32m<ipython-input-3-85766cb74cbd>[0m in [0;36m<module>[0;34m[0m
+[1;32m    123[0m   [0mdaily_job_ga[0m [0;34m>>[0m [0mEdge[0m[0;34m([0m[0mcolor[0m[0;34m=[0m[0;34m'purple'[0m[0;34m)[0m [0;34m>>[0m [0mdis_news_halts[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    124[0m   [0mmanual_job_ga[0m [0;34m>>[0m [0mEdge[0m[0;34m([0m[0mcolor[0m[0;34m=[0m[0;34m'purple'[0m[0;34m)[0m [0;34m>>[0m [0mdis_video[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 125[0;31m   [0mdaily_job_ga[0m [0;34m>>[0m [0mEdge[0m[0;34m([0m[0mcolor[0m[0;34m=[0m[0;34m'purple'[0m[0;34m)[0m [0;34m>>[0m [0mdis_video[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    126[0m   [0;31m# cad_tickers_list_ga >> Edge(label="notification") >> code_status[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36m__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
+[1;32m    147[0m [0;34m[0m[0m
+[1;32m    148[0m     [0;32mdef[0m [0m__exit__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mexc_type[0m[0;34m,[0m [0mexc_value[0m[0;34m,[0m [0mtraceback[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 149[0;31m         [0mself[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    150[0m         [0;31m# Remove the graphviz file leaving only the image.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    151[0m         [0mos[0m[0;34m.[0m[0mremove[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36mrender[0;34m(self)[0m
+[1;32m    189[0m [0;34m[0m[0m
+[1;32m    190[0m     [0;32mdef[0m [0mrender[0m[0;34m([0m[0mself[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 191[0;31m         [0mself[0m[0;34m.[0m[0mdot[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0moutformat[0m[0;34m,[0m [0mview[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mshow[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    192[0m [0;34m[0m[0m
+[1;32m    193[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/files.py[0m in [0;36mrender[0;34m(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view)[0m
+[1;32m    207[0m         rendered = backend.render(self._engine, format, filepath,
+[1;32m    208[0m                                   [0mrenderer[0m[0;34m=[0m[0mrenderer[0m[0;34m,[0m [0mformatter[0m[0;34m=[0m[0mformatter[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 209[0;31m                                   quiet=quiet)
+[0m[1;32m    210[0m [0;34m[0m[0m
+[1;32m    211[0m         [0;32mif[0m [0mcleanup[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py[0m in [0;36mrender[0;34m(engine, format, filepath, renderer, formatter, quiet)[0m
+[1;32m    204[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    205[0m         [0mcwd[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 206[0;31m     [0mrun[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0mcapture_output[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0mcwd[0m[0;34m=[0m[0mcwd[0m[0;34m,[0m [0mcheck[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0mquiet[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    207[0m     [0;32mreturn[0m [0mrendered[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    208[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py[0m in [0;36mrun[0;34m(cmd, input, capture_output, check, quiet, **kwargs)[0m
+[1;32m    160[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    161[0m         [0;32mif[0m [0me[0m[0;34m.[0m[0merrno[0m [0;34m==[0m [0merrno[0m[0;34m.[0m[0mENOENT[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 162[0;31m             [0;32mraise[0m [0mExecutableNotFound[0m[0;34m([0m[0mcmd[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    163[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    164[0m             [0;32mraise[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mExecutableNotFound[0m: failed to execute ['dot', '-Tpng', '-O', 'stock-arch-v2'], make sure the Graphviz executables are on your systems' PATH
+ExecutableNotFound: failed to execute ['dot', '-Tpng', '-O', 'stock-arch-v2'], make sure the Graphviz executables are on your systems' PATH
+

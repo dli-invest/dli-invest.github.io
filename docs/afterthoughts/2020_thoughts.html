@@ -114,23 +114,9 @@
      Projects
     </a>
    </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../ch3_utility_code.html">
-   Web Scrapping and Data Extraction
-  </a>
-  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notebooks/analyze/Performance_06-01-2020.html">
-     Performance analyze as of 06/01/2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../notebooks/analyze/RISK_06-05-2020.html">
-     Risk Analyze 06/05/2020
+    <a class="reference internal" href="../code/task_list.html">
+     Task List
     </a>
    </li>
   </ul>
@@ -340,6 +326,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloud-architecture-v1">
+   Cloud Architecture V1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cloud-architecture-v0">
    Cloud Architecture V0
   </a>
@@ -357,7 +348,9 @@
                 
   <div class="section" id="stock-purchases-thoughts">
 <h1>Stock Purchases Thoughts<a class="headerlink" href="#stock-purchases-thoughts" title="Permalink to this headline">¶</a></h1>
-<p><strong>11/20/2020</strong></p>
+<p><strong>12/05/2020</strong>
+If you have no idea what you are doing, rely on charts and TA, it can tell you a good time to sell.</p>
+<p>Never underestimate FOMO</p>
 <p><strong>11/11/2020</strong></p>
 <ul class="simple">
 <li><p>MTRX loop insights - spiked to 0.50 - shouldn’t have sold</p></li>
@@ -453,6 +446,22 @@ Wait on BYL for 5G</p>
 <p>The first few purchases on August 26 and September 03 were profitable, after the failed Sept 08 purchases and surprise drop I emailed the investor relations guy asking about india approval.</p>
 <p>My brief calculations of the covid-19 test selling well make me think if they sell well (80 %), the stock will continue the rise.</p>
 <p>The combination of covid-19 increasing, the need to know if you were previously infected for health care workers perhaps even vaccines, make me think that the stock will go up in the short term in the next few months.</p>
+<div class="section" id="cloud-architecture-v1">
+<h2>Cloud Architecture V1<a class="headerlink" href="#cloud-architecture-v1" title="Permalink to this headline">¶</a></h2>
+<p>Since diagrams added a bunch of nodes, I can now fully diagram my current stock market CI/CD pipelines and tools.</p>
+<p>To run on colab install graphviz</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!pip install graphviz
+!apt-get install graphviz
+</pre></div>
+</div>
+<p>Install the diagrams package</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!pip install diagrams
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="../../_images/v1stockarch.png" src="../../_images/v1stockarch.png" />
+</div>
+</div>
 <div class="section" id="cloud-architecture-v0">
 <h2>Cloud Architecture V0<a class="headerlink" href="#cloud-architecture-v0" title="Permalink to this headline">¶</a></h2>
 <p>Make this seperate chapter</p>
