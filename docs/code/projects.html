@@ -57,7 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Web Scrapping and Data Extraction" href="../ch3_utility_code.html" />
+    <link rel="next" title="Tasklist" href="task_list.html" />
     <link rel="prev" title="Code For Trading" href="../ch2_code_4trading.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,23 +114,9 @@
      Projects
     </a>
    </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../ch3_utility_code.html">
-   Web Scrapping and Data Extraction
-  </a>
-  <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../notebooks/analyze/Performance_06-01-2020.html">
-     Performance analyze as of 06/01/2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../notebooks/analyze/RISK_06-05-2020.html">
-     Risk Analyze 06/05/2020
+    <a class="reference internal" href="task_list.html">
+     Task List
     </a>
    </li>
   </ul>
@@ -340,14 +326,36 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#youtube-nlp">
+   Youtube NLP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investing-book">
+   Investing Book
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stock-dashboard">
+   Stock Dashboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#earnings-report-calendar">
    Earnings Report Calendar
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sedar-documents">
-   Sedar documents
+  <a class="reference internal nav-link" href="#news-alerts">
+   News Alerts
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bid-analysis">
+     Bid analysis
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -362,6 +370,30 @@
                 
   <div class="section" id="stock-investing-projects">
 <h1>Stock Investing Projects<a class="headerlink" href="#stock-investing-projects" title="Permalink to this headline">¶</a></h1>
+<p>Contains project overview and what I seek to accomplish in each project.</p>
+<div class="section" id="youtube-nlp">
+<h2>Youtube NLP<a class="headerlink" href="#youtube-nlp" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Annotate youtube videos</p></li>
+<li><p>v2 can annotate videos without youtube transcriptions</p></li>
+</ul>
+</div>
+<div class="section" id="investing-book">
+<h2>Investing Book<a class="headerlink" href="#investing-book" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Executable book containing all the content for my investing journey from software engineer
+to successful investor.</p></li>
+<li><p>Contains a list of projects I have built related for investing.</p></li>
+</ul>
+</div>
+<div class="section" id="stock-dashboard">
+<h2>Stock Dashboard<a class="headerlink" href="#stock-dashboard" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Includings various dash and streamlit apps for ta and analysis of stocks. My most common use case is to
+just look at all the stock prices of things I am interested in.</p></li>
+<li><p>Dashboard with links to other projects</p></li>
+</ul>
+</div>
 <div class="section" id="earnings-report-calendar">
 <h2>Earnings Report Calendar<a class="headerlink" href="#earnings-report-calendar" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -369,24 +401,22 @@
 <li><p>Cron job to update list of stocks of interest</p></li>
 <li><p>Copy existing google calendar interaction code from repo</p></li>
 <li><p>Use best practise to initialize python repo</p></li>
-<li><p>Add discord webhook to notify success or failure</p></li>
+<li><p>Have discord webhook to notify success or failure</p></li>
 <li><p>update csv containing captured earnings per week (useful for future trading) - index by id</p></li>
 <li><p>use browserstack instead of selenium for visiblity and easier traceback.</p></li>
 <li><p>Make open source under dli-invest.</p></li>
 </ul>
 </div>
-<div class="section" id="sedar-documents">
-<h2>Sedar documents<a class="headerlink" href="#sedar-documents" title="Permalink to this headline">¶</a></h2>
-<p>The sedar documents site is horribly outdated, I can automatically grab and download documents</p>
-<p>Steps:
-Seleinum based.</p>
-<ol class="simple">
-<li><p>Go to inputted sedar url</p></li>
-<li><p>Click on given link</p></li>
-<li><p>capcha reading using ocr downloading 5 images</p></li>
-<li><p>entering data into input field</p></li>
-<li><p>visiting all the other links now that authentication has occured.</p></li>
-</ol>
+<div class="section" id="news-alerts">
+<h2>News Alerts<a class="headerlink" href="#news-alerts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Output notifications from yahoo news, this only gets recent news, sometimes there is clutter from ads and/or random new items, but good enough for my purposes</p></li>
+</ul>
+<div class="section" id="bid-analysis">
+<h3>Bid analysis<a class="headerlink" href="#bid-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Get bid data per market open - move into fast api???</p>
+<p>Need to get bids for stocks from tmx web money and the cse before market open (might need selenium, probably not).</p>
+</div>
 </div>
 </div>
 
@@ -419,7 +449,7 @@ Seleinum based.</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../ch2_code_4trading.html" title="previous page">Code For Trading</a>
-    <a class='right-next' id="next-link" href="../ch3_utility_code.html" title="next page">Web Scrapping and Data Extraction</a>
+    <a class='right-next' id="next-link" href="task_list.html" title="next page">Tasklist</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
