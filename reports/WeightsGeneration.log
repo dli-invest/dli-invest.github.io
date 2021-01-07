@@ -1,0 +1,99 @@
+Traceback (most recent call last):
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import yfinance as yf
+import pandas as pd
+from mlfinlab.portfolio_optimization.mean_variance import MeanVarianceOptimisation
+
+def get_prices(stocks, start_date="2019-03-01", end_date="2020-05-30"):
+    stocks_string = " ".join(stocks)
+    data = yf.download(stocks_string, start=start_date, end=end_date,
+                      group_by="ticker")
+    data = data.fillna(method='ffill')
+    # Drop columns with no entries
+    data = data.dropna(axis='columns', how='all')
+
+    prices_df = pd.concat([data[ticker]["Close"] for ticker in stocks], axis=1)
+    prices_df.columns = stocks
+    return prices_df
+stocks = ["NEXCF", "ACB.TO", "BB.TO", "N.V", "APHA.TO", "TTT.CN", "HUT.TO", "HIVE.V", "AC.TO", "CVE.TO"]
+asset_prices = get_prices(stocks) 
+# Compute IVP weights
+mvo = MeanVarianceOptimisation()
+mvo.allocate(asset_names=asset_prices.columns, asset_prices=asset_prices,
+             solution='max_sharpe')
+ivp_weights = mvo.weights.sort_values(by=0, ascending=False, axis=1)
+with pd.option_context('display.max_rows', None, 'display.max_columns', None): 
+  print(ivp_weights)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m<ipython-input-2-152241dbc074>[0m in [0;36m<module>[0;34m[0m
+[1;32m     15[0m     [0;32mreturn[0m [0mprices_df[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m [0mstocks[0m [0;34m=[0m [0;34m[[0m[0;34m"NEXCF"[0m[0;34m,[0m [0;34m"ACB.TO"[0m[0;34m,[0m [0;34m"BB.TO"[0m[0;34m,[0m [0;34m"N.V"[0m[0;34m,[0m [0;34m"APHA.TO"[0m[0;34m,[0m [0;34m"TTT.CN"[0m[0;34m,[0m [0;34m"HUT.TO"[0m[0;34m,[0m [0;34m"HIVE.V"[0m[0;34m,[0m [0;34m"AC.TO"[0m[0;34m,[0m [0;34m"CVE.TO"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 17[0;31m [0masset_prices[0m [0;34m=[0m [0mget_prices[0m[0;34m([0m[0mstocks[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     18[0m [0;31m# Compute IVP weights[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     19[0m [0mmvo[0m [0;34m=[0m [0mMeanVarianceOptimisation[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m<ipython-input-2-152241dbc074>[0m in [0;36mget_prices[0;34m(stocks, start_date, end_date)[0m
+[1;32m     11[0m     [0mdata[0m [0;34m=[0m [0mdata[0m[0;34m.[0m[0mdropna[0m[0;34m([0m[0maxis[0m[0;34m=[0m[0;34m'columns'[0m[0;34m,[0m [0mhow[0m[0;34m=[0m[0;34m'all'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     12[0m [0;34m[0m[0m
+[0;32m---> 13[0;31m     [0mprices_df[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mconcat[0m[0;34m([0m[0;34m[[0m[0mdata[0m[0;34m[[0m[0mticker[0m[0;34m][0m[0;34m[[0m[0;34m"Close"[0m[0;34m][0m [0;32mfor[0m [0mticker[0m [0;32min[0m [0mstocks[0m[0;34m][0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     14[0m     [0mprices_df[0m[0;34m.[0m[0mcolumns[0m [0;34m=[0m [0mstocks[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     15[0m     [0;32mreturn[0m [0mprices_df[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m<ipython-input-2-152241dbc074>[0m in [0;36m<listcomp>[0;34m(.0)[0m
+[1;32m     11[0m     [0mdata[0m [0;34m=[0m [0mdata[0m[0;34m.[0m[0mdropna[0m[0;34m([0m[0maxis[0m[0;34m=[0m[0;34m'columns'[0m[0;34m,[0m [0mhow[0m[0;34m=[0m[0;34m'all'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     12[0m [0;34m[0m[0m
+[0;32m---> 13[0;31m     [0mprices_df[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mconcat[0m[0;34m([0m[0;34m[[0m[0mdata[0m[0;34m[[0m[0mticker[0m[0;34m][0m[0;34m[[0m[0;34m"Close"[0m[0;34m][0m [0;32mfor[0m [0mticker[0m [0;32min[0m [0mstocks[0m[0;34m][0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     14[0m     [0mprices_df[0m[0;34m.[0m[0mcolumns[0m [0;34m=[0m [0mstocks[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     15[0m     [0;32mreturn[0m [0mprices_df[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m   2797[0m         [0;32mif[0m [0mis_single_key[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2798[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mnlevels[0m [0;34m>[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2799[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_getitem_multilevel[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2800[0m             [0mindexer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2801[0m             [0;32mif[0m [0mis_integer[0m[0;34m([0m[0mindexer[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36m_getitem_multilevel[0;34m(self, key)[0m
+[1;32m   2847[0m     [0;32mdef[0m [0m_getitem_multilevel[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2848[0m         [0;31m# self.columns is a MultiIndex[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2849[0;31m         [0mloc[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2850[0m         [0;32mif[0m [0misinstance[0m[0;34m([0m[0mloc[0m[0;34m,[0m [0;34m([0m[0mslice[0m[0;34m,[0m [0mSeries[0m[0;34m,[0m [0mnp[0m[0;34m.[0m[0mndarray[0m[0;34m,[0m [0mIndex[0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2851[0m             [0mnew_columns[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m[[0m[0mloc[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/indexes/multi.py[0m in [0;36mget_loc[0;34m(self, key, method)[0m
+[1;32m   2660[0m         [0;32mif[0m [0;32mnot[0m [0misinstance[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0;34m([0m[0mtuple[0m[0;34m,[0m [0mlist[0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2661[0m             [0;31m# not including list here breaks some indexing, xref #30892[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2662[0;31m             [0mloc[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_get_level_indexer[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0mlevel[0m[0;34m=[0m[0;36m0[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2663[0m             [0;32mreturn[0m [0m_maybe_to_slice[0m[0;34m([0m[0mloc[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2664[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/indexes/multi.py[0m in [0;36m_get_level_indexer[0;34m(self, key, level, indexer)[0m
+[1;32m   2941[0m             [0;32mif[0m [0mi[0m [0;34m==[0m [0mj[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2942[0m                 [0;31m# The label is present in self.levels[level] but unused:[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2943[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2944[0m             [0;32mreturn[0m [0mslice[0m[0;34m([0m[0mi[0m[0;34m,[0m [0mj[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2945[0m [0;34m[0m[0m
+
+[0;31mKeyError[0m: 'NEXCF'
+KeyError: 'NEXCF'
+
