@@ -29,3 +29,9 @@ DCM - 2
 
 PKK forever stock, want to hold 20 long term, can add some to tsfa at most 2
 IDK can add at most 14 cause selling USD stock
+
+
+TSX: ADCO, Ad core, adco.v
+CSE: CRL, carl data solutions, crl.cn
+UBMRF:US, urban immursive
+dtst, data storage corporation
