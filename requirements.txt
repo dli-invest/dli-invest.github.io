@@ -2,6 +2,6 @@ sphinx == 2.4.4
 mlfinlab == 0.14.0
 pandas == 1.0.4
 matplotlib == 3.2.1
-mplfinance == 0.12.7a0
+mplfinance == 1.0.1
 jupyter-book
 sympy 
