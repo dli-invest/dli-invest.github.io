@@ -35,3 +35,11 @@ TSX: ADCO, Ad core, adco.v
 CSE: CRL, carl data solutions, crl.cn
 UBMRF:US, urban immursive
 dtst, data storage corporation
+
+## Retirement crisis
+
+The retirement crisis will happen because of politicans overpromising and underdelivering.
+
+With biden giving 86 billion to bail out pensions, will likely happen if calfornia pensions go away.
+
+When the crisis happens, taxes will likely go up and/or house prices go down?
