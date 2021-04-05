@@ -44,7 +44,7 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None):
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mImportError[0m                               Traceback (most recent call last)
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
 [0;32m<ipython-input-2-152241dbc074>[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0myfinance[0m [0;32mas[0m [0myf[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
@@ -52,81 +52,6 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None):
 [0m[1;32m      4[0m [0;34m[0m[0m
 [1;32m      5[0m [0;32mdef[0m [0mget_prices[0m[0;34m([0m[0mstocks[0m[0;34m,[0m [0mstart_date[0m[0;34m=[0m[0;34m"2019-03-01"[0m[0;34m,[0m [0mend_date[0m[0;34m=[0m[0;34m"2020-05-30"[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/mlfinlab/__init__.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     20[0m [0;32mimport[0m [0mmlfinlab[0m[0;34m.[0m[0mfeature_importance[0m [0;32mas[0m [0mfeature_importance[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     21[0m [0;32mimport[0m [0mmlfinlab[0m[0;34m.[0m[0mensemble[0m [0;32mas[0m [0mensemble[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 22[0;31m [0;32mimport[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m [0;32mas[0m [0mportfolio_optimization[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     23[0m [0;32mimport[0m [0mmlfinlab[0m[0;34m.[0m[0mclustering[0m [0;32mas[0m [0mclustering[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     24[0m [0;32mimport[0m [0mmlfinlab[0m[0;34m.[0m[0mmicrostructural_features[0m [0;32mas[0m [0mmicrostructural_features[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/mlfinlab/portfolio_optimization/__init__.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      5[0m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mcla[0m [0;32mimport[0m [0mCriticalLineAlgorithm[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      6[0m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mhrp[0m [0;32mimport[0m [0mHierarchicalRiskParity[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 7[0;31m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mmean_variance[0m [0;32mimport[0m [0mMeanVarianceOptimisation[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      8[0m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mherc[0m [0;32mimport[0m [0mHierarchicalEqualRiskContribution[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      9[0m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mrisk_metrics[0m [0;32mimport[0m [0mRiskMetrics[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/mlfinlab/portfolio_optimization/mean_variance.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      2[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      3[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 4[0;31m [0;32mimport[0m [0mcvxpy[0m [0;32mas[0m [0mcp[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      5[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      6[0m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mreturns_estimators[0m [0;32mimport[0m [0mReturnsEstimators[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/__init__.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     16[0m [0;34m[0m[0m
-[1;32m     17[0m [0m__version__[0m [0;34m=[0m [0;34m"1.1.1"[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 18[0;31m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m [0;32mimport[0m [0;34m*[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     19[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mconstraints[0m [0;32mimport[0m [0mNonPos[0m[0;34m,[0m [0mZero[0m[0;34m,[0m [0mSOC[0m[0;34m,[0m [0mPSD[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     20[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mexpressions[0m[0;34m.[0m[0mvariable[0m [0;32mimport[0m [0mVariable[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/atoms/__init__.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     18[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0mdist_ratio[0m [0;32mimport[0m [0mdist_ratio[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     19[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0meye_minus_inv[0m [0;32mimport[0m [0meye_minus_inv[0m[0;34m,[0m [0mresolvent[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 20[0;31m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0mgeo_mean[0m [0;32mimport[0m [0mgeo_mean[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     21[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0mgen_lambda_max[0m [0;32mimport[0m [0mgen_lambda_max[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     22[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0mgmatmul[0m [0;32mimport[0m [0mgmatmul[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/atoms/geo_mean.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     18[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     19[0m [0;32mimport[0m [0mscipy[0m[0;34m.[0m[0msparse[0m [0;32mas[0m [0msp[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 20[0;31m from cvxpy.utilities.power_tools import (fracify, decompose, approx_error, lower_bound,
-[0m[1;32m     21[0m                                          over_bound, prettydict)
-[1;32m     22[0m [0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/utilities/power_tools.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     16[0m [0;34m[0m[0m
-[1;32m     17[0m [0;32mfrom[0m [0mfractions[0m [0;32mimport[0m [0mFraction[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 18[0;31m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0maffine[0m[0;34m.[0m[0mreshape[0m [0;32mimport[0m [0mreshape[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     19[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0maffine[0m[0;34m.[0m[0mvstack[0m [0;32mimport[0m [0mvstack[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     20[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mconstraints[0m[0;34m.[0m[0msecond_order[0m [0;32mimport[0m [0mSOC[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/atoms/affine/reshape.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     16[0m [0;34m[0m[0m
-[1;32m     17[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mexpressions[0m[0;34m.[0m[0mexpression[0m [0;32mimport[0m [0mExpression[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 18[0;31m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0maffine[0m[0;34m.[0m[0mhstack[0m [0;32mimport[0m [0mhstack[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     19[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0maffine[0m[0;34m.[0m[0maffine_atom[0m [0;32mimport[0m [0mAffAtom[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     20[0m [0;32mimport[0m [0mcvxpy[0m[0;34m.[0m[0mlin_ops[0m[0;34m.[0m[0mlin_utils[0m [0;32mas[0m [0mlu[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/atoms/affine/hstack.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     16[0m [0;34m[0m[0m
-[1;32m     17[0m [0;32mimport[0m [0mcvxpy[0m[0;34m.[0m[0mlin_ops[0m[0;34m.[0m[0mlin_utils[0m [0;32mas[0m [0mlu[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 18[0;31m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0maffine[0m[0;34m.[0m[0maffine_atom[0m [0;32mimport[0m [0mAffAtom[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     19[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     20[0m [0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/atoms/affine/affine_atom.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     20[0m [0;32mimport[0m [0mcvxpy[0m[0;34m.[0m[0mlin_ops[0m[0;34m.[0m[0mlin_utils[0m [0;32mas[0m [0mlu[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     21[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0matoms[0m[0;34m.[0m[0matom[0m [0;32mimport[0m [0mAtom[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 22[0;31m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mcvxcore[0m[0;34m.[0m[0mpython[0m [0;32mimport[0m [0mcanonInterface[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     23[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mexpressions[0m[0;34m.[0m[0mconstants[0m [0;32mimport[0m [0mConstant[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     24[0m [0;32mfrom[0m [0mcvxpy[0m[0;34m.[0m[0mutilities[0m [0;32mimport[0m [0mperformance_utils[0m [0;32mas[0m [0mperf[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/cvxpy/cvxcore/python/__init__.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;31m# TODO(akshayka): This is a hack; the swig-auto-generated cvxcore.py[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;31m# tries to import cvxcore as `from . import _cvxcore`[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 3[0;31m [0;32mimport[0m [0m_cvxcore[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mImportError[0m: numpy.core.multiarray failed to import
-ImportError: numpy.core.multiarray failed to import
+[0;31mModuleNotFoundError[0m: No module named 'mlfinlab'
+ModuleNotFoundError: No module named 'mlfinlab'
 

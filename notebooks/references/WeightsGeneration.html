@@ -343,47 +343,25 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mlfinlab in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.12.3)
-Requirement already satisfied: numba==0.49.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (0.49.1)
-Requirement already satisfied: numpy==1.18.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (1.18.5)
-Requirement already satisfied: scipy==1.4.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (1.4.1)
-Requirement already satisfied: pandas==1.0.4 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (1.0.4)
-Requirement already satisfied: matplotlib==3.2.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (3.2.1)
-Requirement already satisfied: cvxpy==1.1.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (1.1.1)
-Requirement already satisfied: statsmodels==0.11.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (0.11.1)
-Requirement already satisfied: scikit-learn==0.23.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mlfinlab) (0.23.1)
-Requirement already satisfied: ecos&gt;=2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (2.0.7.post1)
-Requirement already satisfied: osqp&gt;=0.4.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (0.6.2.post0)
-Requirement already satisfied: scs&gt;=1.1.3 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from cvxpy==1.1.1-&gt;mlfinlab) (2.1.2)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (0.10.0)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.8.1)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (1.3.1)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib==3.2.1-&gt;mlfinlab) (2.4.7)
-Requirement already satisfied: llvmlite&lt;=0.33.0.dev0,&gt;=0.31.0.dev0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from numba==0.49.1-&gt;mlfinlab) (0.32.1)
-Requirement already satisfied: setuptools in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from numba==0.49.1-&gt;mlfinlab) (52.0.0.post20210125)
-Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas==1.0.4-&gt;mlfinlab) (2021.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from scikit-learn==0.23.1-&gt;mlfinlab) (2.1.0)
-Requirement already satisfied: joblib&gt;=0.11 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from scikit-learn==0.23.1-&gt;mlfinlab) (1.0.1)
-Requirement already satisfied: patsy&gt;=0.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from statsmodels==0.11.1-&gt;mlfinlab) (0.5.1)
-Requirement already satisfied: six in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from cycler&gt;=0.10-&gt;matplotlib==3.2.1-&gt;mlfinlab) (1.15.0)
-Requirement already satisfied: qdldl in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from osqp&gt;=0.4.1-&gt;cvxpy==1.1.1-&gt;mlfinlab) (0.1.5.post0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Could not find a version that satisfies the requirement mlfinlab</span>
+<span class=" -Color -Color-Red">ERROR: No matching distribution found for mlfinlab</span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.1.59)
+Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.19.2)
+Requirement already satisfied: lxml&gt;=4.5.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (4.6.3)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (0.0.9)
 Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (2.25.1)
 Requirement already satisfied: pandas&gt;=0.24 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.0.4)
-Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (0.0.9)
-Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.18.5)
-Requirement already satisfied: lxml&gt;=4.5.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (4.6.3)
 Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2021.1)
 Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2.8.1)
 Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas&gt;=0.24-&gt;yfinance) (1.15.0)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2020.12.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2020.12.5)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2.10)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (4.0.0)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (1.26.4)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (4.0.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca: Permission denied
@@ -429,12 +407,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="ne">RuntimeError</span>: module compiled against API version 0xe but this version of numpy is 0xd
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">152241</span><span class="n">dbc074</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -442,82 +415,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">get_prices</span><span class="p">(</span><span class="n">stocks</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;2019-03-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2020-05-30&quot;</span><span class="p">):</span>
 
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mlfinlab</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">mlfinlab.feature_importance</span> <span class="k">as</span> <span class="nn">feature_importance</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">import</span> <span class="nn">mlfinlab.ensemble</span> <span class="k">as</span> <span class="nn">ensemble</span>
-<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">import</span> <span class="nn">mlfinlab.portfolio_optimization</span> <span class="k">as</span> <span class="nn">portfolio_optimization</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">import</span> <span class="nn">mlfinlab.clustering</span> <span class="k">as</span> <span class="nn">clustering</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="kn">import</span> <span class="nn">mlfinlab.microstructural_features</span> <span class="k">as</span> <span class="nn">microstructural_features</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mlfinlab</span><span class="o">/</span><span class="n">portfolio_optimization</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.cla</span> <span class="kn">import</span> <span class="n">CriticalLineAlgorithm</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.hrp</span> <span class="kn">import</span> <span class="n">HierarchicalRiskParity</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.mean_variance</span> <span class="kn">import</span> <span class="n">MeanVarianceOptimisation</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.herc</span> <span class="kn">import</span> <span class="n">HierarchicalEqualRiskContribution</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.risk_metrics</span> <span class="kn">import</span> <span class="n">RiskMetrics</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">mlfinlab</span><span class="o">/</span><span class="n">portfolio_optimization</span><span class="o">/</span><span class="n">mean_variance</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">cvxpy</span> <span class="k">as</span> <span class="nn">cp</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.returns_estimators</span> <span class="kn">import</span> <span class="n">ReturnsEstimators</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> 
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.1.1&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">cvxpy.constraints</span> <span class="kn">import</span> <span class="n">NonPos</span><span class="p">,</span> <span class="n">Zero</span><span class="p">,</span> <span class="n">SOC</span><span class="p">,</span> <span class="n">PSD</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">cvxpy.expressions.variable</span> <span class="kn">import</span> <span class="n">Variable</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">atoms</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.dist_ratio</span> <span class="kn">import</span> <span class="n">dist_ratio</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.eye_minus_inv</span> <span class="kn">import</span> <span class="n">eye_minus_inv</span><span class="p">,</span> <span class="n">resolvent</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.geo_mean</span> <span class="kn">import</span> <span class="n">geo_mean</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.gen_lambda_max</span> <span class="kn">import</span> <span class="n">gen_lambda_max</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.gmatmul</span> <span class="kn">import</span> <span class="n">gmatmul</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">atoms</span><span class="o">/</span><span class="n">geo_mean</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">import</span> <span class="nn">scipy.sparse</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">cvxpy.utilities.power_tools</span> <span class="kn">import</span> <span class="p">(</span><span class="n">fracify</span><span class="p">,</span> <span class="n">decompose</span><span class="p">,</span> <span class="n">approx_error</span><span class="p">,</span> <span class="n">lower_bound</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>                                          <span class="n">over_bound</span><span class="p">,</span> <span class="n">prettydict</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> 
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">utilities</span><span class="o">/</span><span class="n">power_tools</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> 
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.affine.reshape</span> <span class="kn">import</span> <span class="n">reshape</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.affine.vstack</span> <span class="kn">import</span> <span class="n">vstack</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">cvxpy.constraints.second_order</span> <span class="kn">import</span> <span class="n">SOC</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">atoms</span><span class="o">/</span><span class="n">affine</span><span class="o">/</span><span class="n">reshape</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> 
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">cvxpy.expressions.expression</span> <span class="kn">import</span> <span class="n">Expression</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.affine.hstack</span> <span class="kn">import</span> <span class="n">hstack</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.affine.affine_atom</span> <span class="kn">import</span> <span class="n">AffAtom</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">cvxpy.lin_ops.lin_utils</span> <span class="k">as</span> <span class="nn">lu</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">atoms</span><span class="o">/</span><span class="n">affine</span><span class="o">/</span><span class="n">hstack</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> 
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">import</span> <span class="nn">cvxpy.lin_ops.lin_utils</span> <span class="k">as</span> <span class="nn">lu</span>
-<span class="ne">---&gt; </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.affine.affine_atom</span> <span class="kn">import</span> <span class="n">AffAtom</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> 
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">atoms</span><span class="o">/</span><span class="n">affine</span><span class="o">/</span><span class="n">affine_atom</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">cvxpy.lin_ops.lin_utils</span> <span class="k">as</span> <span class="nn">lu</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">cvxpy.atoms.atom</span> <span class="kn">import</span> <span class="n">Atom</span>
-<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">cvxpy.cvxcore.python</span> <span class="kn">import</span> <span class="n">canonInterface</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">from</span> <span class="nn">cvxpy.expressions.constants</span> <span class="kn">import</span> <span class="n">Constant</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="kn">from</span> <span class="nn">cvxpy.utilities</span> <span class="kn">import</span> <span class="n">performance_utils</span> <span class="k">as</span> <span class="n">perf</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">investing_book</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cvxpy</span><span class="o">/</span><span class="n">cvxcore</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># TODO(akshayka): This is a hack; the swig-auto-generated cvxcore.py</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># tries to import cvxcore as `from . import _cvxcore`</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">_cvxcore</span>
-
-<span class="ne">ImportError</span>: numpy.core.multiarray failed to import
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;mlfinlab&#39;
 </pre></div>
 </div>
 </div>
