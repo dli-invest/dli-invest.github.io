@@ -11,7 +11,8 @@ dependencies:
   - matplotlib=3.2.1
   - pip:
     - jupyter-book
-    - git+https://github.com/FriendlyUser/mlfinlab.git
+    # remove mlfinlab, replace with another library
+    # - git+https://github.com/FriendlyUser/mlfinlab.git
     - sympy
     - mplfinance
     - yfinance
