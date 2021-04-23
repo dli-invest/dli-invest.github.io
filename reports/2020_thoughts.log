@@ -1,0 +1,105 @@
+Traceback (most recent call last):
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 554, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import yfinance as yf
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import mplfinance as mpf
+
+vst = yf.Ticker("VST.CN")
+data = vst.history(interval="1d", start="2020-08-08", end="2020-09-10")
+mpf.plot(
+    data,
+    type="candle",
+    mav=4,
+    title="Victory Square Purchases Dates",
+    vlines=dict(
+        vlines=["2020-08-26", "2020-09-03", "2020-09-08"], linewidths=(0.5, 0.5, 0.5)
+    ),
+)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-1-c1f33ec96b42>[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m [0;32mimport[0m [0mmplfinance[0m [0;32mas[0m [0mmpf[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
+[0;32m----> 6[0;31m [0mvst[0m [0;34m=[0m [0myf[0m[0;34m.[0m[0mTicker[0m[0;34m([0m[0;34m"VST.CN"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      7[0m [0mdata[0m [0;34m=[0m [0mvst[0m[0;34m.[0m[0mhistory[0m[0;34m([0m[0minterval[0m[0;34m=[0m[0;34m"1d"[0m[0;34m,[0m [0mstart[0m[0;34m=[0m[0;34m"2020-08-08"[0m[0;34m,[0m [0mend[0m[0;34m=[0m[0;34m"2020-09-10"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m mpf.plot(
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/yfinance/base.py[0m in [0;36m__init__[0;34m(self, ticker, session)[0m
+[1;32m     63[0m [0;34m[0m[0m
+[1;32m     64[0m         self._earnings = {
+[0;32m---> 65[0;31m             [0;34m"yearly"[0m[0;34m:[0m [0mutils[0m[0;34m.[0m[0mempty_df[0m[0;34m([0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     66[0m             "quarterly": utils.empty_df()}
+[1;32m     67[0m         self._financials = {
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/yfinance/utils.py[0m in [0;36mempty_df[0;34m(index)[0m
+[1;32m     38[0m     empty = _pd.DataFrame(index=index, data={
+[1;32m     39[0m         [0;34m'Open'[0m[0;34m:[0m [0m_np[0m[0;34m.[0m[0mnan[0m[0;34m,[0m [0;34m'High'[0m[0;34m:[0m [0m_np[0m[0;34m.[0m[0mnan[0m[0;34m,[0m [0;34m'Low'[0m[0;34m:[0m [0m_np[0m[0;34m.[0m[0mnan[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 40[0;31m         'Close': _np.nan, 'Adj Close': _np.nan, 'Volume': _np.nan})
+[0m[1;32m     41[0m     [0mempty[0m[0;34m.[0m[0mindex[0m[0;34m.[0m[0mname[0m [0;34m=[0m [0;34m'Date'[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     42[0m     [0;32mreturn[0m [0mempty[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36m__init__[0;34m(self, data, index, columns, dtype, copy)[0m
+[1;32m    433[0m             )
+[1;32m    434[0m         [0;32melif[0m [0misinstance[0m[0;34m([0m[0mdata[0m[0;34m,[0m [0mdict[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 435[0;31m             [0mmgr[0m [0;34m=[0m [0minit_dict[0m[0;34m([0m[0mdata[0m[0;34m,[0m [0mindex[0m[0;34m,[0m [0mcolumns[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    436[0m         [0;32melif[0m [0misinstance[0m[0;34m([0m[0mdata[0m[0;34m,[0m [0mma[0m[0;34m.[0m[0mMaskedArray[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    437[0m             [0;32mimport[0m [0mnumpy[0m[0;34m.[0m[0mma[0m[0;34m.[0m[0mmrecords[0m [0;32mas[0m [0mmrecords[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/internals/construction.py[0m in [0;36minit_dict[0;34m(data, index, columns, dtype)[0m
+[1;32m    252[0m             [0marr[0m [0;32mif[0m [0;32mnot[0m [0mis_datetime64tz_dtype[0m[0;34m([0m[0marr[0m[0;34m)[0m [0;32melse[0m [0marr[0m[0;34m.[0m[0mcopy[0m[0;34m([0m[0;34m)[0m [0;32mfor[0m [0marr[0m [0;32min[0m [0marrays[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    253[0m         ]
+[0;32m--> 254[0;31m     [0;32mreturn[0m [0marrays_to_mgr[0m[0;34m([0m[0marrays[0m[0;34m,[0m [0mdata_names[0m[0;34m,[0m [0mindex[0m[0;34m,[0m [0mcolumns[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    255[0m [0;34m[0m[0m
+[1;32m    256[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/internals/construction.py[0m in [0;36marrays_to_mgr[0;34m(arrays, arr_names, index, columns, dtype)[0m
+[1;32m     67[0m [0;34m[0m[0m
+[1;32m     68[0m     [0;31m# don't force copy because getting jammed in an ndarray anyway[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 69[0;31m     [0marrays[0m [0;34m=[0m [0m_homogenize[0m[0;34m([0m[0marrays[0m[0;34m,[0m [0mindex[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     70[0m [0;34m[0m[0m
+[1;32m     71[0m     [0;31m# from BlockManager perspective[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/internals/construction.py[0m in [0;36m_homogenize[0;34m(data, index, dtype)[0m
+[1;32m    321[0m                 [0mval[0m [0;34m=[0m [0mlib[0m[0;34m.[0m[0mfast_multiget[0m[0;34m([0m[0mval[0m[0;34m,[0m [0moindex[0m[0;34m.[0m[0mvalues[0m[0;34m,[0m [0mdefault[0m[0;34m=[0m[0mnp[0m[0;34m.[0m[0mnan[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    322[0m             val = sanitize_array(
+[0;32m--> 323[0;31m                 [0mval[0m[0;34m,[0m [0mindex[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m,[0m [0mcopy[0m[0;34m=[0m[0;32mFalse[0m[0;34m,[0m [0mraise_cast_failure[0m[0;34m=[0m[0;32mFalse[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    324[0m             )
+[1;32m    325[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/construction.py[0m in [0;36msanitize_array[0;34m(data, index, dtype, copy, raise_cast_failure)[0m
+[1;32m    463[0m                 [0mvalue[0m [0;34m=[0m [0mmaybe_cast_to_datetime[0m[0;34m([0m[0mvalue[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    464[0m [0;34m[0m[0m
+[0;32m--> 465[0;31m             [0msubarr[0m [0;34m=[0m [0mconstruct_1d_arraylike_from_scalar[0m[0;34m([0m[0mvalue[0m[0;34m,[0m [0mlen[0m[0;34m([0m[0mindex[0m[0;34m)[0m[0;34m,[0m [0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    466[0m [0;34m[0m[0m
+[1;32m    467[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/dtypes/cast.py[0m in [0;36mconstruct_1d_arraylike_from_scalar[0;34m(value, length, dtype)[0m
+[1;32m   1450[0m                 [0mvalue[0m [0;34m=[0m [0mensure_str[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1451[0m [0;34m[0m[0m
+[0;32m-> 1452[0;31m         [0msubarr[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mempty[0m[0;34m([0m[0mlength[0m[0;34m,[0m [0mdtype[0m[0;34m=[0m[0mdtype[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1453[0m         [0msubarr[0m[0;34m.[0m[0mfill[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1454[0m [0;34m[0m[0m
+
+[0;31mTypeError[0m: Cannot interpret '<attribute 'dtype' of 'numpy.generic' objects>' as a data type
+TypeError: Cannot interpret '<attribute 'dtype' of 'numpy.generic' objects>' as a data type
+
