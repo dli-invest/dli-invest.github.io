@@ -36,6 +36,23 @@ CSE: CRL, carl data solutions, crl.cn
 UBMRF:US, urban immursive
 dtst, data storage corporation
 
+**4/4/2021**
+
+Coinbase, buy 3 shares, see where the price goes, holding too much cash.
+
+
+**8/22/2021**
+
+I believe vst will go to the moon, covalent holdings are much higher than the nav.
+
+The ability to buy more creator.co with shares priced at 1.00 rather compared to current stock price of 0.54.
+
+The water shortage is interesting,
+
+I think water treatment will become more important, with contaminated water 
+mud/oil.
+
+Consider investing in [AQUA](https://finance.yahoo.com/quote/AQUA?p=AQUA&.tsrc=fin-srch).
 ### Retirement crisis
 
 The retirement crisis will happen because of politicans overpromising and underdelivering.
