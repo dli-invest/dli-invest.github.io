@@ -2,7 +2,8 @@ name: Build HTML
 on:
   push:
     branches-ignore:
-      - master
+      - gh-pages
+
 jobs:
   build:
     runs-on: ubuntu-latest
