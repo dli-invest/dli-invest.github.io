@@ -62,3 +62,14 @@ With biden giving 86 billion to bail out pensions, will likely happen if calforn
 When the crisis happens, taxes will likely go up and/or house prices go down?
 
 I hope that the retirement crisis will be resolved soon
+
+
+### Evergrande Crisis
+
+I sold most of my pkk the day on 9/18/2021 in fear of a crash and in part because of evergrande.
+
+Sold the rest on 9/20/2021 due to fears of covid 
+
+Also sold POW.TO because it was financials and fear of the crisis.
+
+I expect the market to crash because if evergrande is going to liquidate massive numbers of properties, it will pull the rest of the market down.
