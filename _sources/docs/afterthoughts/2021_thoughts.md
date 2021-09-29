@@ -73,3 +73,8 @@ Sold the rest on 9/20/2021 due to fears of covid
 Also sold POW.TO because it was financials and fear of the crisis.
 
 I expect the market to crash because if evergrande is going to liquidate massive numbers of properties, it will pull the rest of the market down.
+
+
+```
+So now you know, the way to look out for the next economic crash is by looking for situations where income can no longer service debts.
+```
