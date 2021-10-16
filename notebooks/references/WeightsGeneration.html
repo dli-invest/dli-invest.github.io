@@ -23,8 +23,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -34,17 +34,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -87,7 +87,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   Custom Content
  </span>
@@ -116,11 +116,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../docs/code/projects.html">
      Projects
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../docs/code/task_list.html">
-     Task List
     </a>
    </li>
   </ul>
@@ -207,7 +202,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Legacy Content
  </span>
@@ -367,35 +362,33 @@
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.1.63)
-Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.21.2)
-Requirement already satisfied: lxml&gt;=4.5.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (4.6.3)
-Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (2.26.0)
-Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (0.0.9)
-Requirement already satisfied: pandas&gt;=0.24 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.0.4)
-Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2021.3)
-Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2.8.2)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas&gt;=0.24-&gt;yfinance) (1.16.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.21.2)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (0.0.9)
+Requirement already satisfied: pandas&gt;=0.24 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.0.4)
+Requirement already satisfied: lxml&gt;=4.5.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (4.6.3)
+Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (2.26.0)
+Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas&gt;=0.24-&gt;yfinance) (2021.3)
+Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas&gt;=0.24-&gt;yfinance) (1.16.0)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (1.26.7)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2021.10.8)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (3.2)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2021.10.8)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2.0.4)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-10-15 00:55:30--  https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage
-Resolving github.com (github.com)... 140.82.113.3
-Connecting to github.com (github.com)|140.82.113.3|:443... connected.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-10-16 00:56:28--  https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage
+Resolving github.com (github.com)... 140.82.112.4
+Connecting to github.com (github.com)|140.82.112.4|:443... connected.
+HTTP request sent, awaiting response... 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>302 Found
-Location: https://github-releases.githubusercontent.com/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20211015%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20211015T005530Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=cfcd75505e77e118ce338544baadb6eefc6c080fb66020421349513cc79ed501&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream [following]
---2021-10-15 00:55:30--  https://github-releases.githubusercontent.com/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20211015%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20211015T005530Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=cfcd75505e77e118ce338544baadb6eefc6c080fb66020421349513cc79ed501&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream
-Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.109.154, 185.199.110.154, 185.199.111.154, ...
-Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.109.154|:443... connected.
+Location: https://github-releases.githubusercontent.com/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20211016%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20211016T005628Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=3011b742a3797f71fcdf8c5d1e15c539faf34fb4136ab26dd09a6ec3b608d0cb&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream [following]
+--2021-10-16 00:56:28--  https://github-releases.githubusercontent.com/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20211016%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20211016T005628Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=3011b742a3797f71fcdf8c5d1e15c539faf34fb4136ab26dd09a6ec3b608d0cb&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.110.154, 185.199.109.154, 185.199.111.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.110.154|:443... connected.
 HTTP request sent, awaiting response... 
 </pre></div>
 </div>
@@ -407,24 +400,15 @@ Saving to: ‘/usr/local/bin/orca’
 /usr/local/bin/orca   0%[                    ]       0  --.-KB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  33%[=====&gt;              ]  16.29M  80.2MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  45%[========&gt;           ]  22.59M   113MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  50%[=========&gt;          ]  24.75M  61.4MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  83%[===============&gt;    ]  40.89M  88.8MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  55%[==========&gt;         ]  27.48M  45.2MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  63%[===========&gt;        ]  31.45M  38.7MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  81%[===============&gt;    ]  40.13M  39.4MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca 100%[===================&gt;]  49.22M  41.4MB/s    in 1.2s    
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca 100%[===================&gt;]  49.22M  96.3MB/s    in 0.5s    
 
-2021-10-15 00:55:31 (41.4 MB/s) - ‘/usr/local/bin/orca’ saved [51607939/51607939]
+2021-10-16 00:56:29 (96.3 MB/s) - ‘/usr/local/bin/orca’ saved [51607939/51607939]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
@@ -465,7 +449,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3527</span><span class="o">/</span><span class="mf">688742252.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3550</span><span class="o">/</span><span class="mf">688742252.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.mean_variance</span> <span class="kn">import</span> <span class="n">MeanVarianceOptimisation</span>
