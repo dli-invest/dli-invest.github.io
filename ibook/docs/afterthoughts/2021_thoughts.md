@@ -72,4 +72,13 @@ Sold the rest on 9/20/2021 due to fears of covid
 
 Also sold POW.TO because it was financials and fear of the crisis.
 
-I expect the market to crash because if evergrande is going to liquidate massive numbers of properties, it will pull the rest of the market down.
+I expect the market to crash because if evergrande is going to liquidate massive numbers of properties, it will pull the rest of the market down. 
+
+## Covid Crisis Africa version
+
+- shutdown happening again
+- covid will overwhelm hospitals
+- stay at home economy
+- nothing is going to be fixed  
+
+Will arht media succeed, I believe zim stock will do okay with the increased supply chain crisis.
