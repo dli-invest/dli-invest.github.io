@@ -82,3 +82,9 @@ I expect the market to crash because if evergrande is going to liquidate massive
 - nothing is going to be fixed  
 
 Will arht media succeed, I believe zim stock will do okay with the increased supply chain crisis.
+I expect the market to crash because if evergrande is going to liquidate massive numbers of properties, it will pull the rest of the market down.
+
+
+```
+So now you know, the way to look out for the next economic crash is by looking for situations where income can no longer service debts.
+```
