@@ -31,3 +31,5 @@ To convert an ipynb book to a markdown file
 ```
 jupytext CorrelationExamples.ipynb --to rmarkdown
 ```
+
+Since this book contains useful contain, I will try to make money on ads, please click on them <3
