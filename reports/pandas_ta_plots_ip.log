@@ -32,8 +32,7 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['def get_prices_for_stock(stock, start_date="2019-03-01", end_date="2020-05-30"):', '    data = yf.download(stock, start=start_date, end=end_date)', "    data = data.fillna(method='ffill')", '    # Drop columns with no entries', "    data = data.dropna(axis='columns', how='all')"]
-...
-['', "ntar_df = get_prices_for_stock('NTAR.CN')", '# Used for example Trend Return Long Trend Below', "ntar_df.columns = ['open', 'high', 'low', 'close', 'adj_close', 'volume']", 'ntar_df.head()']
+!pip install mplfinance yfinance
+!pip install -U git+https://github.com/twopirllc/pandas-ta
 -------------------
 
