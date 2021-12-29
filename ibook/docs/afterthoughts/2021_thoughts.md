@@ -88,3 +88,18 @@ I expect the market to crash because if evergrande is going to liquidate massive
 ```
 So now you know, the way to look out for the next economic crash is by looking for situations where income can no longer service debts.
 ```
+
+
+## Capital Power
+
+With cpx stock I think it has long term potential,
+
+On the canadian market, it trended down to 39.48$ CAD, luckily I dumped it at 40.20 blaze it number almost.
+
+Dividend stocks are boring and lame I prefer high end rolling on stonks.
+
+## End of Year Afterwards
+
+Although I was somewhat accurate in predicting the prices of bb, all my other predictions were completely wrong.
+
+Note to self dont trust my ability to randomly throw out numbers, focus on big picture changes

@@ -24,6 +24,8 @@ parts:
       title: 2020 Thoughts
     - file: docs/afterthoughts/2021_thoughts.md
       title: 2021 Thoughts
+    - file: docs/afterthoughts/2022_thoughts.md
+      title: 2022 Thoughts
   - file: docs/ch6_predictions
     sections:
     - file: docs/predictions/2020_eoy_predictions.md

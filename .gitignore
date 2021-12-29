@@ -2,3 +2,4 @@ pythonenv3.8
 _build
 .vscode
 venv
+oryx-build-commands.txt
