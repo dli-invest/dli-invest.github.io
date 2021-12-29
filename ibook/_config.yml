@@ -16,6 +16,9 @@ execute:
     - 'analyze/**'
     - 'mini_book/notebooks/references/stock_predictions.ipynb'
 
+bibtex_bibfiles:
+  - _bibliography/references.bib
+  - _bibliography/investing.bib
 #######################################################################################
 # HTML-specific settings
 html:
