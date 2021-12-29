@@ -11,7 +11,6 @@ kernelspec:
 
 # Tasklist
 
-
 Acting under the assumption that tasklists will be implemented pretty quickly.
 
 ```{todo}
@@ -54,7 +53,6 @@ TODO
 - [ ] Notifications when events happen
 - [ ] Use golang or python for this
 - [ ] Store data in faunadb with discord notifications
-- [ ]
 
 #### Sedar documents
 
