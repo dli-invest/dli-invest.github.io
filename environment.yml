@@ -9,11 +9,11 @@ dependencies:
   - pip
   - pandas=1.0.4
   - matplotlib=3.2.1
-  - sphinxcontrib-bibtex=2.4.1
   - pip:
     - jupyter-book
     # remove mlfinlab, replace with another library
     # - git+https://github.com/FriendlyUser/mlfinlab.git
     - sympy
     - mplfinance
+    - sphinxcontrib-bibtex
     - yfinance
