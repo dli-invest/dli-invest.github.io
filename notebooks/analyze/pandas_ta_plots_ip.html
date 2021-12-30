@@ -367,31 +367,31 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mplfinance in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.12.8b6)
 Requirement already satisfied: yfinance in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.1.67)
+Requirement already satisfied: pandas in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mplfinance) (1.0.4)
+Requirement already satisfied: matplotlib in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mplfinance) (3.2.1)
+Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (2.26.0)
+Requirement already satisfied: lxml&gt;=4.5.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (4.7.1)
+Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.21.2)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (0.0.10)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mplfinance) (3.2.1)
-Requirement already satisfied: pandas in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from mplfinance) (1.0.4)
-Requirement already satisfied: lxml&gt;=4.5.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (4.7.1)
-Requirement already satisfied: requests&gt;=2.20 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (2.26.0)
-Requirement already satisfied: multitasking&gt;=0.0.7 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (0.0.10)
-Requirement already satisfied: numpy&gt;=1.15 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from yfinance) (1.21.2)
-Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas-&gt;mplfinance) (2021.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas-&gt;mplfinance) (2021.3)
 Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas-&gt;mplfinance) (2.8.2)
 Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas-&gt;mplfinance) (1.16.0)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2.0.4)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (3.3)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (1.26.7)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2021.10.8)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (1.26.7)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (3.3)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from requests&gt;=2.20-&gt;yfinance) (2.0.4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib-&gt;mplfinance) (3.0.4)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib-&gt;mplfinance) (1.3.1)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib-&gt;mplfinance) (3.0.4)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from matplotlib-&gt;mplfinance) (0.11.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting git+https://github.com/twopirllc/pandas-ta
-  Cloning https://github.com/twopirllc/pandas-ta to /tmp/pip-req-build-ay9am30e
-  Running command git clone -q https://github.com/twopirllc/pandas-ta /tmp/pip-req-build-ay9am30e
+  Cloning https://github.com/twopirllc/pandas-ta to /tmp/pip-req-build-6u8w71oi
+  Running command git clone -q https://github.com/twopirllc/pandas-ta /tmp/pip-req-build-6u8w71oi
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Resolved https://github.com/twopirllc/pandas-ta to commit b92e45c0b8f035ac76292f8f130be32ec49b2ef4
@@ -401,9 +401,7 @@ Requirement already satisfied: cycler&gt;=0.10 in /usr/share/miniconda3/envs/inv
 Requirement already satisfied: numpy&gt;=1.13.3 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (1.21.2)
 Requirement already satisfied: python-dateutil&gt;=2.6.1 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (2.8.2)
 Requirement already satisfied: pytz&gt;=2017.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (2021.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas-&gt;pandas-ta==0.3.14b0) (1.16.0)
+Requirement already satisfied: six&gt;=1.5 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas-&gt;pandas-ta==0.3.14b0) (1.16.0)
 Building wheels for collected packages: pandas-ta
 </pre></div>
 </div>
@@ -414,8 +412,8 @@ Building wheels for collected packages: pandas-ta
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for pandas-ta: filename=pandas_ta-0.3.14b0-py3-none-any.whl size=219766 sha256=b3595067f102c9a58ef0dfdd9c2de19bb8268036a6c6302cbc1c0a71fa3d6586
-  Stored in directory: /tmp/pip-ephem-wheel-cache-fwbk2d7n/wheels/2d/b0/97/98814700c6859229dac6f4c0b1bc1546331add62e7f6c9bf15
+?25h  Created wheel for pandas-ta: filename=pandas_ta-0.3.14b0-py3-none-any.whl size=219766 sha256=846061cb2438dd0954d6c6e35e46c88d4eee0869ff9c3a622d60552671c87d3c
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i1pe8ms8/wheels/2d/b0/97/98814700c6859229dac6f4c0b1bc1546331add62e7f6c9bf15
 Successfully built pandas-ta
 </pre></div>
 </div>
@@ -857,14 +855,14 @@ TypeError: Cannot interpret &#39;&lt;attribute &#39;dtype&#39; of &#39;numpy.gen
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3462</span><span class="o">/</span><span class="mf">2875402308.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3459</span><span class="o">/</span><span class="mf">2875402308.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="k">return</span> <span class="p">(</span><span class="n">smin</span><span class="p">,</span> <span class="n">smax</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">21</span> 
 <span class="ne">---&gt; </span><span class="mi">22</span> <span class="n">ntar_df</span> <span class="o">=</span> <span class="n">get_prices_for_stock</span><span class="p">(</span><span class="s1">&#39;NTAR.CN&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="c1"># Used for example Trend Return Long Trend Below</span>
 <span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">ntar_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="s1">&#39;adj_close&#39;</span><span class="p">,</span> <span class="s1">&#39;volume&#39;</span><span class="p">]</span>
 
-<span class="nn">/tmp/ipykernel_3462/2875402308.py</span> in <span class="ni">get_prices_for_stock</span><span class="nt">(stock, start_date, end_date)</span>
+<span class="nn">/tmp/ipykernel_3459/2875402308.py</span> in <span class="ni">get_prices_for_stock</span><span class="nt">(stock, start_date, end_date)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">get_prices_for_stock</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;2019-03-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2020-05-30&quot;</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
