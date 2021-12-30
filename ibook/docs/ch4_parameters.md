@@ -61,3 +61,15 @@ In addition there are certain quality factors that indicate a company will perfo
 |Leverage              |A firm with significantly more debt than equity is considered to be highly leveraged. The debt-to-equity ratio is typically inversely related to prospects, with lower leverage being better.|
 |Payout ratio          |The share of earnings paid out in dividends to shareholders. Stocks with higher payout ratios are ranked higher.                        |
 |Return on equity (ROE)|ROE is computed as the ratio of net income to shareholders' equity. Equities with higher historical returns on equity are ranked higher.|
+
+Terms explained
+
+What Is the Current Ratio?
+The current ratio is a liquidity ratio that measures a company’s ability to pay short-term obligations or those due within one year. 
+$$
+  Debt / Equity = \frac{Total Liabilities}{Total Shareholder's Equity}
+$$
+
+A ratio under 1.00 indicates that the company’s debts due in a year or less are greater than its assets—cash or other short-term assets expected to be converted to cash within a year or less. A current ratio of less than 1.00 may seem alarming, although different situations can negatively affect the current ratio in a solid company.
+
+A high D/E ratio is often associated with high risk; it means that a company has been aggressive in financing its growth with debt.
