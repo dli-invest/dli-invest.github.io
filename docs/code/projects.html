@@ -42,7 +42,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -285,7 +285,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -338,7 +338,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -383,7 +383,136 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Stock Investing Projects</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#youtube-nlp">
+   Youtube NLP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#investing-book">
+   Investing Book
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stock-dashboard">
+   Stock Dashboard
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#earnings-report-calendar">
+   Earnings Report Calendar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#news-alerts">
+   News Alerts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bid-analysis">
+     Bid analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="stock-investing-projects">
+<h1>Stock Investing Projects<a class="headerlink" href="#stock-investing-projects" title="Permalink to this headline">¶</a></h1>
+<p>Contains project overview and what I seek to accomplish in each project.</p>
+<div class="section" id="youtube-nlp">
+<h2>Youtube NLP<a class="headerlink" href="#youtube-nlp" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Annotate youtube videos</p></li>
+<li><p>v2 can annotate videos without youtube transcriptions</p></li>
+</ul>
+</div>
+<div class="section" id="investing-book">
+<h2>Investing Book<a class="headerlink" href="#investing-book" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Executable book containing all the content for my investing journey from software engineer
+to successful investor.</p></li>
+<li><p>Contains a list of projects I have built related for investing.</p></li>
+</ul>
+</div>
+<div class="section" id="stock-dashboard">
+<h2>Stock Dashboard<a class="headerlink" href="#stock-dashboard" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Includings various dash and streamlit apps for ta and analysis of stocks. My most common use case is to
+just look at all the stock prices of things I am interested in.</p></li>
+<li><p>Dashboard with links to other projects</p></li>
+</ul>
+</div>
+<div class="section" id="earnings-report-calendar">
+<h2>Earnings Report Calendar<a class="headerlink" href="#earnings-report-calendar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Creates events in my calendar when the stocks in my stock list are being generated</p></li>
+<li><p>Cron job to update list of stocks of interest</p></li>
+<li><p>Copy existing google calendar interaction code from repo</p></li>
+<li><p>Use best practise to initialize python repo</p></li>
+<li><p>Have discord webhook to notify success or failure</p></li>
+<li><p>update csv containing captured earnings per week (useful for future trading) - index by id</p></li>
+<li><p>use browserstack instead of selenium for visiblity and easier traceback.</p></li>
+<li><p>Make open source under dli-invest.</p></li>
+</ul>
+</div>
+<div class="section" id="news-alerts">
+<h2>News Alerts<a class="headerlink" href="#news-alerts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Output notifications from yahoo news, this only gets recent news, sometimes there is clutter from ads and/or random new items, but good enough for my purposes</p></li>
+</ul>
+<div class="section" id="bid-analysis">
+<h3>Bid analysis<a class="headerlink" href="#bid-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Get bid data per market open - move into fast api???</p>
+<p>Need to get bids for stocks from tmx web money and the cse before market open (might need selenium, probably not).</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/code"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -484,15 +613,13 @@ just look at all the stock prices of things I am interested in.</p></li>
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By David Li<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By David Li<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

@@ -42,7 +42,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -285,7 +285,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -338,12 +338,112 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Course Notes</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="course-notes">
+<h1>Course Notes<a class="headerlink" href="#course-notes" title="Permalink to this headline">¶</a></h1>
+<p>Various notes from courses (may be copy paste) – remove from any final edition of the book.</p>
+<p>Strategies range
+from low-frequency, at least by trading
+standards, to high-frequency. You must implement high-frequency
+trading strategies with software and market
+interfaces that can handle sub-millisecond order
+creation and submission. Quant strategies
+are also a type of forecasting method that
+attempts to predict the future value of a stock or other instrument where
+the direction of a price spread between
+two instruments. These forecasts are based on an observed price response
+to factors that you have identified as
+statistically significant in predicting changes in
+an instrument’s price.</p>
+<p>Mean reversion strategies
+depend on the stability or stationarity of an asset’s price or spread relative
+to another asset. When the price risk
+spread gets too high, it becomes more likely
+that it will decrease, and so revert to its long-term
+mean or neutral value. When the price risk
+spread gets too low, it becomes more likely
+that it will increase, and again revert to its mean.</p>
+<p>Equally important
+is their ability to detect and profit
+from the execution of large orders that have
+been broken up and hidden using an order
+execution strategy. Let’s say a firm
+wants to purchase an unusually large
+quantity of stock. Now use an execution
+strategy that enters the trades in a
+way that is supposed to break up and hide the order but which unintentionally
+signals search strategy.</p>
+<p>Sophisticated traders
+have their own algorithms which are able to detect
+these stealth orders. They’re able to use
+this information to jump in front of
+the large orders, and profit by driving
+prices up ahead of a buy order or down
+ahead of a sell order.</p>
+<p>Spoofing is where traders
+attempt to mislead other traders by submitting
+orders to the market, order book that they
+don’t intend to execute.</p>
+<p>Say a trading group needs to sell a stock and wants to
+get a better price. They can enter temporary
+large-sized buy orders below the current market
+bid to encourage other bidders to pay higher
+prices for the stock.</p>
+<p>Other potential applications of machine learning include</p>
+<ul class="simple">
+<li><p>clustering grouping stocks that are similar or disimilar</p></li>
+<li><p>Various plots for clustering and filtering companies by criteria</p></li>
+<li><p>Making a hierarchy  matrix.</p></li>
+</ul>
+<p><strong>Risk of Trading</strong></p>
+<p>Knight financial group, bad IT practise, very risky assets.</p>
+<p>80% of the market is using quant trading already.</p>
+<p>Calmar Ratio = Return / Maximum Drawdown
+Sharpe Ratio = Return / Risk</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -455,15 +555,13 @@ Sharpe Ratio = Return / Risk</p>
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By David Li<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By David Li<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

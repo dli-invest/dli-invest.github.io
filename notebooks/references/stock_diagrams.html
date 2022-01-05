@@ -42,7 +42,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -280,7 +280,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -338,7 +338,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -351,7 +351,244 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1><no title></h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                
+  <p><a href="https://colab.research.google.com/github/dli-invest/dli-invest.github.io/blob/master/ibook/notebooks/references/stock_diagrams.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install graphviz
+<span class="o">!</span>apt-get install graphviz
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.16)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install diagrams
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.20.0)
+Requirement already satisfied: graphviz&lt;0.17.0,&gt;=0.13.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (0.16)
+Requirement already satisfied: jinja2&lt;3.0,&gt;=2.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (2.11.3)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from jinja2&lt;3.0,&gt;=2.10-&gt;diagrams) (2.0.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Diagram</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.compute</span> <span class="kn">import</span> <span class="n">EC2</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.database</span> <span class="kn">import</span> <span class="n">RDS</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">ELB</span>
+
+<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;Grouped Workers&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;TB&quot;</span><span class="p">):</span>
+    <span class="n">ELB</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker1&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker2&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">164</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">startupinfo</span><span class="o">=</span><span class="n">get_startupinfo</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py</span> in <span class="ni">__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>                                 <span class="n">errread</span><span class="p">,</span> <span class="n">errwrite</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">800</span>                                 <span class="n">restore_signals</span><span class="p">,</span> <span class="n">start_new_session</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>         <span class="k">except</span><span class="p">:</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py</span> in <span class="ni">_execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1550</span>                             <span class="n">err_msg</span> <span class="o">+=</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err_filename</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1551</span>                     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>                 <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;dot&#39;: &#39;dot&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3536</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py</span> in <span class="ni">__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span> 
+<span class="g g-Whitespace">    </span><span class="mi">148</span>     <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">149</span>         <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>         <span class="c1"># Remove the graphviz file leaving only the image.</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py</span> in <span class="ni">render</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span> 
+<span class="g g-Whitespace">    </span><span class="mi">190</span>     <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">191</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">192</span> 
+<span class="g g-Whitespace">    </span><span class="mi">193</span> 
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view)</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="n">rendered</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>                                   <span class="n">renderer</span><span class="o">=</span><span class="n">renderer</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="n">formatter</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">245</span>                                   <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span> 
+<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">render</span><span class="nt">(***failed resolving arguments***)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">cwd</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span> 
+<span class="ne">--&gt; </span><span class="mi">223</span>     <span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">cwd</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="k">return</span> <span class="n">rendered</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span> 
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>         <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errno</span><span class="o">.</span><span class="n">ENOENT</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">167</span>             <span class="k">raise</span> <span class="n">ExecutableNotFound</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>             <span class="k">raise</span>
+
+<span class="ne">ExecutableNotFound</span>: failed to execute [&#39;dot&#39;, &#39;-Kdot&#39;, &#39;-Tpng&#39;, &#39;-O&#39;, &#39;grouped_workers&#39;], make sure the Graphviz executables are on your systems&#39; PATH
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;grouped_workers.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/stock_diagrams_4_0.png" src="../../_images/stock_diagrams_4_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Cluster</span><span class="p">,</span> <span class="n">Diagram</span>
+<span class="kn">from</span> <span class="nn">diagrams.programming.language</span> <span class="kn">import</span> <span class="n">Python</span><span class="p">,</span> <span class="n">Csharp</span><span class="p">,</span> <span class="n">Go</span>
+<span class="kn">from</span> <span class="nn">diagrams.programming.framework</span> <span class="kn">import</span> <span class="n">Django</span><span class="p">,</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">Route53</span>
+<span class="kn">from</span> <span class="nn">diagrams.saas.chat</span> <span class="kn">import</span> <span class="n">Slack</span>
+<span class="kn">from</span> <span class="nn">diagrams.gcp.compute</span> <span class="kn">import</span> <span class="n">AppEngine</span><span class="p">,</span> <span class="n">GCE</span><span class="p">,</span> <span class="n">GCF</span><span class="p">,</span> <span class="n">Run</span>
+<span class="kn">from</span> <span class="nn">diagrams.gcp.devtools</span> <span class="kn">import</span> <span class="n">Code</span><span class="p">,</span> <span class="n">Build</span>
+<span class="kn">from</span> <span class="nn">diagrams.elastic.elasticsearch</span> <span class="kn">import</span> <span class="n">Elasticsearch</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.database</span> <span class="kn">import</span> <span class="n">SQL</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.storage</span> <span class="kn">import</span> <span class="n">Storage</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.blank</span> <span class="kn">import</span> <span class="n">Blank</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.device</span> <span class="kn">import</span> <span class="n">Tablet</span>
+
+<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;stock-arch&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">nSlack</span> <span class="o">=</span> <span class="n">Slack</span><span class="p">(</span><span class="s1">&#39;automatic updates&#39;</span><span class="p">)</span>
+    <span class="n">nPython</span> <span class="o">=</span> <span class="n">Python</span><span class="p">()</span>
+    <span class="n">nGo</span> <span class="o">=</span> <span class="n">Go</span><span class="p">()</span>
+    <span class="n">nCSharp</span> <span class="o">=</span> <span class="n">Csharp</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Google Cloud&quot;</span><span class="p">):</span>
+        <span class="n">gcp_build</span> <span class="o">=</span> <span class="n">Build</span><span class="p">(</span><span class="s2">&quot;Auto Build&quot;</span><span class="p">)</span>
+        <span class="n">sapp</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s2">&quot;stocks app&quot;</span><span class="p">)</span>
+        <span class="n">fstocks</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s1">&#39;fstocks&#39;</span><span class="p">)</span>
+        <span class="n">utilities</span> <span class="o">=</span> <span class="n">GCF</span><span class="p">(</span><span class="s1">&#39;utility&#39;</span><span class="p">)</span>
+        <span class="n">gcp_serverless</span> <span class="o">=</span> <span class="p">[</span><span class="n">sapp</span><span class="p">,</span>
+                     <span class="n">fstocks</span><span class="p">,</span>
+                     <span class="n">utilities</span>
+                    <span class="p">]</span>
+        <span class="n">gcp_build</span> <span class="o">-</span> <span class="n">gcp_serverless</span>
+
+    <span class="n">nElasticsearch</span> <span class="o">=</span> <span class="n">Elasticsearch</span><span class="p">(</span><span class="s1">&#39;news_db&#39;</span><span class="p">)</span>
+    <span class="n">dash</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">()</span>
+    <span class="n">nPython</span> <span class="o">&gt;&gt;</span> <span class="n">dash</span>
+    <span class="c1"># Convert to framework</span>
+    <span class="n">dash</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+    <span class="n">nGo</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+    <span class="n">nCSharp</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+
+    <span class="n">fstocks</span> <span class="o">&gt;&gt;</span> <span class="n">nSlack</span>
+
+    <span class="n">sapp</span> <span class="o">&gt;&gt;</span> <span class="n">nElasticsearch</span>
+
+    <span class="n">nPython</span> <span class="o">&gt;&gt;</span> <span class="n">Storage</span><span class="p">(</span><span class="s1">&#39;stock list&#39;</span><span class="p">)</span>
+
+    <span class="n">gcp_serverless</span> <span class="o">&gt;&gt;</span> <span class="n">Tablet</span><span class="p">(</span><span class="s1">&#39;View&#39;</span><span class="p">)</span>
+    
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;stock-arch.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/stock_diagrams_6_0.png" src="../../_images/stock_diagrams_6_0.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/references"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -428,7 +665,7 @@ Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3561</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3536</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
 <span class="ne">---&gt; </span><span class="mi">11</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
@@ -578,15 +815,13 @@ Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By David Li<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By David Li<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
