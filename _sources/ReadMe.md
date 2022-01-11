@@ -59,18 +59,10 @@ risk:
      output_csv:
 ```
 
-Will iterate across predicted images and show them in the report.
-
-### Prophet
-#### IEX API KEY
-
-Need to set iex api key
-
-This will be a html report generated and setup to have more or less statistics
+Then my logic will iterate across tickers in the csv and generate images for them.
 
 ##### References
 
 
 https://mlfinlab.readthedocs.io/en/latest/portfolio_optimisation/risk_metrics.html
 
-I doubt anyone would actually read this
