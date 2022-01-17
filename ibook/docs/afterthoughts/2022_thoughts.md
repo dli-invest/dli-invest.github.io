@@ -27,6 +27,27 @@ ZIM: 20%
 VPH: 20%
 DCM: 20%
 
+## DII.B
+
+Dorel is a company that sells a bunch of different things.
+
+They has sold off their biking business and have decided to give a special dividend of $12 USD to shareholders.
+
+I believe with a current price of $15 CAD in a tax free savings account. The value cannot be understated here.
+
+I have until January 17th to buy, and will likely use two or three goes to purchase shares.
+
+A relative of mine thought that DII.B (dorel) was a declining business and overlooked the special dividend, so I think the stock price is greatly undervalued.
+
+"The special dividend will be payable on February 1, 2022 to shareholders of record as at the close of business on January 18, 2022".
+
+With the extra cash I think its unlikely that the stock price would decline more than 50%, they still have other businesses.
+
+With the recent rate hike scare, I should be able to acquire this asset around 24 or lower.
+
+https://finance.yahoo.com/news/dorel-completes-sale-sports-segment-135500537.html
+
+
 ## Plurlock Security
 
 1/16/2022.
