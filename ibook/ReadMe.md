@@ -1,4 +1,14 @@
+## investing Book
+
+This book contains information on my investing best practises as well as what I will do in the future for my investments. This is all my opinion and its really hard to say what the market will do in the future.
+
+
 ### Overview
+
+
+
+To publish
+
 
 Build sphinx files
 
@@ -23,7 +33,7 @@ Periodic publishing for online portoflio selection and risk management for curre
 
 **06/13/2020**
 
-* 
+* add more examples
 
 **06/07/2020**
 * ~~Limit to 2 decimals make columns 6 instead of 3~~
@@ -49,18 +59,10 @@ risk:
      output_csv:
 ```
 
-Will iterate across predicted images and show them in the report.
-
-### Prophet
-#### IEX API KEY
-
-Need to set iex api key
-
-This will be a html report generated and setup to have more or less statistics
+Then my logic will iterate across tickers in the csv and generate images for them.
 
 ##### References
 
 
 https://mlfinlab.readthedocs.io/en/latest/portfolio_optimisation/risk_metrics.html
 
-I doubt anyone would actually read this
