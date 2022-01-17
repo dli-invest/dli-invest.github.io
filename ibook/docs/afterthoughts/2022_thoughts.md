@@ -27,8 +27,6 @@ ZIM: 20%
 VPH: 20%
 DCM: 20%
 
-
-
 ## DII.B
 
 Dorel is a company that sells a bunch of different things.
@@ -48,3 +46,23 @@ With the extra cash I think its unlikely that the stock price would decline more
 With the recent rate hike scare, I should be able to acquire this asset around 24 or lower.
 
 https://finance.yahoo.com/news/dorel-completes-sale-sports-segment-135500537.html
+
+
+## Plurlock Security
+
+1/16/2022.
+
+As of sept 2021 they are sitting around 7.6 million, losing 1.44 million per quarter.
+
+Can last until 2022.
+
+Seems like a lot of their business is low margin, not really that interesting at the moment.
+
+They are facing supply chain issues and making less on their hardware.
+
+I want to see their software sales go up higher before investing, likely thats why their stock is down.
+
+Not interested in low margin hardware sales while software sales remain flat.
+
+PLUR.V wait and see
+
