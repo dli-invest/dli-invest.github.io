@@ -26,3 +26,22 @@ PKK: 20%
 ZIM: 20%
 VPH: 20%
 DCM: 20%
+
+## Plurlock Security
+
+1/16/2022.
+
+As of sept 2021 they are sitting around 7.6 million, losing 1.44 million per quarter.
+
+Can last until 2022.
+
+Seems like a lot of their business is low margin, not really that interesting at the moment.
+
+They are facing supply chain issues and making less on their hardware.
+
+I want to see their software sales go up higher before investing, likely thats why their stock is down.
+
+Not interested in low margin hardware sales while software sales remain flat.
+
+PLUR.V wait and see
+
