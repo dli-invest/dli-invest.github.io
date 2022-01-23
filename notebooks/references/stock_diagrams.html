@@ -383,7 +383,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.16)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.19.1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
@@ -399,12 +399,12 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.20.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.21.0)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (3.0.2)
+Requirement already satisfied: graphviz&lt;0.20.0,&gt;=0.13.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (0.19.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jinja2&lt;3.0,&gt;=2.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (2.11.3)
-Requirement already satisfied: graphviz&lt;0.17.0,&gt;=0.13.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (0.16)
-Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from jinja2&lt;3.0,&gt;=2.10-&gt;diagrams) (2.0.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.0.1)
 </pre></div>
 </div>
 </div>
@@ -428,10 +428,15 @@ Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">164</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">startupinfo</span><span class="o">=</span><span class="n">get_startupinfo</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, capture_output, quiet, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">85</span>             <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span> 
+<span class="ne">--&gt; </span><span class="mi">488</span>     <span class="k">with</span> <span class="n">Popen</span><span class="p">(</span><span class="o">*</span><span class="n">popenargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">process</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">489</span>         <span class="k">try</span><span class="p">:</span>
 
 <span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py</span> in <span class="ni">__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)</span>
 <span class="g g-Whitespace">    </span><span class="mi">799</span>                                 <span class="n">errread</span><span class="p">,</span> <span class="n">errwrite</span><span class="p">,</span>
@@ -443,12 +448,12 @@ Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs
 <span class="ne">-&gt; </span><span class="mi">1551</span>                     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1552</span>                 <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;dot&#39;: &#39;dot&#39;
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: PosixPath(&#39;dot&#39;): PosixPath(&#39;dot&#39;)
 
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3554</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3553</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
 <span class="ne">---&gt; </span><span class="mi">11</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
@@ -467,28 +472,42 @@ Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/share/miniconda3/envs
 <span class="g g-Whitespace">    </span><span class="mi">192</span> 
 <span class="g g-Whitespace">    </span><span class="mi">193</span> 
 
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view)</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="n">rendered</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>                                   <span class="n">renderer</span><span class="o">=</span><span class="n">renderer</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="n">formatter</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">245</span>                                   <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">246</span> 
-<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/_tools.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>                               <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span> 
+<span class="ne">--&gt; </span><span class="mi">172</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> 
+<span class="g g-Whitespace">    </span><span class="mi">174</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">render</span><span class="nt">(***failed resolving arguments***)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">cwd</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span> 
-<span class="ne">--&gt; </span><span class="mi">223</span>     <span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">cwd</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="k">return</span> <span class="n">rendered</span>
-<span class="g g-Whitespace">    </span><span class="mi">225</span> 
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/rendering.py</span> in <span class="ni">render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span>         <span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span> 
+<span class="ne">--&gt; </span><span class="mi">119</span>         <span class="n">rendered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span> 
+<span class="g g-Whitespace">    </span><span class="mi">121</span>         <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
 
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span>         <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errno</span><span class="o">.</span><span class="n">ENOENT</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">167</span>             <span class="k">raise</span> <span class="n">ExecutableNotFound</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>             <span class="k">raise</span>
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/_tools.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>                               <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span> 
+<span class="ne">--&gt; </span><span class="mi">172</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> 
+<span class="g g-Whitespace">    </span><span class="mi">174</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="ne">ExecutableNotFound</span>: failed to execute [&#39;dot&#39;, &#39;-Kdot&#39;, &#39;-Tpng&#39;, &#39;-O&#39;, &#39;grouped_workers&#39;], make sure the Graphviz executables are on your systems&#39; PATH
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/rendering.py</span> in <span class="ni">render</span><span class="nt">(engine, format, filepath, renderer, formatter, quiet, outfile, raise_if_result_exists, overwrite_filepath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span>                       <span class="n">cwd</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span> <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parts</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span>                       <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">320</span>                       <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span> 
+<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
+
+<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, capture_output, quiet, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>         <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errno</span><span class="o">.</span><span class="n">ENOENT</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>             <span class="k">raise</span> <span class="n">ExecutableNotFound</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>         <span class="k">raise</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span> 
+
+<span class="ne">ExecutableNotFound</span>: failed to execute PosixPath(&#39;dot&#39;), make sure the Graphviz executables are on your systems&#39; PATH
 </pre></div>
 </div>
 </div>
