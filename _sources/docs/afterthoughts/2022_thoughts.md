@@ -66,3 +66,20 @@ Not interested in low margin hardware sales while software sales remain flat.
 
 PLUR.V wait and see
 
+
+## Zim Purchase
+
+Dumped a lot of money into zim.
+
+Jerome Powell mentioned that supply chain shortages should "get" better in the second half of 2022.
+
+Going to hold ZIM in my tsfa and pump and dump based on dividend news releases.
+
+And rebuy in my taxable accounts to avoid the tax on dividends.
+
+I think zim is an excellent buy, supply chain shortages should persist with the great resignation, new lockdowns and bottlenecks like more flooding and disruptions.
+
+
+## March 2022
+
+Expected to raise rates, but there is a high chance that the fed will delay or take it slow again. Buy the 5 to 10% dip on strong stonks like zim and/or small caps.
