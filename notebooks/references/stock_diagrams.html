@@ -399,11 +399,9 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.21.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz&lt;0.20.0,&gt;=0.13.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (0.19.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.21.1)
 Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (3.0.2)
+Requirement already satisfied: graphviz&lt;0.20.0,&gt;=0.13.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (0.19.1)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.0.1)
 </pre></div>
 </div>
@@ -453,24 +451,24 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/share/miniconda3/envs/
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3548</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3595</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
 <span class="ne">---&gt; </span><span class="mi">11</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
 
 <span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py</span> in <span class="ni">__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">147</span> 
-<span class="g g-Whitespace">    </span><span class="mi">148</span>     <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">149</span>         <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>         <span class="c1"># Remove the graphviz file leaving only the image.</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span>         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span> 
+<span class="g g-Whitespace">    </span><span class="mi">153</span>     <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">154</span>         <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>         <span class="c1"># Remove the graphviz file leaving only the image.</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
 
 <span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py</span> in <span class="ni">render</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">186</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="n">one_format</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">188</span>             <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">189</span> 
-<span class="g g-Whitespace">    </span><span class="mi">190</span>     <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">191</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">192</span> 
-<span class="g g-Whitespace">    </span><span class="mi">193</span> 
+<span class="g g-Whitespace">    </span><span class="mi">190</span> 
 
 <span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/_tools.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">170</span>                               <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
