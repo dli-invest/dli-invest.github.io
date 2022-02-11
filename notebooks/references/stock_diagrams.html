@@ -38,17 +38,19 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -400,8 +402,8 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (0.21.1)
-Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (3.0.2)
 Requirement already satisfied: graphviz&lt;0.20.0,&gt;=0.13.2 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (0.19.1)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from diagrams) (3.0.2)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.0.1)
 </pre></div>
 </div>
@@ -451,7 +453,7 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/share/miniconda3/envs/
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3595</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3639</span><span class="o">/</span><span class="mf">3027030631.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
 <span class="ne">---&gt; </span><span class="mi">11</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
