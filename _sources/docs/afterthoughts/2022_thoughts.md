@@ -83,3 +83,22 @@ I think zim is an excellent buy, supply chain shortages should persist with the 
 ## March 2022
 
 Expected to raise rates, but there is a high chance that the fed will delay or take it slow again. Buy the 5 to 10% dip on strong stonks like zim and/or small caps.
+
+
+## Purchase Indigo Books and Music
+
+* Ceo has a strong background in ecommerce and e books
+* Tech stack of indigo seems solid and modern (asp.net + react), .net 6.0 is badass and easy to update to .net 6.0 (solid products)
+* diversification into other industries
+* commitment to green stuff
+* solid growth in digital sales
+
+* project 100 million net profit in 2022
+* Blow out earnings, beat pre COVID Q4 earnings by 12%. Huge discount!
+* cash higher than market cap
+
+### Negatives
+
+* Cant outcompete amazon
+* only make money in certain quarters
+* low shareholder equity
