@@ -84,6 +84,10 @@ I think zim is an excellent buy, supply chain shortages should persist with the 
 
 Expected to raise rates, but there is a high chance that the fed will delay or take it slow again. Buy the 5 to 10% dip on strong stonks like zim and/or small caps.
 
+* Buy zim in rrsp using new input money after canada does rate stuff on wednesday
+* dumped money in hive because crypto is more attractive as russia is cut off from the global financial system
+* I expect usage and price to remain around these levels
+* dump if price goes up enough
 
 ## Purchase Indigo Books and Music
 
