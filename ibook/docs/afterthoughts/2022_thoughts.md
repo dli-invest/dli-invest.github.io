@@ -89,6 +89,33 @@ Expected to raise rates, but there is a high chance that the fed will delay or t
 * I expect usage and price to remain around these levels
 * dump if price goes up enough
 
+Messed up on hive (russia cant do anything even use cryptocurrency), hold hive for a while, no real use atm.
+
+Tax loss selling
+
+uan, solid company, should perform well with rising food costs and banning of fertilizer, american company, expect it to do well, with 5 dollar dividend.
+
+As for zim, shipping rates should go higher with russia disruption hold until 2022.
+
+### Russian Invasion
+
+#### Russia loses
+
+- they run away, or akwardly attempt to broker peace
+- most sanctions remain, production has been wiped and investment not happening
+- production still messed up
+
+#### Urkaine Wins
+
+- russia keeps fighting for a while
+- damaged infrastructure, farmers have evacuated, cant start up production right away
+- expect costs to normalize after 2 to 3 years
+
+#### Russia keeps fighting
+- prelonged war, urakine not safe
+- production hampers, oil prices hit 200 dollars per barrel
+- status quo remains
+
 ## Purchase Indigo Books and Music
 
 * Ceo has a strong background in ecommerce and e books
