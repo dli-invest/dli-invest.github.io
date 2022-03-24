@@ -57,7 +57,7 @@ with Diagram("Grouped Workers", show=False, direction="TB"):
 The above exception was the direct cause of the following exception:
 
 [0;31mExecutableNotFound[0m                        Traceback (most recent call last)
-[0;32m/tmp/ipykernel_3588/3027030631.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_3590/3027030631.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      9[0m                   [0mEC2[0m[0;34m([0m[0;34m"worker3"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m     10[0m                   [0mEC2[0m[0;34m([0m[0;34m"worker4"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 11[0;31m                   EC2("worker5")] >> RDS("events")
