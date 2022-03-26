@@ -97,6 +97,9 @@ uan, solid company, should perform well with rising food costs and banning of fe
 
 As for zim, shipping rates should go higher with russia disruption hold until 2022.
 
+- there is a contract coming up in 2022, chance of port strikes are very high
+- wait and hold until the port strike in the usa.
+
 ### Russian Invasion
 
 #### Russia loses
