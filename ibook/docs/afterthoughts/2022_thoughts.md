@@ -99,6 +99,7 @@ As for zim, shipping rates should go higher with russia disruption hold until 20
 
 - there is a contract coming up in 2022, chance of port strikes are very high
 - wait and hold until the port strike in the usa.
+- vfv is an etf tracking the S&P 500 I can invest in using canadian dollars.
 
 ### Russian Invasion
 
