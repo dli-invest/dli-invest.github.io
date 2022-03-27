@@ -15,6 +15,51 @@ Although I was somewhat accurate in predicting the prices of bb, all my other pr
 
 Note to self dont trust my ability to randomly throw out numbers, focus on big picture changes
 
+## Portfolio why I bought
+
+1. HIVE.V 
+  - made money previously in crypto, thought I could do okay with it again, with proof of stake transition, it should have a positive impact on crypto.
+  - proof of stake for eth, see if it causes a price increase of 10% to 20% and see more adoption with the russian sanctions
+  - btc and/or eth around 50k with more money printing
+  - massive decefits in the future and decline of reserve currency usd
+
+2. ZIM
+  - shipping is a sexy industry
+  - pe of 2 below industry average
+  - more covid lockdowns and supply chain disruptions with the war (russia)
+  - port union (labour disruptions)
+  - expect sustained supply chain issues until 2023
+  - more ships at this time means more money.
+
+3. UAN
+  - fertilizer prices are high have tripled
+  - pays out solid dividend yields
+  - american company (supply chain issues) like cn rail strike dont impact it
+
+4. ERTH
+  - ESG company that makes fertilizer
+  - expected fertilizer prices to stay high over time with russia war
+  - sanctions should remain after war, tho may get removed.
+
+5. EGLX
+
+  - probably unvalued
+  - doing things like discord competitor
+  - fond of addiciting games
+  - growth company with decent projections
+  - beaten down stonk
+
+6. POW
+  - discount to nav
+  - solid dividend
+  - hopeful immune from trudeaus tax changes
+  - reliable company that always increases the dividend
+  - payout ratio is sustainable
+
+7. CM
+  - costco credit card
+  - small and nimble bank (dont like the super big ones)
+  - dividend is decent and stock split in may
 ## Simple portfolio
 
 Despite losses in PKK, I still belive in the stock.
@@ -101,6 +146,18 @@ As for zim, shipping rates should go higher with russia disruption hold until 20
 - wait and hold until the port strike in the usa.
 - vfv is an etf tracking the S&P 500 I can invest in using canadian dollars.
 
+
+### Russian Invasion II
+
+#### Peace is brokered
+
+- sanctions removed
+- dump money in poyyf
+- loot russian stuff to pay for ukraine
+
+#### War continues
+
+- russia loots western assets
 ### Russian Invasion
 
 #### Russia loses
