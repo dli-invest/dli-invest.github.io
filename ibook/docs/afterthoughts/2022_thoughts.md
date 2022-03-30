@@ -35,6 +35,7 @@ Note to self dont trust my ability to randomly throw out numbers, focus on big p
   - fertilizer prices are high have tripled
   - pays out solid dividend yields
   - american company (supply chain issues) like cn rail strike dont impact it
+  - russia crisis continues, no peace between ukraine (why did I sell omega lol)
 
 4. ERTH
   - ESG company that makes fertilizer
