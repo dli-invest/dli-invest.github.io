@@ -61,6 +61,17 @@ Note to self dont trust my ability to randomly throw out numbers, focus on big p
   - costco credit card
   - small and nimble bank (dont like the super big ones)
   - dividend is decent and stock split in may
+
+
+8. KNR
+  - PE based on 2021 earnings is 98
+  - if company keeps growing the pe will be decently low so,
+  - if they double revenue and keep their profit margin
+  - hoping for revenue of 35 million in Q1 2022 and gross profit of 3 million
+  - major source of revenue is from housing, if housing goes down, then this company will likely not make money
+  - revenue breakdown:
+    1. sass is declining
+    2. mostly project based revenue for housing which is all over the place 
 ## Simple portfolio
 
 Despite losses in PKK, I still belive in the stock.
