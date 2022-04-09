@@ -147,10 +147,10 @@ with Diagram("stock-arch-v2", show=False):
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py[0m in [0;36mrun_check[0;34m(cmd, input_lines, encoding, capture_output, quiet, **kwargs)[0m
-[1;32m     84[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 85[0;31m             [0mproc[0m [0;34m=[0m [0msubprocess[0m[0;34m.[0m[0mrun[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     86[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py[0m in [0;36mrun_check[0;34m(cmd, input_lines, encoding, quiet, **kwargs)[0m
+[1;32m     80[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 81[0;31m             [0mproc[0m [0;34m=[0m [0msubprocess[0m[0;34m.[0m[0mrun[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     82[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py[0m in [0;36mrun[0;34m(input, capture_output, timeout, check, *popenargs, **kwargs)[0m
 [1;32m    487[0m [0;34m[0m[0m
@@ -172,7 +172,7 @@ with Diagram("stock-arch-v2", show=False):
 The above exception was the direct cause of the following exception:
 
 [0;31mExecutableNotFound[0m                        Traceback (most recent call last)
-[0;32m/tmp/ipykernel_3683/3002167544.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_3720/3002167544.py[0m in [0;36m<module>[0;34m[0m
 [1;32m    123[0m   [0mdaily_job_ga[0m [0;34m>>[0m [0mEdge[0m[0;34m([0m[0mcolor[0m[0;34m=[0m[0;34m'purple'[0m[0;34m)[0m [0;34m>>[0m [0mdis_news_halts[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    124[0m   [0mmanual_job_ga[0m [0;34m>>[0m [0mEdge[0m[0;34m([0m[0mcolor[0m[0;34m=[0m[0;34m'purple'[0m[0;34m)[0m [0;34m>>[0m [0mdis_video[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 125[0;31m   [0mdaily_job_ga[0m [0;34m>>[0m [0mEdge[0m[0;34m([0m[0mcolor[0m[0;34m=[0m[0;34m'purple'[0m[0;34m)[0m [0;34m>>[0m [0mdis_video[0m[0;34m[0m[0;34m[0m[0m
@@ -220,12 +220,12 @@ The above exception was the direct cause of the following exception:
 [0m[1;32m    321[0m [0;34m[0m[0m
 [1;32m    322[0m     [0;32mreturn[0m [0mos[0m[0;34m.[0m[0mfspath[0m[0;34m([0m[0moutfile[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py[0m in [0;36mrun_check[0;34m(cmd, input_lines, encoding, capture_output, quiet, **kwargs)[0m
-[1;32m     86[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     87[0m         [0;32mif[0m [0me[0m[0;34m.[0m[0merrno[0m [0;34m==[0m [0merrno[0m[0;34m.[0m[0mENOENT[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 88[0;31m             [0;32mraise[0m [0mExecutableNotFound[0m[0;34m([0m[0mcmd[0m[0;34m)[0m [0;32mfrom[0m [0me[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     89[0m         [0;32mraise[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     90[0m [0;34m[0m[0m
+[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py[0m in [0;36mrun_check[0;34m(cmd, input_lines, encoding, quiet, **kwargs)[0m
+[1;32m     82[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     83[0m         [0;32mif[0m [0me[0m[0;34m.[0m[0merrno[0m [0;34m==[0m [0merrno[0m[0;34m.[0m[0mENOENT[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 84[0;31m             [0;32mraise[0m [0mExecutableNotFound[0m[0;34m([0m[0mcmd[0m[0;34m)[0m [0;32mfrom[0m [0me[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     85[0m         [0;32mraise[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     86[0m [0;34m[0m[0m
 
 [0;31mExecutableNotFound[0m: failed to execute PosixPath('dot'), make sure the Graphviz executables are on your systems' PATH
 ExecutableNotFound: failed to execute PosixPath('dot'), make sure the Graphviz executables are on your systems' PATH
