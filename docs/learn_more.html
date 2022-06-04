@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
 <script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Learn More &#8212; Investing Reference Book</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -44,6 +44,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -599,13 +600,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="learn-more">
+  <section class="tex2jax_ignore mathjax_ignore" id="learn-more">
 <h1>Learn More<a class="headerlink" href="#learn-more" title="Permalink to this headline">#</a></h1>
 <p>We’re about ready to wrap up this brief course on Python for scientific
 computing.</p>
 <p>In this last lecture we give some pointers to the major scientific libraries
 and suggestions for further reading.</p>
-<div class="section" id="numpy">
+<section id="numpy">
 <h2>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">#</a></h2>
 <p>Fundamental matrix and array processing capabilities are provided by the
 excellent <a class="reference external" href="http://www.numpy.org/">NumPy</a> library.</p>
@@ -639,8 +640,8 @@ but it’s essentially zero.</p>
 <p>As with other standard NumPy operations, this inner product calls into highly
 optimized machine code.</p>
 <p>It is as efficient as carefully hand-coded FORTRAN or C.</p>
-</div>
-<div class="section" id="scipy">
+</section>
+<section id="scipy">
 <h2>SciPy<a class="headerlink" href="#scipy" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="http://www.scipy.org">SciPy</a> library is built on top of NumPy and
 provides additional functionality.</p>
@@ -660,7 +661,7 @@ the standard normal density.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3586</span><span class="o">/</span><span class="mf">3871879263.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3466</span><span class="o">/</span><span class="mf">3871879263.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -682,8 +683,8 @@ the standard normal density.</p>
 <li><p><a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/signal.html">signal processing</a></p></li>
 </ul>
 <p>See them all <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/index.html">here</a>.</p>
-</div>
-<div class="section" id="graphics">
+</section>
+<section id="graphics">
 <h2>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">#</a></h2>
 <p>The most popular and comprehensive Python library for creating figures
 and graphs is <a class="reference external" href="http://matplotlib.org/">Matplotlib</a>, with functionality
@@ -694,17 +695,17 @@ including</p>
 <li><p>LaTeX integration</p></li>
 </ul>
 <p>Example 2D plot with embedded LaTeX annotations</p>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/qs.png"><img alt="../_images/qs.png" src="../_images/qs.png" style="width: 446.6px; height: 336.6px;" /></a>
-</div>
+</figure>
 <p>Example contour plot</p>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/bn_density1.png"><img alt="../_images/bn_density1.png" src="../_images/bn_density1.png" style="width: 328.35px; height: 257.95000000000005px;" /></a>
-</div>
+</figure>
 <p>Example 3D plot</p>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/career_vf.png"><img alt="../_images/career_vf.png" src="../_images/career_vf.png" style="width: 373.6px; height: 277.6px;" /></a>
-</div>
+</figure>
 <p>More examples can be found in the <a class="reference external" href="http://matplotlib.org/gallery.html">Matplotlib thumbnail
 gallery</a>.</p>
 <p>Other graphics libraries include</p>
@@ -712,8 +713,8 @@ gallery</a>.</p>
 <li><p><a class="reference external" href="https://plot.ly/python/">Plotly</a></p></li>
 <li><p><a class="reference external" href="http://bokeh.pydata.org/en/latest/">Bokeh</a></p></li>
 </ul>
-</div>
-<div class="section" id="symbolic-algebra">
+</section>
+<section id="symbolic-algebra">
 <h2>Symbolic Algebra<a class="headerlink" href="#symbolic-algebra" title="Permalink to this headline">#</a></h2>
 <p>It’s useful to be able to manipulate symbolic expressions, as in
 Mathematica or Maple.</p>
@@ -776,8 +777,8 @@ from within the Python shell.</p>
 working within a fully fledged programming language.</p>
 <p>We can easily create tables of derivatives, generate LaTeX output, add
 that output to figures and so on.</p>
-</div>
-<div class="section" id="pandas">
+</section>
+<section id="pandas">
 <h2>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">#</a></h2>
 <p>One of the most popular libraries for working with data is
 <a class="reference external" href="http://pandas.pydata.org/">pandas</a>.</p>
@@ -805,15 +806,15 @@ excellent <code class="docutils literal notranslate"><span class="pre">random</s
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="further-reading">
+</section>
+<section id="further-reading">
 <h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
 <p>These lectures were originally taken from a longer and more complete lecture
 series on Python programming hosted by <a class="reference external" href="https://quantecon.org">QuantEcon</a>.</p>
 <p>The <a class="reference external" href="https://python-programming.quantecon.org/">full set of lectures</a> might be
 useful as the next step of your study.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -858,7 +859,7 @@ useful as the next step of your study.</p>
   
     By David Li<br/>
   
-      &copy; Copyright 2021.<br/>
+      &copy; Copyright 2022.<br/>
 </p>
         </footer>
     </div>

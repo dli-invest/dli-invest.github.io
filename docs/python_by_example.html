@@ -5,7 +5,8 @@
   <head>
     <meta charset="utf-8" />
 <script data-ad-client="ca-pub-2479144310234386" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>An Introductory Example &#8212; Investing Reference Book</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -26,8 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -44,6 +44,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -840,9 +841,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="an-introductory-example">
+  <section class="tex2jax_ignore mathjax_ignore" id="an-introductory-example">
 <span id="python-by-example"></span><h1>An Introductory Example<a class="headerlink" href="#an-introductory-example" title="Permalink to this headline">#</a></h1>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <p>We’re now ready to start learning the Python language itself.</p>
 <p>In this lecture, we will write and then pick apart small Python
@@ -851,17 +852,17 @@ programs.</p>
 structures.</p>
 <p>Deeper concepts will be covered in later lectures.</p>
 <p>You should have read the <a class="reference internal" href="getting_started.html#getting-started"><span class="std std-ref">lecture</span></a> on getting started with Python before beginning this one.</p>
-</div>
-<div class="section" id="the-task-plotting-a-white-noise-process">
+</section>
+<section id="the-task-plotting-a-white-noise-process">
 <h2>The Task: Plotting a White Noise Process<a class="headerlink" href="#the-task-plotting-a-white-noise-process" title="Permalink to this headline">#</a></h2>
 <p>Suppose we want to simulate and plot the white noise process
 <span class="math notranslate nohighlight">\(\epsilon_0, \epsilon_1, \ldots, \epsilon_T\)</span>, where each draw
 <span class="math notranslate nohighlight">\(\epsilon_t\)</span> is independent standard normal.</p>
 <p>In other words, we want to generate figures that look something like
 this:</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/test_program_1_updated.png" src="../_images/test_program_1_updated.png" />
-</div>
+</figure>
 <p>(Here <span class="math notranslate nohighlight">\(t\)</span> is on the horizontal axis and <span class="math notranslate nohighlight">\(\epsilon_t\)</span> is on the vertical
 axis.)</p>
 <p>We’ll do this in several different ways, each time learning something
@@ -875,8 +876,8 @@ in the notebook if you run it on your own machine.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="version-1">
+</section>
+<section id="version-1">
 <h2>Version 1<a class="headerlink" href="#version-1" title="Permalink to this headline">#</a></h2>
 <p id="ourfirstprog">Here are a few lines of code that perform the task we set</p>
 <div class="cell docutils container">
@@ -895,7 +896,7 @@ in the notebook if you run it on your own machine.</p>
 </div>
 </div>
 <p>Let’s break this program down and see how it works.</p>
-<div class="section" id="imports">
+<section id="imports">
 <span id="import"></span><h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
 <p>The first two lines of the program import functionality from external
 code libraries.</p>
@@ -951,15 +952,15 @@ syntax <code class="docutils literal notranslate"><span class="pre">np.attribute
 </div>
 <p>But the former method (using the short name <code class="docutils literal notranslate"><span class="pre">np</span></code>) is convenient and more
 standard.</p>
-<div class="section" id="why-so-many-imports">
+<section id="why-so-many-imports">
 <h4>Why So Many Imports?<a class="headerlink" href="#why-so-many-imports" title="Permalink to this headline">#</a></h4>
 <p>Python programs typically require several import statements.</p>
 <p>The reason is that the core language is deliberately kept small, so that
 it’s easy to learn and maintain.</p>
 <p>When you want to do something interesting with Python, you almost always
 need to import additional functionality.</p>
-</div>
-<div class="section" id="packages">
+</section>
+<section id="packages">
 <h4>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">#</a></h4>
 <p>As stated above, NumPy is a Python <em>package</em>.</p>
 <p>Packages are used by developers to organize code they wish to share.</p>
@@ -977,17 +978,17 @@ computer easily enough if you look around.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>anaconda3/lib/python3.7/site-packages/numpy
 </pre></div>
 </div>
-</div>
-<div class="section" id="subpackages">
+</section>
+<section id="subpackages">
 <h4>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">#</a></h4>
 <p>Consider the line <code class="docutils literal notranslate"><span class="pre">ϵ_values</span> <span class="pre">=</span> <span class="pre">np.random.randn(100)</span></code>.</p>
 <p>Here <code class="docutils literal notranslate"><span class="pre">np</span></code> refers to the package NumPy, while <code class="docutils literal notranslate"><span class="pre">random</span></code> is a
 <strong>subpackage</strong> of NumPy.</p>
 <p>Subpackages are just packages that are subdirectories of another
 package.</p>
-</div>
-</div>
-<div class="section" id="importing-names-directly">
+</section>
+</section>
+<section id="importing-names-directly">
 <h3>Importing Names Directly<a class="headerlink" href="#importing-names-directly" title="Permalink to this headline">#</a></h3>
 <p>Recall this code that we saw above</p>
 <div class="cell docutils container">
@@ -1025,8 +1026,8 @@ package.</p>
 separated by many other lines.</p>
 <p>Then it’s harder for readers to know where <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> came from, should
 they wish to.</p>
-</div>
-<div class="section" id="random-draws">
+</section>
+<section id="random-draws">
 <h3>Random Draws<a class="headerlink" href="#random-draws" title="Permalink to this headline">#</a></h3>
 <p>Returning to our program that plots white noise, the remaining three
 lines after the import statements are</p>
@@ -1047,9 +1048,9 @@ stores them in <code class="docutils literal notranslate"><span class="pre">ϵ_v
 <p>The next two lines genererate the plot.</p>
 <p>We can and will look at various ways to configure and improve this plot
 below.</p>
-</div>
-</div>
-<div class="section" id="alternative-implementations">
+</section>
+</section>
+<section id="alternative-implementations">
 <h2>Alternative Implementations<a class="headerlink" href="#alternative-implementations" title="Permalink to this headline">#</a></h2>
 <p>Let’s try writing some alternative versions of
 <a class="reference internal" href="#ourfirstprog"><span class="std std-ref">our first program</span></a>, which
@@ -1058,7 +1059,7 @@ plotted IID draws from the normal distribution.</p>
 somewhat artificial.</p>
 <p>But they do help us illustrate some important Python syntax and
 semantics in a familiar setting.</p>
-<div class="section" id="a-version-with-a-for-loop">
+<section id="a-version-with-a-for-loop">
 <h3>A Version with a For Loop<a class="headerlink" href="#a-version-with-a-for-loop" title="Permalink to this headline">#</a></h3>
 <p>Here’s a version that illustrates <code class="docutils literal notranslate"><span class="pre">for</span></code> loops and Python lists.</p>
 <div class="cell docutils container" id="firstloopprog">
@@ -1092,8 +1093,8 @@ new random number <span class="math notranslate nohighlight">\(\epsilon_t\)</spa
 <li><p>The last two lines generate the plot and display it to the user.</p></li>
 </ul>
 <p>Let’s study some parts of this program in more detail.</p>
-</div>
-<div class="section" id="lists">
+</section>
+<section id="lists">
 <span id="lists-ref"></span><h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h3>
 <p>Consider the statement <code class="docutils literal notranslate"><span class="pre">ϵ_values</span> <span class="pre">=</span> <span class="pre">[]</span></code>, which creates an empty list.</p>
 <p>Lists are a <em>native Python data structure</em> used to group a collection of
@@ -1217,8 +1218,8 @@ element is referenced by <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-for-loop">
+</section>
+<section id="the-for-loop">
 <h3>The For Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this headline">#</a></h3>
 <p>Now let’s consider the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop from
 <a class="reference internal" href="#firstloopprog"><span class="std std-ref">the program above</span></a>, which
@@ -1271,8 +1272,8 @@ a loop of the form</p>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">sequence</span></code> object can in fact be a very general object, as we’ll
 see soon enough.</p>
-</div>
-<div class="section" id="a-comment-on-indentation">
+</section>
+<section id="a-comment-on-indentation">
 <h3>A Comment on Indentation<a class="headerlink" href="#a-comment-on-indentation" title="Permalink to this headline">#</a></h3>
 <p>In discussing the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, we explained that the code blocks being
 looped over are delimited by indentation.</p>
@@ -1301,8 +1302,8 @@ remember:</p>
 <li><p>All lines in a code block <strong>must have the same amount of indentation</strong>.</p></li>
 <li><p>The Python standard is 4 spaces, and that’s what you should use.</p></li>
 </ul>
-</div>
-<div class="section" id="while-loops">
+</section>
+<section id="while-loops">
 <h3>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is the most common technique for iteration in Python.</p>
 <p>But, for the purpose of illustration, let’s modify
@@ -1331,9 +1332,9 @@ a <code class="docutils literal notranslate"><span class="pre">while</span></cod
 <li><p>the code block for the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is again delimited only by indentation</p></li>
 <li><p>the statement <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">1</span></code> can be replaced by <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">+=</span> <span class="pre">1</span></code></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="another-application">
+</section>
+</section>
+<section id="another-application">
 <h2>Another Application<a class="headerlink" href="#another-application" title="Permalink to this headline">#</a></h2>
 <p>Let’s do one more application before we turn to exercises.</p>
 <p>In this application, we plot the balance of a bank account over time.</p>
@@ -1375,12 +1376,12 @@ list and <code class="docutils literal notranslate"><span class="pre">append</sp
 space from the operating system.</p>
 <p>Notice that we added a legend to the plot — a feature you will be
 asked to use in the exercises.</p>
-</div>
-<div class="section" id="exercises">
+</section>
+<section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
 <p>Now we turn to exercises. It is important that you complete them before
 continuing, since they present new concepts we will need.</p>
-<div class="section" id="exercise-1">
+<section id="exercise-1">
 <h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h3>
 <p>Your first task is to simulate and plot the correlated time series</p>
 <div class="math notranslate nohighlight">
@@ -1402,8 +1403,8 @@ standard normal.</p>
 </div>
 </div>
 <p>Set <span class="math notranslate nohighlight">\(T=200\)</span> and <span class="math notranslate nohighlight">\(\alpha = 0.9\)</span>.</p>
-</div>
-<div class="section" id="exercise-2">
+</section>
+<section id="exercise-2">
 <h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h3>
 <p>Starting with your solution to exercise 2, plot three simulated time
 series, one for each of the cases <span class="math notranslate nohighlight">\(\alpha=0\)</span>, <span class="math notranslate nohighlight">\(\alpha=0.8\)</span> and
@@ -1419,8 +1420,8 @@ figure.</p></li>
 <li><p>For the legend, noted that the expression <code class="docutils literal notranslate"><span class="pre">'foo'</span> <span class="pre">+</span> <span class="pre">str(42)</span></code>
 evaluates to <code class="docutils literal notranslate"><span class="pre">'foo42'</span></code>.</p></li>
 </ul>
-</div>
-<div class="section" id="exercise-3">
+</section>
+<section id="exercise-3">
 <h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h3>
 <p>Similar to the previous exercises, plot the time series</p>
 <div class="math notranslate nohighlight">
@@ -1433,8 +1434,8 @@ x_0 = 0
 <p>Use <span class="math notranslate nohighlight">\(T=200\)</span>, <span class="math notranslate nohighlight">\(\alpha = 0.9\)</span> and <span class="math notranslate nohighlight">\(\{\epsilon_t\}\)</span> as before.</p>
 <p>Search online for a function that can be used to compute the absolute
 value <span class="math notranslate nohighlight">\(|x_t|\)</span>.</p>
-</div>
-<div class="section" id="exercise-4">
+</section>
+<section id="exercise-4">
 <h3>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this headline">#</a></h3>
 <p>One important aspect of essentially all programming languages is
 branching and conditions.</p>
@@ -1470,8 +1471,8 @@ and 1 for each nonnegative number</p>
 <p>Now, write a new solution to Exercise 3 that does not use an existing
 function to compute the absolute value.</p>
 <p>Replace this existing function with an if–else condition.</p>
-</div>
-<div class="section" id="exercise-5">
+</section>
+<section id="exercise-5">
 <span id="pbe-ex3"></span><h3>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this headline">#</a></h3>
 <p>Here’s a harder exercise, that takes some thought and planning.</p>
 <p>The task is to compute an approximation to <span class="math notranslate nohighlight">\(\pi\)</span> using <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo</a>.</p>
@@ -1493,11 +1494,11 @@ the fraction that falls in <span class="math notranslate nohighlight">\(B\)</spa
 landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 <li><p>For a circle, <span class="math notranslate nohighlight">\(area = \pi * radius^2\)</span>.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="solutions">
+</section>
+</section>
+<section id="solutions">
 <h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id1">
+<section id="id1">
 <h3>Exercise 1<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Here’s one solution.</p>
 <div class="cell docutils container">
@@ -1519,8 +1520,8 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 <img alt="../_images/python_by_example_45_0.png" src="../_images/python_by_example_45_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>Exercise 2<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1543,8 +1544,8 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 <img alt="../_images/python_by_example_47_0.png" src="../_images/python_by_example_47_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h3>Exercise 3<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>Here’s one solution:</p>
 <div class="cell docutils container">
@@ -1566,8 +1567,8 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 <img alt="../_images/python_by_example_49_0.png" src="../_images/python_by_example_49_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h3>Exercise 4<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p>Here’s one way:</p>
 <div class="cell docutils container">
@@ -1614,8 +1615,8 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 <img alt="../_images/python_by_example_53_0.png" src="../_images/python_by_example_53_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h3>Exercise 5<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p>Consider the circle of diameter 1 embedded in the unit square.</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be its area and let <span class="math notranslate nohighlight">\(r=1/2\)</span> be its radius.</p>
@@ -1644,14 +1645,14 @@ fraction that falls into the circle.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.13988
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.13776
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1703,7 +1704,7 @@ fraction that falls into the circle.</p>
   
     By David Li<br/>
   
-      &copy; Copyright 2021.<br/>
+      &copy; Copyright 2022.<br/>
 </p>
         </footer>
     </div>
