@@ -1,4 +1,15 @@
 Traceback (most recent call last):
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 730, in _async_poll_for_reply
+    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 96, in ensure_async
+    result = await obj
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/jupyter_client/channels.py", line 230, in get_msg
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
     record_timing=False,
   File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 1204, in execute
@@ -11,47 +22,21 @@ Traceback (most recent call last):
     return future.result()
   File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 664, in async_execute
     cell, index, execution_count=self.code_cells_executed + 1
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 965, in async_execute_cell
-    await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
-nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
-------------------
-import yfinance as yf
-import pandas as pd
-from mlfinlab.portfolio_optimization.mean_variance import MeanVarianceOptimisation
-
-def get_prices(stocks, start_date="2019-03-01", end_date="2020-05-30"):
-    stocks_string = " ".join(stocks)
-    data = yf.download(stocks_string, start=start_date, end=end_date,
-                      group_by="ticker")
-    data = data.fillna(method='ffill')
-    # Drop columns with no entries
-    data = data.dropna(axis='columns', how='all')
-
-    prices_df = pd.concat([data[ticker]["Close"] for ticker in stocks], axis=1)
-    prices_df.columns = stocks
-    return prices_df
-stocks = ["NEXCF", "ACB.TO", "BB.TO", "N.V", "APHA.TO", "TTT.CN", "HUT.TO", "HIVE.V", "AC.TO", "CVE.TO"]
-asset_prices = get_prices(stocks) 
-# Compute IVP weights
-mvo = MeanVarianceOptimisation()
-mvo.allocate(asset_names=asset_prices.columns, asset_prices=asset_prices,
-             solution='max_sharpe')
-ivp_weights = mvo.weights.sort_values(by=0, ascending=False, axis=1)
-with pd.option_context('display.max_rows', None, 'display.max_columns', None): 
-  print(ivp_weights)
-------------------
-
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_3630/688742252.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;32mimport[0m [0myfinance[0m [0;32mas[0m [0myf[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 3[0;31m [0;32mfrom[0m [0mmlfinlab[0m[0;34m.[0m[0mportfolio_optimization[0m[0;34m.[0m[0mmean_variance[0m [0;32mimport[0m [0mMeanVarianceOptimisation[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      4[0m [0;34m[0m[0m
-[1;32m      5[0m [0;32mdef[0m [0mget_prices[0m[0;34m([0m[0mstocks[0m[0;34m,[0m [0mstart_date[0m[0;34m=[0m[0;34m"2019-03-01"[0m[0;34m,[0m [0mend_date[0m[0;34m=[0m[0;34m"2020-05-30"[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mModuleNotFoundError[0m: No module named 'mlfinlab'
-ModuleNotFoundError: No module named 'mlfinlab'
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 949, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 754, in _async_poll_for_reply
+    await self._async_handle_timeout(timeout, cell)
+  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 802, in _async_handle_timeout
+    "Cell execution timed out", timeout, cell
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
+The message was: Cell execution timed out.
+Here is a preview of the cell contents:
+-------------------
+!pip install mlfinlab
+!pip install yfinance
+# See https://plotly.com/python/static-image-export/
+!wget https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage -O /usr/local/bin/orca
+!chmod +x /usr/local/bin/orca
+!apt-get install xvfb libgtk2.0-0 libgconf-2-4
+-------------------
 
