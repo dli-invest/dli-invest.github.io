@@ -3,17 +3,17 @@ channels:
   - default
 dependencies:
   - python=3.7
-  - sphinx=2.4.4
   - Cython=0.29.21
   - sympy
   - pip
-  - pandas=1.0.4
-  - matplotlib=3.2.1
+  - matplotlib=3.5.2
   - pip:
     - jupyter-book
     # remove mlfinlab, replace with another library
     # - git+https://github.com/FriendlyUser/mlfinlab.git
+    - sphinx
     - sympy
     - mplfinance
     - sphinxcontrib-bibtex
     - yfinance
+    - pandas

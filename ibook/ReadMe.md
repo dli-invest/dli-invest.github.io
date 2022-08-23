@@ -1,9 +1,9 @@
-## investing Book
+# investing Book
 
 This book contains information on my investing best practises as well as what I will do in the future for my investments. This is all my opinion and its really hard to say what the market will do in the future.
 
 
-### Overview
+## Overview
 
 
 
@@ -29,7 +29,7 @@ New Risk Page will be made for risk management per tag with useless price predic
 Periodic publishing for online portoflio selection and risk management for current portfolio.
 
 
-#### TodoList
+### TodoList
 
 **06/13/2020**
 
@@ -61,7 +61,7 @@ risk:
 
 Then my logic will iterate across tickers in the csv and generate images for them.
 
-##### References
+### References
 
 
 https://mlfinlab.readthedocs.io/en/latest/portfolio_optimisation/risk_metrics.html

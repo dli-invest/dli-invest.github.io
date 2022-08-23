@@ -18,7 +18,6 @@ execute:
 
 bibtex_bibfiles:
   - _bibliography/references.bib
-  - _bibliography/investing.bib
 #######################################################################################
 # HTML-specific settings
 html:

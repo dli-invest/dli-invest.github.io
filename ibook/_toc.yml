@@ -7,15 +7,15 @@ parts:
   - file: docs/ch1_trade_rules_to_live_by
   - file: docs/ch2_code_4trading
     sections:
-    - file: docs/code/projects
+    - file: docs/code/projects.md
       title: Projects
-    - file: docs/code/task_list
-      title: Task List
+    - file: docs/code/task_list.md
+      title: Tasks
   - file: docs/code/ch3_utility_code
     sections:
-    - file: notebooks/analyze/Performance_06-01-2020
+    - file: notebooks/analyze/Performance_06-01-2020.ipynb
       title: Performance analyze as of 06/01/2020
-    - file: notebooks/analyze/RISK_06-05-2020
+    - file: notebooks/analyze/RISK_06-05-2020.ipynb
       title: Risk Analyze 06/05/2020
   - file: docs/ch4_parameters
   - file: docs/ch5_afterthoughts
@@ -26,6 +26,8 @@ parts:
       title: 2021 Thoughts
     - file: docs/afterthoughts/2022_thoughts.md
       title: 2022 Thoughts
+    - file: docs/afterthoughts/Industry_notes_trends.md
+      title: Industry trends
   - file: docs/ch6_predictions
     sections:
     - file: docs/predictions/2020_eoy_predictions.md

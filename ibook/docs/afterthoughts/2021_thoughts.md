@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-## Stock Purchases Thoughts
+# Stock Purchases Thoughts
 
 Going to purchase ART and CMC for my tsfa 2021
 
@@ -53,7 +53,7 @@ I think water treatment will become more important, with contaminated water
 mud/oil.
 
 Consider investing in [AQUA](https://finance.yahoo.com/quote/AQUA?p=AQUA&.tsrc=fin-srch).
-### Retirement crisis
+## Retirement crisis
 
 The retirement crisis will happen because of politicans overpromising and underdelivering.
 
@@ -64,7 +64,7 @@ When the crisis happens, taxes will likely go up and/or house prices go down?
 I hope that the retirement crisis will be resolved soon
 
 
-### Evergrande Crisis
+## Evergrande Crisis
 
 I sold most of my pkk the day on 9/18/2021 in fear of a crash and in part because of evergrande.
 

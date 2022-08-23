@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-## Initial Thoughts
+# Initial Thoughts
 
 Although I was somewhat accurate in predicting the prices of bb, all my other predictions were completely wrong.
 

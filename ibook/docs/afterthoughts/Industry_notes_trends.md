@@ -14,7 +14,7 @@ kernelspec:
 - investing in technology to dynamically display prices
 - best buy has smart labels, no idea where they got it from, check in another store that is bigger
 
-# Shipping Industry
+## Shipping Industry
 
 Our business has historically been seasonal in nature. As a result, our average freight rates have reflected fluctuations in demand for
 container shipping services, which affect the volume of cargo carried by our fleet and the freight rates which we charge for the

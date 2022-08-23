@@ -9,7 +9,6 @@ kernelspec:
   name: python3
 ---
 
-(utility_code)=
 # Web Scrapping and Data Extraction
 
 Oftentimes, there is data available on the internet and/or in files in which you want specific parts. When I was reading finance books and technical books I found it incredibly useful to extract tables from pdfs. Below is the code I use to extract data, note that camelot requires (tk and ghostscript).
@@ -124,7 +123,6 @@ if __name__ == "__main__":
 
 The following utility scripts uses camelot to extract tables from pdf and then save them in `rst` format, it has difficult merging tables split around 2 pages which is why I save the individual `csvs` files.
 
-Some sample output can be seen at {ref}`some_value_factors`, {numref}`some_value_factors`
 
 
 Another script that I have used is for converting glossary for the latex format to something that jupyterbook can understand, the script is very rough and does not work with references to terms within terms. `\glsapi{}` will be inputted as raw latex, I am expecting the excecutable book project to eventually produce a better solution, but in the interim this script looks for my purposes.
