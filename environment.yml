@@ -2,11 +2,10 @@ name: investing_book
 channels:
   - default
 dependencies:
-  - python=3.7
+  - python=3.9
   - Cython=0.29.21
   - sympy
   - pip
-  - matplotlib=3.5.2
   - pip:
     - jupyter-book
     # remove mlfinlab, replace with another library
@@ -14,6 +13,7 @@ dependencies:
     - sphinx
     - sympy
     - mplfinance
+    - matplotlib
     - sphinxcontrib-bibtex
     - yfinance
     - pandas
