@@ -87,6 +87,5 @@ Technical strategies tend to focus on endogenous factors and
 event-driven strategies focus on exogenous factors.
 
 ```{bibliography} ../_bibliography/references.bib
-:style: unsrt
 :filter: docname in docnames
 ```

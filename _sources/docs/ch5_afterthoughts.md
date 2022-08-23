@@ -12,7 +12,7 @@ kernelspec:
 (Afterthoughts)=
 # Afterthoughts
 
-### Decision Making Framework
+## Decision Making Framework
 1. Never buy a stock expecting to make money
 2. Does the stock have momentum
 3. Is this a good time to buy this stock and why (good news not realised, or no interest)
@@ -20,7 +20,7 @@ kernelspec:
 5. Is this stock industry going to be useful and do well
 6. Does the stock have good management.
 
-### Exchange uplisting trading schedule
+## Exchange uplisting trading schedule
 
 When stocks are uplisted from the cse and/or tsxv to the tsx or otc to the nasdaq, they become eligible for the big institutions to invest in.
 

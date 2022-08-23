@@ -137,6 +137,11 @@ const thebe_selector_output = ".output, .cell_output"
      Projects
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../code/task_list.html">
+     Tasks
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -161,12 +166,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2021_thoughts.html">
-     Stock Purchases Thoughts
+     2021 Thoughts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2022_thoughts.html">
-     Initial Thoughts
+     2022 Thoughts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Industry_notes_trends.html">
+     Industry trends
     </a>
    </li>
   </ul>
@@ -559,7 +569,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="stock-purchases-thoughts">
+  <section class="tex2jax_ignore mathjax_ignore" id="stock-purchases-thoughts">
 <h1>Stock Purchases Thoughts<a class="headerlink" href="#stock-purchases-thoughts" title="Permalink to this headline">#</a></h1>
 <p><strong>12/05/2020</strong>
 If you have no idea what you are doing, rely on charts and TA, it can tell you a good time to sell.</p>
@@ -654,71 +664,13 @@ Wait on BYL for 5G</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3436</span><span class="o">/</span><span class="mf">180073093.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">vst</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;VST.CN&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">data</span> <span class="o">=</span> <span class="n">vst</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2020-08-08&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2020-09-10&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
 
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/yfinance/base.py</span> in <span class="ni">__init__</span><span class="nt">(self, ticker, session)</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span> 
-<span class="g g-Whitespace">     </span><span class="mi">74</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_earnings</span> <span class="o">=</span> <span class="p">{</span>
-<span class="ne">---&gt; </span><span class="mi">75</span>             <span class="s2">&quot;yearly&quot;</span><span class="p">:</span> <span class="n">utils</span><span class="o">.</span><span class="n">empty_df</span><span class="p">(),</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span>             <span class="s2">&quot;quarterly&quot;</span><span class="p">:</span> <span class="n">utils</span><span class="o">.</span><span class="n">empty_df</span><span class="p">()}</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_financials</span> <span class="o">=</span> <span class="p">{</span>
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/yfinance/utils.py</span> in <span class="ni">empty_df</span><span class="nt">(index)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="n">empty</span> <span class="o">=</span> <span class="n">_pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>         <span class="s1">&#39;Open&#39;</span><span class="p">:</span> <span class="n">_np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">:</span> <span class="n">_np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">:</span> <span class="n">_np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="s1">&#39;Close&#39;</span><span class="p">:</span> <span class="n">_np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;Adj Close&#39;</span><span class="p">:</span> <span class="n">_np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="s1">&#39;Volume&#39;</span><span class="p">:</span> <span class="n">_np</span><span class="o">.</span><span class="n">nan</span><span class="p">})</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span>     <span class="n">empty</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="n">empty</span>
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ni">__init__</span><span class="nt">(self, data, index, columns, dtype, copy)</span>
-<span class="g g-Whitespace">    </span><span class="mi">433</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">434</span>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">435</span>             <span class="n">mgr</span> <span class="o">=</span> <span class="n">init_dict</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">436</span>         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ma</span><span class="o">.</span><span class="n">MaskedArray</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">437</span>             <span class="kn">import</span> <span class="nn">numpy.ma.mrecords</span> <span class="k">as</span> <span class="nn">mrecords</span>
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/internals/construction.py</span> in <span class="ni">init_dict</span><span class="nt">(data, index, columns, dtype)</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span>             <span class="n">arr</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">is_datetime64tz_dtype</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="k">else</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">arrays</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span>         <span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">254</span>     <span class="k">return</span> <span class="n">arrays_to_mgr</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">data_names</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">255</span> 
-<span class="g g-Whitespace">    </span><span class="mi">256</span> 
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/internals/construction.py</span> in <span class="ni">arrays_to_mgr</span><span class="nt">(arrays, arr_names, index, columns, dtype)</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> 
-<span class="g g-Whitespace">     </span><span class="mi">68</span>     <span class="c1"># don&#39;t force copy because getting jammed in an ndarray anyway</span>
-<span class="ne">---&gt; </span><span class="mi">69</span>     <span class="n">arrays</span> <span class="o">=</span> <span class="n">_homogenize</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span> 
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="c1"># from BlockManager perspective</span>
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/internals/construction.py</span> in <span class="ni">_homogenize</span><span class="nt">(data, index, dtype)</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>                 <span class="n">val</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">fast_multiget</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">oindex</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span>             <span class="n">val</span> <span class="o">=</span> <span class="n">sanitize_array</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">323</span>                 <span class="n">val</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">raise_cast_failure</span><span class="o">=</span><span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span> 
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/construction.py</span> in <span class="ni">sanitize_array</span><span class="nt">(data, index, dtype, copy, raise_cast_failure)</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span>                 <span class="n">value</span> <span class="o">=</span> <span class="n">maybe_cast_to_datetime</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">464</span> 
-<span class="ne">--&gt; </span><span class="mi">465</span>             <span class="n">subarr</span> <span class="o">=</span> <span class="n">construct_1d_arraylike_from_scalar</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">),</span> <span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span> 
-<span class="g g-Whitespace">    </span><span class="mi">467</span>         <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/pandas/core/dtypes/cast.py</span> in <span class="ni">construct_1d_arraylike_from_scalar</span><span class="nt">(value, length, dtype)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1450</span>                 <span class="n">value</span> <span class="o">=</span> <span class="n">ensure_str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1451</span> 
-<span class="ne">-&gt; </span><span class="mi">1452</span>         <span class="n">subarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1453</span>         <span class="n">subarr</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1454</span> 
-
-<span class="ne">TypeError</span>: Cannot interpret &#39;&lt;attribute &#39;dtype&#39; of &#39;numpy.generic&#39; objects&gt;&#39; as a data type
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;yfinance&#39;
 </pre></div>
 </div>
 </div>

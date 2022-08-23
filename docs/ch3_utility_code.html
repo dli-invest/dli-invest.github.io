@@ -135,6 +135,11 @@ const thebe_selector_output = ".output, .cell_output"
      Projects
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="code/task_list.html">
+     Tasks
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -159,12 +164,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="afterthoughts/2021_thoughts.html">
-     Stock Purchases Thoughts
+     2021 Thoughts
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="afterthoughts/2022_thoughts.html">
-     Initial Thoughts
+     2022 Thoughts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="afterthoughts/Industry_notes_trends.html">
+     Industry trends
     </a>
    </li>
   </ul>
@@ -511,7 +521,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="web-scrapping-and-data-extraction">
-<span id="utility-code"></span><h1>Web Scrapping and Data Extraction<a class="headerlink" href="#web-scrapping-and-data-extraction" title="Permalink to this headline">#</a></h1>
+<h1>Web Scrapping and Data Extraction<a class="headerlink" href="#web-scrapping-and-data-extraction" title="Permalink to this headline">#</a></h1>
 <p>Oftentimes, there is data available on the internet and/or in files in which you want specific parts. When I was reading finance books and technical books I found it incredibly useful to extract tables from pdfs. Below is the code I use to extract data, note that camelot requires (tk and ghostscript).</p>
 <p>As someone who has gone through university using latex, it was only natural for me to want to convert content locked in pdf into formats useful to me.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -616,7 +626,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>The following utility scripts uses camelot to extract tables from pdf and then save them in <code class="docutils literal notranslate"><span class="pre">rst</span></code> format, it has difficult merging tables split around 2 pages which is why I save the individual <code class="docutils literal notranslate"><span class="pre">csvs</span></code> files.</p>
-<p>Some sample output can be seen at <span class="xref std std-ref">some_value_factors</span>, <code class="xref std std-numref docutils literal notranslate"><span class="pre">some_value_factors</span></code></p>
 <p>Another script that I have used is for converting glossary for the latex format to something that jupyterbook can understand, the script is very rough and does not work with references to terms within terms. <code class="docutils literal notranslate"><span class="pre">\glsapi{}</span></code> will be inputted as raw latex, I am expecting the excecutable book project to eventually produce a better solution, but in the interim this script looks for my purposes.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Converts a tex glossary into a format jupyterbook can understand</span>

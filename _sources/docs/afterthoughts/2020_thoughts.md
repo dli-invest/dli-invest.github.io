@@ -9,7 +9,7 @@ kernelspec:
   name: python3
 ---
 
-## Stock Purchases Thoughts
+# Stock Purchases Thoughts
 
 **12/05/2020**
 If you have no idea what you are doing, rely on charts and TA, it can tell you a good time to sell.
@@ -111,7 +111,7 @@ The combination of covid-19 increasing, the need to know if you were previously 
 
 
 
-### Cloud Architecture V1
+## Cloud Architecture V1
 
 Since diagrams added a bunch of nodes, I can now fully diagram my current stock market CI/CD pipelines and tools.
 
@@ -130,7 +130,7 @@ Install the diagrams package
 ```
 
 
-### Cloud Architecture V0
+## Cloud Architecture V0
 
 Make this seperate chapter 
 

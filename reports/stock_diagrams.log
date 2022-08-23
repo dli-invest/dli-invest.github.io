@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
-    record_timing=False,
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 1204, in execute
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
     return future.result()
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 664, in async_execute
-    cell, index, execution_count=self.code_cells_executed + 1
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -32,84 +32,106 @@ with Diagram("Grouped Workers", show=False, direction="TB"):
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py[0m in [0;36mrun_check[0;34m(cmd, input_lines, encoding, quiet, **kwargs)[0m
-[1;32m     80[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 81[0;31m             [0mproc[0m [0;34m=[0m [0msubprocess[0m[0;34m.[0m[0mrun[0m[0;34m([0m[0mcmd[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     82[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:81[0m, in [0;36mrun_check[0;34m(cmd, input_lines, encoding, quiet, **kwargs)[0m
+[1;32m     80[0m     [38;5;28;01melse[39;00m:
+[0;32m---> 81[0m         proc [38;5;241m=[39m [43msubprocess[49m[38;5;241;43m.[39;49m[43mrun[49m[43m([49m[43mcmd[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     82[0m [38;5;28;01mexcept[39;00m [38;5;167;01mOSError[39;00m [38;5;28;01mas[39;00m e:
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py[0m in [0;36mrun[0;34m(input, capture_output, timeout, check, *popenargs, **kwargs)[0m
-[1;32m    487[0m [0;34m[0m[0m
-[0;32m--> 488[0;31m     [0;32mwith[0m [0mPopen[0m[0;34m([0m[0;34m*[0m[0mpopenargs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m [0;32mas[0m [0mprocess[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    489[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/subprocess.py:501[0m, in [0;36mrun[0;34m(input, capture_output, timeout, check, *popenargs, **kwargs)[0m
+[1;32m    499[0m     kwargs[[38;5;124m'[39m[38;5;124mstderr[39m[38;5;124m'[39m] [38;5;241m=[39m PIPE
+[0;32m--> 501[0m [38;5;28;01mwith[39;00m [43mPopen[49m[43m([49m[38;5;241;43m*[39;49m[43mpopenargs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m [38;5;28;01mas[39;00m process:
+[1;32m    502[0m     [38;5;28;01mtry[39;00m:
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py[0m in [0;36m__init__[0;34m(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)[0m
-[1;32m    799[0m                                 [0merrread[0m[0;34m,[0m [0merrwrite[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 800[0;31m                                 restore_signals, start_new_session)
-[0m[1;32m    801[0m         [0;32mexcept[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/subprocess.py:969[0m, in [0;36mPopen.__init__[0;34m(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, user, group, extra_groups, encoding, errors, text, umask, pipesize)[0m
+[1;32m    966[0m             [38;5;28mself[39m[38;5;241m.[39mstderr [38;5;241m=[39m io[38;5;241m.[39mTextIOWrapper([38;5;28mself[39m[38;5;241m.[39mstderr,
+[1;32m    967[0m                     encoding[38;5;241m=[39mencoding, errors[38;5;241m=[39merrors)
+[0;32m--> 969[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_execute_child[49m[43m([49m[43margs[49m[43m,[49m[43m [49m[43mexecutable[49m[43m,[49m[43m [49m[43mpreexec_fn[49m[43m,[49m[43m [49m[43mclose_fds[49m[43m,[49m
+[1;32m    970[0m [43m                        [49m[43mpass_fds[49m[43m,[49m[43m [49m[43mcwd[49m[43m,[49m[43m [49m[43menv[49m[43m,[49m
+[1;32m    971[0m [43m                        [49m[43mstartupinfo[49m[43m,[49m[43m [49m[43mcreationflags[49m[43m,[49m[43m [49m[43mshell[49m[43m,[49m
+[1;32m    972[0m [43m                        [49m[43mp2cread[49m[43m,[49m[43m [49m[43mp2cwrite[49m[43m,[49m
+[1;32m    973[0m [43m                        [49m[43mc2pread[49m[43m,[49m[43m [49m[43mc2pwrite[49m[43m,[49m
+[1;32m    974[0m [43m                        [49m[43merrread[49m[43m,[49m[43m [49m[43merrwrite[49m[43m,[49m
+[1;32m    975[0m [43m                        [49m[43mrestore_signals[49m[43m,[49m
+[1;32m    976[0m [43m                        [49m[43mgid[49m[43m,[49m[43m [49m[43mgids[49m[43m,[49m[43m [49m[43muid[49m[43m,[49m[43m [49m[43mumask[49m[43m,[49m
+[1;32m    977[0m [43m                        [49m[43mstart_new_session[49m[43m)[49m
+[1;32m    978[0m [38;5;28;01mexcept[39;00m:
+[1;32m    979[0m     [38;5;66;03m# Cleanup if the child failed starting.[39;00m
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/subprocess.py[0m in [0;36m_execute_child[0;34m(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)[0m
-[1;32m   1550[0m                             [0merr_msg[0m [0;34m+=[0m [0;34m': '[0m [0;34m+[0m [0mrepr[0m[0;34m([0m[0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1551[0;31m                     [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merrno_num[0m[0;34m,[0m [0merr_msg[0m[0;34m,[0m [0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1552[0m                 [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merr_msg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/subprocess.py:1845[0m, in [0;36mPopen._execute_child[0;34m(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, gid, gids, uid, umask, start_new_session)[0m
+[1;32m   1844[0m         err_msg [38;5;241m=[39m os[38;5;241m.[39mstrerror(errno_num)
+[0;32m-> 1845[0m     [38;5;28;01mraise[39;00m child_exception_type(errno_num, err_msg, err_filename)
+[1;32m   1846[0m [38;5;28;01mraise[39;00m child_exception_type(err_msg)
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: PosixPath('dot'): PosixPath('dot')
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: PosixPath('dot')
 
 The above exception was the direct cause of the following exception:
 
 [0;31mExecutableNotFound[0m                        Traceback (most recent call last)
-[0;32m/tmp/ipykernel_3964/3027030631.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      9[0m                   [0mEC2[0m[0;34m([0m[0;34m"worker3"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     10[0m                   [0mEC2[0m[0;34m([0m[0;34m"worker4"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 11[0;31m                   EC2("worker5")] >> RDS("events")
-[0m
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36m__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
-[1;32m    152[0m [0;34m[0m[0m
-[1;32m    153[0m     [0;32mdef[0m [0m__exit__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mexc_type[0m[0;34m,[0m [0mexc_value[0m[0;34m,[0m [0mtraceback[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 154[0;31m         [0mself[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    155[0m         [0;31m# Remove the graphviz file leaving only the image.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    156[0m         [0mos[0m[0;34m.[0m[0mremove[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mfilename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+Input [0;32mIn [3][0m, in [0;36m<cell line: 6>[0;34m()[0m
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdiagrams[39;00m[38;5;21;01m.[39;00m[38;5;21;01maws[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdatabase[39;00m [38;5;28;01mimport[39;00m RDS
+[1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdiagrams[39;00m[38;5;21;01m.[39;00m[38;5;21;01maws[39;00m[38;5;21;01m.[39;00m[38;5;21;01mnetwork[39;00m [38;5;28;01mimport[39;00m ELB
+[0;32m----> 6[0m [38;5;28;01mwith[39;00m Diagram([38;5;124m"[39m[38;5;124mGrouped Workers[39m[38;5;124m"[39m, show[38;5;241m=[39m[38;5;28;01mFalse[39;00m, direction[38;5;241m=[39m[38;5;124m"[39m[38;5;124mTB[39m[38;5;124m"[39m):
+[1;32m      7[0m     ELB([38;5;124m"[39m[38;5;124mlb[39m[38;5;124m"[39m) [38;5;241m>>[39m [EC2([38;5;124m"[39m[38;5;124mworker1[39m[38;5;124m"[39m),
+[1;32m      8[0m                   EC2([38;5;124m"[39m[38;5;124mworker2[39m[38;5;124m"[39m),
+[1;32m      9[0m                   EC2([38;5;124m"[39m[38;5;124mworker3[39m[38;5;124m"[39m),
+[1;32m     10[0m                   EC2([38;5;124m"[39m[38;5;124mworker4[39m[38;5;124m"[39m),
+[1;32m     11[0m                   EC2([38;5;124m"[39m[38;5;124mworker5[39m[38;5;124m"[39m)] [38;5;241m>>[39m RDS([38;5;124m"[39m[38;5;124mevents[39m[38;5;124m"[39m)
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/diagrams/__init__.py[0m in [0;36mrender[0;34m(self)[0m
-[1;32m    186[0m                 [0mself[0m[0;34m.[0m[0mdot[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0mone_format[0m[0;34m,[0m [0mview[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mshow[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    187[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 188[0;31m             [0mself[0m[0;34m.[0m[0mdot[0m[0;34m.[0m[0mrender[0m[0;34m([0m[0mformat[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0moutformat[0m[0;34m,[0m [0mview[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mshow[0m[0;34m,[0m [0mquiet[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    189[0m [0;34m[0m[0m
-[1;32m    190[0m [0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/diagrams/__init__.py:154[0m, in [0;36mDiagram.__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
+[1;32m    153[0m [38;5;28;01mdef[39;00m [38;5;21m__exit__[39m([38;5;28mself[39m, exc_type, exc_value, traceback):
+[0;32m--> 154[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mrender[49m[43m([49m[43m)[49m
+[1;32m    155[0m     [38;5;66;03m# Remove the graphviz file leaving only the image.[39;00m
+[1;32m    156[0m     os[38;5;241m.[39mremove([38;5;28mself[39m[38;5;241m.[39mfilename)
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/_tools.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
-[1;32m    170[0m                               category=category)
-[1;32m    171[0m [0;34m[0m[0m
-[0;32m--> 172[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    173[0m [0;34m[0m[0m
-[1;32m    174[0m         [0;32mreturn[0m [0mwrapper[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/diagrams/__init__.py:188[0m, in [0;36mDiagram.render[0;34m(self)[0m
+[1;32m    186[0m         [38;5;28mself[39m[38;5;241m.[39mdot[38;5;241m.[39mrender([38;5;28mformat[39m[38;5;241m=[39mone_format, view[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mshow, quiet[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[1;32m    187[0m [38;5;28;01melse[39;00m:
+[0;32m--> 188[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mdot[49m[38;5;241;43m.[39;49m[43mrender[49m[43m([49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moutformat[49m[43m,[49m[43m [49m[43mview[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mshow[49m[43m,[49m[43m [49m[43mquiet[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/rendering.py[0m in [0;36mrender[0;34m(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)[0m
-[1;32m    117[0m         [0margs[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0mfilepath[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    118[0m [0;34m[0m[0m
-[0;32m--> 119[0;31m         [0mrendered[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_render[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    120[0m [0;34m[0m[0m
-[1;32m    121[0m         [0;32mif[0m [0mcleanup[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/graphviz/_tools.py:172[0m, in [0;36mdeprecate_positional_args.<locals>.decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    163[0m     wanted [38;5;241m=[39m [38;5;124m'[39m[38;5;124m, [39m[38;5;124m'[39m[38;5;241m.[39mjoin([38;5;124mf[39m[38;5;124m'[39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m=[39m[38;5;132;01m{[39;00mvalue[38;5;132;01m!r}[39;00m[38;5;124m'[39m
+[1;32m    164[0m                        [38;5;28;01mfor[39;00m name, value [38;5;129;01min[39;00m deprecated[38;5;241m.[39mitems())
+[1;32m    165[0m     warnings[38;5;241m.[39mwarn([38;5;124mf[39m[38;5;124m'[39m[38;5;124mThe signature of [39m[38;5;132;01m{[39;00mfunc[38;5;241m.[39m[38;5;18m__name__[39m[38;5;132;01m}[39;00m[38;5;124m will be reduced[39m[38;5;124m'[39m
+[1;32m    166[0m                   [38;5;124mf[39m[38;5;124m'[39m[38;5;124m to [39m[38;5;132;01m{[39;00msupported_number[38;5;132;01m}[39;00m[38;5;124m positional args[39m[38;5;124m'[39m
+[1;32m    167[0m                   [38;5;124mf[39m[38;5;124m'[39m[38;5;124m [39m[38;5;132;01m{[39;00m[38;5;28mlist[39m(supported)[38;5;132;01m}[39;00m[38;5;124m: pass [39m[38;5;132;01m{[39;00mwanted[38;5;132;01m}[39;00m[38;5;124m'[39m
+[1;32m    168[0m                   [38;5;124m'[39m[38;5;124m as keyword arg(s)[39m[38;5;124m'[39m,
+[1;32m    169[0m                   stacklevel[38;5;241m=[39mstacklevel,
+[1;32m    170[0m                   category[38;5;241m=[39mcategory)
+[0;32m--> 172[0m [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/_tools.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
-[1;32m    170[0m                               category=category)
-[1;32m    171[0m [0;34m[0m[0m
-[0;32m--> 172[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    173[0m [0;34m[0m[0m
-[1;32m    174[0m         [0;32mreturn[0m [0mwrapper[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/graphviz/rendering.py:119[0m, in [0;36mRender.render[0;34m(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)[0m
+[1;32m    115[0m filepath [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39msave(filename, directory[38;5;241m=[39mdirectory, skip_existing[38;5;241m=[39m[38;5;28;01mNone[39;00m)
+[1;32m    117[0m args[38;5;241m.[39mappend(filepath)
+[0;32m--> 119[0m rendered [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_render[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    121[0m [38;5;28;01mif[39;00m cleanup:
+[1;32m    122[0m     log[38;5;241m.[39mdebug([38;5;124m'[39m[38;5;124mdelete [39m[38;5;132;01m%r[39;00m[38;5;124m'[39m, filepath)
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/rendering.py[0m in [0;36mrender[0;34m(engine, format, filepath, renderer, formatter, quiet, outfile, raise_if_result_exists, overwrite_filepath)[0m
-[1;32m    318[0m                       [0mcwd[0m[0;34m=[0m[0mfilepath[0m[0;34m.[0m[0mparent[0m [0;32mif[0m [0mfilepath[0m[0;34m.[0m[0mparent[0m[0;34m.[0m[0mparts[0m [0;32melse[0m [0;32mNone[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    319[0m                       [0mquiet[0m[0;34m=[0m[0mquiet[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 320[0;31m                       capture_output=True)
-[0m[1;32m    321[0m [0;34m[0m[0m
-[1;32m    322[0m     [0;32mreturn[0m [0mos[0m[0;34m.[0m[0mfspath[0m[0;34m([0m[0moutfile[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/graphviz/_tools.py:172[0m, in [0;36mdeprecate_positional_args.<locals>.decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    163[0m     wanted [38;5;241m=[39m [38;5;124m'[39m[38;5;124m, [39m[38;5;124m'[39m[38;5;241m.[39mjoin([38;5;124mf[39m[38;5;124m'[39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m=[39m[38;5;132;01m{[39;00mvalue[38;5;132;01m!r}[39;00m[38;5;124m'[39m
+[1;32m    164[0m                        [38;5;28;01mfor[39;00m name, value [38;5;129;01min[39;00m deprecated[38;5;241m.[39mitems())
+[1;32m    165[0m     warnings[38;5;241m.[39mwarn([38;5;124mf[39m[38;5;124m'[39m[38;5;124mThe signature of [39m[38;5;132;01m{[39;00mfunc[38;5;241m.[39m[38;5;18m__name__[39m[38;5;132;01m}[39;00m[38;5;124m will be reduced[39m[38;5;124m'[39m
+[1;32m    166[0m                   [38;5;124mf[39m[38;5;124m'[39m[38;5;124m to [39m[38;5;132;01m{[39;00msupported_number[38;5;132;01m}[39;00m[38;5;124m positional args[39m[38;5;124m'[39m
+[1;32m    167[0m                   [38;5;124mf[39m[38;5;124m'[39m[38;5;124m [39m[38;5;132;01m{[39;00m[38;5;28mlist[39m(supported)[38;5;132;01m}[39;00m[38;5;124m: pass [39m[38;5;132;01m{[39;00mwanted[38;5;132;01m}[39;00m[38;5;124m'[39m
+[1;32m    168[0m                   [38;5;124m'[39m[38;5;124m as keyword arg(s)[39m[38;5;124m'[39m,
+[1;32m    169[0m                   stacklevel[38;5;241m=[39mstacklevel,
+[1;32m    170[0m                   category[38;5;241m=[39mcategory)
+[0;32m--> 172[0m [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
 
-[0;32m/usr/share/miniconda3/envs/investing_book/lib/python3.7/site-packages/graphviz/backend/execute.py[0m in [0;36mrun_check[0;34m(cmd, input_lines, encoding, quiet, **kwargs)[0m
-[1;32m     82[0m     [0;32mexcept[0m [0mOSError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     83[0m         [0;32mif[0m [0me[0m[0;34m.[0m[0merrno[0m [0;34m==[0m [0merrno[0m[0;34m.[0m[0mENOENT[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 84[0;31m             [0;32mraise[0m [0mExecutableNotFound[0m[0;34m([0m[0mcmd[0m[0;34m)[0m [0;32mfrom[0m [0me[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     85[0m         [0;32mraise[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     86[0m [0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/graphviz/backend/rendering.py:317[0m, in [0;36mrender[0;34m(engine, format, filepath, renderer, formatter, quiet, outfile, raise_if_result_exists, overwrite_filepath)[0m
+[1;32m    313[0m     [38;5;28;01mraise[39;00m exceptions[38;5;241m.[39mFileExistsError([38;5;124mf[39m[38;5;124m'[39m[38;5;124moutput file exists: [39m[38;5;132;01m{[39;00mos[38;5;241m.[39mfspath(outfile)[38;5;132;01m!r}[39;00m[38;5;124m'[39m)
+[1;32m    315[0m cmd [38;5;241m+[39m[38;5;241m=[39m args
+[0;32m--> 317[0m [43mexecute[49m[38;5;241;43m.[39;49m[43mrun_check[49m[43m([49m[43mcmd[49m[43m,[49m
+[1;32m    318[0m [43m                  [49m[43mcwd[49m[38;5;241;43m=[39;49m[43mfilepath[49m[38;5;241;43m.[39;49m[43mparent[49m[43m [49m[38;5;28;43;01mif[39;49;00m[43m [49m[43mfilepath[49m[38;5;241;43m.[39;49m[43mparent[49m[38;5;241;43m.[39;49m[43mparts[49m[43m [49m[38;5;28;43;01melse[39;49;00m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m,[49m
+[1;32m    319[0m [43m                  [49m[43mquiet[49m[38;5;241;43m=[39;49m[43mquiet[49m[43m,[49m
+[1;32m    320[0m [43m                  [49m[43mcapture_output[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m    322[0m [38;5;28;01mreturn[39;00m os[38;5;241m.[39mfspath(outfile)
+
+File [0;32m/opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:84[0m, in [0;36mrun_check[0;34m(cmd, input_lines, encoding, quiet, **kwargs)[0m
+[1;32m     82[0m [38;5;28;01mexcept[39;00m [38;5;167;01mOSError[39;00m [38;5;28;01mas[39;00m e:
+[1;32m     83[0m     [38;5;28;01mif[39;00m e[38;5;241m.[39merrno [38;5;241m==[39m errno[38;5;241m.[39mENOENT:
+[0;32m---> 84[0m         [38;5;28;01mraise[39;00m ExecutableNotFound(cmd) [38;5;28;01mfrom[39;00m [38;5;21;01me[39;00m
+[1;32m     85[0m     [38;5;28;01mraise[39;00m
+[1;32m     87[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m quiet [38;5;129;01mand[39;00m proc[38;5;241m.[39mstderr:
 
 [0;31mExecutableNotFound[0m: failed to execute PosixPath('dot'), make sure the Graphviz executables are on your systems' PATH
 ExecutableNotFound: failed to execute PosixPath('dot'), make sure the Graphviz executables are on your systems' PATH
