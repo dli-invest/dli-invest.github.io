@@ -72,6 +72,10 @@ Note to self dont trust my ability to randomly throw out numbers, focus on big p
   - revenue breakdown:
     1. sass is declining
     2. mostly project based revenue for housing which is all over the place 
+
+
+The above is actually terrible, dont listen to me ever.
+
 ## Simple portfolio
 
 Despite losses in PKK, I still belive in the stock.
