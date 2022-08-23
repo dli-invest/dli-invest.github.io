@@ -13,15 +13,12 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v2
+      - uses: actions/setup-python@v4
         with:
-          auto-update-conda: true
-          auto-activate-base: false
-          miniconda-version: 'latest'
-          python-version: 3.7
-          environment-file: environment.yml
-          activate-environment: investing_book
+          python-version: '3.10' 
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Install jupyter_book
         shell: bash -l {0}
