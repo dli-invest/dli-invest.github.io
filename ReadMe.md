@@ -33,3 +33,10 @@ jupytext CorrelationExamples.ipynb --to rmarkdown
 ```
 
 Since this book contains useful contain, I will try to make money on ads, please click on them <3
+
+
+To serve content directly you can use
+
+```python
+python -m http.server 8080 --bind 127.0.0.1 --directory ibook/_build
+```

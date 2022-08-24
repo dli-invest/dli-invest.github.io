@@ -4,4 +4,3 @@ matplotlib
 mplfinance
 jupyter-book
 sympy 
-https://github.com/FriendlyUser/mlfinlab.git

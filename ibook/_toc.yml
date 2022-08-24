@@ -32,6 +32,8 @@ parts:
     sections:
     - file: docs/predictions/2020_eoy_predictions.md
       title: 2020 EOY predictions
+    - file: docs/predictions/2022_stonk_predictions.md
+      title: 2022 Stonk predictions
   - file: notebooks/references/ReadMe
     sections:
     - file: notebooks/references/Returns
