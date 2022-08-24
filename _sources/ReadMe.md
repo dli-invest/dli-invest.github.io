@@ -16,7 +16,7 @@ My quest to gain an edge on stocks includes
 * Risk Analyze - I honestly just held enough cash to deploy in any situation.
 * Estimation of Returns
 
-But to be perfectly honest, I have done fairly well buying canadian small cap companies that were interesting or undervalued.
+But to be perfectly honest, I have done fairly well buying canadian small cap companies that were interesting or undervalued - in 2021, no comment on 2022.
 
 
 ### Building this book
