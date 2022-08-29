@@ -80,12 +80,14 @@ import matplotlib.pyplot as plt
 net_income = [40, 30, 30, 35]
 plt.plot(net_income)
 
-profit = [0.5 * income in net_income]
+profit = [0.5 * income for income in net_income]
 plt.plot(profit)
 
 # with current profits I would expect
 dividends = 20 + 15 + 15 + 17.5
 ```
+
+ships last 20 or 25 years
 
 Should get my money back in 2 to 3 years, dont expect shipping profits to collapse, new ships, environmental changes and climate change should keep profits high, and we are shipping more things than ever before.
 

@@ -612,7 +612,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb0d1d24790&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f5c80af4700&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/2022_stonk_predictions_3_1.png" src="../../_images/2022_stonk_predictions_3_1.png" />
@@ -655,7 +655,7 @@ title="Print to PDF"
 <span class="n">net_income</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">net_income</span><span class="p">)</span>
 
-<span class="n">profit</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">net_income</span><span class="p">]</span>
+<span class="n">profit</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">income</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">net_income</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
 
 <span class="c1"># with current profits I would expect</span>
@@ -664,21 +664,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">net_income</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">net_income</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">profit</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">net_income</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># with current profits I would expect</span>
-
-<span class="ne">NameError</span>: name &#39;income&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/2022_stonk_predictions_7_1.png" src="../../_images/2022_stonk_predictions_7_1.png" />
+<img alt="../../_images/2022_stonk_predictions_7_0.png" src="../../_images/2022_stonk_predictions_7_0.png" />
 </div>
 </div>
+<p>ships last 20 or 25 years</p>
 <p>Should get my money back in 2 to 3 years, dont expect shipping profits to collapse, new ships, environmental changes and climate change should keep profits high, and we are shipping more things than ever before.</p>
 <p>Generates Record Full Year Net Income of $524 Million, in 2020 before the supply chain issues</p>
 </section>
