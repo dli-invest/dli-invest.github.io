@@ -530,6 +530,11 @@ title="Print to PDF"
    Itafos
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zim">
+   ZIM
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -552,6 +557,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#itafos">
    Itafos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zim">
+   ZIM
   </a>
  </li>
 </ul>
@@ -602,7 +612,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f48f89887f0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb0d1d24790&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/2022_stonk_predictions_3_1.png" src="../../_images/2022_stonk_predictions_3_1.png" />
@@ -631,6 +641,46 @@ title="Print to PDF"
 </div>
 </div>
 <p>Its a bit above the 50MA, want to wait until its below.</p>
+</section>
+<section id="zim">
+<h2>ZIM<a class="headerlink" href="#zim" title="Permalink to this headline">#</a></h2>
+<p>I believe with the current supply chain issues, the inability to use rivers to ship goods, think container shipping is here to stay, port congestion is unlikely to end anytime soon with all the port strikes. Think zim will be able to maintain revenue for a few years.</p>
+<p><a href="https://www.statista.com/statistics/1102442/age-of-world-merchant-fleet-by-vessel-type/" rel="nofollow"><img src="https://www.statista.com/graphic/1/1102442/age-of-world-merchant-fleet-by-vessel-type.jpg" alt="Statistic: Age distribution of the world merchant fleet in 2019-2020, by vessel type | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a></p>
+<p>Seems like a lot of ships are old, think lifespan time is like 20 years, possible shipping remains high for a bit longer. With the aging fleet, I think
+<a class="reference external" href="https://gcaptain.com/old-is-gold-sky-high-cost-of-ageing-ships-sounds-inflation-sos/">https://gcaptain.com/old-is-gold-sky-high-cost-of-ageing-ships-sounds-inflation-sos/</a> and with supply chain issues with pretty high <a class="reference external" href="https://data.worldbank.org/indicator/IS.SHP.GOOD.TU">https://data.worldbank.org/indicator/IS.SHP.GOOD.TU</a> shipping teu, makes sense that zim will be able to maintain high profits. Although the amount of teu went down in 2008, it was still high in recession, the rate may get lower, but I think zim will continue to deliver profits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># income for each quarter</span>
+<span class="n">net_income</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">net_income</span><span class="p">)</span>
+
+<span class="n">profit</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">net_income</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
+
+<span class="c1"># with current profits I would expect</span>
+<span class="n">dividends</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">+</span> <span class="mf">17.5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">net_income</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">net_income</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">profit</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">net_income</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># with current profits I would expect</span>
+
+<span class="ne">NameError</span>: name &#39;income&#39; is not defined
+</pre></div>
+</div>
+<img alt="../../_images/2022_stonk_predictions_7_1.png" src="../../_images/2022_stonk_predictions_7_1.png" />
+</div>
+</div>
+<p>Should get my money back in 2 to 3 years, dont expect shipping profits to collapse, new ships, environmental changes and climate change should keep profits high, and we are shipping more things than ever before.</p>
+<p>Generates Record Full Year Net Income of $524 Million, in 2020 before the supply chain issues</p>
 </section>
 </section>
 
