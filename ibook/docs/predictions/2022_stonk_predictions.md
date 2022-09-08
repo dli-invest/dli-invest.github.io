@@ -64,3 +64,47 @@ mpf.plot(last_year,type='candle',mav=(50, 100),volume=True)
 ```
 
 Its a bit above the 50MA, want to wait until its below.
+
+```{code-cell}ipython3
+import numpy as np
+def relative_strength(prices, n=14):
+    """
+    compute the n period relative strength indicator
+    http://stockcharts.com/school/doku.php?id=chart_school:glossary_r#relativestrengthindex
+    http://www.investopedia.com/terms/r/rsi.asp
+    """
+    deltas = np.diff(prices)
+    seed = deltas[:n + 1]
+    up = seed[seed >= 0].sum() / n
+    down = -seed[seed < 0].sum() / n
+    rs = up / down
+    rsi = np.zeros_like(prices)
+    rsi[:n] = 100. - 100. / (1. + rs)
+
+    for i in range(n, len(prices)):
+        delta = deltas[i - 1]  # cause the diff is 1 shorter
+
+        if delta > 0:
+            upval = delta
+            downval = 0.
+        else:
+            upval = 0.
+            downval = -delta
+
+        up = (up * (n - 1) + upval) / n
+        down = (down * (n - 1) + downval) / n
+
+        rs = up / down
+        rsi[i] = 100. - 100. / (1. + rs)
+
+    return rsi
+
+for stock in ["ZIM", "DOLE", "SBSW"]
+    zim = yf.Ticker(stock)
+    zim = sp.history(start="2021-03-14")
+    zim['rsi'] = relative_strength(zim['Close'],n=7)
+
+    apd = mpf.make_addplot(zim['rsi'],panel=2,color='lime',ylim=(10,90),secondary_y=True)
+
+    mpf.plot(zim,type='candle',volume=True,figscale=1.5,addplot=apd,panel_ratios=(1,0.6), title=f"{stock} - 2021-03-14")
+```
