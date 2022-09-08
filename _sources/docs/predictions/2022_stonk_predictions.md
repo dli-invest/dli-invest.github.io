@@ -51,20 +51,6 @@ Plot of expected earnings over the next few years based on article of expected p
 
 <a href="https://www.statista.com/statistics/1251275/phosphate-rock-fertilizer-price-forecast/" rel="nofollow"><img src="https://www.statista.com/graphic/1/1251275/phosphate-rock-fertilizer-price-forecast.jpg" alt="Statistic: Price for phosphate rock from 2015 to 2020 with a forecast for 2021 to 2035 (in U.S. dollars per metric ton) | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a>
 
-```{code-cell}ipython3
-import yfinance as yf
-import mplfinance as mpf
-sp = yf.Ticker("MBCF")
-# Consider grabbing for valid date index instead
-daily = sp.history(start="2016-01-02")
-mpf.plot(daily,type='line')
-
-last_year = sp.history(start="2021-03-14")
-mpf.plot(last_year,type='candle',mav=(50, 100),volume=True)
-```
-
-Its a bit above the 50MA, want to wait until its below.
-
 ## ZIM
 
 I believe with the current supply chain issues, the inability to use rivers to ship goods, think container shipping is here to stay, port congestion is unlikely to end anytime soon with all the port strikes. Think zim will be able to maintain revenue for a few years. 
@@ -92,3 +78,63 @@ ships last 20 or 25 years
 Should get my money back in 2 to 3 years, dont expect shipping profits to collapse, new ships, environmental changes and climate change should keep profits high, and we are shipping more things than ever before.
 
 Generates Record Full Year Net Income of $524 Million, in 2020 before the supply chain issues
+
+```{code-cell}ipython3
+import yfinance as yf
+import mplfinance as mpf
+sp = yf.Ticker("MBCF")
+# Consider grabbing for valid date index instead
+daily = sp.history(start="2016-01-02")
+mpf.plot(daily,type='line')
+
+last_year = sp.history(start="2021-03-14")
+mpf.plot(last_year,type='candle',mav=(50, 100),volume=True)
+```
+
+Its a bit above the 50MA, want to wait until its below.
+
+Expect the bullwhip effect to happen a few times.
+
+```{code-cell}ipython3
+import numpy as np
+def relative_strength(prices, n=14):
+    """
+    compute the n period relative strength indicator
+    http://stockcharts.com/school/doku.php?id=chart_school:glossary_r#relativestrengthindex
+    http://www.investopedia.com/terms/r/rsi.asp
+    """
+    deltas = np.diff(prices)
+    seed = deltas[:n + 1]
+    up = seed[seed >= 0].sum() / n
+    down = -seed[seed < 0].sum() / n
+    rs = up / down
+    rsi = np.zeros_like(prices)
+    rsi[:n] = 100. - 100. / (1. + rs)
+
+    for i in range(n, len(prices)):
+        delta = deltas[i - 1]  # cause the diff is 1 shorter
+
+        if delta > 0:
+            upval = delta
+            downval = 0.
+        else:
+            upval = 0.
+            downval = -delta
+
+        up = (up * (n - 1) + upval) / n
+        down = (down * (n - 1) + downval) / n
+
+        rs = up / down
+        rsi[i] = 100. - 100. / (1. + rs)
+
+    return rsi
+
+for stock in ["ZIM", "DOLE", "SBSW"]:
+    zim = yf.Ticker(stock)
+    zim = sp.history(start="2021-03-14")
+    zim['rsi'] = relative_strength(zim['Close'],n=7)
+
+    apd = mpf.make_addplot(zim['rsi'],panel=2,color='lime',ylim=(10,90),secondary_y=True)
+
+    mpf.plot(zim,type='candle',volume=True,figscale=1.5,addplot=apd,panel_ratios=(1,0.6), title=f"{stock} - 2021-03-14")
+```

@@ -612,7 +612,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f21d8c90910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0ce2d2c9d0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/2022_stonk_predictions_3_1.png" src="../../_images/2022_stonk_predictions_3_1.png" />
@@ -621,26 +621,6 @@ title="Print to PDF"
 <p>Earning should be sustained for a bit.</p>
 <p>Plot of expected earnings over the next few years based on article of expected phosphate rock.</p>
 <p><a href="https://www.statista.com/statistics/1251275/phosphate-rock-fertilizer-price-forecast/" rel="nofollow"><img src="https://www.statista.com/graphic/1/1251275/phosphate-rock-fertilizer-price-forecast.jpg" alt="Statistic: Price for phosphate rock from 2015 to 2020 with a forecast for 2021 to 2035 (in U.S. dollars per metric ton) | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
-<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
-<span class="n">sp</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;MBCF&quot;</span><span class="p">)</span>
-<span class="c1"># Consider grabbing for valid date index instead</span>
-<span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
-<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
-
-<span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
-<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">last_year</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">mav</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/2022_stonk_predictions_5_0.png" src="../../_images/2022_stonk_predictions_5_0.png" />
-<img alt="../../_images/2022_stonk_predictions_5_1.png" src="../../_images/2022_stonk_predictions_5_1.png" />
-</div>
-</div>
-<p>Its a bit above the 50MA, want to wait until its below.</p>
 </section>
 <section id="zim">
 <h2>ZIM<a class="headerlink" href="#zim" title="Permalink to this headline">#</a></h2>
@@ -664,12 +644,85 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2022_stonk_predictions_7_0.png" src="../../_images/2022_stonk_predictions_7_0.png" />
+<img alt="../../_images/2022_stonk_predictions_5_0.png" src="../../_images/2022_stonk_predictions_5_0.png" />
 </div>
 </div>
 <p>ships last 20 or 25 years</p>
 <p>Should get my money back in 2 to 3 years, dont expect shipping profits to collapse, new ships, environmental changes and climate change should keep profits high, and we are shipping more things than ever before.</p>
 <p>Generates Record Full Year Net Income of $524 Million, in 2020 before the supply chain issues</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;MBCF&quot;</span><span class="p">)</span>
+<span class="c1"># Consider grabbing for valid date index instead</span>
+<span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
+<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+
+<span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
+<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">last_year</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">mav</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2022_stonk_predictions_7_0.png" src="../../_images/2022_stonk_predictions_7_0.png" />
+<img alt="../../_images/2022_stonk_predictions_7_1.png" src="../../_images/2022_stonk_predictions_7_1.png" />
+</div>
+</div>
+<p>Its a bit above the 50MA, want to wait until its below.</p>
+<p>Expect the bullwhip effect to happen a few times.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">relative_strength</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">14</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    compute the n period relative strength indicator</span>
+<span class="sd">    http://stockcharts.com/school/doku.php?id=chart_school:glossary_r#relativestrengthindex</span>
+<span class="sd">    http://www.investopedia.com/terms/r/rsi.asp</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">deltas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+    <span class="n">seed</span> <span class="o">=</span> <span class="n">deltas</span><span class="p">[:</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">up</span> <span class="o">=</span> <span class="n">seed</span><span class="p">[</span><span class="n">seed</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">down</span> <span class="o">=</span> <span class="o">-</span><span class="n">seed</span><span class="p">[</span><span class="n">seed</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">rs</span> <span class="o">=</span> <span class="n">up</span> <span class="o">/</span> <span class="n">down</span>
+    <span class="n">rsi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+    <span class="n">rsi</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.</span> <span class="o">-</span> <span class="mf">100.</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">rs</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)):</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">deltas</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># cause the diff is 1 shorter</span>
+
+        <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">upval</span> <span class="o">=</span> <span class="n">delta</span>
+            <span class="n">downval</span> <span class="o">=</span> <span class="mf">0.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">upval</span> <span class="o">=</span> <span class="mf">0.</span>
+            <span class="n">downval</span> <span class="o">=</span> <span class="o">-</span><span class="n">delta</span>
+
+        <span class="n">up</span> <span class="o">=</span> <span class="p">(</span><span class="n">up</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">upval</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+        <span class="n">down</span> <span class="o">=</span> <span class="p">(</span><span class="n">down</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">downval</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+
+        <span class="n">rs</span> <span class="o">=</span> <span class="n">up</span> <span class="o">/</span> <span class="n">down</span>
+        <span class="n">rsi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.</span> <span class="o">-</span> <span class="mf">100.</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">rs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">rsi</span>
+
+<span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;ZIM&quot;</span><span class="p">,</span> <span class="s2">&quot;DOLE&quot;</span><span class="p">,</span> <span class="s2">&quot;SBSW&quot;</span><span class="p">]:</span>
+    <span class="n">zim</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
+    <span class="n">zim</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
+    <span class="n">zim</span><span class="p">[</span><span class="s1">&#39;rsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relative_strength</span><span class="p">(</span><span class="n">zim</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span><span class="n">n</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+
+    <span class="n">apd</span> <span class="o">=</span> <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">zim</span><span class="p">[</span><span class="s1">&#39;rsi&#39;</span><span class="p">],</span><span class="n">panel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">90</span><span class="p">),</span><span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">zim</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figscale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">addplot</span><span class="o">=</span><span class="n">apd</span><span class="p">,</span><span class="n">panel_ratios</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.6</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stock</span><span class="si">}</span><span class="s2"> - 2021-03-14&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/2022_stonk_predictions_9_0.png" src="../../_images/2022_stonk_predictions_9_0.png" />
+<img alt="../../_images/2022_stonk_predictions_9_1.png" src="../../_images/2022_stonk_predictions_9_1.png" />
+<img alt="../../_images/2022_stonk_predictions_9_2.png" src="../../_images/2022_stonk_predictions_9_2.png" />
+</div>
+</div>
 </section>
 </section>
 
