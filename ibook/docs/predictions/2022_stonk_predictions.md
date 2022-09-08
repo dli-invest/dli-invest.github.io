@@ -129,7 +129,7 @@ def relative_strength(prices, n=14):
 
     return rsi
 
-for stock in ["ZIM", "DOLE", "SBSW"]
+for stock in ["ZIM", "DOLE", "SBSW"]:
     zim = yf.Ticker(stock)
     zim = sp.history(start="2021-03-14")
     zim['rsi'] = relative_strength(zim['Close'],n=7)
