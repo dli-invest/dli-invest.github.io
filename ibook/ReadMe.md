@@ -1,68 +1,42 @@
-# investing Book
+# Investing Book
 
-This book contains information on my investing best practises as well as what I will do in the future for my investments. This is all my opinion and its really hard to say what the market will do in the future.
+This is my a interactive recording of my quest to become a successful investor.
+
+Contains various code snippets in python and ipython notebooks with useful code snippets to analyze a variety of stocks and stock related data.
+
+My quest to gain an edge on stocks includes
+
+* Scanning for news from yahoo
+* Subscribing to ceo.ca to get news alerts
+* Python scripts to visualize my yolo purchase decisions
+* Sentiment Analysis on published documents and text
+* Analyze the transcripts of youtube videos for nlp
+* Algorithmic trading - just for back testing
+* Price Prediction
+* Risk Analyze - I honestly just held enough cash to deploy in any situation.
+* Estimation of Returns
+
+But to be perfectly honest, I have done fairly well buying canadian small cap companies that were interesting or undervalued - in 2021, no comment on 2022.
 
 
-## Overview
+### Building this book
 
-
-
-To publish
-
-
-Build sphinx files
+To build this project
 
 ```
 jb build ibook/
 ```
 
+To convert an ipynb book to a markdown file
 ```
 jupytext CorrelationExamples.ipynb --to rmarkdown
 ```
 
-* Risk of Returns
-* Price Prediction (Practically useless for what I buy)
-* Online Portoflio Selection (Just for Verification/Validation)
-* Estimation of Returns
-
-New Risk Page will be made for risk management per tag with useless price predictions
-Periodic publishing for online portoflio selection and risk management for current portfolio.
+Since this book contains useful contain, I will try to make money on ads, please click on them <3
 
 
-### TodoList
+To serve content directly you can use
 
-**06/13/2020**
-
-* add more examples
-
-**06/07/2020**
-* ~~Limit to 2 decimals make columns 6 instead of 3~~
-* Append data to hardcoded csv (won't do, stocks will change too quickly)
-
-#### SubReports
-
-Github Pages with Specific Folder Report on Risk.
-Generate risk with different holdings, append to different csvs based on settings.
-Complex config.yml file?
-
-
-**Disclaimer** Major non day trade purchases will be recorded here.
-
-Note this will not be rolling, say I buy a stock
+```python
+python -m http.server 8080 --bind 127.0.0.1 --directory ibook/_build
 ```
-risk:
-  -  stocks:
-     weights:
-     output_csv:
-  -  stocks:
-     weights:
-     output_csv:
-```
-
-Then my logic will iterate across tickers in the csv and generate images for them.
-
-### References
-
-
-https://mlfinlab.readthedocs.io/en/latest/portfolio_optimisation/risk_metrics.html
-

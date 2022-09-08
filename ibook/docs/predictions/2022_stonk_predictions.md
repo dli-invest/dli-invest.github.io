@@ -51,6 +51,34 @@ Plot of expected earnings over the next few years based on article of expected p
 
 <a href="https://www.statista.com/statistics/1251275/phosphate-rock-fertilizer-price-forecast/" rel="nofollow"><img src="https://www.statista.com/graphic/1/1251275/phosphate-rock-fertilizer-price-forecast.jpg" alt="Statistic: Price for phosphate rock from 2015 to 2020 with a forecast for 2021 to 2035 (in U.S. dollars per metric ton) | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a>
 
+## ZIM
+
+I believe with the current supply chain issues, the inability to use rivers to ship goods, think container shipping is here to stay, port congestion is unlikely to end anytime soon with all the port strikes. Think zim will be able to maintain revenue for a few years. 
+
+<a href="https://www.statista.com/statistics/1102442/age-of-world-merchant-fleet-by-vessel-type/" rel="nofollow"><img src="https://www.statista.com/graphic/1/1102442/age-of-world-merchant-fleet-by-vessel-type.jpg" alt="Statistic: Age distribution of the world merchant fleet in 2019-2020, by vessel type | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at  <a href="https://www.statista.com" rel="nofollow">Statista</a>
+
+Seems like a lot of ships are old, think lifespan time is like 20 years, possible shipping remains high for a bit longer. With the aging fleet, I think 
+https://gcaptain.com/old-is-gold-sky-high-cost-of-ageing-ships-sounds-inflation-sos/ and with supply chain issues with pretty high https://data.worldbank.org/indicator/IS.SHP.GOOD.TU shipping teu, makes sense that zim will be able to maintain high profits. Although the amount of teu went down in 2008, it was still high in recession, the rate may get lower, but I think zim will continue to deliver profits. 
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+# income for each quarter
+net_income = [40, 30, 30, 35]
+plt.plot(net_income)
+
+profit = [0.5 * income for income in net_income]
+plt.plot(profit)
+
+# with current profits I would expect
+dividends = 20 + 15 + 15 + 17.5
+```
+
+ships last 20 or 25 years
+
+Should get my money back in 2 to 3 years, dont expect shipping profits to collapse, new ships, environmental changes and climate change should keep profits high, and we are shipping more things than ever before.
+
+Generates Record Full Year Net Income of $524 Million, in 2020 before the supply chain issues
+
 ```{code-cell}ipython3
 import yfinance as yf
 import mplfinance as mpf
@@ -64,6 +92,8 @@ mpf.plot(last_year,type='candle',mav=(50, 100),volume=True)
 ```
 
 Its a bit above the 50MA, want to wait until its below.
+
+Expect the bullwhip effect to happen a few times.
 
 ```{code-cell}ipython3
 import numpy as np
