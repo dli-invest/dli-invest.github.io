@@ -138,3 +138,91 @@ for stock in ["ZIM", "DOLE", "SBSW"]:
 
     mpf.plot(zim,type='candle',volume=True,figscale=1.5,addplot=apd,panel_ratios=(1,0.6), title=f"{stock} - 2021-03-14")
 ```
+
+
+Analyze of rollover of XSB, basic facts
+
+2.74 years which is about 2 years and 8.2 months.
+
+Current price 25.72, I am betting once the weak bonds expire, average bond yield at 0.61 \%, reinvesting will result in a solid long term yield above the exist values. Assume current yield is rolling from 3 to 4.
+
+TODO make model I can generalize
+
+```{code-cell}ipython3
+nav = 3282292855
+
+current_yield = 2.24
+# average bond yield for 2.74 years
+lower_end = 3.25 
+higher_end = 4.5 
+avg_yield_for_years = 0.61
+
+# assuming interest rates remain high for about 2.74 years
+adjusted_yield_low =  ((lower_end / avg_yield_for_years)-current_yield*0.5) + current_yield * 0.5
+adjusted_yield_high = ((higher_end / avg_yield_for_years)-current_yield*0.5) + current_yield * 0.5
+
+# current rates are 
+print(adjusted_yield_low)
+
+
+print(adjusted_yield_high)
+# 5.327868852459017
+# 7.377049180327869
+```
+
+```{figure} /_static/afterthoughts/fed_dotplot.webp
+```
+
+Scenario for 0.75 0.25, 0.25 rate increases.
+
+
+```{code-cell}ipython3
+import pandas as pd
+df = pd.read_csv("static_2019_to_now_boc_rates.csv")
+last_date_in_csv = "2022-09-20"
+first_hike = "2022-10-26"
+base_rate = 3.25;
+second_hike = "2022-12-07"
+last_hike = "2023-01-26"
+
+# list of objects, start, end, rate
+future_date = "2023-11-25"
+# create loop for this in the future
+df['Date'] = pd.to_datetime(df['Date'])
+to_first_hike = pd.DataFrame({'Date': pd.date_range(start=last_date_in_csv, end=first_hike,closed='left'), 'V39079': base_rate})
+
+df.append(to_first_hike)
+new_df = pd.concat([df, to_first_hike])
+base_rate = base_rate + 0.75
+to_second_hike = pd.DataFrame({'Date': pd.date_range(start=first_hike, end=second_hike,closed='left'), 'V39079': base_rate})
+
+# have to draw rolling average with plot
+new_df = pd.concat([new_df, to_second_hike])
+base_rate = base_rate + 0.25
+to_third_hike = pd.DataFrame({'Date': pd.date_range(start=second_hike, end=last_hike), 'V39079': base_rate})
+new_df = pd.concat([new_df, to_third_hike])
+
+to_future = pd.DataFrame({'Date': pd.date_range(start=last_hike, end=future_date), 'V39079': base_rate})
+new_df = pd.concat([new_df, to_future])
+to_future = pd.DataFrame({'Date': pd.date_range(start=future_date, end="2024-05-05"), 'V39079': base_rate-0.75})
+new_df = pd.concat([new_df, to_future])
+new_df = new_df[pd.to_numeric(new_df['V39079'], errors='coerce').notnull()]
+# drop duplicates based on date
+new_df = new_df.drop_duplicates()
+# drop all zero entries
+
+new_df["Rates"] = pd.to_numeric(new_df["V39079"])
+new_df= new_df[new_df['Rates'] != 0]
+# sort by Date
+new_df.sort_values(by='Date', inplace=True)
+# plot rolling average
+new_df['MA'] = new_df["Rates"].rolling(600, min_periods=1).mean()
+new_df.plot("Date", "Rates")
+new_df.plot("Date", "MA")
+print(new_df)
+```
+
+So this fails to account for proper weighting, accounting for high yield corporate bonds and heavily assumes that a lot of the debt will roll off successfully.
+
+* Assumes raises in government bonds will transfer over to the private sector (true, but companies may not be able to pay)
+* Assumes assets will roll over (true, but some may not), and greatly increase the yield, at bare minimum over a 2.74 year period would expect the yield to meet at least the benchmark yield, if not slightly higher. 
