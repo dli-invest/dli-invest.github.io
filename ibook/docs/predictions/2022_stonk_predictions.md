@@ -225,4 +225,23 @@ print(new_df)
 So this fails to account for proper weighting, accounting for high yield corporate bonds and heavily assumes that a lot of the debt will roll off successfully.
 
 * Assumes raises in government bonds will transfer over to the private sector (true, but companies may not be able to pay)
-* Assumes assets will roll over (true, but some may not), and greatly increase the yield, at bare minimum over a 2.74 year period would expect the yield to meet at least the benchmark yield, if not slightly higher. 
+* Assumes assets will roll over (true, but some may not), and greatly increase the yield, at bare minimum over a 2.74 year period would expect the yield to meet at least the benchmark yield, if not slightly higher.
+ 
+```{code-cell}ipython3
+import pandas as pd 
+
+df = pd.read_csv("xsb_holdings.csv")
+
+# find columns with Duration less than 2 years and coupon less than 1.5%
+df = df[(df["Duration"] < 2.74)]
+
+print(df)
+
+# total weight
+
+print(df["Weight (%)"].sum())
+print(df["Coupon (%)"].mean())
+coupon_low = df[(df["Coupon (%)"] < 3)]
+print(coupon_low["Coupon (%)"].mean())
+print(coupon_low["Weight (%)"].sum())
+```
