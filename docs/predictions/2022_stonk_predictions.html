@@ -612,7 +612,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f77c45ca4d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f4b403aa500&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/2022_stonk_predictions_3_1.png" src="../../_images/2022_stonk_predictions_3_1.png" />
@@ -665,38 +665,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Got error from yahoo api for ticker MBCF, Error: {&#39;code&#39;: &#39;Internal Server Error&#39;, &#39;description&#39;: &#39;Request Failed&#39;}
-- MBCF: No data found for this date range, symbol may be delisted
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/_styles.py:24: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(style[&#39;base_mpl_style&#39;])
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Consider grabbing for valid date index instead</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">last_year</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">mav</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/plotting.py:416,</span> in <span class="ni">plot</span><span class="nt">(data, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">413</span> <span class="c1"># translate alias types:</span>
-<span class="g g-Whitespace">    </span><span class="mi">414</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_valid_plot_types</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
-<span class="ne">--&gt; </span><span class="mi">416</span> <span class="n">dates</span><span class="p">,</span><span class="n">opens</span><span class="p">,</span><span class="n">highs</span><span class="p">,</span><span class="n">lows</span><span class="p">,</span><span class="n">closes</span><span class="p">,</span><span class="n">volumes</span> <span class="o">=</span> <span class="n">_check_and_prepare_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">418</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;xlim&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_check_and_convert_xlim_configuration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">420</span> <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">VALID_PMOVE_TYPES</span> <span class="ow">and</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;addplot&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:31,</span> in <span class="ni">_check_and_prepare_data</span><span class="nt">(data, config)</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Expect data as DataFrame&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">indexes</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">31</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Expect data.index as DatetimeIndex&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># We will not be fully case-insensitive (since Pandas columns as NOT case-insensitive)</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="c1"># but because so many people have requested it, for the default column names we will</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="c1"># try both Capitalized and lower case:</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;columns&#39;</span><span class="p">]</span>
-
-<span class="ne">TypeError</span>: Expect data.index as DatetimeIndex
+<img alt="../../_images/2022_stonk_predictions_7_1.png" src="../../_images/2022_stonk_predictions_7_1.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/_styles.py:24: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(style[&#39;base_mpl_style&#39;])
 </pre></div>
 </div>
+<img alt="../../_images/2022_stonk_predictions_7_3.png" src="../../_images/2022_stonk_predictions_7_3.png" />
 </div>
 </div>
 <p>Its a bit above the 50MA, want to wait until its below.</p>
@@ -747,6 +725,23 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/_styles.py:24: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(style[&#39;base_mpl_style&#39;])
+</pre></div>
+</div>
+<img alt="../../_images/2022_stonk_predictions_9_1.png" src="../../_images/2022_stonk_predictions_9_1.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/_styles.py:24: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(style[&#39;base_mpl_style&#39;])
+</pre></div>
+</div>
+<img alt="../../_images/2022_stonk_predictions_9_3.png" src="../../_images/2022_stonk_predictions_9_3.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/mplfinance/_styles.py:24: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(style[&#39;base_mpl_style&#39;])
+</pre></div>
+</div>
+<img alt="../../_images/2022_stonk_predictions_9_5.png" src="../../_images/2022_stonk_predictions_9_5.png" />
+</div>
 </div>
 <p>Analyze of rollover of XSB, basic facts</p>
 <p>2.74 years which is about 2 years and 8.2 months.</p>
@@ -773,6 +768,12 @@ title="Print to PDF"
 <span class="nb">print</span><span class="p">(</span><span class="n">adjusted_yield_high</span><span class="p">)</span>
 <span class="c1"># 5.327868852459017</span>
 <span class="c1"># 7.377049180327869</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.327868852459017
+7.377049180327869
 </pre></div>
 </div>
 </div>
@@ -829,6 +830,34 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Date V39079  Rates        MA
+678 2020-02-13   1.75   1.75  1.750000
+677 2020-02-14   1.75   1.75  1.750000
+676 2020-02-17   1.75   1.75  1.750000
+675 2020-02-18   1.75   1.75  1.750000
+674 2020-02-19   1.75   1.75  1.750000
+..         ...    ...    ...       ...
+158 2024-05-01    3.5   3.50  3.958750
+159 2024-05-02    3.5   3.50  3.959167
+160 2024-05-03    3.5   3.50  3.959583
+161 2024-05-04    3.5   3.50  3.960000
+162 2024-05-05    3.5   3.50  3.960417
+
+[1268 rows x 4 columns]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2531/3628862061.py:13: FutureWarning: Argument `closed` is deprecated in favor of `inclusive`.
+  to_first_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=last_date_in_csv, end=first_hike,closed=&#39;left&#39;), &#39;V39079&#39;: base_rate})
+/tmp/ipykernel_2531/3628862061.py:15: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  df.append(to_first_hike)
+/tmp/ipykernel_2531/3628862061.py:18: FutureWarning: Argument `closed` is deprecated in favor of `inclusive`.
+  to_second_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=first_hike, end=second_hike,closed=&#39;left&#39;), &#39;V39079&#39;: base_rate})
+</pre></div>
+</div>
+<img alt="../../_images/2022_stonk_predictions_13_2.png" src="../../_images/2022_stonk_predictions_13_2.png" />
+<img alt="../../_images/2022_stonk_predictions_13_3.png" src="../../_images/2022_stonk_predictions_13_3.png" />
+</div>
 </div>
 <p>So this fails to account for proper weighting, accounting for high yield corporate bonds and heavily assumes that a lot of the debt will roll off successfully.</p>
 <ul class="simple">
@@ -853,6 +882,67 @@ title="Print to PDF"
 <span class="n">coupon_low</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Coupon (%)&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">coupon_low</span><span class="p">[</span><span class="s2">&quot;Coupon (%)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">coupon_low</span><span class="p">[</span><span class="s2">&quot;Weight (%)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                Name Asset Class  Weight (%)   Price  \
+1             CANADA (GOVERNMENT OF)          FI        2.17   98.18   
+2     CANADA HOUSING TRUST NO 1 144A          FI        2.10   98.32   
+3             CANADA (GOVERNMENT OF)          FI        1.95   96.43   
+5              ONTARIO (PROVINCE OF)          FI        1.77   96.76   
+6             CANADA (GOVERNMENT OF)          FI        1.75   95.96   
+..                               ...         ...         ...     ...   
+524  WEST EDMONTON MALL PROPERTY INC          FI        0.01   96.86   
+525                GAZ METRO INC MTN          FI        0.01  110.56   
+526      ENBRIDGE PIPE LINES INC MTN          FI        0.00  101.22   
+531            FORTISALBERTA INC MTN          FI        0.00   97.49   
+532                       NAV CANADA          FI        0.00  105.90   
+
+      Market Value Notional Value          Sector    SEDOL      CUSIP  \
+1    70,872,653.13  70,872,653.13         Federal  BNHP6Q6  135087N91   
+2    68,595,176.45  68,595,176.45         Federal  BK0HZW7  13509PEF6   
+3    63,469,236.26  63,469,236.26         Federal        -  135087N42   
+5    57,707,986.01  57,707,986.01      Provincial  BYQGSH2  68323ACX0   
+6    57,011,227.29  57,011,227.29         Federal        -  135087M92   
+..             ...            ...             ...      ...        ...   
+524     257,936.89     257,936.89     Real Estate  BYQGRD1  952637AA4   
+525     227,487.50     227,487.50          Energy  2362388  368271AQ5   
+526     155,170.16     155,170.16          Energy  2980382  29250ZAA6   
+531      63,412.80      63,412.80  Infrastructure  BYQGLB7  34957ZAS3   
+532      32,431.06      32,431.06  Infrastructure  2615264  628957AE2   
+
+     Coupon (%)      Maturity Location of Risk Currency Market Currency        \
+1          2.75   Aug 1, 2024           Canada      CAD             CAD  3.77   
+2          2.90  Jun 15, 2024           Canada      CAD             CAD  3.91   
+3          1.50   May 1, 2024           Canada      CAD             CAD  3.81   
+5          2.60   Jun 2, 2025           Canada      CAD             CAD  3.88   
+6          0.75   Feb 1, 2024           Canada      CAD             CAD  3.83   
+..          ...           ...              ...      ...             ...   ...   
+524        4.31  Feb 13, 2024           Canada      CAD             CAD  6.70   
+525        9.00  May 16, 2025           Canada      CAD             CAD  4.70   
+526        6.35  Nov 17, 2023           Canada      CAD             CAD  5.22   
+531        3.30  Sep 30, 2024           Canada      CAD             CAD  4.61   
+532        7.56   Mar 1, 2027           Canada      CAD             CAD  4.92   
+
+    Yield to Call (%)  Yield to Worst (%)  Duration  Mod. Duration  FX Rate  
+1                   -                3.77      1.78           1.78      1.0  
+2                   -                3.91      1.66           1.65      1.0  
+3                   -                3.81      1.56           1.56      1.0  
+5                   -                3.88      2.55           2.55      1.0  
+6                   -                3.83      1.33           1.33      1.0  
+..                ...                 ...       ...            ...      ...  
+524                 -                6.70      1.34           1.32      1.0  
+525                 -                4.70      2.32           2.31      1.0  
+526                 -                5.22      1.09           1.08      1.0  
+531                 -                4.61      1.91           1.90      1.0  
+532                 -                4.92      2.22           2.20      1.0  
+
+[266 rows x 20 columns]
+51.720000000000006
+3.0128195488721805
+2.1327083333333334
+39.449999999999996
 </pre></div>
 </div>
 </div>
