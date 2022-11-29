@@ -45,7 +45,7 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None):
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn [2], line 3[0m
+Cell [0;32mIn[2], line 3[0m
 [1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01myfinance[39;00m [38;5;28;01mas[39;00m [38;5;21;01myf[39;00m
 [1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
 [0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmlfinlab[39;00m[38;5;21;01m.[39;00m[38;5;21;01mportfolio_optimization[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmean_variance[39;00m [38;5;28;01mimport[39;00m MeanVarianceOptimisation

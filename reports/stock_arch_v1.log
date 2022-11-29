@@ -182,7 +182,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/subprocess.py:
 The above exception was the direct cause of the following exception:
 
 [0;31mExecutableNotFound[0m                        Traceback (most recent call last)
-Cell [0;32mIn [3], line 13[0m
+Cell [0;32mIn[3], line 13[0m
 [1;32m      9[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdiagrams[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgeneric[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstorage[39;00m [38;5;28;01mimport[39;00m Storage
 [1;32m     10[0m [38;5;66;03m# blue - build/cron[39;00m
 [1;32m     11[0m [38;5;66;03m# purple - notification[39;00m

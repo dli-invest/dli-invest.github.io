@@ -648,22 +648,22 @@ Wait on BYL for 5G</p>
 <p><strong>09/08/2020</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
-<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import yfinance as yf
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import mplfinance as mpf
 
-<span class="n">vst</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;VST.CN&quot;</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">vst</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2020-08-08&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2020-09-10&quot;</span><span class="p">)</span>
-<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">data</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;candle&quot;</span><span class="p">,</span>
-    <span class="n">mav</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Victory Square Purchases Dates&quot;</span><span class="p">,</span>
-    <span class="n">vlines</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-        <span class="n">vlines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2020-08-26&quot;</span><span class="p">,</span> <span class="s2">&quot;2020-09-03&quot;</span><span class="p">,</span> <span class="s2">&quot;2020-09-08&quot;</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-    <span class="p">),</span>
-<span class="p">)</span>
+vst = yf.Ticker(&quot;VST.CN&quot;)
+data = vst.history(interval=&quot;1d&quot;, start=&quot;2020-08-08&quot;, end=&quot;2020-09-10&quot;)
+mpf.plot(
+    data,
+    type=&quot;candle&quot;,
+    mav=4,
+    title=&quot;Victory Square Purchases Dates&quot;,
+    vlines=dict(
+        vlines=[&quot;2020-08-26&quot;, &quot;2020-09-03&quot;, &quot;2020-09-08&quot;], linewidths=(0.5, 0.5, 0.5)
+    ),
+)
 </pre></div>
 </div>
 </div>

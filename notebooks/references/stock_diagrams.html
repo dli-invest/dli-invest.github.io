@@ -538,8 +538,8 @@ title="Print to PDF"
   <p><a href="https://colab.research.google.com/github/dli-invest/dli-invest.github.io/blob/master/ibook/notebooks/references/stock_diagrams.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install graphviz
-<span class="o">!</span>apt-get install graphviz
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install graphviz
+!apt-get install graphviz
 </pre></div>
 </div>
 </div>
@@ -555,14 +555,14 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install diagrams
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install diagrams
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (0.23.1)
-Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from diagrams) (3.1.2)
 Requirement already satisfied: graphviz&lt;0.20.0,&gt;=0.13.2 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from diagrams) (0.19.2)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from diagrams) (3.1.2)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.1.1)
 </pre></div>
 </div>
@@ -570,17 +570,17 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Diagram</span>
-<span class="kn">from</span> <span class="nn">diagrams.aws.compute</span> <span class="kn">import</span> <span class="n">EC2</span>
-<span class="kn">from</span> <span class="nn">diagrams.aws.database</span> <span class="kn">import</span> <span class="n">RDS</span>
-<span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">ELB</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
 
-<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;Grouped Workers&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;TB&quot;</span><span class="p">):</span>
-    <span class="n">ELB</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker1&quot;</span><span class="p">),</span>
-                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker2&quot;</span><span class="p">),</span>
-                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
-                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
-                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
+with Diagram(&quot;Grouped Workers&quot;, show=False, direction=&quot;TB&quot;):
+    ELB(&quot;lb&quot;) &gt;&gt; [EC2(&quot;worker1&quot;),
+                  EC2(&quot;worker2&quot;),
+                  EC2(&quot;worker3&quot;),
+                  EC2(&quot;worker4&quot;),
+                  EC2(&quot;worker5&quot;)] &gt;&gt; RDS(&quot;events&quot;)
 </pre></div>
 </div>
 </div>
@@ -622,7 +622,7 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">diagrams.aws.database</span> <span class="kn">import</span> <span class="n">RDS</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">ELB</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;Grouped Workers&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;TB&quot;</span><span class="p">):</span>
@@ -695,8 +695,8 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;grouped_workers.png&#39;</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from IPython.display import Image
+Image(filename=&#39;grouped_workers.png&#39;) 
 </pre></div>
 </div>
 </div>
@@ -706,50 +706,50 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Cluster</span><span class="p">,</span> <span class="n">Diagram</span>
-<span class="kn">from</span> <span class="nn">diagrams.programming.language</span> <span class="kn">import</span> <span class="n">Python</span><span class="p">,</span> <span class="n">Csharp</span><span class="p">,</span> <span class="n">Go</span>
-<span class="kn">from</span> <span class="nn">diagrams.programming.framework</span> <span class="kn">import</span> <span class="n">Django</span><span class="p">,</span> <span class="n">Flask</span>
-<span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">Route53</span>
-<span class="kn">from</span> <span class="nn">diagrams.saas.chat</span> <span class="kn">import</span> <span class="n">Slack</span>
-<span class="kn">from</span> <span class="nn">diagrams.gcp.compute</span> <span class="kn">import</span> <span class="n">AppEngine</span><span class="p">,</span> <span class="n">GCE</span><span class="p">,</span> <span class="n">GCF</span><span class="p">,</span> <span class="n">Run</span>
-<span class="kn">from</span> <span class="nn">diagrams.gcp.devtools</span> <span class="kn">import</span> <span class="n">Code</span><span class="p">,</span> <span class="n">Build</span>
-<span class="kn">from</span> <span class="nn">diagrams.elastic.elasticsearch</span> <span class="kn">import</span> <span class="n">Elasticsearch</span>
-<span class="kn">from</span> <span class="nn">diagrams.generic.database</span> <span class="kn">import</span> <span class="n">SQL</span>
-<span class="kn">from</span> <span class="nn">diagrams.generic.storage</span> <span class="kn">import</span> <span class="n">Storage</span>
-<span class="kn">from</span> <span class="nn">diagrams.generic.blank</span> <span class="kn">import</span> <span class="n">Blank</span>
-<span class="kn">from</span> <span class="nn">diagrams.generic.device</span> <span class="kn">import</span> <span class="n">Tablet</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from diagrams import Cluster, Diagram
+from diagrams.programming.language import Python, Csharp, Go
+from diagrams.programming.framework import Django, Flask
+from diagrams.aws.network import Route53
+from diagrams.saas.chat import Slack
+from diagrams.gcp.compute import AppEngine, GCE, GCF, Run
+from diagrams.gcp.devtools import Code, Build
+from diagrams.elastic.elasticsearch import Elasticsearch
+from diagrams.generic.database import SQL
+from diagrams.generic.storage import Storage
+from diagrams.generic.blank import Blank
+from diagrams.generic.device import Tablet
 
-<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;stock-arch&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="n">nSlack</span> <span class="o">=</span> <span class="n">Slack</span><span class="p">(</span><span class="s1">&#39;automatic updates&#39;</span><span class="p">)</span>
-    <span class="n">nPython</span> <span class="o">=</span> <span class="n">Python</span><span class="p">()</span>
-    <span class="n">nGo</span> <span class="o">=</span> <span class="n">Go</span><span class="p">()</span>
-    <span class="n">nCSharp</span> <span class="o">=</span> <span class="n">Csharp</span><span class="p">()</span>
-    <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Google Cloud&quot;</span><span class="p">):</span>
-        <span class="n">gcp_build</span> <span class="o">=</span> <span class="n">Build</span><span class="p">(</span><span class="s2">&quot;Auto Build&quot;</span><span class="p">)</span>
-        <span class="n">sapp</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s2">&quot;stocks app&quot;</span><span class="p">)</span>
-        <span class="n">fstocks</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s1">&#39;fstocks&#39;</span><span class="p">)</span>
-        <span class="n">utilities</span> <span class="o">=</span> <span class="n">GCF</span><span class="p">(</span><span class="s1">&#39;utility&#39;</span><span class="p">)</span>
-        <span class="n">gcp_serverless</span> <span class="o">=</span> <span class="p">[</span><span class="n">sapp</span><span class="p">,</span>
-                     <span class="n">fstocks</span><span class="p">,</span>
-                     <span class="n">utilities</span>
-                    <span class="p">]</span>
-        <span class="n">gcp_build</span> <span class="o">-</span> <span class="n">gcp_serverless</span>
+with Diagram(&quot;stock-arch&quot;, show=False):
+    nSlack = Slack(&#39;automatic updates&#39;)
+    nPython = Python()
+    nGo = Go()
+    nCSharp = Csharp()
+    with Cluster(&quot;Google Cloud&quot;):
+        gcp_build = Build(&quot;Auto Build&quot;)
+        sapp = Run(&quot;stocks app&quot;)
+        fstocks = Run(&#39;fstocks&#39;)
+        utilities = GCF(&#39;utility&#39;)
+        gcp_serverless = [sapp,
+                     fstocks,
+                     utilities
+                    ]
+        gcp_build - gcp_serverless
 
-    <span class="n">nElasticsearch</span> <span class="o">=</span> <span class="n">Elasticsearch</span><span class="p">(</span><span class="s1">&#39;news_db&#39;</span><span class="p">)</span>
-    <span class="n">dash</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">()</span>
-    <span class="n">nPython</span> <span class="o">&gt;&gt;</span> <span class="n">dash</span>
-    <span class="c1"># Convert to framework</span>
-    <span class="n">dash</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
-    <span class="n">nGo</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
-    <span class="n">nCSharp</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+    nElasticsearch = Elasticsearch(&#39;news_db&#39;)
+    dash = Flask()
+    nPython &gt;&gt; dash
+    # Convert to framework
+    dash &gt;&gt; gcp_build
+    nGo &gt;&gt; gcp_build
+    nCSharp &gt;&gt; gcp_build
 
-    <span class="n">fstocks</span> <span class="o">&gt;&gt;</span> <span class="n">nSlack</span>
+    fstocks &gt;&gt; nSlack
 
-    <span class="n">sapp</span> <span class="o">&gt;&gt;</span> <span class="n">nElasticsearch</span>
+    sapp &gt;&gt; nElasticsearch
 
-    <span class="n">nPython</span> <span class="o">&gt;&gt;</span> <span class="n">Storage</span><span class="p">(</span><span class="s1">&#39;stock list&#39;</span><span class="p">)</span>
+    nPython &gt;&gt; Storage(&#39;stock list&#39;)
 
-    <span class="n">gcp_serverless</span> <span class="o">&gt;&gt;</span> <span class="n">Tablet</span><span class="p">(</span><span class="s1">&#39;View&#39;</span><span class="p">)</span>
+    gcp_serverless &gt;&gt; Tablet(&#39;View&#39;)
     
     
 </pre></div>
@@ -758,8 +758,8 @@ Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;stock-arch.png&#39;</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from IPython.display import Image
+Image(filename=&#39;stock-arch.png&#39;) 
 </pre></div>
 </div>
 </div>

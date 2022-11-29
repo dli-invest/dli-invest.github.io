@@ -67,7 +67,7 @@ File [0;32m/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/subprocess.py:
 The above exception was the direct cause of the following exception:
 
 [0;31mExecutableNotFound[0m                        Traceback (most recent call last)
-Cell [0;32mIn [3], line 6[0m
+Cell [0;32mIn[3], line 6[0m
 [1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdiagrams[39;00m[38;5;21;01m.[39;00m[38;5;21;01maws[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdatabase[39;00m [38;5;28;01mimport[39;00m RDS
 [1;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mdiagrams[39;00m[38;5;21;01m.[39;00m[38;5;21;01maws[39;00m[38;5;21;01m.[39;00m[38;5;21;01mnetwork[39;00m [38;5;28;01mimport[39;00m ELB
 [0;32m----> 6[0m [38;5;28;01mwith[39;00m Diagram([38;5;124m"[39m[38;5;124mGrouped Workers[39m[38;5;124m"[39m, show[38;5;241m=[39m[38;5;28;01mFalse[39;00m, direction[38;5;241m=[39m[38;5;124m"[39m[38;5;124mTB[39m[38;5;124m"[39m):

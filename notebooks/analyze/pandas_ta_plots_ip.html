@@ -538,8 +538,8 @@ title="Print to PDF"
   <p><a href="https://colab.research.google.com/github/dli-invest/dli-invest.github.io/blob/master/ibook/notebooks/analyze/pandas_ta_plots_ip.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install mplfinance yfinance
-<span class="o">!</span>pip install -U git+https://github.com/twopirllc/pandas-ta
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install mplfinance yfinance
+!pip install -U git+https://github.com/twopirllc/pandas-ta
 </pre></div>
 </div>
 </div>
@@ -548,34 +548,34 @@ title="Print to PDF"
 Requirement already satisfied: yfinance in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (0.1.87)
 Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from mplfinance) (3.6.2)
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from mplfinance) (1.5.2)
-Requirement already satisfied: multitasking&gt;=0.0.7 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (0.0.11)
 Requirement already satisfied: lxml&gt;=4.5.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (4.9.1)
-Requirement already satisfied: requests&gt;=2.26 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (2.28.1)
 Requirement already satisfied: appdirs&gt;=1.4.4 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (1.4.4)
 Requirement already satisfied: numpy&gt;=1.15 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (1.23.5)
+Requirement already satisfied: requests&gt;=2.26 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (2.28.1)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from yfinance) (0.0.11)
 Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-&gt;mplfinance) (2022.6)
 Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-&gt;mplfinance) (2.8.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.4)
+Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2.1.1)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2022.9.24)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.4)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (1.26.13)
-Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2.1.1)
-Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (3.0.9)
-Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (21.3)
 Requirement already satisfied: pillow&gt;=6.2.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (9.3.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (1.4.4)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (1.0.6)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (4.38.0)
 Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (0.11.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (1.0.6)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (3.0.9)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (4.38.0)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (21.3)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from matplotlib-&gt;mplfinance) (1.4.4)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;mplfinance) (1.16.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting git+https://github.com/twopirllc/pandas-ta
-  Cloning https://github.com/twopirllc/pandas-ta to /tmp/pip-req-build-__webzn1
-  Running command git clone --filter=blob:none --quiet https://github.com/twopirllc/pandas-ta /tmp/pip-req-build-__webzn1
+  Cloning https://github.com/twopirllc/pandas-ta to /tmp/pip-req-build-9mqwsa_3
+  Running command git clone --filter=blob:none --quiet https://github.com/twopirllc/pandas-ta /tmp/pip-req-build-9mqwsa_3
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Resolved https://github.com/twopirllc/pandas-ta to commit 084dbe1c4b76082f383fa3029270ea9ac35e4dc7
@@ -584,9 +584,14 @@ Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
 ?25hRequirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-ta==0.3.14b0) (1.5.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (2.8.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (2.8.2)
 Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (2022.6)
 Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from pandas-&gt;pandas-ta==0.3.14b0) (1.23.5)
 Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;pandas-ta==0.3.14b0) (1.16.0)
@@ -599,12 +604,9 @@ Building wheels for collected packages: pandas-ta
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for pandas-ta: filename=pandas_ta-0.3.14b0-py3-none-any.whl size=219751 sha256=29b6eb5d2850b59461ce7b52de21270cedab611930197a275ffc610dc44e33da
-  Stored in directory: /tmp/pip-ephem-wheel-cache-qeg1n49y/wheels/7f/03/8e/6c5ec9c051db18ca4f345a3bee3371a11b95cce48fdbe1f51e
+?25h  Created wheel for pandas-ta: filename=pandas_ta-0.3.14b0-py3-none-any.whl size=219751 sha256=4a820ec73b5a91a54c81a4bae0519713ea930eb430726ccaa360e470fe5098da
+  Stored in directory: /tmp/pip-ephem-wheel-cache-prns235r/wheels/7f/03/8e/6c5ec9c051db18ca4f345a3bee3371a11b95cce48fdbe1f51e
 Successfully built pandas-ta
 </pre></div>
 </div>
@@ -618,397 +620,397 @@ Successfully built pandas-ta
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
-<span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rnd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%matplotlib inline
+import datetime as dt
+import random as rnd
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
-<span class="kn">import</span> <span class="nn">pandas_ta</span> <span class="k">as</span> <span class="nn">ta</span>
-<span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+import numpy as np
+import pandas as pd
+import mplfinance as mpf
+import pandas_ta as ta
+import yfinance as yf
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Chart</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">strategy</span><span class="p">:</span> <span class="n">ta</span><span class="o">.</span><span class="n">Strategy</span> <span class="o">=</span> <span class="n">ta</span><span class="o">.</span><span class="n">CommonStrategy</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;verbose&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Chart(object):
+    def __init__(self, df: pd.DataFrame = None, strategy: ta.Strategy = ta.CommonStrategy, *args, **kwargs):
+        self.verbose = kwargs.pop(&quot;verbose&quot;, False)
 
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="ow">and</span> <span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">datetime_ordered</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-                <span class="n">df_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">df_name</span> <span class="o">=</span> <span class="s2">&quot;DataFrame&quot;</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[i] Loaded </span><span class="si">{</span><span class="n">df_name</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[X] Oops! Missing &#39;ohlcv&#39; data or index is not datetime ordered.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="kc">None</span>
+        if isinstance(df, pd.DataFrame) and df.ta.datetime_ordered:
+            self.df = df
+            if self.df.name is not None and self.df.name != &quot;&quot;:
+                df_name = str(self.df.name)
+            else:
+                df_name = &quot;DataFrame&quot;
+            if self.verbose: print(f&quot;[i] Loaded {df_name}{self.df.shape}&quot;)
+        else:
+            print(f&quot;[X] Oops! Missing &#39;ohlcv&#39; data or index is not datetime ordered.\n&quot;)
+            return None
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_ta_strategy</span><span class="p">(</span><span class="n">strategy</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_mpf_kwargs</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_chart_kwargs</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        self._validate_ta_strategy(strategy)
+        self._validate_mpf_kwargs(**kwargs)
+        self._validate_chart_kwargs(**kwargs)
 
-        <span class="c1"># Build TA and Plot</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">strategy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strategy</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        # Build TA and Plot
+        self.df.ta.strategy(self.strategy, verbose=self.verbose)
+        self._plot(**kwargs)
 
-    <span class="k">def</span> <span class="nf">_validate_ta_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strategy</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">strategy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">strategy</span><span class="p">,</span> <span class="n">ta</span><span class="o">.</span><span class="n">Strategy</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">strategy</span>
-        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strategy_ta</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[+] Strategy: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">strategy_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">ta</span><span class="o">.</span><span class="n">CommonStrategy</span>        
+    def _validate_ta_strategy(self, strategy):
+        if strategy is not None or isinstance(strategy, ta.Strategy):
+            self.strategy = strategy
+        elif len(self.strategy_ta) &gt; 0:
+            print(f&quot;[+] Strategy: {self.strategy_name}&quot;)
+        else:
+            self.strategy = ta.CommonStrategy        
 
-    <span class="k">def</span> <span class="nf">_validate_chart_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Chart Settings&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;last&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;last&quot;</span><span class="p">,</span> <span class="n">recent_bars</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;rpad&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;rpad&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;Asset&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    def _validate_chart_kwargs(self, **kwargs):
+        &quot;&quot;&quot;Chart Settings&quot;&quot;&quot;
+        self.config = {}
+        self.config[&quot;last&quot;] = kwargs.pop(&quot;last&quot;, recent_bars(self.df))
+        self.config[&quot;rpad&quot;] = kwargs.pop(&quot;rpad&quot;, 10)
+        self.config[&quot;title&quot;] = kwargs.pop(&quot;title&quot;, &quot;Asset&quot;)
+        self.config[&quot;volume&quot;] = kwargs.pop(&quot;volume&quot;, True)
 
-    <span class="k">def</span> <span class="nf">_validate_mpf_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># mpf global chart settings</span>
-        <span class="n">default_chart</span> <span class="o">=</span> <span class="n">mpf</span><span class="o">.</span><span class="n">available_styles</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">default_mpf_width</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;candle_linewidth&#39;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
-            <span class="s1">&#39;candle_width&#39;</span><span class="p">:</span> <span class="mf">0.525</span><span class="p">,</span>
-            <span class="s1">&#39;volume_width&#39;</span><span class="p">:</span> <span class="mf">0.525</span>
-        <span class="p">}</span>
-        <span class="n">mpfchart</span> <span class="o">=</span> <span class="p">{}</span>
+    def _validate_mpf_kwargs(self, **kwargs):
+        # mpf global chart settings
+        default_chart = mpf.available_styles()[-1]
+        default_mpf_width = {
+            &#39;candle_linewidth&#39;: 0.6,
+            &#39;candle_width&#39;: 0.525,
+            &#39;volume_width&#39;: 0.525
+        }
+        mpfchart = {}
 
-        <span class="n">mpf_style</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;style&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">mpf_style</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">mpf_style</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
-            <span class="n">mpf_styles</span> <span class="o">=</span> <span class="n">mpf</span><span class="o">.</span><span class="n">available_styles</span><span class="p">()</span>
-            <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;style&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpf_styles</span><span class="p">[</span><span class="n">rnd</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mpf_styles</span><span class="p">))]</span>
-        <span class="k">elif</span> <span class="n">mpf_style</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">mpf</span><span class="o">.</span><span class="n">available_styles</span><span class="p">():</span>
-            <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;style&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpf_style</span>
+        mpf_style = kwargs.pop(&quot;style&quot;, &quot;&quot;)
+        if mpf_style == &quot;&quot; or mpf_style.lower() == &quot;random&quot;:
+            mpf_styles = mpf.available_styles()
+            mpfchart[&quot;style&quot;] = mpf_styles[rnd.randrange(len(mpf_styles))]
+        elif mpf_style.lower() in mpf.available_styles():
+            mpfchart[&quot;style&quot;] = mpf_style
 
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;figsize&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;non_trading&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;nontrading&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;rc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;rc&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;figure.facecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;#EDEDED&#39;</span><span class="p">})</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">))</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;scale_padding&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;scale_padding&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;left&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;tight_layout&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tight_layout&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;candle&quot;</span><span class="p">)</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;width_config&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;width_config&quot;</span><span class="p">,</span> <span class="n">default_mpf_width</span><span class="p">)</span>
-        <span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;xrotation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;xrotation&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+        mpfchart[&quot;figsize&quot;] = kwargs.pop(&quot;figsize&quot;, (12, 10))
+        mpfchart[&quot;non_trading&quot;] = kwargs.pop(&quot;nontrading&quot;, False)
+        mpfchart[&quot;rc&quot;] = kwargs.pop(&quot;rc&quot;, {&#39;figure.facecolor&#39;: &#39;#EDEDED&#39;})
+        mpfchart[&quot;plot_ratios&quot;] = kwargs.pop(&quot;plot_ratios&quot;, (12, 1.7))
+        mpfchart[&quot;scale_padding&quot;] = kwargs.pop(&quot;scale_padding&quot;, {&#39;left&#39;: 1, &#39;top&#39;: 4, &#39;right&#39;: 1, &#39;bottom&#39;: 1})
+        mpfchart[&quot;tight_layout&quot;] = kwargs.pop(&quot;tight_layout&quot;, True)
+        mpfchart[&quot;type&quot;] = kwargs.pop(&quot;type&quot;, &quot;candle&quot;)
+        mpfchart[&quot;width_config&quot;] = kwargs.pop(&quot;width_config&quot;, default_mpf_width)
+        mpfchart[&quot;xrotation&quot;] = kwargs.pop(&quot;xrotation&quot;, 15)
         
-        <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span> <span class="o">=</span> <span class="n">mpfchart</span>
+        self.mpfchart = mpfchart
 
-    <span class="k">def</span> <span class="nf">_attribution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pandas v: </span><span class="si">{</span><span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2"> [pip install pandas] https://github.com/pandas-dev/pandas&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data from Yahoo Finance v: 1.0.19 [pip install yfinance]&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Technical Analysis with Pandas TA v: </span><span class="si">{</span><span class="n">ta</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2"> [pip install pandas_ta] https://github.com/twopirllc/pandas-ta&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Charts by Matplotlib Finance v: </span><span class="si">{</span><span class="n">mpf</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2"> [pip install mplfinance] https://github.com/matplotlib/mplfinance</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    def _attribution(self):
+        print(f&quot;\nPandas v: {pd.__version__} [pip install pandas] https://github.com/pandas-dev/pandas&quot;)
+        print(f&quot;Data from Yahoo Finance v: 1.0.19 [pip install yfinance]&quot;)
+        print(f&quot;Technical Analysis with Pandas TA v: {ta.version} [pip install pandas_ta] https://github.com/twopirllc/pandas-ta&quot;)
+        print(f&quot;Charts by Matplotlib Finance v: {mpf.__version__} [pip install mplfinance] https://github.com/matplotlib/mplfinance\n&quot;)
 
-    <span class="k">def</span> <span class="nf">_right_pad_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rpad</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">delta_unit</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">range_freq</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">rpad</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">dfpad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="o">-</span><span class="n">rpad</span><span class="p">:]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-            <span class="n">dfpad</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span>
+    def _right_pad_df(self, rpad: int, delta_unit: str = &quot;D&quot;, range_freq: str = &quot;B&quot;):
+        if rpad &gt; 0:
+            dfpad = self.df[-rpad:].copy()
+            dfpad.iloc[:,:] = np.NaN
 
-            <span class="n">df_frequency</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Most common frequency</span>
-            <span class="n">freq_delta</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">df_frequency</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">delta_unit</span><span class="p">)</span>
-            <span class="n">new_dr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">freq_delta</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="n">rpad</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">range_freq</span><span class="p">)</span>
-            <span class="n">dfpad</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">new_dr</span> <span class="c1"># Update the padded index with new dates</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dfpad</span><span class="p">)</span>
+            df_frequency = self.df.index.value_counts().mode()[0] # Most common frequency
+            freq_delta = pd.Timedelta(df_frequency, unit=delta_unit)
+            new_dr = pd.date_range(start=self.df.index[-1] + freq_delta, periods=rpad, freq=range_freq)
+            dfpad.index = new_dr # Update the padded index with new dates
+            self.df = self.df.append(dfpad)
         
             
-    <span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[X] plot_ratios must be a tuple&quot;</span><span class="p">)</span>
-            <span class="k">return</span>
+    def _plot(self, **kwargs):
+        if not isinstance(self.mpfchart[&quot;plot_ratios&quot;], tuple):
+            print(f&quot;[X] plot_ratios must be a tuple&quot;)
+            return
 
-        <span class="c1"># Override Chart Title Option</span>
-        <span class="n">chart_title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s2">&quot;title&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="n">chart_title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+        # Override Chart Title Option
+        chart_title = self.config[&quot;title&quot;]
+        if &quot;title&quot; in kwargs and isinstance(kwargs[&quot;title&quot;], str):
+            chart_title = kwargs.pop(&quot;title&quot;)
 
-        <span class="c1"># Override Right Bar Padding Option</span>
-        <span class="n">rpad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;rpad&quot;</span><span class="p">]</span>
-        <span class="k">if</span> <span class="s2">&quot;rpad&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;rpad&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">rpad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;rpad&quot;</span><span class="p">])</span>
+        # Override Right Bar Padding Option
+        rpad = self.config[&quot;rpad&quot;]
+        if &quot;rpad&quot; in kwargs and kwargs[&quot;rpad&quot;] &gt; 0:
+            rpad = int(kwargs[&quot;rpad&quot;])
 
-        <span class="k">def</span> <span class="nf">cpanel</span><span class="p">():</span>
-            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s1">&#39;plot_ratios&#39;</span><span class="p">])</span>
+        def cpanel():
+            return len(self.mpfchart[&#39;plot_ratios&#39;])
 
-        <span class="c1"># Last Second Default TA Indicators</span>
-        <span class="n">linreg</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;linreg&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">linreg_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">linreg</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">linreg</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        # Last Second Default TA Indicators
+        linreg = kwargs.pop(&quot;linreg&quot;, False)
+        linreg_name = self.df.ta.linreg(append=True).name if linreg else &quot;&quot;
 
-        <span class="n">midpoint</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;midpoint&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">midpoint_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">midpoint</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">midpoint</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        midpoint = kwargs.pop(&quot;midpoint&quot;, False)
+        midpoint_name = self.df.ta.midpoint(append=True).name if midpoint else &quot;&quot;
 
-        <span class="n">ohlc4</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;ohlc4&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">ohlc4_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">ohlc4</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">ohlc4</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        ohlc4 = kwargs.pop(&quot;ohlc4&quot;, False)
+        ohlc4_name = self.df.ta.ohlc4(append=True).name if ohlc4 else &quot;&quot;
 
-        <span class="n">clr</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;clr&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">clr_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">log_return</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="k">if</span> <span class="n">clr</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        clr = kwargs.pop(&quot;clr&quot;, False)
+        clr_name = self.df.ta.log_return(cumulative=True, append=True).name if clr else &quot;&quot;
 
-        <span class="n">rsi</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;rsi&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">rsi_length</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;rsi_length&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rsi_length</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">rsi_length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">rsi_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">rsi</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="n">rsi_length</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
-        <span class="k">elif</span> <span class="n">rsi</span><span class="p">:</span>
-            <span class="n">rsi_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">rsi</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
-        <span class="k">else</span><span class="p">:</span> <span class="n">rsi_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        rsi = kwargs.pop(&quot;rsi&quot;, False)
+        rsi_length = kwargs.pop(&quot;rsi_length&quot;, None)
+        if isinstance(rsi_length, int) and rsi_length &gt; 1:
+            rsi_name = self.df.ta.rsi(length=rsi_length, append=True).name
+        elif rsi:
+            rsi_name = self.df.ta.rsi(append=True).name
+        else: rsi_name = &quot;&quot;
             
-        <span class="n">zscore</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;zscore&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">zscore_length</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;zscore_length&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">zscore_length</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="n">zscore_length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">zs_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="n">zscore_length</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
-        <span class="k">elif</span> <span class="n">zscore</span><span class="p">:</span>
-            <span class="n">zs_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
-        <span class="k">else</span><span class="p">:</span> <span class="n">zs_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        zscore = kwargs.pop(&quot;zscore&quot;, False)
+        zscore_length = kwargs.pop(&quot;zscore_length&quot;, None)
+        if isinstance(zscore_length, int) and zscore_length &gt; 1:
+            zs_name = self.df.ta.zscore(length=zscore_length, append=True).name
+        elif zscore:
+            zs_name = self.df.ta.zscore(append=True).name
+        else: zs_name = &quot;&quot;
 
-        <span class="n">macd</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;macd&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">macd_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">macd</span><span class="p">:</span>
-            <span class="n">macds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">macd</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">macd_name</span> <span class="o">=</span> <span class="n">macds</span><span class="o">.</span><span class="n">name</span>
+        macd = kwargs.pop(&quot;macd&quot;, False)
+        macd_name = &quot;&quot;
+        if macd:
+            macds = self.df.ta.macd(append=True)
+            macd_name = macds.name
 
-        <span class="n">squeeze</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;squeeze&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">lazybear</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;lazybear&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">squeeze_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">squeeze</span><span class="p">:</span>
-            <span class="n">squeezes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">lazybear</span><span class="o">=</span><span class="n">lazybear</span><span class="p">,</span> <span class="n">detailed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">squeeze_name</span> <span class="o">=</span> <span class="n">squeezes</span><span class="o">.</span><span class="n">name</span>
+        squeeze = kwargs.pop(&quot;squeeze&quot;, False)
+        lazybear = kwargs.pop(&quot;lazybear&quot;, False)
+        squeeze_name = &quot;&quot;
+        if squeeze:
+            squeezes = self.df.ta.squeeze(lazybear=lazybear, detailed=True, append=True)
+            squeeze_name = squeezes.name
 
-        <span class="n">ama</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;archermas&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">ama_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">ama</span><span class="p">:</span>
-            <span class="n">amas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">amat</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">ama_name</span> <span class="o">=</span> <span class="n">amas</span><span class="o">.</span><span class="n">name</span>
+        ama = kwargs.pop(&quot;archermas&quot;, False)
+        ama_name = &quot;&quot;
+        if ama:
+            amas = self.df.ta.amat(append=True)
+            ama_name = amas.name
 
-        <span class="n">aobv</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;archerobv&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="n">aobv_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">aobv</span><span class="p">:</span>
-            <span class="n">aobvs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">aobv</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="n">aobv_name</span> <span class="o">=</span> <span class="n">aobvs</span><span class="o">.</span><span class="n">name</span>
+        aobv = kwargs.pop(&quot;archerobv&quot;, False)
+        aobv_name = &quot;&quot;
+        if aobv:
+            aobvs = self.df.ta.aobv(append=True)
+            aobv_name = aobvs.name
 
-        <span class="n">treturn</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;trendreturn&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">treturn</span><span class="p">:</span>
-            <span class="c1"># Long Trend requires Series Comparison (&lt;=. &lt;, = &gt;, &gt;=)</span>
-            <span class="c1"># or Trade Logic that yields trends in binary.</span>
-            <span class="n">default_long</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SMA_10&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SMA_20&quot;</span><span class="p">]</span>
-            <span class="n">long_trend</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;long_trend&quot;</span><span class="p">,</span> <span class="n">default_long</span><span class="p">)</span>
-            <span class="n">short_trend</span> <span class="o">=</span> <span class="o">~</span><span class="n">long_trend</span> <span class="c1"># Opposite/Inverse</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TRl&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ta</span><span class="o">.</span><span class="n">trend_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;close&quot;</span><span class="p">],</span> <span class="n">long_trend</span><span class="p">,</span> <span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TRs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ta</span><span class="o">.</span><span class="n">trend_return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;close&quot;</span><span class="p">],</span> <span class="n">short_trend</span><span class="p">,</span> <span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TRl&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TRs&quot;</span><span class="p">]</span>
+        treturn = kwargs.pop(&quot;trendreturn&quot;, False)
+        if treturn:
+            # Long Trend requires Series Comparison (&lt;=. &lt;, = &gt;, &gt;=)
+            # or Trade Logic that yields trends in binary.
+            default_long = self.df[&quot;SMA_10&quot;] &gt; self.df[&quot;SMA_20&quot;]
+            long_trend = kwargs.pop(&quot;long_trend&quot;, default_long)
+            short_trend = ~long_trend # Opposite/Inverse
+            self.df[&quot;TRl&quot;] = ta.trend_return(self.df[&quot;close&quot;], long_trend, cumulative=True)
+            self.df[&quot;TRs&quot;] = ta.trend_return(self.df[&quot;close&quot;], short_trend, cumulative=True)
+            self.df[&quot;TR&quot;] = self.df[&quot;TRl&quot;] + self.df[&quot;TRs&quot;]
 
-        <span class="c1"># Pad and trim Chart</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_right_pad_df</span><span class="p">(</span><span class="n">rpad</span><span class="p">)</span>
-        <span class="n">mpfdf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;last&quot;</span><span class="p">])</span>
-        <span class="n">mpfdf_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+        # Pad and trim Chart
+        self._right_pad_df(rpad)
+        mpfdf = self.df.tail(self.config[&quot;last&quot;])
+        mpfdf_columns = list(self.df.columns)
 
-        <span class="c1"># BEGIN: Custom TA Plots and Panels</span>
-        <span class="c1"># Modify the area below </span>
-        <span class="n">taplots</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Holds all the additional plots</span>
+        # BEGIN: Custom TA Plots and Panels
+        # Modify the area below 
+        taplots = [] # Holds all the additional plots
 
-        <span class="c1"># Panel 0: Price Overlay</span>
-        <span class="k">if</span> <span class="n">linreg_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span><span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">linreg_name</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;linreg_type&quot;</span><span class="p">,</span> <span class="s2">&quot;line&quot;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;linreg_color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-.&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+        # Panel 0: Price Overlay
+        if linreg_name in mpfdf_columns:
+            taplots += [mpf.make_addplot(mpfdf[linreg_name], type=kwargs.pop(&quot;linreg_type&quot;, &quot;line&quot;), color=kwargs.pop(&quot;linreg_color&quot;, &quot;black&quot;), linestyle=&quot;-.&quot;, width=1.2, panel=0)]
 
-        <span class="k">if</span> <span class="n">midpoint_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span><span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">midpoint_name</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;midpoint_type&quot;</span><span class="p">,</span> <span class="s2">&quot;scatter&quot;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;midpoint_color&quot;</span><span class="p">,</span> <span class="s2">&quot;fuchsia&quot;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+        if midpoint_name in mpfdf_columns:
+            taplots += [mpf.make_addplot(mpfdf[midpoint_name], type=kwargs.pop(&quot;midpoint_type&quot;, &quot;scatter&quot;), color=kwargs.pop(&quot;midpoint_color&quot;, &quot;fuchsia&quot;), width=0.4, panel=0)]
 
-        <span class="k">if</span> <span class="n">ohlc4_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span><span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">ohlc4_name</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">ohlc4_name</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;ohlc4_type&quot;</span><span class="p">,</span> <span class="s2">&quot;scatter&quot;</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;ohlc4_color&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+        if ohlc4_name in mpfdf_columns:
+            taplots += [mpf.make_addplot(mpfdf[ohlc4_name], ylabel=ohlc4_name, type=kwargs.pop(&quot;ohlc4_type&quot;, &quot;scatter&quot;), color=kwargs.pop(&quot;ohlc4_color&quot;, &quot;blue&quot;), alpha=0.85, width=0.4, panel=0)]
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">ta</span><span class="o">.</span><span class="n">CommonStrategy</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
-            <span class="n">total_sma</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Check if all the overlap indicators exists before adding plots</span>
-            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;SMA_10&quot;</span><span class="p">,</span> <span class="s2">&quot;SMA_20&quot;</span><span class="p">,</span> <span class="s2">&quot;SMA_50&quot;</span><span class="p">,</span> <span class="s2">&quot;SMA_200&quot;</span><span class="p">]:</span>
-                <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span> <span class="n">total_sma</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[X] Indicator: </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> missing!&quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">total_sma</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-                <span class="n">ta_smas</span> <span class="o">=</span> <span class="p">[</span>
-                    <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;SMA_10&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-                    <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;SMA_20&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-                    <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;SMA_50&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-                    <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;SMA_200&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;maroon&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-                <span class="p">]</span>
-                <span class="n">taplots</span> <span class="o">+=</span> <span class="n">ta_smas</span>
+        if self.strategy.name == ta.CommonStrategy.name:
+            total_sma = 0 # Check if all the overlap indicators exists before adding plots
+            for c in [&quot;SMA_10&quot;, &quot;SMA_20&quot;, &quot;SMA_50&quot;, &quot;SMA_200&quot;]:
+                if c in mpfdf_columns: total_sma += 1
+                else: print(f&quot;[X] Indicator: {c} missing!&quot;)
+            if total_sma == 4:
+                ta_smas = [
+                    mpf.make_addplot(mpfdf[&quot;SMA_10&quot;], color=&quot;green&quot;, width=1.5, panel=0),
+                    mpf.make_addplot(mpfdf[&quot;SMA_20&quot;], color=&quot;orange&quot;, width=2, panel=0),
+                    mpf.make_addplot(mpfdf[&quot;SMA_50&quot;], color=&quot;red&quot;, width=2, panel=0),
+                    mpf.make_addplot(mpfdf[&quot;SMA_200&quot;], color=&quot;maroon&quot;, width=3, panel=0),
+                ]
+                taplots += ta_smas
 
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ama_name</span><span class="p">):</span>
-            <span class="n">amat_sr_</span> <span class="o">=</span> <span class="n">mpfdf</span><span class="p">[</span><span class="n">amas</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]][</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">amas</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
-            <span class="n">amat_sr</span> <span class="o">=</span> <span class="n">amat_sr_</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">amat_sr</span> <span class="o">=</span> <span class="kc">None</span>
+        if len(ama_name):
+            amat_sr_ = mpfdf[amas.columns[-1]][mpfdf[amas.columns[-1]] &gt; 0]
+            amat_sr = amat_sr_.index.to_list()
+        else:
+            amat_sr = None
 
-        <span class="c1"># Panel 1: If volume=True, the add the VOL MA. Since we know there is only one, we immediately pop it.</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">]:</span>
-            <span class="n">volma</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;VOL_&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-            <span class="n">max_vol</span> <span class="o">=</span> <span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-            <span class="n">ta_volume</span> <span class="o">=</span> <span class="p">[</span><span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">volma</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">.2</span> <span class="o">*</span> <span class="n">max_vol</span><span class="p">,</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">max_vol</span><span class="p">))]</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="n">ta_volume</span>
+        # Panel 1: If volume=True, the add the VOL MA. Since we know there is only one, we immediately pop it.
+        if self.config[&quot;volume&quot;]:
+            volma = [x for x in list(self.df.columns) if x.startswith(&quot;VOL_&quot;)].pop()
+            max_vol = mpfdf[&quot;volume&quot;].max()
+            ta_volume = [mpf.make_addplot(mpfdf[volma], color=&quot;red&quot;, width=2, panel=1, ylim=(-.2 * max_vol, 1.5 * max_vol))]
+            taplots += ta_volume
 
-        <span class="c1"># Panels 2 - 9</span>
-        <span class="n">common_plot_ratio</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,)</span>
+        # Panels 2 - 9
+        common_plot_ratio = (3,)
 
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">aobv_name</span><span class="p">):</span>
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;aobv_percenty&quot;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
-            <span class="n">aobv_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">aobvs</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">_p</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">aobvs</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">aobv_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">aobv_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">aobvs</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;silver&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">aobv_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">aobvs</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">aobv_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">aobvs</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">aobv_ylim</span><span class="p">),</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+        if len(aobv_name):
+            _p = kwargs.pop(&quot;aobv_percenty&quot;, 0.2)
+            aobv_ylim = ta_ylim(mpfdf[aobvs.columns[0]], _p)
+            taplots += [
+                mpf.make_addplot(mpfdf[aobvs.columns[0]], ylabel=aobv_name, color=&quot;black&quot;, width=1.5, panel=cpanel(), ylim=aobv_ylim),
+                mpf.make_addplot(mpfdf[aobvs.columns[2]], color=&quot;silver&quot;, width=1, panel=cpanel(), ylim=aobv_ylim),
+                mpf.make_addplot(mpfdf[aobvs.columns[3]], color=&quot;green&quot;, width=1, panel=cpanel(), ylim=aobv_ylim),
+                mpf.make_addplot(mpfdf[aobvs.columns[4]], color=&quot;red&quot;, width=1.2, panel=cpanel(), ylim=aobv_ylim),
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
 
-        <span class="k">if</span> <span class="n">clr_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;clr_percenty&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
-            <span class="n">clr_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">clr_name</span><span class="p">],</span> <span class="n">_p</span><span class="p">)</span>
+        if clr_name in mpfdf_columns:
+            _p = kwargs.pop(&quot;clr_percenty&quot;, 0.1)
+            clr_ylim = ta_ylim(mpfdf[clr_name], _p)
 
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span><span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">clr_name</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">clr_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">clr_ylim</span><span class="p">)]</span>
-            <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">_p</span><span class="p">)</span> <span class="o">*</span> <span class="n">mpfdf</span><span class="p">[</span><span class="n">clr_name</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">_p</span><span class="p">)</span> <span class="o">*</span> <span class="n">mpfdf</span><span class="p">[</span><span class="n">clr_name</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span><span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">clr_ylim</span><span class="p">)]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+            taplots += [mpf.make_addplot(mpfdf[clr_name], ylabel=clr_name, color=&quot;black&quot;, width=1.5, panel=cpanel(), ylim=clr_ylim)]
+            if (1 - _p) * mpfdf[clr_name].min() &lt; 0 and (1 + _p) * mpfdf[clr_name].max() &gt; 0:
+                taplots += [mpf.make_addplot(mpfdf[&quot;0&quot;], color=&quot;gray&quot;, width=1.2, panel=cpanel(), ylim=clr_ylim)]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
 
-        <span class="k">if</span> <span class="n">rsi_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">rsi_ylim</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">rsi_name</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">rsi_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;rsi_color&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">rsi_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">rsi_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">rsi_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;80&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">rsi_ylim</span><span class="p">),</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+        if rsi_name in mpfdf_columns:
+            rsi_ylim = (0, 100)
+            taplots += [
+                mpf.make_addplot(mpfdf[rsi_name], ylabel=rsi_name, color=kwargs.pop(&quot;rsi_color&quot;, &quot;black&quot;), width=1.5, panel=cpanel(), ylim=rsi_ylim),
+                mpf.make_addplot(mpfdf[&quot;20&quot;], color=&quot;green&quot;, width=1, panel=cpanel(), ylim=rsi_ylim),
+                mpf.make_addplot(mpfdf[&quot;50&quot;], color=&quot;gray&quot;, width=0.8, panel=cpanel(), ylim=rsi_ylim),
+                mpf.make_addplot(mpfdf[&quot;80&quot;], color=&quot;red&quot;, width=1, panel=cpanel(), ylim=rsi_ylim),
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
         
-        <span class="k">if</span> <span class="n">macd_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;macd_percenty&quot;</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">)</span>
-            <span class="n">macd_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">macd_name</span><span class="p">],</span> <span class="n">_p</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">macd_name</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">macd_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">()),</span><span class="c1">#, ylim=macd_ylim),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">macds</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">()),</span><span class="c1">#, ylim=macd_ylim),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">macds</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;dimgray&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">()),</span><span class="c1">#, ylim=macd_ylim),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">()),</span><span class="c1">#, ylim=macd_ylim),</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel            </span>
+        if macd_name in mpfdf_columns:
+            _p = kwargs.pop(&quot;macd_percenty&quot;, 0.15)
+            macd_ylim = ta_ylim(mpfdf[macd_name], _p)
+            taplots += [
+                mpf.make_addplot(mpfdf[macd_name], ylabel=macd_name, color=&quot;black&quot;, width=1.5, panel=cpanel()),#, ylim=macd_ylim),
+                mpf.make_addplot(mpfdf[macds.columns[-1]], color=&quot;blue&quot;, width=1.1, panel=cpanel()),#, ylim=macd_ylim),
+                mpf.make_addplot(mpfdf[macds.columns[1]], type=&quot;bar&quot;, alpha=0.8, color=&quot;dimgray&quot;, width=0.8, panel=cpanel()),#, ylim=macd_ylim),
+                mpf.make_addplot(mpfdf[&quot;0&quot;], color=&quot;black&quot;, width=1.2, panel=cpanel()),#, ylim=macd_ylim),
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel            
 
-        <span class="k">if</span> <span class="n">zs_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;zascore_percenty&quot;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
-            <span class="n">zs_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">zs_name</span><span class="p">],</span> <span class="n">_p</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">zs_name</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">zs_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;-3&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;-2&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;-1&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;silver&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;silver&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;3&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">zs_ylim</span><span class="p">)</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+        if zs_name in mpfdf_columns:
+            _p = kwargs.pop(&quot;zascore_percenty&quot;, 0.2)
+            zs_ylim = ta_ylim(mpfdf[zs_name], _p)
+            taplots += [
+                mpf.make_addplot(mpfdf[zs_name], ylabel=zs_name, color=&quot;black&quot;, width=1.5, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;-3&quot;], color=&quot;red&quot;, width=1.2, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;-2&quot;], color=&quot;orange&quot;, width=1, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;-1&quot;], color=&quot;silver&quot;, width=1, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;0&quot;], color=&quot;black&quot;, width=1.2, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;1&quot;], color=&quot;silver&quot;, width=1, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;2&quot;], color=&quot;orange&quot;, width=1, panel=cpanel(), ylim=zs_ylim),
+                mpf.make_addplot(mpfdf[&quot;3&quot;], color=&quot;red&quot;, width=1.2, panel=cpanel(), ylim=zs_ylim)
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
 
-        <span class="k">if</span> <span class="n">squeeze_name</span> <span class="ow">in</span> <span class="n">mpfdf_columns</span><span class="p">:</span>
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;squeeze_percenty&quot;</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">)</span>
-            <span class="n">sqz_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeeze_name</span><span class="p">],</span> <span class="n">_p</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeezes</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeezes</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeezes</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;maroon&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeezes</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeezes</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">squeeze_name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="n">squeezes</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">5</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">sqz_ylim</span><span class="p">),</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+        if squeeze_name in mpfdf_columns:
+            _p = kwargs.pop(&quot;squeeze_percenty&quot;, 0.6)
+            sqz_ylim = ta_ylim(mpfdf[squeeze_name], _p)
+            taplots += [
+                mpf.make_addplot(mpfdf[squeezes.columns[-4]], type=&quot;bar&quot;, color=&quot;lime&quot;, alpha=0.65, width=0.8, panel=cpanel(), ylim=sqz_ylim),
+                mpf.make_addplot(mpfdf[squeezes.columns[-3]], type=&quot;bar&quot;, color=&quot;green&quot;, alpha=0.65, width=0.8, panel=cpanel(), ylim=sqz_ylim),
+                mpf.make_addplot(mpfdf[squeezes.columns[-2]], type=&quot;bar&quot;, color=&quot;maroon&quot;, alpha=0.65, width=0.8, panel=cpanel(), ylim=sqz_ylim),
+                mpf.make_addplot(mpfdf[squeezes.columns[-1]], type=&quot;bar&quot;, color=&quot;red&quot;, alpha=0.65, width=0.8, panel=cpanel(), ylim=sqz_ylim),
+                mpf.make_addplot(mpfdf[&quot;0&quot;], color=&quot;black&quot;, width=1.2, panel=cpanel(), ylim=sqz_ylim),
+                mpf.make_addplot(mpfdf[squeezes.columns[4]], ylabel=squeeze_name, color=&quot;green&quot;, width=2, panel=cpanel(), ylim=sqz_ylim),
+                mpf.make_addplot(mpfdf[squeezes.columns[5]], color=&quot;red&quot;, width=1.8, panel=cpanel(), ylim=sqz_ylim),
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
 
-        <span class="k">if</span> <span class="n">treturn</span><span class="p">:</span>
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;treturn_percenty&quot;</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">)</span>
-            <span class="n">treturn_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;TR&quot;</span><span class="p">],</span> <span class="n">_p</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;TRl&quot;</span><span class="p">],</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Trend Return&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">treturn_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;TRs&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">treturn_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;TR&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">treturn_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">treturn_ylim</span><span class="p">),</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+        if treturn:
+            _p = kwargs.pop(&quot;treturn_percenty&quot;, 0.33)
+            treturn_ylim = ta_ylim(mpfdf[&quot;TR&quot;], _p)
+            taplots += [
+                mpf.make_addplot(mpfdf[&quot;TRl&quot;], ylabel=&quot;Trend Return&quot;, type=&quot;bar&quot;, color=&quot;green&quot;, alpha=0.45, width=0.8, panel=cpanel(), ylim=treturn_ylim),
+                mpf.make_addplot(mpfdf[&quot;TRs&quot;], type=&quot;bar&quot;, color=&quot;red&quot;, alpha=0.45, width=0.8, panel=cpanel(), ylim=treturn_ylim),
+                mpf.make_addplot(mpfdf[&quot;TR&quot;], color=&quot;black&quot;, width=1.5, panel=cpanel(), ylim=treturn_ylim),
+                mpf.make_addplot(mpfdf[&quot;0&quot;], color=&quot;black&quot;, width=1.2, panel=cpanel(), ylim=treturn_ylim),
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
 
-            <span class="n">_p</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;cstreturn_percenty&quot;</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">)</span>
-            <span class="n">trcs</span> <span class="o">=</span> <span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;TR&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
-            <span class="n">treturncs_ylim</span> <span class="o">=</span> <span class="n">ta_ylim</span><span class="p">(</span><span class="n">trcs</span><span class="p">,</span> <span class="n">_p</span><span class="p">)</span>
-            <span class="n">taplots</span> <span class="o">+=</span> <span class="p">[</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">trcs</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Trend B&amp;H&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">treturncs_ylim</span><span class="p">),</span>
-                <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">panel</span><span class="o">=</span><span class="n">cpanel</span><span class="p">(),</span> <span class="n">ylim</span><span class="o">=</span><span class="n">treturncs_ylim</span><span class="p">),</span>
-            <span class="p">]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">common_plot_ratio</span> <span class="c1"># Required to add a new Panel</span>
+            _p = kwargs.pop(&quot;cstreturn_percenty&quot;, 0.33)
+            trcs = mpfdf[&quot;TR&quot;].cumsum()
+            treturncs_ylim = ta_ylim(trcs, _p)
+            taplots += [
+                mpf.make_addplot(trcs, ylabel=&quot;Trend B&amp;H&quot;, color=&quot;black&quot;, width=1.5, panel=cpanel(), ylim=treturncs_ylim),
+                mpf.make_addplot(mpfdf[&quot;0&quot;], color=&quot;black&quot;, width=1.2, panel=cpanel(), ylim=treturncs_ylim),
+            ]
+            self.mpfchart[&quot;plot_ratios&quot;] += common_plot_ratio # Required to add a new Panel
 
-        <span class="c1"># END: Custom TA Plots and Panels</span>
+        # END: Custom TA Plots and Panels
 
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
-            <span class="n">additional_ta</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="n">chart_title</span>  <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">chart_title</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">] (last </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;last&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> bars)&quot;</span>
-            <span class="n">chart_title</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Since </span><span class="si">{</span><span class="n">mpfdf</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> till </span><span class="si">{</span><span class="n">mpfdf</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">linreg_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">additional_ta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linreg_name</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">midpoint_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">additional_ta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">midpoint_name</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ohlc4_name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> <span class="n">additional_ta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ohlc4_name</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">additional_ta</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">chart_title</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Including: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">additional_ta</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        if self.verbose:
+            additional_ta = []
+            chart_title  = f&quot;{chart_title} [{self.strategy.name}] (last {self.config[&#39;last&#39;]} bars)&quot;
+            chart_title += f&quot;\nSince {mpfdf.index[0]} till {mpfdf.index[-1]}&quot;
+            if len(linreg_name) &gt; 0: additional_ta.append(linreg_name)
+            if len(midpoint_name) &gt; 0: additional_ta.append(midpoint_name)
+            if len(ohlc4_name) &gt; 0: additional_ta.append(ohlc4_name)
+            if len(additional_ta) &gt; 0:
+                chart_title += f&quot;\nIncluding: {&#39;, &#39;.join(additional_ta)}&quot;
 
-        <span class="k">if</span> <span class="n">amat_sr</span><span class="p">:</span>
-            <span class="n">vlines_</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">vlines</span><span class="o">=</span><span class="n">amat_sr</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># Hidden because vlines needs valid arguments even if None </span>
-            <span class="n">vlines_</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">vlines</span><span class="o">=</span><span class="n">mpfdf</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+        if amat_sr:
+            vlines_ = dict(vlines=amat_sr, alpha=0.1, colors=&quot;red&quot;)
+        else:
+            # Hidden because vlines needs valid arguments even if None 
+            vlines_ = dict(vlines=mpfdf.index[0], alpha=0, colors=&quot;white&quot;)
 
-        <span class="c1"># Create Final Plot</span>
-        <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mpfdf</span><span class="p">,</span>
-            <span class="n">title</span><span class="o">=</span><span class="n">chart_title</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">],</span>
-            <span class="n">style</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;style&quot;</span><span class="p">],</span>
-            <span class="n">datetime_format</span><span class="o">=</span><span class="s2">&quot;%-m/</span><span class="si">%-d</span><span class="s2">/%Y&quot;</span><span class="p">,</span>
-            <span class="n">volume</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">],</span>
-            <span class="n">figsize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;figsize&quot;</span><span class="p">],</span>
-            <span class="n">tight_layout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;tight_layout&quot;</span><span class="p">],</span>
-            <span class="n">scale_padding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;scale_padding&quot;</span><span class="p">],</span>
-            <span class="n">panel_ratios</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;plot_ratios&quot;</span><span class="p">],</span> <span class="c1"># This key needs to be update above if adding more panels</span>
-            <span class="n">xrotation</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;xrotation&quot;</span><span class="p">],</span>
-            <span class="n">update_width_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;width_config&quot;</span><span class="p">],</span>
-            <span class="n">show_nontrading</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mpfchart</span><span class="p">[</span><span class="s2">&quot;non_trading&quot;</span><span class="p">],</span>
-            <span class="n">vlines</span><span class="o">=</span><span class="n">vlines_</span><span class="p">,</span>
-            <span class="n">addplot</span><span class="o">=</span><span class="n">taplots</span>
-        <span class="p">)</span>
+        # Create Final Plot
+        mpf.plot(mpfdf,
+            title=chart_title,
+            type=self.mpfchart[&quot;type&quot;],
+            style=self.mpfchart[&quot;style&quot;],
+            datetime_format=&quot;%-m/%-d/%Y&quot;,
+            volume=self.config[&quot;volume&quot;],
+            figsize=self.mpfchart[&quot;figsize&quot;],
+            tight_layout=self.mpfchart[&quot;tight_layout&quot;],
+            scale_padding=self.mpfchart[&quot;scale_padding&quot;],
+            panel_ratios=self.mpfchart[&quot;plot_ratios&quot;], # This key needs to be update above if adding more panels
+            xrotation=self.mpfchart[&quot;xrotation&quot;],
+            update_width_config=self.mpfchart[&quot;width_config&quot;],
+            show_nontrading=self.mpfchart[&quot;non_trading&quot;],
+            vlines=vlines_,
+            addplot=taplots
+        )
         
-        <span class="bp">self</span><span class="o">.</span><span class="n">_attribution</span><span class="p">()</span>
+        self._attribution()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_prices_for_stock</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;2019-03-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2020-05-30&quot;</span><span class="p">):</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
-    <span class="c1"># Drop columns with no entries</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def get_prices_for_stock(stock, start_date=&quot;2019-03-01&quot;, end_date=&quot;2020-05-30&quot;):
+    data = yf.download(stock, start=start_date, end=end_date)
+    data = data.fillna(method=&#39;ffill&#39;)
+    # Drop columns with no entries
+    data = data.dropna(axis=&#39;columns&#39;, how=&#39;all&#39;)
+    return data
 
-<span class="k">def</span> <span class="nf">recent_bars</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tf</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;1y&quot;</span><span class="p">):</span>
-    <span class="c1"># All Data: 0, Last Four Years: 0.25, Last Two Years: 0.5, This Year: 1, Last Half Year: 2, Last Quarter: 4</span>
-    <span class="n">yearly_divisor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;all&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;10y&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;5y&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s2">&quot;4y&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s2">&quot;3y&quot;</span><span class="p">:</span> <span class="mf">1.</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;2y&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;1y&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;6mo&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;3mo&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
-    <span class="n">yd</span> <span class="o">=</span> <span class="n">yearly_divisor</span><span class="p">[</span><span class="n">tf</span><span class="p">]</span> <span class="k">if</span> <span class="n">tf</span> <span class="ow">in</span> <span class="n">yearly_divisor</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">ta</span><span class="o">.</span><span class="n">RATE</span><span class="p">[</span><span class="s2">&quot;TRADING_DAYS_PER_YEAR&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">yd</span><span class="p">)</span> <span class="k">if</span> <span class="n">yd</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+def recent_bars(df, tf: str = &quot;1y&quot;):
+    # All Data: 0, Last Four Years: 0.25, Last Two Years: 0.5, This Year: 1, Last Half Year: 2, Last Quarter: 4
+    yearly_divisor = {&quot;all&quot;: 0, &quot;10y&quot;: 0.1, &quot;5y&quot;: 0.2, &quot;4y&quot;: 0.25, &quot;3y&quot;: 1./3, &quot;2y&quot;: 0.5, &quot;1y&quot;: 1, &quot;6mo&quot;: 2, &quot;3mo&quot;: 4}
+    yd = yearly_divisor[tf] if tf in yearly_divisor.keys() else 0
+    return int(ta.RATE[&quot;TRADING_DAYS_PER_YEAR&quot;] / yd) if yd &gt; 0 else df.shape[0]
   
-<span class="k">def</span> <span class="nf">ta_ylim</span><span class="p">(</span><span class="n">series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">percent</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">):</span>
-    <span class="n">smin</span><span class="p">,</span> <span class="n">smax</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">series</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">percent</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nb">float</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">y_min</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">percent</span><span class="p">)</span> <span class="o">*</span> <span class="n">smin</span> <span class="k">if</span> <span class="n">smin</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">percent</span><span class="p">)</span> <span class="o">*</span> <span class="n">smin</span>
-        <span class="n">y_max</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">percent</span><span class="p">)</span> <span class="o">*</span> <span class="n">smax</span> <span class="k">if</span> <span class="n">smax</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">percent</span><span class="p">)</span> <span class="o">*</span> <span class="n">smax</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">smin</span><span class="p">,</span> <span class="n">smax</span><span class="p">)</span>
+def ta_ylim(series: pd.Series, percent: float = 0.1):
+    smin, smax = series.min(), series.max()
+    if isinstance(percent, float) and 0 &lt;= float(percent) &lt;= 1:
+        y_min = (1 + percent) * smin if smin &lt; 0 else (1 - percent) * smin
+        y_max = (1 - percent) * smax if smax &lt; 0 else (1 + percent) * smax
+        return (y_min, y_max)
+    return (smin, smax)
 
-<span class="n">ntar_df</span> <span class="o">=</span> <span class="n">get_prices_for_stock</span><span class="p">(</span><span class="s1">&#39;NTAR.CN&#39;</span><span class="p">)</span>
-<span class="c1"># Used for example Trend Return Long Trend Below</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;high&#39;</span><span class="p">,</span> <span class="s1">&#39;low&#39;</span><span class="p">,</span> <span class="s1">&#39;close&#39;</span><span class="p">,</span> <span class="s1">&#39;adj_close&#39;</span><span class="p">,</span> <span class="s1">&#39;volume&#39;</span><span class="p">]</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+ntar_df = get_prices_for_stock(&#39;NTAR.CN&#39;)
+# Used for example Trend Return Long Trend Below
+ntar_df.columns = [&#39;open&#39;, &#39;high&#39;, &#39;low&#39;, &#39;close&#39;, &#39;adj_close&#39;, &#39;volume&#39;]
+ntar_df.head()
 </pre></div>
 </div>
 </div>
@@ -1106,12 +1108,13 @@ Successfully built pandas-ta
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate Returns and append to the df DataFrame</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">log_return</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">percent_return</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">rsi</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="n">ntar_df</span><span class="o">.</span><span class="n">columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+# Calculate Returns and append to the df DataFrame
+ntar_df.ta.log_return(cumulative=True, append=True)
+ntar_df.ta.percent_return(cumulative=True, append=True)
+ntar_df.ta.rsi(cumulative=False, append=True)
+ntar_df.head()
+ntar_df.columns
 </pre></div>
 </div>
 </div>
@@ -1125,10 +1128,11 @@ Successfully built pandas-ta
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We create an additional plot placing it on the third panel</span>
-<span class="n">roc_plot</span> <span class="o">=</span> <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">ntar_df</span><span class="p">[</span><span class="s1">&#39;RSI_14&#39;</span><span class="p">],</span> <span class="n">panel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;ROC&#39;</span><span class="p">)</span>
-<span class="c1">#We pass the additional plot using the addplot parameter</span>
-<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ntar_df</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span>  <span class="n">style</span><span class="o">=</span><span class="s1">&#39;yahoo&#39;</span><span class="p">,</span> <span class="n">addplot</span><span class="o">=</span><span class="n">roc_plot</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Ntar Price Point&quot;</span><span class="p">,</span> <span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+# We create an additional plot placing it on the third panel
+roc_plot = mpf.make_addplot(ntar_df[&#39;RSI_14&#39;], panel=2, ylabel=&#39;ROC&#39;)
+#We pass the additional plot using the addplot parameter
+mpf.plot(ntar_df, type=&#39;candle&#39;,  style=&#39;yahoo&#39;, addplot=roc_plot, title=&quot;Ntar Price Point&quot;, volume=True)
 </pre></div>
 </div>
 </div>
@@ -1138,17 +1142,17 @@ Successfully built pandas-ta
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># IP analysis just before major increases in stock prices</span>
-<span class="n">ip_spike1_df</span> <span class="o">=</span> <span class="n">get_prices_for_stock</span><span class="p">(</span><span class="s1">&#39;IP.CN&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-05-04&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-07-25&#39;</span><span class="p">)</span>
-<span class="n">ip_spike1_df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
-<span class="n">ip_spike1_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">log_return</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ip_spike1_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">percent_return</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ip_spike1_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">rsi</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ip_spike1_df</span><span class="o">.</span><span class="n">ta</span><span class="o">.</span><span class="n">pvol</span><span class="p">(</span><span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ip_spike1_df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-<span class="n">roc_plot</span> <span class="o">=</span> <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">ip_spike1_df</span><span class="p">[</span><span class="s1">&#39;PVOL&#39;</span><span class="p">],</span> <span class="n">panel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;ROC&#39;</span><span class="p">)</span>
-<span class="c1">#We pass the additional plot using the addplot parameter</span>
-<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ip_spike1_df</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span> <span class="n">addplot</span><span class="o">=</span><span class="n">roc_plot</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;IP Price Point&quot;</span><span class="p">,</span> <span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># IP analysis just before major increases in stock prices
+ip_spike1_df = get_prices_for_stock(&#39;IP.CN&#39;, &#39;2020-05-04&#39;, &#39;2020-07-25&#39;)
+ip_spike1_df.tail()
+ip_spike1_df.ta.log_return(cumulative=True, append=True)
+ip_spike1_df.ta.percent_return(cumulative=True, append=True)
+ip_spike1_df.ta.rsi(cumulative=False, append=True)
+ip_spike1_df.ta.pvol(append=True)
+print(ip_spike1_df.columns)
+roc_plot = mpf.make_addplot(ip_spike1_df[&#39;PVOL&#39;], panel=2, ylabel=&#39;ROC&#39;)
+#We pass the additional plot using the addplot parameter
+mpf.plot(ip_spike1_df, type=&#39;candle&#39;, addplot=roc_plot, title=&quot;IP Price Point&quot;, volume=True)
 </pre></div>
 </div>
 </div>
@@ -1170,7 +1174,7 @@ Successfully built pandas-ta
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cielo Analysis just before major stock increases</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Cielo Analysis just before major stock increases
 </pre></div>
 </div>
 </div>
