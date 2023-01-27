@@ -26,6 +26,8 @@ parts:
       title: 2021 Thoughts
     - file: docs/afterthoughts/2022_thoughts.md
       title: 2022 Thoughts
+    - file: docs/afterthoughts/2023_thoughts.md
+      title: 2023 Thoughts
     - file: docs/afterthoughts/Industry_notes_trends.md
       title: Industry trends
   - file: docs/ch6_predictions

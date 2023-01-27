@@ -1,3 +1,15 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+```{code-cell} python3
 # calculate average from daily data from natural gas futures from yahoo finance
 import yfinance
 import pandas as pd
@@ -55,3 +67,4 @@ print(min_debt_reduction)
 
 # save fig
 mpf.plot(nat_gas,type='ohlc',mav=(30, 60, 90), volume=True, style='yahoo', savefig='ng.png')
+```
