@@ -5,3 +5,4 @@ mplfinance
 jupyter-book
 sympy 
 yfinance
+ nbconvert==6.1.0
