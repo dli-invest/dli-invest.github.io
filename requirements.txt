@@ -5,4 +5,5 @@ mplfinance
 jupyter-book
 sympy 
 yfinance
-nbconvert==7.2.9
+jinja2==3.0.3
+nbconvert==6.4.4
