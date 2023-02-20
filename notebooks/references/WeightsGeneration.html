@@ -515,12 +515,12 @@ title="Print to PDF"
 <p><a href="https://colab.research.google.com/github/dli-invest/iref-book/blob/ibook/master/notebooks/references/WeightsGeneration.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install mlfinlab
-!pip install yfinance
-# See https://plotly.com/python/static-image-export/
-!wget https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage -O /usr/local/bin/orca
-!chmod +x /usr/local/bin/orca
-!apt-get install xvfb libgtk2.0-0 libgconf-2-4
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mlfinlab
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>yfinance
+<span class="c1"># See https://plotly.com/python/static-image-export/</span>
+<span class="o">!</span>wget<span class="w"> </span>https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage<span class="w"> </span>-O<span class="w"> </span>/usr/local/bin/orca
+<span class="o">!</span>chmod<span class="w"> </span>+x<span class="w"> </span>/usr/local/bin/orca
+<span class="o">!</span>apt-get<span class="w"> </span>install<span class="w"> </span>xvfb<span class="w"> </span>libgtk2.0-0<span class="w"> </span>libgconf-2-4
 </pre></div>
 </div>
 </div>
@@ -530,51 +530,57 @@ title="Print to PDF"
 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (0.2.3)
-Requirement already satisfied: frozendict&gt;=2.3.4 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (2.3.4)
-Requirement already satisfied: beautifulsoup4&gt;=4.11.1 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (4.11.1)
-Requirement already satisfied: html5lib&gt;=1.1 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (1.1)
-Requirement already satisfied: requests&gt;=2.26 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (2.28.1)
-Requirement already satisfied: numpy&gt;=1.16.5 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (1.24.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0</span> -&gt; <span class=" -Color -Color-Green">23.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cryptography&gt;=3.3.2 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (38.0.4)
-Requirement already satisfied: pandas&gt;=1.3.0 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (1.5.2)
-Requirement already satisfied: lxml&gt;=4.9.1 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (4.9.2)
-Requirement already satisfied: pytz&gt;=2022.5 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (2022.7)
-Requirement already satisfied: multitasking&gt;=0.0.7 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (0.0.11)
-Requirement already satisfied: appdirs&gt;=1.4.4 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from yfinance) (1.4.4)
-Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from beautifulsoup4&gt;=4.11.1-&gt;yfinance) (2.3.2.post1)
-Requirement already satisfied: cffi&gt;=1.12 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cryptography&gt;=3.3.2-&gt;yfinance) (1.15.1)
-Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from html5lib&gt;=1.1-&gt;yfinance) (0.5.1)
-Requirement already satisfied: six&gt;=1.9 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from html5lib&gt;=1.1-&gt;yfinance) (1.16.0)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from pandas&gt;=1.3.0-&gt;yfinance) (2.8.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (0.2.12)
+Requirement already satisfied: pandas&gt;=1.3.0 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.5.3)
+Requirement already satisfied: numpy&gt;=1.16.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.24.2)
+Requirement already satisfied: frozendict&gt;=2.3.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2.3.5)
+Requirement already satisfied: pytz&gt;=2022.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2022.7.1)
+Requirement already satisfied: beautifulsoup4&gt;=4.11.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (4.11.2)
+Requirement already satisfied: requests&gt;=2.26 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2.28.2)
+Requirement already satisfied: appdirs&gt;=1.4.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.4.4)
+Requirement already satisfied: lxml&gt;=4.9.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (4.9.2)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (0.0.11)
+Requirement already satisfied: cryptography&gt;=3.3.2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (39.0.1)
+Requirement already satisfied: html5lib&gt;=1.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from beautifulsoup4&gt;=4.11.1-&gt;yfinance) (2.4)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.4)
-Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2.1.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (1.26.13)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2022.12.7)
-Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=3.3.2-&gt;yfinance) (2.21)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.12 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from cryptography&gt;=3.3.2-&gt;yfinance) (1.15.1)
+Requirement already satisfied: six&gt;=1.9 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from html5lib&gt;=1.1-&gt;yfinance) (1.16.0)
+Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from html5lib&gt;=1.1-&gt;yfinance) (0.5.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from pandas&gt;=1.3.0-&gt;yfinance) (2.8.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.0.1)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2022.12.7)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (1.26.14)
+Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=3.3.2-&gt;yfinance) (2.21)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-12-29 01:11:44--  https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage
-Resolving github.com (github.com)... 140.82.112.3
-Connecting to github.com (github.com)|140.82.112.3|:443... 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0</span> -&gt; <span class=" -Color -Color-Green">23.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-02-20 18:18:29--  https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage
+Resolving github.com (github.com)... 140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>connected.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
+HTTP request sent, awaiting response... 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>302 Found
-Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221229%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221229T011145Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=a319f232c22c9aec858cb8fcf35a6339189bb50541e4b0fce408754a63e07653&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream [following]
---2022-12-29 01:11:45--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221229%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221229T011145Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=a319f232c22c9aec858cb8fcf35a6339189bb50541e4b0fce408754a63e07653&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream
-Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
-Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.109.133|:443... connected.
-HTTP request sent, awaiting response... 
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230220%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230220T181829Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=452027307bafa798be8e5113fadbcd0d19581a0618ce365fec809199bdd14f8e&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream [following]
+--2023-02-20 18:18:29--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230220%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230220T181829Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=452027307bafa798be8e5113fadbcd0d19581a0618ce365fec809199bdd14f8e&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.109.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200 OK
@@ -585,39 +591,18 @@ Saving to: ‘/usr/local/bin/orca’
 /usr/local/bin/orca   0%[                    ]       0  --.-KB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   0%[                    ] 199.43K   837KB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  24%[===&gt;                ]  12.01M  49.5MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   3%[                    ]   1.91M  4.01MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  56%[==========&gt;         ]  28.01M  63.1MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  16%[==&gt;                 ]   8.01M  10.8MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  89%[================&gt;   ]  44.01M  65.5MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  27%[====&gt;               ]  13.59M  13.6MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  38%[======&gt;             ]  19.16M  15.1MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  48%[========&gt;           ]  24.01M  15.9MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  57%[==========&gt;         ]  28.21M  16.4MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  68%[============&gt;       ]  33.59M  17.1MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  79%[==============&gt;     ]  39.16M  17.7MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  89%[================&gt;   ]  44.01M  17.8MB/s               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca 100%[===================&gt;]  49.22M  18.5MB/s    in 2.7s    
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca 100%[===================&gt;]  49.22M  68.4MB/s    in 0.7s    
 
-2022-12-29 01:11:48 (18.5 MB/s) - ‘/usr/local/bin/orca’ saved [51607939/51607939]
+2023-02-20 18:18:30 (68.4 MB/s) - ‘/usr/local/bin/orca’ saved [51607939/51607939]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
@@ -628,30 +613,30 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import yfinance as yf
-import pandas as pd
-from mlfinlab.portfolio_optimization.mean_variance import MeanVarianceOptimisation
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">mlfinlab.portfolio_optimization.mean_variance</span> <span class="kn">import</span> <span class="n">MeanVarianceOptimisation</span>
 
-def get_prices(stocks, start_date=&quot;2019-03-01&quot;, end_date=&quot;2020-05-30&quot;):
-    stocks_string = &quot; &quot;.join(stocks)
-    data = yf.download(stocks_string, start=start_date, end=end_date,
-                      group_by=&quot;ticker&quot;)
-    data = data.fillna(method=&#39;ffill&#39;)
-    # Drop columns with no entries
-    data = data.dropna(axis=&#39;columns&#39;, how=&#39;all&#39;)
+<span class="k">def</span> <span class="nf">get_prices</span><span class="p">(</span><span class="n">stocks</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;2019-03-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2020-05-30&quot;</span><span class="p">):</span>
+    <span class="n">stocks_string</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">stocks</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">stocks_string</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">,</span>
+                      <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;ticker&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+    <span class="c1"># Drop columns with no entries</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
 
-    prices_df = pd.concat([data[ticker][&quot;Close&quot;] for ticker in stocks], axis=1)
-    prices_df.columns = stocks
-    return prices_df
-stocks = [&quot;NEXCF&quot;, &quot;ACB.TO&quot;, &quot;BB.TO&quot;, &quot;N.V&quot;, &quot;APHA.TO&quot;, &quot;TTT.CN&quot;, &quot;HUT.TO&quot;, &quot;HIVE.V&quot;, &quot;AC.TO&quot;, &quot;CVE.TO&quot;]
-asset_prices = get_prices(stocks) 
-# Compute IVP weights
-mvo = MeanVarianceOptimisation()
-mvo.allocate(asset_names=asset_prices.columns, asset_prices=asset_prices,
-             solution=&#39;max_sharpe&#39;)
-ivp_weights = mvo.weights.sort_values(by=0, ascending=False, axis=1)
-with pd.option_context(&#39;display.max_rows&#39;, None, &#39;display.max_columns&#39;, None): 
-  print(ivp_weights)
+    <span class="n">prices_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="n">ticker</span><span class="p">][</span><span class="s2">&quot;Close&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">ticker</span> <span class="ow">in</span> <span class="n">stocks</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">prices_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">stocks</span>
+    <span class="k">return</span> <span class="n">prices_df</span>
+<span class="n">stocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NEXCF&quot;</span><span class="p">,</span> <span class="s2">&quot;ACB.TO&quot;</span><span class="p">,</span> <span class="s2">&quot;BB.TO&quot;</span><span class="p">,</span> <span class="s2">&quot;N.V&quot;</span><span class="p">,</span> <span class="s2">&quot;APHA.TO&quot;</span><span class="p">,</span> <span class="s2">&quot;TTT.CN&quot;</span><span class="p">,</span> <span class="s2">&quot;HUT.TO&quot;</span><span class="p">,</span> <span class="s2">&quot;HIVE.V&quot;</span><span class="p">,</span> <span class="s2">&quot;AC.TO&quot;</span><span class="p">,</span> <span class="s2">&quot;CVE.TO&quot;</span><span class="p">]</span>
+<span class="n">asset_prices</span> <span class="o">=</span> <span class="n">get_prices</span><span class="p">(</span><span class="n">stocks</span><span class="p">)</span> 
+<span class="c1"># Compute IVP weights</span>
+<span class="n">mvo</span> <span class="o">=</span> <span class="n">MeanVarianceOptimisation</span><span class="p">()</span>
+<span class="n">mvo</span><span class="o">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">asset_names</span><span class="o">=</span><span class="n">asset_prices</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">asset_prices</span><span class="o">=</span><span class="n">asset_prices</span><span class="p">,</span>
+             <span class="n">solution</span><span class="o">=</span><span class="s1">&#39;max_sharpe&#39;</span><span class="p">)</span>
+<span class="n">ivp_weights</span> <span class="o">=</span> <span class="n">mvo</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span> 
+  <span class="nb">print</span><span class="p">(</span><span class="n">ivp_weights</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -684,7 +669,7 @@ with pd.option_context(&#39;display.max_rows&#39;, None, &#39;display.max_column
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/references"
         },
         predefinedOutput: true

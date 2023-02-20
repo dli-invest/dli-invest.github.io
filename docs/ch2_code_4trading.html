@@ -570,27 +570,27 @@ title="Print to PDF"
 <p>In order to calculate profits and how much money to I put into the market, I use a formula after downloading my data from RBC direct investing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-data = {
-    &quot;Activity&quot;: {
-        0: &quot;Buy&quot;,
-        1: &quot;Buy&quot;,
-        2: &quot;Deposits &amp; Contributions&quot;,
-        3: &quot;Withdrawals &amp; De-registrations&quot;,
-        4: &quot;Deposits &amp; Contributions&quot;,
-    },
-    &quot;Symbol&quot;: {0: &quot;BB&quot;, 1: &quot;RBF556&quot;, 2: &quot;&quot;, 3: &quot;RBF558&quot;, 4: &quot;&quot;},
-    &quot;Value&quot;: {0: -100.95, 1: -2328.24, 2: 1000.0, 3: -14000.0, 4: 15000.0},
-}
-df = pd.DataFrame.from_dict(data)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Activity&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Buy&quot;</span><span class="p">,</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Buy&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Withdrawals &amp; De-registrations&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;Symbol&quot;</span><span class="p">:</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;BB&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;RBF556&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;RBF558&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;Value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="o">-</span><span class="mf">100.95</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="o">-</span><span class="mf">2328.24</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="o">-</span><span class="mf">14000.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">15000.0</span><span class="p">},</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-print(df)
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
-deposit_df = df[df.Activity == &quot;Deposits &amp; Contributions&quot;]
-divid_df = df[df.Activity == &quot;Dividends&quot;]
-with_df = df[df.Activity == &quot;Withdrawals &amp; De-registrations&quot;]
-total = deposit_df[&#39;Value&#39;].sum() + with_df[&#39;Value&#39;].sum()
-print(total)
+<span class="n">deposit_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Deposits &amp; Contributions&quot;</span><span class="p">]</span>
+<span class="n">divid_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Dividends&quot;</span><span class="p">]</span>
+<span class="n">with_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Activity</span> <span class="o">==</span> <span class="s2">&quot;Withdrawals &amp; De-registrations&quot;</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">deposit_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">with_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -675,7 +675,7 @@ print(total)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./docs"
         },
         predefinedOutput: true

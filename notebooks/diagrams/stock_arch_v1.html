@@ -538,8 +538,8 @@ title="Print to PDF"
   <p><a href="https://colab.research.google.com/github/dli-invest/investing-book/blob/feature%2Fv1.1/ibook/notebooks/diagrams/stock_arch_v2.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install graphviz
-!apt-get install graphviz
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>graphviz
+<span class="o">!</span>apt-get<span class="w"> </span>install<span class="w"> </span>graphviz
 </pre></div>
 </div>
 </div>
@@ -549,7 +549,7 @@ title="Print to PDF"
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading graphviz-0.20.1-py3-none-any.whl (47 kB)
 ?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/47.0 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">47.0/47.0 kB</span> <span class=" -Color -Color-Red">1.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">47.0/47.0 kB</span> <span class=" -Color -Color-Red">1.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -557,6 +557,10 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed graphviz-0.20.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0</span> -&gt; <span class=" -Color -Color-Green">23.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
@@ -567,7 +571,7 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install diagrams
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>diagrams
 </pre></div>
 </div>
 </div>
@@ -575,561 +579,239 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting diagrams
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading diagrams-0.23.1-py3-none-any.whl (24.1 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/24.1 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.1/24.1 MB</span> <span class=" -Color -Color-Red">3.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:07</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading diagrams-0.23.3-py3-none-any.whl (24.4 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/24.4 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.2/24.1 MB</span> <span class=" -Color -Color-Red">3.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:07</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.1/24.4 MB</span> <span class=" -Color -Color-Red">3.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:08</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.5/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:06</span>
-     ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.7/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.4/24.4 MB</span> <span class=" -Color -Color-Red">6.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.9/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.8/24.4 MB</span> <span class=" -Color -Color-Red">7.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+     ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.2/24.4 MB</span> <span class=" -Color -Color-Red">8.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.1/24.1 MB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
-     ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.3/24.1 MB</span> <span class=" -Color -Color-Red">5.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.7/24.4 MB</span> <span class=" -Color -Color-Red">9.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.5/24.1 MB</span> <span class=" -Color -Color-Red">5.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.3/24.4 MB</span> <span class=" -Color -Color-Red">10.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
+     ━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.9/24.4 MB</span> <span class=" -Color -Color-Red">11.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.7/24.1 MB</span> <span class=" -Color -Color-Red">5.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.5/24.4 MB</span> <span class=" -Color -Color-Red">12.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.9/24.1 MB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
-     ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.1/24.1 MB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.3/24.4 MB</span> <span class=" -Color -Color-Red">13.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
+     ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.2/24.4 MB</span> <span class=" -Color -Color-Red">14.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.3/24.1 MB</span> <span class=" -Color -Color-Red">5.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.2/24.4 MB</span> <span class=" -Color -Color-Red">16.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.6/24.1 MB</span> <span class=" -Color -Color-Red">5.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.8/24.1 MB</span> <span class=" -Color -Color-Red">5.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.3/24.4 MB</span> <span class=" -Color -Color-Red">17.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.1/24.1 MB</span> <span class=" -Color -Color-Red">5.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.6/24.4 MB</span> <span class=" -Color -Color-Red">18.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.1/24.4 MB</span> <span class=" -Color -Color-Red">20.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.3/24.1 MB</span> <span class=" -Color -Color-Red">6.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.4/24.1 MB</span> <span class=" -Color -Color-Red">5.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.8/24.4 MB</span> <span class=" -Color -Color-Red">27.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.6/24.1 MB</span> <span class=" -Color -Color-Red">5.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.5/24.4 MB</span> <span class=" -Color -Color-Red">34.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">14.9/24.4 MB</span> <span class=" -Color -Color-Red">37.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.7/24.1 MB</span> <span class=" -Color -Color-Red">5.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.8/24.1 MB</span> <span class=" -Color -Color-Red">5.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.7/24.4 MB</span> <span class=" -Color -Color-Red">40.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.0/24.1 MB</span> <span class=" -Color -Color-Red">5.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ <span class=" -Color -Color-Green">17.9/24.4 MB</span> <span class=" -Color -Color-Red">42.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ <span class=" -Color -Color-Green">20.4/24.4 MB</span> <span class=" -Color -Color-Red">48.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.1/24.1 MB</span> <span class=" -Color -Color-Red">5.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.2/24.1 MB</span> <span class=" -Color -Color-Red">5.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">23.3/24.4 MB</span> <span class=" -Color -Color-Red">54.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.4/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">24.4/24.4 MB</span> <span class=" -Color -Color-Red">57.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.5/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.7/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.9/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.0/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.2/24.1 MB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.3/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.4/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.5/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.7/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.8/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.9/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.1/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.2/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.4/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.5/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.6/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.8/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.0/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.2/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.3/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.4/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.5/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.6/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.7/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.8/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.9/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.0/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.1/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.2/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.3/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.4/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.6/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.7/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.8/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.9/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.0/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.1/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.2/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.3/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.4/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.6/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.7/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">9.8/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.0/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.1/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.2/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.3/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.4/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.5/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.7/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.8/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.0/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.1/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-     ━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.3/24.1 MB</span> <span class=" -Color -Color-Red">4.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.5/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.7/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.0/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-     ━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.2/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.4/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.7/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-     ━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.0/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.3/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.3/24.1 MB</span> <span class=" -Color -Color-Red">4.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-     ━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.6/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">13.9/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">14.2/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">14.5/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">14.8/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.0/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.1/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.2/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.4/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.5/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.7/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.9/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.1/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.2/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.4/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.5/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.6/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.7/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ <span class=" -Color -Color-Green">16.8/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━ <span class=" -Color -Color-Green">16.9/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━ <span class=" -Color -Color-Green">17.0/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━ <span class=" -Color -Color-Green">17.1/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ <span class=" -Color -Color-Green">17.2/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ <span class=" -Color -Color-Green">17.4/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ <span class=" -Color -Color-Green">17.5/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ <span class=" -Color -Color-Green">17.7/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ <span class=" -Color -Color-Green">17.8/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ <span class=" -Color -Color-Green">18.0/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━ <span class=" -Color -Color-Green">18.2/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━ <span class=" -Color -Color-Green">18.3/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ <span class=" -Color -Color-Green">18.5/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ <span class=" -Color -Color-Green">18.6/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━ <span class=" -Color -Color-Green">18.8/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━ <span class=" -Color -Color-Green">19.0/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━ <span class=" -Color -Color-Green">19.2/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━ <span class=" -Color -Color-Green">19.4/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━ <span class=" -Color -Color-Green">19.6/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━ <span class=" -Color -Color-Green">19.8/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ <span class=" -Color -Color-Green">20.1/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━ <span class=" -Color -Color-Green">20.3/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ <span class=" -Color -Color-Green">20.5/24.1 MB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ <span class=" -Color -Color-Green">20.7/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ <span class=" -Color -Color-Green">20.8/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ <span class=" -Color -Color-Green">20.9/24.1 MB</span> <span class=" -Color -Color-Red">5.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ <span class=" -Color -Color-Green">21.1/24.1 MB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━ <span class=" -Color -Color-Green">21.2/24.1 MB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━ <span class=" -Color -Color-Green">21.3/24.1 MB</span> <span class=" -Color -Color-Red">5.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━ <span class=" -Color -Color-Green">21.4/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ <span class=" -Color -Color-Green">21.5/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ <span class=" -Color -Color-Green">21.6/24.1 MB</span> <span class=" -Color -Color-Red">5.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━ <span class=" -Color -Color-Green">21.7/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━ <span class=" -Color -Color-Green">21.8/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━ <span class=" -Color -Color-Green">21.9/24.1 MB</span> <span class=" -Color -Color-Red">4.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ <span class=" -Color -Color-Green">22.0/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ <span class=" -Color -Color-Green">22.1/24.1 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ <span class=" -Color -Color-Green">22.3/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━ <span class=" -Color -Color-Green">22.4/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━ <span class=" -Color -Color-Green">22.5/24.1 MB</span> <span class=" -Color -Color-Red">4.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ <span class=" -Color -Color-Green">22.7/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ <span class=" -Color -Color-Green">22.8/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">22.9/24.1 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">23.0/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">23.1/24.1 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">23.2/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━ <span class=" -Color -Color-Green">23.2/24.1 MB</span> <span class=" -Color -Color-Red">4.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━ <span class=" -Color -Color-Green">23.3/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━ <span class=" -Color -Color-Green">23.4/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">23.5/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ <span class=" -Color -Color-Green">23.7/24.1 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">23.8/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">24.0/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">24.1/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">24.1/24.1 MB</span> <span class=" -Color -Color-Red">4.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">24.1/24.1 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">24.4/24.4 MB</span> <span class=" -Color -Color-Red">57.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">24.4/24.4 MB</span> <span class=" -Color -Color-Red">39.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from diagrams) (3.1.2)
-Collecting graphviz&lt;0.20.0,&gt;=0.13.2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz&lt;0.21.0,&gt;=0.13.2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from diagrams) (0.20.1)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from diagrams) (3.0.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading graphviz-0.19.2-py3-none-any.whl (46 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/46.3 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">46.3/46.3 kB</span> <span class=" -Color -Color-Red">3.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.1.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting typed-ast&lt;2.0.0,&gt;=1.5.4
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: graphviz, diagrams
-  Attempting uninstall: graphviz
-    Found existing installation: graphviz 0.20.1
-    Uninstalling graphviz-0.20.1:
-      Successfully uninstalled graphviz-0.20.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading typed_ast-1.5.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (877 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/877.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">877.7/877.7 kB</span> <span class=" -Color -Color-Red">87.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.1.2)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed diagrams-0.23.1 graphviz-0.19.2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: typed-ast, diagrams
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed diagrams-0.23.3 typed-ast-1.5.4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0</span> -&gt; <span class=" -Color -Color-Green">23.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from diagrams import Cluster, Diagram, Edge
-from diagrams.programming.language import Python, Csharp, Go
-from diagrams.onprem.vcs import Github, Git
-from diagrams.onprem.ci import GithubActions
-from diagrams.saas.chat import Discord
-from diagrams.gcp.compute import AppEngine, GCE, GCF, Run
-from diagrams.gcp.devtools import Code, Build
-from diagrams.elastic.elasticsearch import Elasticsearch
-from diagrams.generic.storage import Storage
-# blue - build/cron
-# purple - notification
-# green - data saving
-with Diagram(&quot;stock-arch-v2&quot;, show=False):
-  with Cluster (&quot;Github Actions&quot;):
-    monthly_job_ga = GithubActions(&#39;monthly job&#39;)
-    weekly_job_ga = GithubActions(&#39;weekly job&#39;)
-    monthly_job_ga - weekly_job_ga
-    daily_job_ga = GithubActions(&#39;daily_job&#39;)
-    weekly_job_ga - daily_job_ga
-    manual_job_ga = GithubActions(&#39;manual push&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Cluster</span><span class="p">,</span> <span class="n">Diagram</span><span class="p">,</span> <span class="n">Edge</span>
+<span class="kn">from</span> <span class="nn">diagrams.programming.language</span> <span class="kn">import</span> <span class="n">Python</span><span class="p">,</span> <span class="n">Csharp</span><span class="p">,</span> <span class="n">Go</span>
+<span class="kn">from</span> <span class="nn">diagrams.onprem.vcs</span> <span class="kn">import</span> <span class="n">Github</span><span class="p">,</span> <span class="n">Git</span>
+<span class="kn">from</span> <span class="nn">diagrams.onprem.ci</span> <span class="kn">import</span> <span class="n">GithubActions</span>
+<span class="kn">from</span> <span class="nn">diagrams.saas.chat</span> <span class="kn">import</span> <span class="n">Discord</span>
+<span class="kn">from</span> <span class="nn">diagrams.gcp.compute</span> <span class="kn">import</span> <span class="n">AppEngine</span><span class="p">,</span> <span class="n">GCE</span><span class="p">,</span> <span class="n">GCF</span><span class="p">,</span> <span class="n">Run</span>
+<span class="kn">from</span> <span class="nn">diagrams.gcp.devtools</span> <span class="kn">import</span> <span class="n">Code</span><span class="p">,</span> <span class="n">Build</span>
+<span class="kn">from</span> <span class="nn">diagrams.elastic.elasticsearch</span> <span class="kn">import</span> <span class="n">Elasticsearch</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.storage</span> <span class="kn">import</span> <span class="n">Storage</span>
+<span class="c1"># blue - build/cron</span>
+<span class="c1"># purple - notification</span>
+<span class="c1"># green - data saving</span>
+<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;stock-arch-v2&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+  <span class="k">with</span> <span class="n">Cluster</span> <span class="p">(</span><span class="s2">&quot;Github Actions&quot;</span><span class="p">):</span>
+    <span class="n">monthly_job_ga</span> <span class="o">=</span> <span class="n">GithubActions</span><span class="p">(</span><span class="s1">&#39;monthly job&#39;</span><span class="p">)</span>
+    <span class="n">weekly_job_ga</span> <span class="o">=</span> <span class="n">GithubActions</span><span class="p">(</span><span class="s1">&#39;weekly job&#39;</span><span class="p">)</span>
+    <span class="n">monthly_job_ga</span> <span class="o">-</span> <span class="n">weekly_job_ga</span>
+    <span class="n">daily_job_ga</span> <span class="o">=</span> <span class="n">GithubActions</span><span class="p">(</span><span class="s1">&#39;daily_job&#39;</span><span class="p">)</span>
+    <span class="n">weekly_job_ga</span> <span class="o">-</span> <span class="n">daily_job_ga</span>
+    <span class="n">manual_job_ga</span> <span class="o">=</span> <span class="n">GithubActions</span><span class="p">(</span><span class="s1">&#39;manual push&#39;</span><span class="p">)</span>
     
-  with Cluster(&quot;Discord&quot;):
-    dis_alerts = Discord(&#39;alerts&#39;)
-    dis_investing = Discord(&#39;events&#39;)
-    dis_news_halts = Discord(&#39;news + halts&#39;)
-    dis_video = Discord(&#39;videos&#39;)
-    # Code status not particular helpful for high level diagram
-  # source = Git(&quot;source&quot;)
-  with Cluster(&quot;Code Sources&quot;):
-      with Cluster(&quot;Github&quot;):
-        account = Github(&quot;account&quot;)
-        dli_invest = Github(&quot;dli-invest&quot;)
-        workers = [account,
-                   dli_invest
-                  ]
-        # Personal repos related to stocks
-        with Cluster(&#39;account repos&#39;):
-          stock_screener = Python(&#39;stock_screener&#39;)
-          cad_tickers_list = Git(&#39;cad_tickers_list&#39;)
-          cad_tickers = Python(&#39;cad_tickers&#39;)
-          stocks_app = Python(&#39;stocks_app&#39;)
-          news_app = Csharp(&#39;news app&#39;)
-          finfiber = Go(&#39;FinFiber&#39;)
-          gcf_functions = Git(&#39;Cloud Functions&#39;)
-          dash_stocks = Python(&#39;Dash Stocks&#39;)
-          account_repos = [stock_screener,
-                            cad_tickers,
-                            news_app,
-                           stocks_app,
-                           finfiber,
-                           gcf_functions,
-                           dash_stocks
-                    ]
-        with Cluster(&#39;dli-invest repos&#39;):
-          with Cluster(&#39;ytube nlp&#39;):
-            # grabbing youtube transcriptions
-            ytube_nlp = Python(&#39;Transcripts&#39;)
-            # Uses assembly AI and manually downloads videos
-            ytube_nlp_ai = Python(&#39;Manual NLP&#39;)
-            ytube = [ytube_nlp, ytube_nlp_ai]
-          # investing book
-          stock_scrapper = Python(&#39;stock-scrapper&#39;)
-          news_and_halts = Python(&#39;News and Halts&#39;)
-          earnings_calendar = Python(&#39;Earnings Calendar&#39;)
-          # notes 
-          with Cluster(&#39;Algorithmic Trading&#39;):
-              zipline_experiments = Python(&#39;Zipline&#39;)
-          with Cluster(&#39;notes&#39;):
-              investing_book = Python(&#39;Investing Book&#39;)
+  <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Discord&quot;</span><span class="p">):</span>
+    <span class="n">dis_alerts</span> <span class="o">=</span> <span class="n">Discord</span><span class="p">(</span><span class="s1">&#39;alerts&#39;</span><span class="p">)</span>
+    <span class="n">dis_investing</span> <span class="o">=</span> <span class="n">Discord</span><span class="p">(</span><span class="s1">&#39;events&#39;</span><span class="p">)</span>
+    <span class="n">dis_news_halts</span> <span class="o">=</span> <span class="n">Discord</span><span class="p">(</span><span class="s1">&#39;news + halts&#39;</span><span class="p">)</span>
+    <span class="n">dis_video</span> <span class="o">=</span> <span class="n">Discord</span><span class="p">(</span><span class="s1">&#39;videos&#39;</span><span class="p">)</span>
+    <span class="c1"># Code status not particular helpful for high level diagram</span>
+  <span class="c1"># source = Git(&quot;source&quot;)</span>
+  <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Code Sources&quot;</span><span class="p">):</span>
+      <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Github&quot;</span><span class="p">):</span>
+        <span class="n">account</span> <span class="o">=</span> <span class="n">Github</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">)</span>
+        <span class="n">dli_invest</span> <span class="o">=</span> <span class="n">Github</span><span class="p">(</span><span class="s2">&quot;dli-invest&quot;</span><span class="p">)</span>
+        <span class="n">workers</span> <span class="o">=</span> <span class="p">[</span><span class="n">account</span><span class="p">,</span>
+                   <span class="n">dli_invest</span>
+                  <span class="p">]</span>
+        <span class="c1"># Personal repos related to stocks</span>
+        <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;account repos&#39;</span><span class="p">):</span>
+          <span class="n">stock_screener</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;stock_screener&#39;</span><span class="p">)</span>
+          <span class="n">cad_tickers_list</span> <span class="o">=</span> <span class="n">Git</span><span class="p">(</span><span class="s1">&#39;cad_tickers_list&#39;</span><span class="p">)</span>
+          <span class="n">cad_tickers</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;cad_tickers&#39;</span><span class="p">)</span>
+          <span class="n">stocks_app</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;stocks_app&#39;</span><span class="p">)</span>
+          <span class="n">news_app</span> <span class="o">=</span> <span class="n">Csharp</span><span class="p">(</span><span class="s1">&#39;news app&#39;</span><span class="p">)</span>
+          <span class="n">finfiber</span> <span class="o">=</span> <span class="n">Go</span><span class="p">(</span><span class="s1">&#39;FinFiber&#39;</span><span class="p">)</span>
+          <span class="n">gcf_functions</span> <span class="o">=</span> <span class="n">Git</span><span class="p">(</span><span class="s1">&#39;Cloud Functions&#39;</span><span class="p">)</span>
+          <span class="n">dash_stocks</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;Dash Stocks&#39;</span><span class="p">)</span>
+          <span class="n">account_repos</span> <span class="o">=</span> <span class="p">[</span><span class="n">stock_screener</span><span class="p">,</span>
+                            <span class="n">cad_tickers</span><span class="p">,</span>
+                            <span class="n">news_app</span><span class="p">,</span>
+                           <span class="n">stocks_app</span><span class="p">,</span>
+                           <span class="n">finfiber</span><span class="p">,</span>
+                           <span class="n">gcf_functions</span><span class="p">,</span>
+                           <span class="n">dash_stocks</span>
+                    <span class="p">]</span>
+        <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;dli-invest repos&#39;</span><span class="p">):</span>
+          <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;ytube nlp&#39;</span><span class="p">):</span>
+            <span class="c1"># grabbing youtube transcriptions</span>
+            <span class="n">ytube_nlp</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;Transcripts&#39;</span><span class="p">)</span>
+            <span class="c1"># Uses assembly AI and manually downloads videos</span>
+            <span class="n">ytube_nlp_ai</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;Manual NLP&#39;</span><span class="p">)</span>
+            <span class="n">ytube</span> <span class="o">=</span> <span class="p">[</span><span class="n">ytube_nlp</span><span class="p">,</span> <span class="n">ytube_nlp_ai</span><span class="p">]</span>
+          <span class="c1"># investing book</span>
+          <span class="n">stock_scrapper</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;stock-scrapper&#39;</span><span class="p">)</span>
+          <span class="n">news_and_halts</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;News and Halts&#39;</span><span class="p">)</span>
+          <span class="n">earnings_calendar</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;Earnings Calendar&#39;</span><span class="p">)</span>
+          <span class="c1"># notes </span>
+          <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;Algorithmic Trading&#39;</span><span class="p">):</span>
+              <span class="n">zipline_experiments</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;Zipline&#39;</span><span class="p">)</span>
+          <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s1">&#39;notes&#39;</span><span class="p">):</span>
+              <span class="n">investing_book</span> <span class="o">=</span> <span class="n">Python</span><span class="p">(</span><span class="s1">&#39;Investing Book&#39;</span><span class="p">)</span>
               
-          # ytube - investing_book
-          # ytube - stock_scrapper
+          <span class="c1"># ytube - investing_book</span>
+          <span class="c1"># ytube - stock_scrapper</span>
 
-  # Cluster for Google Cloud
-  with Cluster(&quot;Google Cloud Platform&quot;):
-    gcp_build = Build(&quot;Auto Build&quot;)
-    sapp = Run(&quot;stocks app&quot;)
-    fstocks = Run(&#39;fstocks&#39;)
-    g_finfiber = AppEngine(&#39;finfiber&#39;)
-    utilities = GCF(&#39;utility&#39;)
-    gcp_serverless = [sapp,
-                  fstocks,
-                  g_finfiber
-                ]
-    gcp_build - gcp_serverless
+  <span class="c1"># Cluster for Google Cloud</span>
+  <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Google Cloud Platform&quot;</span><span class="p">):</span>
+    <span class="n">gcp_build</span> <span class="o">=</span> <span class="n">Build</span><span class="p">(</span><span class="s2">&quot;Auto Build&quot;</span><span class="p">)</span>
+    <span class="n">sapp</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s2">&quot;stocks app&quot;</span><span class="p">)</span>
+    <span class="n">fstocks</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s1">&#39;fstocks&#39;</span><span class="p">)</span>
+    <span class="n">g_finfiber</span> <span class="o">=</span> <span class="n">AppEngine</span><span class="p">(</span><span class="s1">&#39;finfiber&#39;</span><span class="p">)</span>
+    <span class="n">utilities</span> <span class="o">=</span> <span class="n">GCF</span><span class="p">(</span><span class="s1">&#39;utility&#39;</span><span class="p">)</span>
+    <span class="n">gcp_serverless</span> <span class="o">=</span> <span class="p">[</span><span class="n">sapp</span><span class="p">,</span>
+                  <span class="n">fstocks</span><span class="p">,</span>
+                  <span class="n">g_finfiber</span>
+                <span class="p">]</span>
+    <span class="n">gcp_build</span> <span class="o">-</span> <span class="n">gcp_serverless</span>
 
-  # Links to google cloud platform
-  gcf_functions - Edge(label=&#39;manual deploy&#39;, color=&#39;orange&#39;) &gt;&gt; utilities
-  finfiber - Edge (color=&#39;orange&#39;, style=&#39;dashed&#39;) &gt;&gt; gcp_build
-  stocks_app - Edge (color=&#39;orange&#39;, style=&#39;dashed&#39;) &gt;&gt; gcp_build
-  dash_stocks - Edge(color=&#39;orange&#39;, style=&#39;dashed&#39;) &gt;&gt; gcp_build
-  # Other nodes
-  news_db = Elasticsearch(&#39;news_db&#39;)
-  fauna_db_halts_news = Storage(&#39;faunadb&#39;)
+  <span class="c1"># Links to google cloud platform</span>
+  <span class="n">gcf_functions</span> <span class="o">-</span> <span class="n">Edge</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;manual deploy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">utilities</span>
+  <span class="n">finfiber</span> <span class="o">-</span> <span class="n">Edge</span> <span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+  <span class="n">stocks_app</span> <span class="o">-</span> <span class="n">Edge</span> <span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+  <span class="n">dash_stocks</span> <span class="o">-</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+  <span class="c1"># Other nodes</span>
+  <span class="n">news_db</span> <span class="o">=</span> <span class="n">Elasticsearch</span><span class="p">(</span><span class="s1">&#39;news_db&#39;</span><span class="p">)</span>
+  <span class="n">fauna_db_halts_news</span> <span class="o">=</span> <span class="n">Storage</span><span class="p">(</span><span class="s1">&#39;faunadb&#39;</span><span class="p">)</span>
 
-  # Dependencies on cad_Tickers
-  cad_tickers - Edge(label=&quot;uses&quot;, color=&quot;purple&quot;, style=&#39;dotted&#39;) &lt;&lt;  [ stock_screener, cad_tickers_list]
-  cad_tickers_list - Edge(label=&quot;gets stocks&quot;, color=&#39;purple&#39;, style=&#39;dotted&#39;) &lt;&lt; [
-      stock_scrapper
-  ]
-  # cad_tickers - Edge(label=&quot;uses&quot;, color=&#39;purple&#39;, style=&#39;dotted&#39;) &lt;&lt; cad_tickers_list
-  # Git links
-  dli_invest &gt;&gt; ytube
-  account &gt;&gt; account_repos
+  <span class="c1"># Dependencies on cad_Tickers</span>
+  <span class="n">cad_tickers</span> <span class="o">-</span> <span class="n">Edge</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;uses&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">)</span> <span class="o">&lt;&lt;</span>  <span class="p">[</span> <span class="n">stock_screener</span><span class="p">,</span> <span class="n">cad_tickers_list</span><span class="p">]</span>
+  <span class="n">cad_tickers_list</span> <span class="o">-</span> <span class="n">Edge</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;gets stocks&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+      <span class="n">stock_scrapper</span>
+  <span class="p">]</span>
+  <span class="c1"># cad_tickers - Edge(label=&quot;uses&quot;, color=&#39;purple&#39;, style=&#39;dotted&#39;) &lt;&lt; cad_tickers_list</span>
+  <span class="c1"># Git links</span>
+  <span class="n">dli_invest</span> <span class="o">&gt;&gt;</span> <span class="n">ytube</span>
+  <span class="n">account</span> <span class="o">&gt;&gt;</span> <span class="n">account_repos</span>
   
-  # Connecting to other nodes
-  news_app &gt;&gt; Edge(label=&#39;save data&#39;, color=&#39;green&#39;, style=&#39;dashed&#39;) &gt;&gt; news_db
-  fauna_db_halts_news &gt;&gt; Edge(labe=&#39;save data&#39;, color=&#39;green&#39;, style=&#39;dashed&#39;) &gt;&gt; news_and_halts
-  # repos calling github actions
-  cad_tickers_list &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; monthly_job_ga
-  monthly_job_ga &gt;&gt; Edge(label=&quot;update stocks&quot;, color=&#39;green&#39;, style=&quot;dashed&quot;) &gt;&gt; cad_tickers_list
-  # Discord links
-  # stock_screener &gt;&gt; Edge(color=&#39;purple&#39;) &gt;&gt; dis_alerts
-  stock_screener &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; daily_job_ga
-  stock_scrapper &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; weekly_job_ga
-  news_app &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; daily_job_ga
-  ytube_nlp &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; daily_job_ga
-  ytube_nlp_ai &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; manual_job_ga
-  investing_book &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; manual_job_ga
-  earnings_calendar &gt;&gt; Edge(color=&#39;blue&#39;) &gt;&gt; weekly_job_ga
-  # notifications sent out from github actions
-  daily_job_ga &gt;&gt; Edge(color=&#39;purple&#39;) &gt;&gt; dis_alerts
-  daily_job_ga &gt;&gt; Edge(color=&#39;purple&#39;) &gt;&gt; dis_news_halts
-  manual_job_ga &gt;&gt; Edge(color=&#39;purple&#39;) &gt;&gt; dis_video
-  daily_job_ga &gt;&gt; Edge(color=&#39;purple&#39;) &gt;&gt; dis_video
-  # cad_tickers_list_ga &gt;&gt; Edge(label=&quot;notification&quot;) &gt;&gt; code_status
+  <span class="c1"># Connecting to other nodes</span>
+  <span class="n">news_app</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;save data&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">news_db</span>
+  <span class="n">fauna_db_halts_news</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">labe</span><span class="o">=</span><span class="s1">&#39;save data&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">news_and_halts</span>
+  <span class="c1"># repos calling github actions</span>
+  <span class="n">cad_tickers_list</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">monthly_job_ga</span>
+  <span class="n">monthly_job_ga</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;update stocks&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">cad_tickers_list</span>
+  <span class="c1"># Discord links</span>
+  <span class="c1"># stock_screener &gt;&gt; Edge(color=&#39;purple&#39;) &gt;&gt; dis_alerts</span>
+  <span class="n">stock_screener</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">daily_job_ga</span>
+  <span class="n">stock_scrapper</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">weekly_job_ga</span>
+  <span class="n">news_app</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">daily_job_ga</span>
+  <span class="n">ytube_nlp</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">daily_job_ga</span>
+  <span class="n">ytube_nlp_ai</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">manual_job_ga</span>
+  <span class="n">investing_book</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">manual_job_ga</span>
+  <span class="n">earnings_calendar</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">weekly_job_ga</span>
+  <span class="c1"># notifications sent out from github actions</span>
+  <span class="n">daily_job_ga</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">dis_alerts</span>
+  <span class="n">daily_job_ga</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">dis_news_halts</span>
+  <span class="n">manual_job_ga</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">dis_video</span>
+  <span class="n">daily_job_ga</span> <span class="o">&gt;&gt;</span> <span class="n">Edge</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">dis_video</span>
+  <span class="c1"># cad_tickers_list_ga &gt;&gt; Edge(label=&quot;notification&quot;) &gt;&gt; code_status</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:81,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:81,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">80</span>     <span class="k">else</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">81</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/subprocess.py:503,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/subprocess.py:503,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;stderr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PIPE</span>
 <span class="ne">--&gt; </span><span class="mi">503</span> <span class="k">with</span> <span class="n">Popen</span><span class="p">(</span><span class="o">*</span><span class="n">popenargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">process</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">504</span>     <span class="k">try</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/subprocess.py:971,</span> in <span class="ni">Popen.__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, user, group, extra_groups, encoding, errors, text, umask, pipesize)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/subprocess.py:971,</span> in <span class="ni">Popen.__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, user, group, extra_groups, encoding, errors, text, umask, pipesize)</span>
 <span class="g g-Whitespace">    </span><span class="mi">968</span>             <span class="bp">self</span><span class="o">.</span><span class="n">stderr</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">TextIOWrapper</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">969</span>                     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">971</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_execute_child</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">executable</span><span class="p">,</span> <span class="n">preexec_fn</span><span class="p">,</span> <span class="n">close_fds</span><span class="p">,</span>
@@ -1144,7 +826,7 @@ with Diagram(&quot;stock-arch-v2&quot;, show=False):
 <span class="g g-Whitespace">    </span><span class="mi">980</span> <span class="k">except</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">981</span>     <span class="c1"># Cleanup if the child failed starting.</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/subprocess.py:1847,</span> in <span class="ni">Popen._execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, gid, gids, uid, umask, start_new_session)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/subprocess.py:1847,</span> in <span class="ni">Popen._execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, gid, gids, uid, umask, start_new_session)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1846</span>         <span class="n">err_msg</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">strerror</span><span class="p">(</span><span class="n">errno_num</span><span class="p">)</span>
 <span class="ne">-&gt; </span><span class="mi">1847</span>     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1848</span> <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
@@ -1163,56 +845,56 @@ with Diagram(&quot;stock-arch-v2&quot;, show=False):
 <span class="g g-Whitespace">     </span><span class="mi">14</span>   <span class="k">with</span> <span class="n">Cluster</span> <span class="p">(</span><span class="s2">&quot;Github Actions&quot;</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">monthly_job_ga</span> <span class="o">=</span> <span class="n">GithubActions</span><span class="p">(</span><span class="s1">&#39;monthly job&#39;</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/diagrams/__init__.py:156,</span> in <span class="ni">Diagram.__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">156</span>     <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="c1"># Remove the graphviz file leaving only the image.</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/diagrams/__init__.py:158,</span> in <span class="ni">Diagram.__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">158</span>     <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="c1"># Remove the graphviz file leaving only the image.</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span>     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/diagrams/__init__.py:190,</span> in <span class="ni">Diagram.render</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="n">one_format</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">190</span>     <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/diagrams/__init__.py:192,</span> in <span class="ni">Diagram.render</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">190</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="n">one_format</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">192</span>     <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/_tools.py:172,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
-<span class="nn">    164                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">172</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/_tools.py:171,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
+<span class="nn">    163                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/rendering.py:119,</span> in <span class="ni">Render.render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="n">filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="n">directory</span><span class="p">,</span> <span class="n">skip_existing</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">119</span> <span class="n">rendered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span> <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;delete </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">filepath</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/rendering.py:122,</span> in <span class="ni">Render.render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, neato_no_op, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="n">filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="n">directory</span><span class="p">,</span> <span class="n">skip_existing</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">122</span> <span class="n">rendered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;delete </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">filepath</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/_tools.py:172,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
-<span class="nn">    164                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">172</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/_tools.py:171,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
+<span class="nn">    163                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/backend/rendering.py:317,</span> in <span class="ni">render</span><span class="nt">(engine, format, filepath, renderer, formatter, quiet, outfile, raise_if_result_exists, overwrite_filepath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">313</span>     <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">FileExistsError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;output file exists: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span> <span class="n">cmd</span> <span class="o">+=</span> <span class="n">args</span>
-<span class="ne">--&gt; </span><span class="mi">317</span> <span class="n">execute</span><span class="o">.</span><span class="n">run_check</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>                   <span class="n">cwd</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span> <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parts</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>                   <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>                   <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span> <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/backend/rendering.py:324,</span> in <span class="ni">render</span><span class="nt">(engine, format, filepath, renderer, formatter, neato_no_op, quiet, outfile, raise_if_result_exists, overwrite_filepath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>     <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">FileExistsError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;output file exists: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span> <span class="n">cmd</span> <span class="o">+=</span> <span class="n">args</span>
+<span class="ne">--&gt; </span><span class="mi">324</span> <span class="n">execute</span><span class="o">.</span><span class="n">run_check</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>                   <span class="n">cwd</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span> <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parts</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>                   <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>                   <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:84,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:84,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errno</span><span class="o">.</span><span class="n">ENOENT</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">84</span>         <span class="k">raise</span> <span class="n">ExecutableNotFound</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
@@ -1226,8 +908,8 @@ with Diagram(&quot;stock-arch-v2&quot;, show=False):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from IPython.display import Image
-Image(&#39;stock-arch-v2.png&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="s1">&#39;stock-arch-v2.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1248,7 +930,7 @@ Image(&#39;stock-arch-v2.png&#39;)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/diagrams"
         },
         predefinedOutput: true

@@ -586,13 +586,13 @@ title="Print to PDF"
 <p>214414000 USD, market cap</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>jun22_equitity = 214414	* 1000
-# market cap in usd
-market_cap =363.735 * 1000 * 1000
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jun22_equitity</span> <span class="o">=</span> <span class="mi">214414</span>	<span class="o">*</span> <span class="mi">1000</span>
+<span class="c1"># market cap in usd</span>
+<span class="n">market_cap</span> <span class="o">=</span><span class="mf">363.735</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">1000</span>
 
-# ratio is
-ratio = jun22_equitity / market_cap
-print(ratio)
+<span class="c1"># ratio is</span>
+<span class="n">ratio</span> <span class="o">=</span> <span class="n">jun22_equitity</span> <span class="o">/</span> <span class="n">market_cap</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -606,13 +606,13 @@ print(ratio)
 <p>Earning back entire market cap in 2 or 3 years is appealing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
-plt.plot([100, 80, 75, 76, 85])
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">85</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f5819b64a30&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f30e810de10&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/2022_stonk_predictions_3_1.png" src="../../_images/2022_stonk_predictions_3_1.png" />
@@ -630,16 +630,16 @@ plt.plot([100, 80, 75, 76, 85])
 <a class="reference external" href="https://gcaptain.com/old-is-gold-sky-high-cost-of-ageing-ships-sounds-inflation-sos/">https://gcaptain.com/old-is-gold-sky-high-cost-of-ageing-ships-sounds-inflation-sos/</a> and with supply chain issues with pretty high <a class="reference external" href="https://data.worldbank.org/indicator/IS.SHP.GOOD.TU">https://data.worldbank.org/indicator/IS.SHP.GOOD.TU</a> shipping teu, makes sense that zim will be able to maintain high profits. Although the amount of teu went down in 2008, it was still high in recession, the rate may get lower, but I think zim will continue to deliver profits.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
-# income for each quarter
-net_income = [40, 30, 30, 35]
-plt.plot(net_income)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># income for each quarter</span>
+<span class="n">net_income</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">net_income</span><span class="p">)</span>
 
-profit = [0.5 * income for income in net_income]
-plt.plot(profit)
+<span class="n">profit</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">income</span> <span class="k">for</span> <span class="n">income</span> <span class="ow">in</span> <span class="n">net_income</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">profit</span><span class="p">)</span>
 
-# with current profits I would expect
-dividends = 20 + 15 + 15 + 17.5
+<span class="c1"># with current profits I would expect</span>
+<span class="n">dividends</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">+</span> <span class="mi">15</span> <span class="o">+</span> <span class="mf">17.5</span>
 </pre></div>
 </div>
 </div>
@@ -652,15 +652,15 @@ dividends = 20 + 15 + 15 + 17.5
 <p>Generates Record Full Year Net Income of $524 Million, in 2020 before the supply chain issues</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import yfinance as yf
-import mplfinance as mpf
-sp = yf.Ticker(&quot;MBCF&quot;)
-# Consider grabbing for valid date index instead
-daily = sp.history(start=&quot;2016-01-02&quot;)
-mpf.plot(daily,type=&#39;line&#39;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">mplfinance</span> <span class="k">as</span> <span class="nn">mpf</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;MBCF&quot;</span><span class="p">)</span>
+<span class="c1"># Consider grabbing for valid date index instead</span>
+<span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
+<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
 
-last_year = sp.history(start=&quot;2021-03-14&quot;)
-mpf.plot(last_year,type=&#39;candle&#39;,mav=(50, 100),volume=True)
+<span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
+<span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">last_year</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">mav</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -673,47 +673,47 @@ mpf.plot(last_year,type=&#39;candle&#39;,mav=(50, 100),volume=True)
 <p>Expect the bullwhip effect to happen a few times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
-def relative_strength(prices, n=14):
-    &quot;&quot;&quot;
-    compute the n period relative strength indicator
-    http://stockcharts.com/school/doku.php?id=chart_school:glossary_r#relativestrengthindex
-    http://www.investopedia.com/terms/r/rsi.asp
-    &quot;&quot;&quot;
-    deltas = np.diff(prices)
-    seed = deltas[:n + 1]
-    up = seed[seed &gt;= 0].sum() / n
-    down = -seed[seed &lt; 0].sum() / n
-    rs = up / down
-    rsi = np.zeros_like(prices)
-    rsi[:n] = 100. - 100. / (1. + rs)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">relative_strength</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">14</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    compute the n period relative strength indicator</span>
+<span class="sd">    http://stockcharts.com/school/doku.php?id=chart_school:glossary_r#relativestrengthindex</span>
+<span class="sd">    http://www.investopedia.com/terms/r/rsi.asp</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">deltas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+    <span class="n">seed</span> <span class="o">=</span> <span class="n">deltas</span><span class="p">[:</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">up</span> <span class="o">=</span> <span class="n">seed</span><span class="p">[</span><span class="n">seed</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">down</span> <span class="o">=</span> <span class="o">-</span><span class="n">seed</span><span class="p">[</span><span class="n">seed</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">rs</span> <span class="o">=</span> <span class="n">up</span> <span class="o">/</span> <span class="n">down</span>
+    <span class="n">rsi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+    <span class="n">rsi</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.</span> <span class="o">-</span> <span class="mf">100.</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">rs</span><span class="p">)</span>
 
-    for i in range(n, len(prices)):
-        delta = deltas[i - 1]  # cause the diff is 1 shorter
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)):</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">deltas</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># cause the diff is 1 shorter</span>
 
-        if delta &gt; 0:
-            upval = delta
-            downval = 0.
-        else:
-            upval = 0.
-            downval = -delta
+        <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">upval</span> <span class="o">=</span> <span class="n">delta</span>
+            <span class="n">downval</span> <span class="o">=</span> <span class="mf">0.</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">upval</span> <span class="o">=</span> <span class="mf">0.</span>
+            <span class="n">downval</span> <span class="o">=</span> <span class="o">-</span><span class="n">delta</span>
 
-        up = (up * (n - 1) + upval) / n
-        down = (down * (n - 1) + downval) / n
+        <span class="n">up</span> <span class="o">=</span> <span class="p">(</span><span class="n">up</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">upval</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+        <span class="n">down</span> <span class="o">=</span> <span class="p">(</span><span class="n">down</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">downval</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
 
-        rs = up / down
-        rsi[i] = 100. - 100. / (1. + rs)
+        <span class="n">rs</span> <span class="o">=</span> <span class="n">up</span> <span class="o">/</span> <span class="n">down</span>
+        <span class="n">rsi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.</span> <span class="o">-</span> <span class="mf">100.</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="n">rs</span><span class="p">)</span>
 
-    return rsi
+    <span class="k">return</span> <span class="n">rsi</span>
 
-for stock in [&quot;ZIM&quot;, &quot;DOLE&quot;, &quot;SBSW&quot;]:
-    zim = yf.Ticker(stock)
-    zim = sp.history(start=&quot;2021-03-14&quot;)
-    zim[&#39;rsi&#39;] = relative_strength(zim[&#39;Close&#39;],n=7)
+<span class="k">for</span> <span class="n">stock</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;ZIM&quot;</span><span class="p">,</span> <span class="s2">&quot;DOLE&quot;</span><span class="p">,</span> <span class="s2">&quot;SBSW&quot;</span><span class="p">]:</span>
+    <span class="n">zim</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
+    <span class="n">zim</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
+    <span class="n">zim</span><span class="p">[</span><span class="s1">&#39;rsi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">relative_strength</span><span class="p">(</span><span class="n">zim</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span><span class="n">n</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 
-    apd = mpf.make_addplot(zim[&#39;rsi&#39;],panel=2,color=&#39;lime&#39;,ylim=(10,90),secondary_y=True)
+    <span class="n">apd</span> <span class="o">=</span> <span class="n">mpf</span><span class="o">.</span><span class="n">make_addplot</span><span class="p">(</span><span class="n">zim</span><span class="p">[</span><span class="s1">&#39;rsi&#39;</span><span class="p">],</span><span class="n">panel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">90</span><span class="p">),</span><span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    mpf.plot(zim,type=&#39;candle&#39;,volume=True,figscale=1.5,addplot=apd,panel_ratios=(1,0.6), title=f&quot;{stock} - 2021-03-14&quot;)
+    <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">zim</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figscale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">addplot</span><span class="o">=</span><span class="n">apd</span><span class="p">,</span><span class="n">panel_ratios</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.6</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stock</span><span class="si">}</span><span class="s2"> - 2021-03-14&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -729,25 +729,25 @@ for stock in [&quot;ZIM&quot;, &quot;DOLE&quot;, &quot;SBSW&quot;]:
 <p>TODO make model I can generalize</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nav = 3282292855
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nav</span> <span class="o">=</span> <span class="mi">3282292855</span>
 
-current_yield = 2.24
-# average bond yield for 2.74 years
-lower_end = 3.25 
-higher_end = 4.5 
-avg_yield_for_years = 0.61
+<span class="n">current_yield</span> <span class="o">=</span> <span class="mf">2.24</span>
+<span class="c1"># average bond yield for 2.74 years</span>
+<span class="n">lower_end</span> <span class="o">=</span> <span class="mf">3.25</span> 
+<span class="n">higher_end</span> <span class="o">=</span> <span class="mf">4.5</span> 
+<span class="n">avg_yield_for_years</span> <span class="o">=</span> <span class="mf">0.61</span>
 
-# assuming interest rates remain high for about 2.74 years
-adjusted_yield_low =  ((lower_end / avg_yield_for_years)-current_yield*0.5) + current_yield * 0.5
-adjusted_yield_high = ((higher_end / avg_yield_for_years)-current_yield*0.5) + current_yield * 0.5
+<span class="c1"># assuming interest rates remain high for about 2.74 years</span>
+<span class="n">adjusted_yield_low</span> <span class="o">=</span>  <span class="p">((</span><span class="n">lower_end</span> <span class="o">/</span> <span class="n">avg_yield_for_years</span><span class="p">)</span><span class="o">-</span><span class="n">current_yield</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="n">current_yield</span> <span class="o">*</span> <span class="mf">0.5</span>
+<span class="n">adjusted_yield_high</span> <span class="o">=</span> <span class="p">((</span><span class="n">higher_end</span> <span class="o">/</span> <span class="n">avg_yield_for_years</span><span class="p">)</span><span class="o">-</span><span class="n">current_yield</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="n">current_yield</span> <span class="o">*</span> <span class="mf">0.5</span>
 
-# current rates are 
-print(adjusted_yield_low)
+<span class="c1"># current rates are </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">adjusted_yield_low</span><span class="p">)</span>
 
 
-print(adjusted_yield_high)
-# 5.327868852459017
-# 7.377049180327869
+<span class="nb">print</span><span class="p">(</span><span class="n">adjusted_yield_high</span><span class="p">)</span>
+<span class="c1"># 5.327868852459017</span>
+<span class="c1"># 7.377049180327869</span>
 </pre></div>
 </div>
 </div>
@@ -764,49 +764,49 @@ print(adjusted_yield_high)
 <p>Scenario for 0.75 0.25, 0.25 rate increases.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-df = pd.read_csv(&quot;static_2019_to_now_boc_rates.csv&quot;)
-last_date_in_csv = &quot;2022-09-20&quot;
-first_hike = &quot;2022-10-26&quot;
-base_rate = 3.25;
-second_hike = &quot;2022-12-07&quot;
-last_hike = &quot;2023-01-26&quot;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;static_2019_to_now_boc_rates.csv&quot;</span><span class="p">)</span>
+<span class="n">last_date_in_csv</span> <span class="o">=</span> <span class="s2">&quot;2022-09-20&quot;</span>
+<span class="n">first_hike</span> <span class="o">=</span> <span class="s2">&quot;2022-10-26&quot;</span>
+<span class="n">base_rate</span> <span class="o">=</span> <span class="mf">3.25</span><span class="p">;</span>
+<span class="n">second_hike</span> <span class="o">=</span> <span class="s2">&quot;2022-12-07&quot;</span>
+<span class="n">last_hike</span> <span class="o">=</span> <span class="s2">&quot;2023-01-26&quot;</span>
 
-# list of objects, start, end, rate
-future_date = &quot;2023-11-25&quot;
-# create loop for this in the future
-df[&#39;Date&#39;] = pd.to_datetime(df[&#39;Date&#39;])
-to_first_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=last_date_in_csv, end=first_hike,closed=&#39;left&#39;), &#39;V39079&#39;: base_rate})
+<span class="c1"># list of objects, start, end, rate</span>
+<span class="n">future_date</span> <span class="o">=</span> <span class="s2">&quot;2023-11-25&quot;</span>
+<span class="c1"># create loop for this in the future</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
+<span class="n">to_first_hike</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">last_date_in_csv</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">first_hike</span><span class="p">,</span><span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
 
-df.append(to_first_hike)
-new_df = pd.concat([df, to_first_hike])
-base_rate = base_rate + 0.75
-to_second_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=first_hike, end=second_hike,closed=&#39;left&#39;), &#39;V39079&#39;: base_rate})
+<span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_first_hike</span><span class="p">)</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">to_first_hike</span><span class="p">])</span>
+<span class="n">base_rate</span> <span class="o">=</span> <span class="n">base_rate</span> <span class="o">+</span> <span class="mf">0.75</span>
+<span class="n">to_second_hike</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">first_hike</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">second_hike</span><span class="p">,</span><span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
 
-# have to draw rolling average with plot
-new_df = pd.concat([new_df, to_second_hike])
-base_rate = base_rate + 0.25
-to_third_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=second_hike, end=last_hike), &#39;V39079&#39;: base_rate})
-new_df = pd.concat([new_df, to_third_hike])
+<span class="c1"># have to draw rolling average with plot</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">new_df</span><span class="p">,</span> <span class="n">to_second_hike</span><span class="p">])</span>
+<span class="n">base_rate</span> <span class="o">=</span> <span class="n">base_rate</span> <span class="o">+</span> <span class="mf">0.25</span>
+<span class="n">to_third_hike</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">second_hike</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">last_hike</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">new_df</span><span class="p">,</span> <span class="n">to_third_hike</span><span class="p">])</span>
 
-to_future = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=last_hike, end=future_date), &#39;V39079&#39;: base_rate})
-new_df = pd.concat([new_df, to_future])
-to_future = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=future_date, end=&quot;2024-05-05&quot;), &#39;V39079&#39;: base_rate-0.75})
-new_df = pd.concat([new_df, to_future])
-new_df = new_df[pd.to_numeric(new_df[&#39;V39079&#39;], errors=&#39;coerce&#39;).notnull()]
-# drop duplicates based on date
-new_df = new_df.drop_duplicates()
-# drop all zero entries
+<span class="n">to_future</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">last_hike</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">future_date</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">new_df</span><span class="p">,</span> <span class="n">to_future</span><span class="p">])</span>
+<span class="n">to_future</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">future_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2024-05-05&quot;</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="o">-</span><span class="mf">0.75</span><span class="p">})</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">new_df</span><span class="p">,</span> <span class="n">to_future</span><span class="p">])</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">new_df</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">new_df</span><span class="p">[</span><span class="s1">&#39;V39079&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
+<span class="c1"># drop duplicates based on date</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">new_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="c1"># drop all zero entries</span>
 
-new_df[&quot;Rates&quot;] = pd.to_numeric(new_df[&quot;V39079&quot;])
-new_df= new_df[new_df[&#39;Rates&#39;] != 0]
-# sort by Date
-new_df.sort_values(by=&#39;Date&#39;, inplace=True)
-# plot rolling average
-new_df[&#39;MA&#39;] = new_df[&quot;Rates&quot;].rolling(600, min_periods=1).mean()
-new_df.plot(&quot;Date&quot;, &quot;Rates&quot;)
-new_df.plot(&quot;Date&quot;, &quot;MA&quot;)
-print(new_df)
+<span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;Rates&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;V39079&quot;</span><span class="p">])</span>
+<span class="n">new_df</span><span class="o">=</span> <span class="n">new_df</span><span class="p">[</span><span class="n">new_df</span><span class="p">[</span><span class="s1">&#39;Rates&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+<span class="c1"># sort by Date</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># plot rolling average</span>
+<span class="n">new_df</span><span class="p">[</span><span class="s1">&#39;MA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_df</span><span class="p">[</span><span class="s2">&quot;Rates&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Rates&quot;</span><span class="p">)</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;MA&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -827,19 +827,16 @@ print(new_df)
 [1268 rows x 4 columns]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2662/3628862061.py:13: FutureWarning: Argument `closed` is deprecated in favor of `inclusive`.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2503/3628862061.py:13: FutureWarning: Argument `closed` is deprecated in favor of `inclusive`.
   to_first_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=last_date_in_csv, end=first_hike,closed=&#39;left&#39;), &#39;V39079&#39;: base_rate})
-/tmp/ipykernel_2662/3628862061.py:15: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+/tmp/ipykernel_2503/3628862061.py:15: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
   df.append(to_first_hike)
-/tmp/ipykernel_2662/3628862061.py:18: FutureWarning: Argument `closed` is deprecated in favor of `inclusive`.
+/tmp/ipykernel_2503/3628862061.py:18: FutureWarning: Argument `closed` is deprecated in favor of `inclusive`.
   to_second_hike = pd.DataFrame({&#39;Date&#39;: pd.date_range(start=first_hike, end=second_hike,closed=&#39;left&#39;), &#39;V39079&#39;: base_rate})
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
+<img alt="../../_images/2022_stonk_predictions_13_2.png" src="../../_images/2022_stonk_predictions_13_2.png" />
 <img alt="../../_images/2022_stonk_predictions_13_3.png" src="../../_images/2022_stonk_predictions_13_3.png" />
-<img alt="../../_images/2022_stonk_predictions_13_4.png" src="../../_images/2022_stonk_predictions_13_4.png" />
 </div>
 </div>
 <p>So this fails to account for proper weighting, accounting for high yield corporate bonds and heavily assumes that a lot of the debt will roll off successfully.</p>
@@ -849,22 +846,22 @@ print(new_df)
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 
-df = pd.read_csv(&quot;xsb_holdings.csv&quot;)
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;xsb_holdings.csv&quot;</span><span class="p">)</span>
 
-# find columns with Duration less than 2 years and coupon less than 1.5%
-df = df[(df[&quot;Duration&quot;] &lt; 2.74)]
+<span class="c1"># find columns with Duration less than 2 years and coupon less than 1.5%</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Duration&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">2.74</span><span class="p">)]</span>
 
-print(df)
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
-# total weight
+<span class="c1"># total weight</span>
 
-print(df[&quot;Weight (%)&quot;].sum())
-print(df[&quot;Coupon (%)&quot;].mean())
-coupon_low = df[(df[&quot;Coupon (%)&quot;] &lt; 3)]
-print(coupon_low[&quot;Coupon (%)&quot;].mean())
-print(coupon_low[&quot;Weight (%)&quot;].sum())
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Weight (%)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Coupon (%)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="n">coupon_low</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Coupon (%)&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coupon_low</span><span class="p">[</span><span class="s2">&quot;Coupon (%)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coupon_low</span><span class="p">[</span><span class="s2">&quot;Weight (%)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -945,7 +942,7 @@ print(coupon_low[&quot;Weight (%)&quot;].sum())
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./docs/predictions"
         },
         predefinedOutput: true

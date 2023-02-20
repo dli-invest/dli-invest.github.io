@@ -538,13 +538,17 @@ title="Print to PDF"
   <p><a href="https://colab.research.google.com/github/dli-invest/dli-invest.github.io/blob/master/ibook/notebooks/references/stock_diagrams.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install graphviz
-!apt-get install graphviz
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>graphviz
+<span class="o">!</span>apt-get<span class="w"> </span>install<span class="w"> </span>graphviz
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (0.19.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (0.20.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0</span> -&gt; <span class=" -Color -Color-Green">23.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
@@ -555,51 +559,54 @@ E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are y
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>!pip install diagrams
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>diagrams
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (0.23.1)
-Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from diagrams) (3.1.2)
-Requirement already satisfied: graphviz&lt;0.20.0,&gt;=0.13.2 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from diagrams) (0.19.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: diagrams in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (0.23.3)
+Requirement already satisfied: typed-ast&lt;2.0.0,&gt;=1.5.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from diagrams) (1.5.4)
+Requirement already satisfied: jinja2&lt;4.0,&gt;=2.10 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from diagrams) (3.0.3)
+Requirement already satisfied: graphviz&lt;0.21.0,&gt;=0.13.2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from diagrams) (0.20.1)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.1.2)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages (from jinja2&lt;4.0,&gt;=2.10-&gt;diagrams) (2.1.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0</span> -&gt; <span class=" -Color -Color-Green">23.0.1</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from diagrams import Diagram
-from diagrams.aws.compute import EC2
-from diagrams.aws.database import RDS
-from diagrams.aws.network import ELB
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Diagram</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.compute</span> <span class="kn">import</span> <span class="n">EC2</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.database</span> <span class="kn">import</span> <span class="n">RDS</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">ELB</span>
 
-with Diagram(&quot;Grouped Workers&quot;, show=False, direction=&quot;TB&quot;):
-    ELB(&quot;lb&quot;) &gt;&gt; [EC2(&quot;worker1&quot;),
-                  EC2(&quot;worker2&quot;),
-                  EC2(&quot;worker3&quot;),
-                  EC2(&quot;worker4&quot;),
-                  EC2(&quot;worker5&quot;)] &gt;&gt; RDS(&quot;events&quot;)
+<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;Grouped Workers&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s2">&quot;TB&quot;</span><span class="p">):</span>
+    <span class="n">ELB</span><span class="p">(</span><span class="s2">&quot;lb&quot;</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker1&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker2&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker3&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
+                  <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:81,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:81,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">80</span>     <span class="k">else</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">81</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/subprocess.py:503,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/subprocess.py:503,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;stderr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">PIPE</span>
 <span class="ne">--&gt; </span><span class="mi">503</span> <span class="k">with</span> <span class="n">Popen</span><span class="p">(</span><span class="o">*</span><span class="n">popenargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">process</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">504</span>     <span class="k">try</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/subprocess.py:971,</span> in <span class="ni">Popen.__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, user, group, extra_groups, encoding, errors, text, umask, pipesize)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/subprocess.py:971,</span> in <span class="ni">Popen.__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, user, group, extra_groups, encoding, errors, text, umask, pipesize)</span>
 <span class="g g-Whitespace">    </span><span class="mi">968</span>             <span class="bp">self</span><span class="o">.</span><span class="n">stderr</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">TextIOWrapper</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">969</span>                     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">971</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_execute_child</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">executable</span><span class="p">,</span> <span class="n">preexec_fn</span><span class="p">,</span> <span class="n">close_fds</span><span class="p">,</span>
@@ -614,7 +621,7 @@ with Diagram(&quot;Grouped Workers&quot;, show=False, direction=&quot;TB&quot;):
 <span class="g g-Whitespace">    </span><span class="mi">980</span> <span class="k">except</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">981</span>     <span class="c1"># Cleanup if the child failed starting.</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/subprocess.py:1847,</span> in <span class="ni">Popen._execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, gid, gids, uid, umask, start_new_session)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/subprocess.py:1847,</span> in <span class="ni">Popen._execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, gid, gids, uid, umask, start_new_session)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1846</span>         <span class="n">err_msg</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">strerror</span><span class="p">(</span><span class="n">errno_num</span><span class="p">)</span>
 <span class="ne">-&gt; </span><span class="mi">1847</span>     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1848</span> <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
@@ -634,56 +641,56 @@ with Diagram(&quot;Grouped Workers&quot;, show=False, direction=&quot;TB&quot;):
 <span class="g g-Whitespace">     </span><span class="mi">10</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker4&quot;</span><span class="p">),</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span>                   <span class="n">EC2</span><span class="p">(</span><span class="s2">&quot;worker5&quot;</span><span class="p">)]</span> <span class="o">&gt;&gt;</span> <span class="n">RDS</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/diagrams/__init__.py:156,</span> in <span class="ni">Diagram.__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">156</span>     <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="c1"># Remove the graphviz file leaving only the image.</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span>     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/diagrams/__init__.py:158,</span> in <span class="ni">Diagram.__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">158</span>     <span class="bp">self</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="c1"># Remove the graphviz file leaving only the image.</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span>     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/diagrams/__init__.py:190,</span> in <span class="ni">Diagram.render</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="n">one_format</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">190</span>     <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/diagrams/__init__.py:192,</span> in <span class="ni">Diagram.render</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">190</span>         <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="n">one_format</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">192</span>     <span class="bp">self</span><span class="o">.</span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">outformat</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/_tools.py:172,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
-<span class="nn">    164                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">172</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/_tools.py:171,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
+<span class="nn">    163                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/rendering.py:119,</span> in <span class="ni">Render.render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="n">filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="n">directory</span><span class="p">,</span> <span class="n">skip_existing</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">119</span> <span class="n">rendered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span> <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;delete </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">filepath</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/rendering.py:122,</span> in <span class="ni">Render.render</span><span class="nt">(self, filename, directory, view, cleanup, format, renderer, formatter, neato_no_op, quiet, quiet_view, outfile, engine, raise_if_result_exists, overwrite_source)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="n">filepath</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="n">directory</span><span class="p">,</span> <span class="n">skip_existing</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="n">args</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">122</span> <span class="n">rendered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="k">if</span> <span class="n">cleanup</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span>     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;delete </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">filepath</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/_tools.py:172,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
-<span class="nn">    164                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">172</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/_tools.py:171,</span> in <span class="ni">deprecate_positional_args.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">wanted</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">=</span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">&#39;</span>
+<span class="nn">    163                        for name, value</span> in <span class="ni">deprecated.items</span><span class="nt">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The signature of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> will be reduced&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>                   <span class="sa">f</span><span class="s1">&#39; to </span><span class="si">{</span><span class="n">supported_number</span><span class="si">}</span><span class="s1"> positional args&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span>                   <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">supported</span><span class="p">)</span><span class="si">}</span><span class="s1">: pass </span><span class="si">{</span><span class="n">wanted</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">167</span>                   <span class="s1">&#39; as keyword arg(s)&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span>                   <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>                   <span class="n">category</span><span class="o">=</span><span class="n">category</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/backend/rendering.py:317,</span> in <span class="ni">render</span><span class="nt">(engine, format, filepath, renderer, formatter, quiet, outfile, raise_if_result_exists, overwrite_filepath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">313</span>     <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">FileExistsError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;output file exists: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span> <span class="n">cmd</span> <span class="o">+=</span> <span class="n">args</span>
-<span class="ne">--&gt; </span><span class="mi">317</span> <span class="n">execute</span><span class="o">.</span><span class="n">run_check</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>                   <span class="n">cwd</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span> <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parts</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>                   <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>                   <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span> <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/backend/rendering.py:324,</span> in <span class="ni">render</span><span class="nt">(engine, format, filepath, renderer, formatter, neato_no_op, quiet, outfile, raise_if_result_exists, overwrite_filepath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span>     <span class="k">raise</span> <span class="n">exceptions</span><span class="o">.</span><span class="n">FileExistsError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;output file exists: </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span> <span class="n">cmd</span> <span class="o">+=</span> <span class="n">args</span>
+<span class="ne">--&gt; </span><span class="mi">324</span> <span class="n">execute</span><span class="o">.</span><span class="n">run_check</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>                   <span class="n">cwd</span><span class="o">=</span><span class="n">filepath</span><span class="o">.</span><span class="n">parent</span> <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parts</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>                   <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>                   <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">outfile</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:84,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/graphviz/backend/execute.py:84,</span> in <span class="ni">run_check</span><span class="nt">(cmd, input_lines, encoding, quiet, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">errno</span> <span class="o">==</span> <span class="n">errno</span><span class="o">.</span><span class="n">ENOENT</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">84</span>         <span class="k">raise</span> <span class="n">ExecutableNotFound</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
@@ -697,8 +704,8 @@ with Diagram(&quot;Grouped Workers&quot;, show=False, direction=&quot;TB&quot;):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from IPython.display import Image
-Image(filename=&#39;grouped_workers.png&#39;) 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;grouped_workers.png&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -708,50 +715,50 @@ Image(filename=&#39;grouped_workers.png&#39;)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from diagrams import Cluster, Diagram
-from diagrams.programming.language import Python, Csharp, Go
-from diagrams.programming.framework import Django, Flask
-from diagrams.aws.network import Route53
-from diagrams.saas.chat import Slack
-from diagrams.gcp.compute import AppEngine, GCE, GCF, Run
-from diagrams.gcp.devtools import Code, Build
-from diagrams.elastic.elasticsearch import Elasticsearch
-from diagrams.generic.database import SQL
-from diagrams.generic.storage import Storage
-from diagrams.generic.blank import Blank
-from diagrams.generic.device import Tablet
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">diagrams</span> <span class="kn">import</span> <span class="n">Cluster</span><span class="p">,</span> <span class="n">Diagram</span>
+<span class="kn">from</span> <span class="nn">diagrams.programming.language</span> <span class="kn">import</span> <span class="n">Python</span><span class="p">,</span> <span class="n">Csharp</span><span class="p">,</span> <span class="n">Go</span>
+<span class="kn">from</span> <span class="nn">diagrams.programming.framework</span> <span class="kn">import</span> <span class="n">Django</span><span class="p">,</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">diagrams.aws.network</span> <span class="kn">import</span> <span class="n">Route53</span>
+<span class="kn">from</span> <span class="nn">diagrams.saas.chat</span> <span class="kn">import</span> <span class="n">Slack</span>
+<span class="kn">from</span> <span class="nn">diagrams.gcp.compute</span> <span class="kn">import</span> <span class="n">AppEngine</span><span class="p">,</span> <span class="n">GCE</span><span class="p">,</span> <span class="n">GCF</span><span class="p">,</span> <span class="n">Run</span>
+<span class="kn">from</span> <span class="nn">diagrams.gcp.devtools</span> <span class="kn">import</span> <span class="n">Code</span><span class="p">,</span> <span class="n">Build</span>
+<span class="kn">from</span> <span class="nn">diagrams.elastic.elasticsearch</span> <span class="kn">import</span> <span class="n">Elasticsearch</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.database</span> <span class="kn">import</span> <span class="n">SQL</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.storage</span> <span class="kn">import</span> <span class="n">Storage</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.blank</span> <span class="kn">import</span> <span class="n">Blank</span>
+<span class="kn">from</span> <span class="nn">diagrams.generic.device</span> <span class="kn">import</span> <span class="n">Tablet</span>
 
-with Diagram(&quot;stock-arch&quot;, show=False):
-    nSlack = Slack(&#39;automatic updates&#39;)
-    nPython = Python()
-    nGo = Go()
-    nCSharp = Csharp()
-    with Cluster(&quot;Google Cloud&quot;):
-        gcp_build = Build(&quot;Auto Build&quot;)
-        sapp = Run(&quot;stocks app&quot;)
-        fstocks = Run(&#39;fstocks&#39;)
-        utilities = GCF(&#39;utility&#39;)
-        gcp_serverless = [sapp,
-                     fstocks,
-                     utilities
-                    ]
-        gcp_build - gcp_serverless
+<span class="k">with</span> <span class="n">Diagram</span><span class="p">(</span><span class="s2">&quot;stock-arch&quot;</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">nSlack</span> <span class="o">=</span> <span class="n">Slack</span><span class="p">(</span><span class="s1">&#39;automatic updates&#39;</span><span class="p">)</span>
+    <span class="n">nPython</span> <span class="o">=</span> <span class="n">Python</span><span class="p">()</span>
+    <span class="n">nGo</span> <span class="o">=</span> <span class="n">Go</span><span class="p">()</span>
+    <span class="n">nCSharp</span> <span class="o">=</span> <span class="n">Csharp</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">Cluster</span><span class="p">(</span><span class="s2">&quot;Google Cloud&quot;</span><span class="p">):</span>
+        <span class="n">gcp_build</span> <span class="o">=</span> <span class="n">Build</span><span class="p">(</span><span class="s2">&quot;Auto Build&quot;</span><span class="p">)</span>
+        <span class="n">sapp</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s2">&quot;stocks app&quot;</span><span class="p">)</span>
+        <span class="n">fstocks</span> <span class="o">=</span> <span class="n">Run</span><span class="p">(</span><span class="s1">&#39;fstocks&#39;</span><span class="p">)</span>
+        <span class="n">utilities</span> <span class="o">=</span> <span class="n">GCF</span><span class="p">(</span><span class="s1">&#39;utility&#39;</span><span class="p">)</span>
+        <span class="n">gcp_serverless</span> <span class="o">=</span> <span class="p">[</span><span class="n">sapp</span><span class="p">,</span>
+                     <span class="n">fstocks</span><span class="p">,</span>
+                     <span class="n">utilities</span>
+                    <span class="p">]</span>
+        <span class="n">gcp_build</span> <span class="o">-</span> <span class="n">gcp_serverless</span>
 
-    nElasticsearch = Elasticsearch(&#39;news_db&#39;)
-    dash = Flask()
-    nPython &gt;&gt; dash
-    # Convert to framework
-    dash &gt;&gt; gcp_build
-    nGo &gt;&gt; gcp_build
-    nCSharp &gt;&gt; gcp_build
+    <span class="n">nElasticsearch</span> <span class="o">=</span> <span class="n">Elasticsearch</span><span class="p">(</span><span class="s1">&#39;news_db&#39;</span><span class="p">)</span>
+    <span class="n">dash</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">()</span>
+    <span class="n">nPython</span> <span class="o">&gt;&gt;</span> <span class="n">dash</span>
+    <span class="c1"># Convert to framework</span>
+    <span class="n">dash</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+    <span class="n">nGo</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
+    <span class="n">nCSharp</span> <span class="o">&gt;&gt;</span> <span class="n">gcp_build</span>
 
-    fstocks &gt;&gt; nSlack
+    <span class="n">fstocks</span> <span class="o">&gt;&gt;</span> <span class="n">nSlack</span>
 
-    sapp &gt;&gt; nElasticsearch
+    <span class="n">sapp</span> <span class="o">&gt;&gt;</span> <span class="n">nElasticsearch</span>
 
-    nPython &gt;&gt; Storage(&#39;stock list&#39;)
+    <span class="n">nPython</span> <span class="o">&gt;&gt;</span> <span class="n">Storage</span><span class="p">(</span><span class="s1">&#39;stock list&#39;</span><span class="p">)</span>
 
-    gcp_serverless &gt;&gt; Tablet(&#39;View&#39;)
+    <span class="n">gcp_serverless</span> <span class="o">&gt;&gt;</span> <span class="n">Tablet</span><span class="p">(</span><span class="s1">&#39;View&#39;</span><span class="p">)</span>
     
     
 </pre></div>
@@ -760,8 +767,8 @@ with Diagram(&quot;stock-arch&quot;, show=False):
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from IPython.display import Image
-Image(filename=&#39;stock-arch.png&#39;) 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;stock-arch.png&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
@@ -782,7 +789,7 @@ Image(filename=&#39;stock-arch.png&#39;)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/references"
         },
         predefinedOutput: true

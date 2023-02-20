@@ -551,7 +551,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">pytablewriter</span>
 
 <span class="k">def</span> <span class="nf">to_rst</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">rst_path</span><span class="o">=</span><span class="s1">&#39;default.tex&#39;</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    to convert a csv table to rst</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">try</span><span class="p">:</span>
@@ -568,7 +568,7 @@ title="Print to PDF"
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unable to write to file&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">to_tex</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">tex_path</span><span class="o">=</span><span class="s1">&#39;default.tex&#39;</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;to convert a csv table to tex using pandas&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;to convert a csv table to tex using pandas&#39;&#39;&#39;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">tex_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">csv_path</span><span class="p">))</span>
         <span class="n">tex_df</span><span class="o">.</span><span class="n">to_latex</span><span class="p">(</span><span class="n">tex_path</span><span class="p">,</span><span class="n">longtable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -576,7 +576,7 @@ title="Print to PDF"
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unable to write to file&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">mkdir_new</span><span class="p">(</span><span class="n">folder_name</span><span class="o">=</span><span class="s1">&#39;2019-01-03&#39;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Makes a new directory if it doesn&#39;t already exist&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Makes a new directory if it doesn&#39;t already exist&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">folder_name</span><span class="p">):</span>
         <span class="n">makedirs</span><span class="p">(</span><span class="n">folder_name</span><span class="p">)</span>
 
@@ -664,7 +664,7 @@ title="Print to PDF"
 
 
 <span class="k">def</span> <span class="nf">scan_file</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Scan a file and separate it into entries and outer code.</span>
 
 <span class="sd">    Parameters</span>
@@ -739,7 +739,7 @@ title="Print to PDF"
 
 
 <span class="k">def</span> <span class="nf">sort_entries</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">label_sort</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Sort all the entries in the source file and returns and dict</span>
 
 <span class="sd">    Parameters</span>
@@ -853,7 +853,7 @@ DebtToEquity
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./docs"
         },
         predefinedOutput: true
