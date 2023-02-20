@@ -40,3 +40,6 @@ To serve content directly you can use
 ```python
 python -m http.server 8080 --bind 127.0.0.1 --directory ibook/_build
 ```
+
+
+This repo is meant to contain some of my investing notes
