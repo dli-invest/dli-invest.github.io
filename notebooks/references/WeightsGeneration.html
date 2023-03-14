@@ -468,17 +468,17 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yfinance in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (0.2.12)
+Requirement already satisfied: appdirs&gt;=1.4.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.4.4)
 Requirement already satisfied: pytz&gt;=2022.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2022.7.1)
-Requirement already satisfied: frozendict&gt;=2.3.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2.3.5)
+Requirement already satisfied: pandas&gt;=1.3.0 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.5.3)
+Requirement already satisfied: html5lib&gt;=1.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.1)
 Requirement already satisfied: cryptography&gt;=3.3.2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (39.0.2)
 Requirement already satisfied: beautifulsoup4&gt;=4.11.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (4.11.2)
-Requirement already satisfied: multitasking&gt;=0.0.7 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (0.0.11)
-Requirement already satisfied: numpy&gt;=1.16.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.24.2)
-Requirement already satisfied: pandas&gt;=1.3.0 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.5.3)
 Requirement already satisfied: lxml&gt;=4.9.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (4.9.2)
-Requirement already satisfied: html5lib&gt;=1.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.1)
+Requirement already satisfied: numpy&gt;=1.16.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.24.2)
+Requirement already satisfied: frozendict&gt;=2.3.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2.3.5)
+Requirement already satisfied: multitasking&gt;=0.0.7 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (0.0.11)
 Requirement already satisfied: requests&gt;=2.26 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (2.28.2)
-Requirement already satisfied: appdirs&gt;=1.4.4 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from yfinance) (1.4.4)
 Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from beautifulsoup4&gt;=4.11.1-&gt;yfinance) (2.4)
 </pre></div>
 </div>
@@ -490,23 +490,26 @@ Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (2022.12.7)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (1.26.15)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.4)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.1.0)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from requests&gt;=2.26-&gt;yfinance) (3.4)
 Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=3.3.2-&gt;yfinance) (2.21)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-03-13 01:13:23--  https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage
-Resolving github.com (github.com)... 140.82.114.4
-Connecting to github.com (github.com)|140.82.114.4|:443... connected.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-03-14 01:04:07--  https://github.com/plotly/orca/releases/download/v1.2.1/orca-1.2.1-x86_64.AppImage
+Resolving github.com (github.com)... 140.82.112.3
+Connecting to github.com (github.com)|140.82.112.3|:443... 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>connected.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>302 Found
-Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230313%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230313T011324Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=440467b75f3e700cc7ecfdf7331773570faf04b44948ebdc26a89ff43f021aba&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream [following]
---2023-03-13 01:13:24--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230313%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230313T011324Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=440467b75f3e700cc7ecfdf7331773570faf04b44948ebdc26a89ff43f021aba&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream
-Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230314%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230314T010408Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=2f87d7715f61a22e2293b20fd9bce7896978fdc1033bdd92079c696e07ec2638&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream [following]
+--2023-03-14 01:04:08--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/99037241/9dc3a580-286a-11e9-8a21-4312b7c8a512?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230314%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230314T010408Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=2f87d7715f61a22e2293b20fd9bce7896978fdc1033bdd92079c696e07ec2638&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;key_id=0&amp;repo_id=99037241&amp;response-content-disposition=attachment%3B%20filename%3Dorca-1.2.1-x86_64.AppImage&amp;response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.111.133, ...
 Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 
 </pre></div>
@@ -519,39 +522,45 @@ Saving to: ‘/usr/local/bin/orca’
 /usr/local/bin/orca   0%[                    ]       0  --.-KB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   0%[                    ] 199.43K   984KB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   0%[                    ] 135.43K   610KB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   1%[                    ] 967.43K  2.29MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   1%[                    ] 519.43K  1.14MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   8%[&gt;                   ]   4.01M  6.48MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca   3%[                    ]   1.74M  2.61MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  19%[==&gt;                 ]   9.74M  11.9MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  10%[=&gt;                  ]   5.40M  5.84MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  31%[=====&gt;              ]  15.74M  15.5MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  23%[===&gt;                ]  11.37M  9.99MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  44%[=======&gt;            ]  22.01M  18.1MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  32%[=====&gt;              ]  16.01M  11.6MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  57%[==========&gt;         ]  28.53M  20.1MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  44%[=======&gt;            ]  21.71M  13.4MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  71%[=============&gt;      ]  35.16M  21.7MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  55%[==========&gt;         ]  27.45M  14.8MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  82%[===============&gt;    ]  40.64M  22.3MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  65%[============&gt;       ]  32.01M  15.2MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  92%[=================&gt;  ]  45.44M  22.5MB/s               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  76%[==============&gt;     ]  37.77M  16.1MB/s               
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca 100%[===================&gt;]  49.22M  22.6MB/s    in 2.2s    
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  88%[================&gt;   ]  43.59M  16.9MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca  97%[==================&gt; ]  47.88M  17.1MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/orca 100%[===================&gt;]  49.22M  17.1MB/s    in 2.9s    
 
-2023-03-13 01:13:26 (22.6 MB/s) - ‘/usr/local/bin/orca’ saved [51607939/51607939]
+2023-03-14 01:04:11 (17.1 MB/s) - ‘/usr/local/bin/orca’ saved [51607939/51607939]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
