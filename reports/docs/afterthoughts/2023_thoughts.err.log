@@ -1,0 +1,106 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# calculate average from daily data from natural gas futures from yahoo finance
+import yfinance
+import pandas as pd
+import mplfinance as mpf
+
+# read NG=F 2 years worth of data
+
+nat_gas = yfinance.download("NG=F", start="2021-01-01", end="2023-01-01")
+
+nat_gas['Month'] = pd.to_datetime(nat_gas.index)
+# pad all date
+# print(nat_gas.groupby(by=['Volume', 'Adj Close', pd.Grouper(key='Month', freq='3M')])['Open'].agg('mean'))
+
+mths_3 = pd.date_range(end = nat_gas.index[-1], freq=pd.offsets.BQuarterEnd(),periods=8)
+# mths_6 = pd.date_range(end = nat_gas.index[-1], freq=pd.offsets.MonthBegin(6),periods=4)
+
+mth3 = (nat_gas
+         #filter for last three months
+        .loc[mths_3]
+        .groupby(["Month", "Volume"])
+        .agg(avg_ng_last_3_months=("Open","mean"))
+        )
+
+# mth6 = (nat_gas
+#          #filter for last six months
+#         .loc[mths_6]
+#          .groupby(["Volume", "Month"])
+#         .agg(avg_invoices_last_6_months=("Open","mean"))
+#         )
+
+print(mth3)
+
+# random guess from last two quarters of profit
+# at 4.558 assume 360 revenue for Q4 and 160M profit
+# 475 revenue and 260M profit for Q4
+# considering the investor presentation, thinking its closer to 360M revenue and 160 M profit.
+quarterly_profit = 160
+# 	266.05M * 0.2
+# if deliveries are 3 quarters behind then 
+
+
+quarterly_dividend = 266.05 * 0.2
+print(quarterly_dividend)
+
+remaining_revenue = quarterly_profit - quarterly_dividend
+print(remaining_revenue)
+# 176 debt
+total_debt = 176
+
+# max debt reduction (they target to get to 50M USD in debt)
+min_debt_reduction = total_debt - 100
+
+print(min_debt_reduction)
+# bunch of risk of falling gas prices, but with new supply reduction from russia, doubt it would be so bad.
+
+# save fig
+mpf.plot(nat_gas,type='ohlc',mav=(30, 60, 90), volume=True, style='yahoo', savefig='ng.png')
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mIndexError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[1], line 14[0m
+[1;32m     10[0m nat_gas[[38;5;124m'[39m[38;5;124mMonth[39m[38;5;124m'[39m] [38;5;241m=[39m pd[38;5;241m.[39mto_datetime(nat_gas[38;5;241m.[39mindex)
+[1;32m     11[0m [38;5;66;03m# pad all date[39;00m
+[1;32m     12[0m [38;5;66;03m# print(nat_gas.groupby(by=['Volume', 'Adj Close', pd.Grouper(key='Month', freq='3M')])['Open'].agg('mean'))[39;00m
+[0;32m---> 14[0m mths_3 [38;5;241m=[39m pd[38;5;241m.[39mdate_range(end [38;5;241m=[39m [43mnat_gas[49m[38;5;241;43m.[39;49m[43mindex[49m[43m[[49m[38;5;241;43m-[39;49m[38;5;241;43m1[39;49m[43m][49m, freq[38;5;241m=[39mpd[38;5;241m.[39moffsets[38;5;241m.[39mBQuarterEnd(),periods[38;5;241m=[39m[38;5;241m8[39m)
+[1;32m     15[0m [38;5;66;03m# mths_6 = pd.date_range(end = nat_gas.index[-1], freq=pd.offsets.MonthBegin(6),periods=4)[39;00m
+[1;32m     17[0m mth3 [38;5;241m=[39m (nat_gas
+[1;32m     18[0m          [38;5;66;03m#filter for last three months[39;00m
+[1;32m     19[0m         [38;5;241m.[39mloc[mths_3]
+[1;32m     20[0m         [38;5;241m.[39mgroupby([[38;5;124m"[39m[38;5;124mMonth[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mVolume[39m[38;5;124m"[39m])
+[1;32m     21[0m         [38;5;241m.[39magg(avg_ng_last_3_months[38;5;241m=[39m([38;5;124m"[39m[38;5;124mOpen[39m[38;5;124m"[39m,[38;5;124m"[39m[38;5;124mmean[39m[38;5;124m"[39m))
+[1;32m     22[0m         )
+
+File [0;32m/opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/pandas/core/indexes/base.py:5174[0m, in [0;36mIndex.__getitem__[0;34m(self, key)[0m
+[1;32m   5171[0m [38;5;28;01mif[39;00m is_integer(key) [38;5;129;01mor[39;00m is_float(key):
+[1;32m   5172[0m     [38;5;66;03m# GH#44051 exclude bool, which would return a 2d ndarray[39;00m
+[1;32m   5173[0m     key [38;5;241m=[39m com[38;5;241m.[39mcast_scalar_indexer(key)
+[0;32m-> 5174[0m     [38;5;28;01mreturn[39;00m [43mgetitem[49m[43m([49m[43mkey[49m[43m)[49m
+[1;32m   5176[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(key, [38;5;28mslice[39m):
+[1;32m   5177[0m     [38;5;66;03m# This case is separated from the conditional above to avoid[39;00m
+[1;32m   5178[0m     [38;5;66;03m# pessimization com.is_bool_indexer and ndim checks.[39;00m
+[1;32m   5179[0m     result [38;5;241m=[39m getitem(key)
+
+[0;31mIndexError[0m: index -1 is out of bounds for axis 0 with size 0
+IndexError: index -1 is out of bounds for axis 0 with size 0
+

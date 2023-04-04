@@ -540,19 +540,36 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  1 of 1 completed
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                   avg_ng_last_3_months
-Month      Volume                      
-2021-03-31 92080                  2.621
-2021-06-30 187005                 3.651
-2021-09-30 243240                 5.457
-2021-12-31 93098                  3.589
-2022-03-31 159717                 5.575
-2022-06-30 182579                 6.428
-2022-09-30 97372                  6.895
-2022-12-30 62281                  4.558
-53.21000000000001
-106.78999999999999
-76
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 Failed download:
+- NG=F: No data found for this date range, symbol may be delisted
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">14</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">nat_gas</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">nat_gas</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># pad all date</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># print(nat_gas.groupby(by=[&#39;Volume&#39;, &#39;Adj Close&#39;, pd.Grouper(key=&#39;Month&#39;, freq=&#39;3M&#39;)])[&#39;Open&#39;].agg(&#39;mean&#39;))</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">mths_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">end</span> <span class="o">=</span> <span class="n">nat_gas</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">freq</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">offsets</span><span class="o">.</span><span class="n">BQuarterEnd</span><span class="p">(),</span><span class="n">periods</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="c1"># mths_6 = pd.date_range(end = nat_gas.index[-1], freq=pd.offsets.MonthBegin(6),periods=4)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">mth3</span> <span class="o">=</span> <span class="p">(</span><span class="n">nat_gas</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>          <span class="c1">#filter for last three months</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mths_3</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>         <span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Volume&quot;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>         <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">avg_ng_last_3_months</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Open&quot;</span><span class="p">,</span><span class="s2">&quot;mean&quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>         <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/pandas/core/indexes/base.py:5174,</span> in <span class="ni">Index.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5171</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">or</span> <span class="n">is_float</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">5172</span>     <span class="c1"># GH#44051 exclude bool, which would return a 2d ndarray</span>
+<span class="g g-Whitespace">   </span><span class="mi">5173</span>     <span class="n">key</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">cast_scalar_indexer</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">5174</span>     <span class="k">return</span> <span class="n">getitem</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5176</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>     <span class="c1"># This case is separated from the conditional above to avoid</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>     <span class="c1"># pessimization com.is_bool_indexer and ndim checks.</span>
+<span class="g g-Whitespace">   </span><span class="mi">5179</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">getitem</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="ne">IndexError</span>: index -1 is out of bounds for axis 0 with size 0
 </pre></div>
 </div>
 </div>

@@ -569,7 +569,43 @@ Wait on BYL for 5G</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5f1663a66689a00a2a71f4cfb804f7f2a36065203dc308b8f4578e55e126286e.png" src="../../_images/5f1663a66689a00a2a71f4cfb804f7f2a36065203dc308b8f4578e55e126286e.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>VST.CN: No data found for this date range, symbol may be delisted
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">vst</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;VST.CN&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">data</span> <span class="o">=</span> <span class="n">vst</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;1d&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2020-08-08&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2020-09-10&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">data</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;candle&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">mav</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Victory Square Purchases Dates&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">vlines</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">vlines</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2020-08-26&quot;</span><span class="p">,</span> <span class="s2">&quot;2020-09-03&quot;</span><span class="p">,</span> <span class="s2">&quot;2020-09-08&quot;</span><span class="p">],</span> <span class="n">linewidths</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/mplfinance/plotting.py:417,</span> in <span class="ni">plot</span><span class="nt">(data, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">414</span> <span class="c1"># translate alias types:</span>
+<span class="g g-Whitespace">    </span><span class="mi">415</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_valid_plot_types</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+<span class="ne">--&gt; </span><span class="mi">417</span> <span class="n">dates</span><span class="p">,</span><span class="n">opens</span><span class="p">,</span><span class="n">highs</span><span class="p">,</span><span class="n">lows</span><span class="p">,</span><span class="n">closes</span><span class="p">,</span><span class="n">volumes</span> <span class="o">=</span> <span class="n">_check_and_prepare_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">419</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;xlim&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_check_and_convert_xlim_configuration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">421</span> <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">VALID_PMOVE_TYPES</span> <span class="ow">and</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;addplot&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:31,</span> in <span class="ni">_check_and_prepare_data</span><span class="nt">(data, config)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Expect data as DataFrame&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">indexes</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">31</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Expect data.index as DatetimeIndex&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># We will not be fully case-insensitive (since Pandas columns as NOT case-insensitive)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="c1"># but because so many people have requested it, for the default column names we will</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="c1"># try both Capitalized and lower case:</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;columns&#39;</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: Expect data.index as DatetimeIndex
+</pre></div>
+</div>
 </div>
 </div>
 <p>The first few purchases on August 26 and September 03 were profitable, after the failed Sept 08 purchases and surprise drop I emailed the investor relations guy asking about india approval.</p>
