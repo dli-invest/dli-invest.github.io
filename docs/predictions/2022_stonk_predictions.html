@@ -513,7 +513,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f5cf0fff370&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd271973400&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/2f3b3069e43921e228e948dd2e5e9912132fc2ed4e192d86effe55c645148047.png" src="../../_images/2f3b3069e43921e228e948dd2e5e9912132fc2ed4e192d86effe55c645148047.png" />
@@ -721,7 +721,7 @@ document.write(`
 <span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_first_hike</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">to_first_hike</span><span class="p">])</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:945,</span> in <span class="ni">date_range</span><span class="nt">(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.11/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:945,</span> in <span class="ni">date_range</span><span class="nt">(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">942</span> <span class="k">if</span> <span class="n">freq</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">com</span><span class="o">.</span><span class="n">any_none</span><span class="p">(</span><span class="n">periods</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">943</span>     <span class="n">freq</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">945</span> <span class="n">dtarr</span> <span class="o">=</span> <span class="n">DatetimeArray</span><span class="o">.</span><span class="n">_generate_range</span><span class="p">(</span>
