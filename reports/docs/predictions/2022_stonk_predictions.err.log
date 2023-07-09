@@ -17,76 +17,42 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
-df = pd.read_csv("static_2019_to_now_boc_rates.csv")
-last_date_in_csv = "2022-09-20"
-first_hike = "2022-10-26"
-base_rate = 3.25;
-second_hike = "2022-12-07"
-last_hike = "2023-01-26"
+import yfinance as yf
+import mplfinance as mpf
+sp = yf.Ticker("MBCF")
+# Consider grabbing for valid date index instead
+daily = sp.history(start="2016-01-02")
+mpf.plot(daily,type='line')
 
-# list of objects, start, end, rate
-future_date = "2023-11-25"
-# create loop for this in the future
-df['Date'] = pd.to_datetime(df['Date'])
-to_first_hike = pd.DataFrame({'Date': pd.date_range(start=last_date_in_csv, end=first_hike,closed='left'), 'V39079': base_rate})
-
-df.append(to_first_hike)
-new_df = pd.concat([df, to_first_hike])
-base_rate = base_rate + 0.75
-to_second_hike = pd.DataFrame({'Date': pd.date_range(start=first_hike, end=second_hike,closed='left'), 'V39079': base_rate})
-
-# have to draw rolling average with plot
-new_df = pd.concat([new_df, to_second_hike])
-base_rate = base_rate + 0.25
-to_third_hike = pd.DataFrame({'Date': pd.date_range(start=second_hike, end=last_hike), 'V39079': base_rate})
-new_df = pd.concat([new_df, to_third_hike])
-
-to_future = pd.DataFrame({'Date': pd.date_range(start=last_hike, end=future_date), 'V39079': base_rate})
-new_df = pd.concat([new_df, to_future])
-to_future = pd.DataFrame({'Date': pd.date_range(start=future_date, end="2024-05-05"), 'V39079': base_rate-0.75})
-new_df = pd.concat([new_df, to_future])
-new_df = new_df[pd.to_numeric(new_df['V39079'], errors='coerce').notnull()]
-# drop duplicates based on date
-new_df = new_df.drop_duplicates()
-# drop all zero entries
-
-new_df["Rates"] = pd.to_numeric(new_df["V39079"])
-new_df= new_df[new_df['Rates'] != 0]
-# sort by Date
-new_df.sort_values(by='Date', inplace=True)
-# plot rolling average
-new_df['MA'] = new_df["Rates"].rolling(600, min_periods=1).mean()
-new_df.plot("Date", "Rates")
-new_df.plot("Date", "MA")
-print(new_df)
+last_year = sp.history(start="2021-03-14")
+mpf.plot(last_year,type='candle',mav=(50, 100),volume=True)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[7], line 13[0m
-[1;32m     11[0m [38;5;66;03m# create loop for this in the future[39;00m
-[1;32m     12[0m df[[38;5;124m'[39m[38;5;124mDate[39m[38;5;124m'[39m] [38;5;241m=[39m pd[38;5;241m.[39mto_datetime(df[[38;5;124m'[39m[38;5;124mDate[39m[38;5;124m'[39m])
-[0;32m---> 13[0m to_first_hike [38;5;241m=[39m pd[38;5;241m.[39mDataFrame({[38;5;124m'[39m[38;5;124mDate[39m[38;5;124m'[39m: [43mpd[49m[38;5;241;43m.[39;49m[43mdate_range[49m[43m([49m[43mstart[49m[38;5;241;43m=[39;49m[43mlast_date_in_csv[49m[43m,[49m[43m [49m[43mend[49m[38;5;241;43m=[39;49m[43mfirst_hike[49m[43m,[49m[43mclosed[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mleft[39;49m[38;5;124;43m'[39;49m[43m)[49m, [38;5;124m'[39m[38;5;124mV39079[39m[38;5;124m'[39m: base_rate})
-[1;32m     15[0m df[38;5;241m.[39mappend(to_first_hike)
-[1;32m     16[0m new_df [38;5;241m=[39m pd[38;5;241m.[39mconcat([df, to_first_hike])
+Cell [0;32mIn[4], line 6[0m
+[1;32m      4[0m [38;5;66;03m# Consider grabbing for valid date index instead[39;00m
+[1;32m      5[0m daily [38;5;241m=[39m sp[38;5;241m.[39mhistory(start[38;5;241m=[39m[38;5;124m"[39m[38;5;124m2016-01-02[39m[38;5;124m"[39m)
+[0;32m----> 6[0m [43mmpf[49m[38;5;241;43m.[39;49m[43mplot[49m[43m([49m[43mdaily[49m[43m,[49m[38;5;28;43mtype[39;49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mline[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      8[0m last_year [38;5;241m=[39m sp[38;5;241m.[39mhistory(start[38;5;241m=[39m[38;5;124m"[39m[38;5;124m2021-03-14[39m[38;5;124m"[39m)
+[1;32m      9[0m mpf[38;5;241m.[39mplot(last_year,[38;5;28mtype[39m[38;5;241m=[39m[38;5;124m'[39m[38;5;124mcandle[39m[38;5;124m'[39m,mav[38;5;241m=[39m([38;5;241m50[39m, [38;5;241m100[39m),volume[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:945[0m, in [0;36mdate_range[0;34m(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)[0m
-[1;32m    942[0m [38;5;28;01mif[39;00m freq [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m com[38;5;241m.[39many_none(periods, start, end):
-[1;32m    943[0m     freq [38;5;241m=[39m [38;5;124m"[39m[38;5;124mD[39m[38;5;124m"[39m
-[0;32m--> 945[0m dtarr [38;5;241m=[39m [43mDatetimeArray[49m[38;5;241;43m.[39;49m[43m_generate_range[49m[43m([49m
-[1;32m    946[0m [43m    [49m[43mstart[49m[38;5;241;43m=[39;49m[43mstart[49m[43m,[49m
-[1;32m    947[0m [43m    [49m[43mend[49m[38;5;241;43m=[39;49m[43mend[49m[43m,[49m
-[1;32m    948[0m [43m    [49m[43mperiods[49m[38;5;241;43m=[39;49m[43mperiods[49m[43m,[49m
-[1;32m    949[0m [43m    [49m[43mfreq[49m[38;5;241;43m=[39;49m[43mfreq[49m[43m,[49m
-[1;32m    950[0m [43m    [49m[43mtz[49m[38;5;241;43m=[39;49m[43mtz[49m[43m,[49m
-[1;32m    951[0m [43m    [49m[43mnormalize[49m[38;5;241;43m=[39;49m[43mnormalize[49m[43m,[49m
-[1;32m    952[0m [43m    [49m[43minclusive[49m[38;5;241;43m=[39;49m[43minclusive[49m[43m,[49m
-[1;32m    953[0m [43m    [49m[43munit[49m[38;5;241;43m=[39;49m[43munit[49m[43m,[49m
-[1;32m    954[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
-[1;32m    955[0m [43m[49m[43m)[49m
-[1;32m    956[0m [38;5;28;01mreturn[39;00m DatetimeIndex[38;5;241m.[39m_simple_new(dtarr, name[38;5;241m=[39mname)
+File [0;32m/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/mplfinance/plotting.py:417[0m, in [0;36mplot[0;34m(data, **kwargs)[0m
+[1;32m    414[0m [38;5;66;03m# translate alias types:[39;00m
+[1;32m    415[0m config[[38;5;124m'[39m[38;5;124mtype[39m[38;5;124m'[39m] [38;5;241m=[39m _get_valid_plot_types(config[[38;5;124m'[39m[38;5;124mtype[39m[38;5;124m'[39m])
+[0;32m--> 417[0m dates,opens,highs,lows,closes,volumes [38;5;241m=[39m [43m_check_and_prepare_data[49m[43m([49m[43mdata[49m[43m,[49m[43m [49m[43mconfig[49m[43m)[49m
+[1;32m    419[0m config[[38;5;124m'[39m[38;5;124mxlim[39m[38;5;124m'[39m] [38;5;241m=[39m _check_and_convert_xlim_configuration(data, config)
+[1;32m    421[0m [38;5;28;01mif[39;00m config[[38;5;124m'[39m[38;5;124mtype[39m[38;5;124m'[39m] [38;5;129;01min[39;00m VALID_PMOVE_TYPES [38;5;129;01mand[39;00m config[[38;5;124m'[39m[38;5;124maddplot[39m[38;5;124m'[39m] [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
 
-[0;31mTypeError[0m: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'
-TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'
+File [0;32m/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:31[0m, in [0;36m_check_and_prepare_data[0;34m(data, config)[0m
+[1;32m     28[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m([38;5;124m'[39m[38;5;124mExpect data as DataFrame[39m[38;5;124m'[39m)
+[1;32m     30[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(data[38;5;241m.[39mindex,pd[38;5;241m.[39mcore[38;5;241m.[39mindexes[38;5;241m.[39mdatetimes[38;5;241m.[39mDatetimeIndex):
+[0;32m---> 31[0m     [38;5;28;01mraise[39;00m [38;5;167;01mTypeError[39;00m([38;5;124m'[39m[38;5;124mExpect data.index as DatetimeIndex[39m[38;5;124m'[39m)
+[1;32m     33[0m [38;5;66;03m# We will not be fully case-insensitive (since Pandas columns as NOT case-insensitive)[39;00m
+[1;32m     34[0m [38;5;66;03m# but because so many people have requested it, for the default column names we will[39;00m
+[1;32m     35[0m [38;5;66;03m# try both Capitalized and lower case:[39;00m
+[1;32m     36[0m columns [38;5;241m=[39m config[[38;5;124m'[39m[38;5;124mcolumns[39m[38;5;124m'[39m]
+
+[0;31mTypeError[0m: Expect data.index as DatetimeIndex
+TypeError: Expect data.index as DatetimeIndex
 

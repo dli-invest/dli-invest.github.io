@@ -513,7 +513,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8c379b41f0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe1237d0220&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/53e647fb4f5ef254ae1bc0b9e090e5a213e7e6d55ba4627e8f1d890ab4d2c1bb.png" src="../../_images/53e647fb4f5ef254ae1bc0b9e090e5a213e7e6d55ba4627e8f1d890ab4d2c1bb.png" />
@@ -566,8 +566,37 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9430c312f2f2bbe2de3bfc598e1d6a8ad194639b1cef2d2877de90214167e2cb.png" src="../../_images/9430c312f2f2bbe2de3bfc598e1d6a8ad194639b1cef2d2877de90214167e2cb.png" />
-<img alt="../../_images/c9a64495a7c24f7a0d9185c5e4080afe8eb7f141f529c5b8bb35a6506eab6b94.png" src="../../_images/c9a64495a7c24f7a0d9185c5e4080afe8eb7f141f529c5b8bb35a6506eab6b94.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MBCF: No price data found, symbol may be delisted (1d 2016-01-02 -&gt; 2023-07-08)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Consider grabbing for valid date index instead</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">last_year</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;candle&#39;</span><span class="p">,</span><span class="n">mav</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/mplfinance/plotting.py:417,</span> in <span class="ni">plot</span><span class="nt">(data, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">414</span> <span class="c1"># translate alias types:</span>
+<span class="g g-Whitespace">    </span><span class="mi">415</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_get_valid_plot_types</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+<span class="ne">--&gt; </span><span class="mi">417</span> <span class="n">dates</span><span class="p">,</span><span class="n">opens</span><span class="p">,</span><span class="n">highs</span><span class="p">,</span><span class="n">lows</span><span class="p">,</span><span class="n">closes</span><span class="p">,</span><span class="n">volumes</span> <span class="o">=</span> <span class="n">_check_and_prepare_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">419</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;xlim&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_check_and_convert_xlim_configuration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">421</span> <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">VALID_PMOVE_TYPES</span> <span class="ow">and</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;addplot&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:31,</span> in <span class="ni">_check_and_prepare_data</span><span class="nt">(data, config)</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Expect data as DataFrame&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">indexes</span><span class="o">.</span><span class="n">datetimes</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">31</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Expect data.index as DatetimeIndex&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># We will not be fully case-insensitive (since Pandas columns as NOT case-insensitive)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="c1"># but because so many people have requested it, for the default column names we will</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="c1"># try both Capitalized and lower case:</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;columns&#39;</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: Expect data.index as DatetimeIndex
+</pre></div>
+</div>
 </div>
 </div>
 <p>Its a bit above the 50MA, want to wait until its below.</p>
@@ -618,11 +647,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/d3632719bce8d0b92f4301a9da54ed6f4c3be12e9f056657bc7ce47c604d3639.png" src="../../_images/d3632719bce8d0b92f4301a9da54ed6f4c3be12e9f056657bc7ce47c604d3639.png" />
-<img alt="../../_images/1cbe69f6461bf1cc74088382abdbda541924423fd4f0f5b7571c1fbe988dd814.png" src="../../_images/1cbe69f6461bf1cc74088382abdbda541924423fd4f0f5b7571c1fbe988dd814.png" />
-<img alt="../../_images/00ae1be5d2eeb772a81c178cc520a7ceca2cda52ddd3f148c211650c5951695c.png" src="../../_images/00ae1be5d2eeb772a81c178cc520a7ceca2cda52ddd3f148c211650c5951695c.png" />
-</div>
 </div>
 <p>Analyze of rollover of XSB, basic facts</p>
 <p>2.74 years which is about 2 years and 8.2 months.</p>
@@ -649,12 +673,6 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">adjusted_yield_high</span><span class="p">)</span>
 <span class="c1"># 5.327868852459017</span>
 <span class="c1"># 7.377049180327869</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.327868852459017
-7.377049180327869
 </pre></div>
 </div>
 </div>
@@ -708,36 +726,6 @@ document.write(`
 <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Rates&quot;</span><span class="p">)</span>
 <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;MA&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># create loop for this in the future</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">to_first_hike</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">last_date_in_csv</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">first_hike</span><span class="p">,</span><span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_first_hike</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">to_first_hike</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:945,</span> in <span class="ni">date_range</span><span class="nt">(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">942</span> <span class="k">if</span> <span class="n">freq</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">com</span><span class="o">.</span><span class="n">any_none</span><span class="p">(</span><span class="n">periods</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">943</span>     <span class="n">freq</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">945</span> <span class="n">dtarr</span> <span class="o">=</span> <span class="n">DatetimeArray</span><span class="o">.</span><span class="n">_generate_range</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span>     <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>     <span class="n">periods</span><span class="o">=</span><span class="n">periods</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">949</span>     <span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">950</span>     <span class="n">tz</span><span class="o">=</span><span class="n">tz</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">951</span>     <span class="n">normalize</span><span class="o">=</span><span class="n">normalize</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">952</span>     <span class="n">inclusive</span><span class="o">=</span><span class="n">inclusive</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">953</span>     <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">954</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">955</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">956</span> <span class="k">return</span> <span class="n">DatetimeIndex</span><span class="o">.</span><span class="n">_simple_new</span><span class="p">(</span><span class="n">dtarr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: DatetimeArray._generate_range() got an unexpected keyword argument &#39;closed&#39;
 </pre></div>
 </div>
 </div>
