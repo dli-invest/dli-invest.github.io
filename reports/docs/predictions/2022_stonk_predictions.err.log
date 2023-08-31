@@ -71,21 +71,21 @@ Cell [0;32mIn[7], line 13[0m
 [1;32m     15[0m df[38;5;241m.[39mappend(to_first_hike)
 [1;32m     16[0m new_df [38;5;241m=[39m pd[38;5;241m.[39mconcat([df, to_first_hike])
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:945[0m, in [0;36mdate_range[0;34m(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)[0m
-[1;32m    942[0m [38;5;28;01mif[39;00m freq [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m com[38;5;241m.[39many_none(periods, start, end):
-[1;32m    943[0m     freq [38;5;241m=[39m [38;5;124m"[39m[38;5;124mD[39m[38;5;124m"[39m
-[0;32m--> 945[0m dtarr [38;5;241m=[39m [43mDatetimeArray[49m[38;5;241;43m.[39;49m[43m_generate_range[49m[43m([49m
-[1;32m    946[0m [43m    [49m[43mstart[49m[38;5;241;43m=[39;49m[43mstart[49m[43m,[49m
-[1;32m    947[0m [43m    [49m[43mend[49m[38;5;241;43m=[39;49m[43mend[49m[43m,[49m
-[1;32m    948[0m [43m    [49m[43mperiods[49m[38;5;241;43m=[39;49m[43mperiods[49m[43m,[49m
-[1;32m    949[0m [43m    [49m[43mfreq[49m[38;5;241;43m=[39;49m[43mfreq[49m[43m,[49m
-[1;32m    950[0m [43m    [49m[43mtz[49m[38;5;241;43m=[39;49m[43mtz[49m[43m,[49m
-[1;32m    951[0m [43m    [49m[43mnormalize[49m[38;5;241;43m=[39;49m[43mnormalize[49m[43m,[49m
-[1;32m    952[0m [43m    [49m[43minclusive[49m[38;5;241;43m=[39;49m[43minclusive[49m[43m,[49m
-[1;32m    953[0m [43m    [49m[43munit[49m[38;5;241;43m=[39;49m[43munit[49m[43m,[49m
-[1;32m    954[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
-[1;32m    955[0m [43m[49m[43m)[49m
-[1;32m    956[0m [38;5;28;01mreturn[39;00m DatetimeIndex[38;5;241m.[39m_simple_new(dtarr, name[38;5;241m=[39mname)
+File [0;32m/opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:1009[0m, in [0;36mdate_range[0;34m(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)[0m
+[1;32m   1006[0m [38;5;28;01mif[39;00m freq [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m com[38;5;241m.[39many_none(periods, start, end):
+[1;32m   1007[0m     freq [38;5;241m=[39m [38;5;124m"[39m[38;5;124mD[39m[38;5;124m"[39m
+[0;32m-> 1009[0m dtarr [38;5;241m=[39m [43mDatetimeArray[49m[38;5;241;43m.[39;49m[43m_generate_range[49m[43m([49m
+[1;32m   1010[0m [43m    [49m[43mstart[49m[38;5;241;43m=[39;49m[43mstart[49m[43m,[49m
+[1;32m   1011[0m [43m    [49m[43mend[49m[38;5;241;43m=[39;49m[43mend[49m[43m,[49m
+[1;32m   1012[0m [43m    [49m[43mperiods[49m[38;5;241;43m=[39;49m[43mperiods[49m[43m,[49m
+[1;32m   1013[0m [43m    [49m[43mfreq[49m[38;5;241;43m=[39;49m[43mfreq[49m[43m,[49m
+[1;32m   1014[0m [43m    [49m[43mtz[49m[38;5;241;43m=[39;49m[43mtz[49m[43m,[49m
+[1;32m   1015[0m [43m    [49m[43mnormalize[49m[38;5;241;43m=[39;49m[43mnormalize[49m[43m,[49m
+[1;32m   1016[0m [43m    [49m[43minclusive[49m[38;5;241;43m=[39;49m[43minclusive[49m[43m,[49m
+[1;32m   1017[0m [43m    [49m[43munit[49m[38;5;241;43m=[39;49m[43munit[49m[43m,[49m
+[1;32m   1018[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
+[1;32m   1019[0m [43m[49m[43m)[49m
+[1;32m   1020[0m [38;5;28;01mreturn[39;00m DatetimeIndex[38;5;241m.[39m_simple_new(dtarr, name[38;5;241m=[39mname)
 
 [0;31mTypeError[0m: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'
 TypeError: DatetimeArray._generate_range() got an unexpected keyword argument 'closed'
