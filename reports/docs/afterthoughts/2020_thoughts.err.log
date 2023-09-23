@@ -18,14 +18,21 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 import yfinance as yf
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 import mplfinance as mpf
-sp = yf.Ticker("MBCF")
-# Consider grabbing for valid date index instead
-daily = sp.history(start="2016-01-02")
-mpf.plot(daily,type='line')
 
-last_year = sp.history(start="2021-03-14")
-mpf.plot(last_year,type='candle',mav=(50, 100),volume=True)
+vst = yf.Ticker("VST.CN")
+data = vst.history(interval="1d", start="2020-08-08", end="2020-09-10")
+mpf.plot(
+    data,
+    type="candle",
+    mav=4,
+    title="Victory Square Purchases Dates",
+    vlines=dict(
+        vlines=["2020-08-26", "2020-09-03", "2020-09-08"], linewidths=(0.5, 0.5, 0.5)
+    ),
+)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
@@ -46,12 +53,16 @@ File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages
 During handling of the above exception, another exception occurred:
 
 [0;31mOperationalError[0m                          Traceback (most recent call last)
-Cell [0;32mIn[4], line 5[0m
-[1;32m      3[0m sp [38;5;241m=[39m yf[38;5;241m.[39mTicker([38;5;124m"[39m[38;5;124mMBCF[39m[38;5;124m"[39m)
-[1;32m      4[0m [38;5;66;03m# Consider grabbing for valid date index instead[39;00m
-[0;32m----> 5[0m daily [38;5;241m=[39m [43msp[49m[38;5;241;43m.[39;49m[43mhistory[49m[43m([49m[43mstart[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m2016-01-02[39;49m[38;5;124;43m"[39;49m[43m)[49m
-[1;32m      6[0m mpf[38;5;241m.[39mplot(daily,[38;5;28mtype[39m[38;5;241m=[39m[38;5;124m'[39m[38;5;124mline[39m[38;5;124m'[39m)
-[1;32m      8[0m last_year [38;5;241m=[39m sp[38;5;241m.[39mhistory(start[38;5;241m=[39m[38;5;124m"[39m[38;5;124m2021-03-14[39m[38;5;124m"[39m)
+Cell [0;32mIn[1], line 7[0m
+[1;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mmplfinance[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmpf[39;00m
+[1;32m      6[0m vst [38;5;241m=[39m yf[38;5;241m.[39mTicker([38;5;124m"[39m[38;5;124mVST.CN[39m[38;5;124m"[39m)
+[0;32m----> 7[0m data [38;5;241m=[39m [43mvst[49m[38;5;241;43m.[39;49m[43mhistory[49m[43m([49m[43minterval[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m1d[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mstart[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m2020-08-08[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mend[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m2020-09-10[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[1;32m      8[0m mpf[38;5;241m.[39mplot(
+[1;32m      9[0m     data,
+[1;32m     10[0m     [38;5;28mtype[39m[38;5;241m=[39m[38;5;124m"[39m[38;5;124mcandle[39m[38;5;124m"[39m,
+[0;32m   (...)[0m
+[1;32m     15[0m     ),
+[1;32m     16[0m )
 
 File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/utils.py:114[0m, in [0;36mlog_indent_decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
 [1;32m    111[0m logger[38;5;241m.[39mdebug([38;5;124mf[39m[38;5;124m'[39m[38;5;124mEntering [39m[38;5;132;01m{[39;00mfunc[38;5;241m.[39m[38;5;18m__name__[39m[38;5;132;01m}[39;00m[38;5;124m()[39m[38;5;124m'[39m)
