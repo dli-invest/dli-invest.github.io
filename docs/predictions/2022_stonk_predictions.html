@@ -523,7 +523,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fea55da9780&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa9700b97e0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/5ca1c9f336c6e04d7fe3af4876b1877958a88753a959498c11b0267697f0e639.png" src="../../_images/5ca1c9f336c6e04d7fe3af4876b1877958a88753a959498c11b0267697f0e639.png" />
@@ -576,106 +576,25 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">OperationalError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:3192,</span> in <span class="ni">Database.connect</span><span class="nt">(self, reuse_if_open)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3191</span> <span class="k">with</span> <span class="n">__exception_wrapper__</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3192</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">set_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">())</span>
-<span class="g g-Whitespace">   </span><span class="mi">3193</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_version</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<img alt="../../_images/efa12093c99e5ad3cb5e9688211c96aa01728d3af3bf01f7feae922f97640db0.png" src="../../_images/efa12093c99e5ad3cb5e9688211c96aa01728d3af3bf01f7feae922f97640db0.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:3536,</span> in <span class="ni">SqliteDatabase._connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3535</span>     <span class="k">raise</span> <span class="n">ImproperlyConfigured</span><span class="p">(</span><span class="s1">&#39;SQLite driver not installed!&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3536</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3537</span>                        <span class="n">isolation_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">connect_params</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3538</span> <span class="k">try</span><span class="p">:</span>
+ ================================================================= 
 
-<span class="ne">OperationalError</span>: unable to open database file
+   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
+            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
+   For more information see:
+   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
+   
+   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
+   OR set kwarg `warn_too_much_data=N` where N is an integer 
+   LARGER than the number of data points you want to plot.
 
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">OperationalError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sp</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;MBCF&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Consider grabbing for valid date index instead</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/utils.py:114,</span> in <span class="ni">log_indent_decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Entering </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">()&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span> <span class="k">with</span> <span class="n">IndentationContext</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">114</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Exiting </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">()&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/base.py:148,</span> in <span class="ni">TickerBase.history</span><span class="nt">(self, period, interval, start, end, prepost, actions, auto_adjust, back_adjust, repair, keepna, proxy, rounding, timeout, debug, raise_errors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">145</span> <span class="n">end_user</span> <span class="o">=</span> <span class="n">end</span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">if</span> <span class="n">start</span> <span class="ow">or</span> <span class="n">period</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">period</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;max&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="c1"># Check can get TZ. Fail =&gt; probably delisted</span>
-<span class="ne">--&gt; </span><span class="mi">148</span>     <span class="n">tz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_ticker_tz</span><span class="p">(</span><span class="n">proxy</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="k">if</span> <span class="n">tz</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>         <span class="c1"># Every valid ticker has a timezone. Missing = problem</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span>         <span class="n">err_msg</span> <span class="o">=</span> <span class="s2">&quot;No timezone found, symbol may be delisted&quot;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/base.py:1644,</span> in <span class="ni">TickerBase._get_ticker_tz</span><span class="nt">(self, proxy, timeout)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1642</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tz</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1643</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tz</span>
-<span class="ne">-&gt; </span><span class="mi">1644</span> <span class="n">cache</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_tz_cache</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1645</span> <span class="n">tz</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ticker</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1647</span> <span class="k">if</span> <span class="n">tz</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_valid_timezone</span><span class="p">(</span><span class="n">tz</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1648</span>     <span class="c1"># Clear from cache and force re-fetch</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/utils.py:985,</span> in <span class="ni">get_tz_cache</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">983</span> <span class="k">if</span> <span class="n">_tz_cache</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">984</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">985</span>         <span class="n">_tz_cache</span> <span class="o">=</span> <span class="n">_TzCache</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">986</span>     <span class="k">except</span> <span class="n">_TzCacheException</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">987</span>         <span class="n">get_yf_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to create TzCache, reason: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">988</span>                              <span class="s2">&quot;TzCache will not be used. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">989</span>                              <span class="s2">&quot;Tip: You can direct cache to use a different location with &#39;set_tz_cache_location(mylocation)&#39;&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/utils.py:926,</span> in <span class="ni">_TzCache.__init__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">925</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">926</span>     <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">927</span>     <span class="n">db</span><span class="o">.</span><span class="n">create_tables</span><span class="p">([</span><span class="n">KV</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">929</span>     <span class="n">old_cache_file_path</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_cache_dir</span><span class="p">,</span> <span class="s2">&quot;tkr-tz.csv&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:3191,</span> in <span class="ni">Database.connect</span><span class="nt">(self, reuse_if_open)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3188</span>     <span class="k">raise</span> <span class="n">OperationalError</span><span class="p">(</span><span class="s1">&#39;Connection already opened.&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3190</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">3191</span> <span class="k">with</span> <span class="n">__exception_wrapper__</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3192</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">set_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">())</span>
-<span class="g g-Whitespace">   </span><span class="mi">3193</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_version</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:3019,</span> in <span class="ni">ExceptionWrapper.__exit__</span><span class="nt">(self, exc_type, exc_value, traceback)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3017</span> <span class="n">new_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exceptions</span><span class="p">[</span><span class="n">exc_type</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">3018</span> <span class="n">exc_args</span> <span class="o">=</span> <span class="n">exc_value</span><span class="o">.</span><span class="n">args</span>
-<span class="ne">-&gt; </span><span class="mi">3019</span> <span class="n">reraise</span><span class="p">(</span><span class="n">new_type</span><span class="p">,</span> <span class="n">new_type</span><span class="p">(</span><span class="n">exc_value</span><span class="p">,</span> <span class="o">*</span><span class="n">exc_args</span><span class="p">),</span> <span class="n">traceback</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:192,</span> in <span class="ni">reraise</span><span class="nt">(tp, value, tb)</span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span> <span class="k">def</span> <span class="nf">reraise</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">tb</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span>     <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">__traceback__</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">tb</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">192</span>         <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">193</span>     <span class="k">raise</span> <span class="n">value</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:3192,</span> in <span class="ni">Database.connect</span><span class="nt">(self, reuse_if_open)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3190</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">3191</span> <span class="k">with</span> <span class="n">__exception_wrapper__</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3192</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">set_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_connect</span><span class="p">())</span>
-<span class="g g-Whitespace">   </span><span class="mi">3193</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_version</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3194</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_set_server_version</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">conn</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/peewee.py:3536,</span> in <span class="ni">SqliteDatabase._connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3534</span> <span class="k">if</span> <span class="n">sqlite3</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3535</span>     <span class="k">raise</span> <span class="n">ImproperlyConfigured</span><span class="p">(</span><span class="s1">&#39;SQLite driver not installed!&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3536</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">database</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3537</span>                        <span class="n">isolation_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">connect_params</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3538</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3539</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_add_conn_hooks</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
-
-<span class="ne">OperationalError</span>: unable to open database file
+ ================================================================ 
+  warnings.warn(&#39;\n\n ================================================================= &#39;+
 </pre></div>
 </div>
+<img alt="../../_images/18c49a679b67a7e574517dbe43d46be8fb50d49276b310b837a1dd8eb8092bfe.png" src="../../_images/18c49a679b67a7e574517dbe43d46be8fb50d49276b310b837a1dd8eb8092bfe.png" />
 </div>
 </div>
 <p>Its a bit above the 50MA, want to wait until its below.</p>
@@ -726,6 +645,62 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
+
+ ================================================================= 
+
+   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
+            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
+   For more information see:
+   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
+   
+   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
+   OR set kwarg `warn_too_much_data=N` where N is an integer 
+   LARGER than the number of data points you want to plot.
+
+ ================================================================ 
+  warnings.warn(&#39;\n\n ================================================================= &#39;+
+</pre></div>
+</div>
+<img alt="../../_images/00f56c93c4a810b9c6b3e048412a90b7b04ee7dec0031313f0343facb5450a8d.png" src="../../_images/00f56c93c4a810b9c6b3e048412a90b7b04ee7dec0031313f0343facb5450a8d.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
+
+ ================================================================= 
+
+   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
+            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
+   For more information see:
+   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
+   
+   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
+   OR set kwarg `warn_too_much_data=N` where N is an integer 
+   LARGER than the number of data points you want to plot.
+
+ ================================================================ 
+  warnings.warn(&#39;\n\n ================================================================= &#39;+
+</pre></div>
+</div>
+<img alt="../../_images/16f6481a1d220c5562e083b0a6a19d742d3159ff6260ed34d9bf3883981f195e.png" src="../../_images/16f6481a1d220c5562e083b0a6a19d742d3159ff6260ed34d9bf3883981f195e.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
+
+ ================================================================= 
+
+   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
+            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
+   For more information see:
+   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
+   
+   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
+   OR set kwarg `warn_too_much_data=N` where N is an integer 
+   LARGER than the number of data points you want to plot.
+
+ ================================================================ 
+  warnings.warn(&#39;\n\n ================================================================= &#39;+
+</pre></div>
+</div>
+<img alt="../../_images/b65942ee5def0c9ae8a45cbc344e165499643acd7b0a48bddc7f155ffd389398.png" src="../../_images/b65942ee5def0c9ae8a45cbc344e165499643acd7b0a48bddc7f155ffd389398.png" />
+</div>
 </div>
 <p>Analyze of rollover of XSB, basic facts</p>
 <p>2.74 years which is about 2 years and 8.2 months.</p>
@@ -752,6 +727,12 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">adjusted_yield_high</span><span class="p">)</span>
 <span class="c1"># 5.327868852459017</span>
 <span class="c1"># 7.377049180327869</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.327868852459017
+7.377049180327869
 </pre></div>
 </div>
 </div>
@@ -805,6 +786,36 @@ document.write(`
 <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Rates&quot;</span><span class="p">)</span>
 <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;MA&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># create loop for this in the future</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">to_first_hike</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">last_date_in_csv</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">first_hike</span><span class="p">,</span><span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_first_hike</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">to_first_hike</span><span class="p">])</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:1009,</span> in <span class="ni">date_range</span><span class="nt">(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1006</span> <span class="k">if</span> <span class="n">freq</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">com</span><span class="o">.</span><span class="n">any_none</span><span class="p">(</span><span class="n">periods</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1007</span>     <span class="n">freq</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1009</span> <span class="n">dtarr</span> <span class="o">=</span> <span class="n">DatetimeArray</span><span class="o">.</span><span class="n">_generate_range</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1010</span>     <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1011</span>     <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1012</span>     <span class="n">periods</span><span class="o">=</span><span class="n">periods</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span>     <span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">tz</span><span class="o">=</span><span class="n">tz</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">normalize</span><span class="o">=</span><span class="n">normalize</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="n">inclusive</span><span class="o">=</span><span class="n">inclusive</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1017</span>     <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1018</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1019</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1020</span> <span class="k">return</span> <span class="n">DatetimeIndex</span><span class="o">.</span><span class="n">_simple_new</span><span class="p">(</span><span class="n">dtarr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: DatetimeArray._generate_range() got an unexpected keyword argument &#39;closed&#39;
 </pre></div>
 </div>
 </div>
