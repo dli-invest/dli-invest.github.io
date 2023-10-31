@@ -77,16 +77,16 @@ Cell [0;32mIn[3], line 6[0m
 [1;32m     10[0m                   EC2([38;5;124m"[39m[38;5;124mworker4[39m[38;5;124m"[39m),
 [1;32m     11[0m                   EC2([38;5;124m"[39m[38;5;124mworker5[39m[38;5;124m"[39m)] [38;5;241m>>[39m RDS([38;5;124m"[39m[38;5;124mevents[39m[38;5;124m"[39m)
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/diagrams/__init__.py:158[0m, in [0;36mDiagram.__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
-[1;32m    157[0m [38;5;28;01mdef[39;00m [38;5;21m__exit__[39m([38;5;28mself[39m, exc_type, exc_value, traceback):
-[0;32m--> 158[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mrender[49m[43m([49m[43m)[49m
-[1;32m    159[0m     [38;5;66;03m# Remove the graphviz file leaving only the image.[39;00m
-[1;32m    160[0m     os[38;5;241m.[39mremove([38;5;28mself[39m[38;5;241m.[39mfilename)
+File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/diagrams/__init__.py:164[0m, in [0;36mDiagram.__exit__[0;34m(self, exc_type, exc_value, traceback)[0m
+[1;32m    163[0m [38;5;28;01mdef[39;00m [38;5;21m__exit__[39m([38;5;28mself[39m, exc_type, exc_value, traceback):
+[0;32m--> 164[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mrender[49m[43m([49m[43m)[49m
+[1;32m    165[0m     [38;5;66;03m# Remove the graphviz file leaving only the image.[39;00m
+[1;32m    166[0m     os[38;5;241m.[39mremove([38;5;28mself[39m[38;5;241m.[39mfilename)
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/diagrams/__init__.py:192[0m, in [0;36mDiagram.render[0;34m(self)[0m
-[1;32m    190[0m         [38;5;28mself[39m[38;5;241m.[39mdot[38;5;241m.[39mrender([38;5;28mformat[39m[38;5;241m=[39mone_format, view[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mshow, quiet[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
-[1;32m    191[0m [38;5;28;01melse[39;00m:
-[0;32m--> 192[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mdot[49m[38;5;241;43m.[39;49m[43mrender[49m[43m([49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moutformat[49m[43m,[49m[43m [49m[43mview[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mshow[49m[43m,[49m[43m [49m[43mquiet[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/diagrams/__init__.py:198[0m, in [0;36mDiagram.render[0;34m(self)[0m
+[1;32m    196[0m         [38;5;28mself[39m[38;5;241m.[39mdot[38;5;241m.[39mrender([38;5;28mformat[39m[38;5;241m=[39mone_format, view[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mshow, quiet[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[1;32m    197[0m [38;5;28;01melse[39;00m:
+[0;32m--> 198[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mdot[49m[38;5;241;43m.[39;49m[43mrender[49m[43m([49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43moutformat[49m[43m,[49m[43m [49m[43mview[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mshow[49m[43m,[49m[43m [49m[43mquiet[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
 
 File [0;32m/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/graphviz/_tools.py:171[0m, in [0;36mdeprecate_positional_args.<locals>.decorator.<locals>.wrapper[0;34m(*args, **kwargs)[0m
 [1;32m    162[0m     wanted [38;5;241m=[39m [38;5;124m'[39m[38;5;124m, [39m[38;5;124m'[39m[38;5;241m.[39mjoin([38;5;124mf[39m[38;5;124m'[39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m=[39m[38;5;132;01m{[39;00mvalue[38;5;132;01m!r}[39;00m[38;5;124m'[39m
