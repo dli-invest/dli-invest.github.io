@@ -524,7 +524,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f13a4ac8280&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f31c83e03a0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/0dea1b21d2b96b1081c72b3bb8f971b9d872181cf91d41a8ad3d498e1259dd02.png" src="../../_images/0dea1b21d2b96b1081c72b3bb8f971b9d872181cf91d41a8ad3d498e1259dd02.png" />
@@ -577,25 +577,38 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/274776af0ac18a5e4299545371c68353e4f9fef351d274789ccd233858942076.png" src="../../_images/274776af0ac18a5e4299545371c68353e4f9fef351d274789ccd233858942076.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AmbiguousTimeError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sp</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">Ticker</span><span class="p">(</span><span class="s2">&quot;MBCF&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Consider grabbing for valid date index instead</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">daily</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2016-01-02&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">mpf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">daily</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">last_year</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">history</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s2">&quot;2021-03-14&quot;</span><span class="p">)</span>
 
- ================================================================= 
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/utils.py:114,</span> in <span class="ni">log_indent_decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span> <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Entering </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">()&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span> <span class="k">with</span> <span class="n">IndentationContext</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">114</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Exiting </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">()&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span> <span class="k">return</span> <span class="n">result</span>
 
-   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
-            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
-   For more information see:
-   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
-   
-   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
-   OR set kwarg `warn_too_much_data=N` where N is an integer 
-   LARGER than the number of data points you want to plot.
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/yfinance/base.py:351,</span> in <span class="ni">TickerBase.history</span><span class="nt">(self, period, interval, start, end, prepost, actions, auto_adjust, back_adjust, repair, keepna, proxy, rounding, timeout, debug, raise_errors)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>             <span class="n">splits</span> <span class="o">=</span> <span class="n">splits</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">startDt</span><span class="p">:]</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span> <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">351</span>     <span class="n">endDt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="n">tz</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span>     <span class="k">if</span> <span class="n">dividends</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">353</span>         <span class="n">dividends</span> <span class="o">=</span> <span class="n">dividends</span><span class="p">[</span><span class="n">dividends</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">endDt</span><span class="p">]</span>
 
- ================================================================ 
-  warnings.warn(&#39;\n\n ================================================================= &#39;+
+<span class="nn">File timestamps.pyx:2327,</span> in <span class="ni">pandas._libs.tslibs.timestamps.Timestamp.tz_localize</span><span class="nt">()</span>
+
+<span class="nn">File tzconversion.pyx:180,</span> in <span class="ni">pandas._libs.tslibs.tzconversion.tz_localize_to_utc_single</span><span class="nt">()</span>
+
+<span class="nn">File tzconversion.pyx:368,</span> in <span class="ni">pandas._libs.tslibs.tzconversion.tz_localize_to_utc</span><span class="nt">()</span>
+
+<span class="ne">AmbiguousTimeError</span>: Cannot infer dst time from 2023-11-05 01:02:59, try using the &#39;ambiguous&#39; argument
 </pre></div>
 </div>
-<img alt="../../_images/cbdee8956db1ecffb4a265f807f59b2bf2b791aa22f1fe4f136264c28133bc32.png" src="../../_images/cbdee8956db1ecffb4a265f807f59b2bf2b791aa22f1fe4f136264c28133bc32.png" />
 </div>
 </div>
 <p>Its a bit above the 50MA, want to wait until its below.</p>
@@ -646,62 +659,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
-
- ================================================================= 
-
-   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
-            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
-   For more information see:
-   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
-   
-   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
-   OR set kwarg `warn_too_much_data=N` where N is an integer 
-   LARGER than the number of data points you want to plot.
-
- ================================================================ 
-  warnings.warn(&#39;\n\n ================================================================= &#39;+
-</pre></div>
-</div>
-<img alt="../../_images/1db0f7026116649688c008c3c502fe99785aeb166651c0db16a1a5c1ca797075.png" src="../../_images/1db0f7026116649688c008c3c502fe99785aeb166651c0db16a1a5c1ca797075.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
-
- ================================================================= 
-
-   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
-            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
-   For more information see:
-   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
-   
-   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
-   OR set kwarg `warn_too_much_data=N` where N is an integer 
-   LARGER than the number of data points you want to plot.
-
- ================================================================ 
-  warnings.warn(&#39;\n\n ================================================================= &#39;+
-</pre></div>
-</div>
-<img alt="../../_images/888eb703815045e07fcab70c9a144fd49d6e85fac4c983df9c2ba85efd15a9a1.png" src="../../_images/888eb703815045e07fcab70c9a144fd49d6e85fac4c983df9c2ba85efd15a9a1.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/mplfinance/_arg_validators.py:84: UserWarning: 
-
- ================================================================= 
-
-   WARNING: YOU ARE PLOTTING SO MUCH DATA THAT IT MAY NOT BE
-            POSSIBLE TO SEE DETAILS (Candles, Ohlc-Bars, Etc.)
-   For more information see:
-   - https://github.com/matplotlib/mplfinance/wiki/Plotting-Too-Much-Data
-   
-   TO SILENCE THIS WARNING, set `type=&#39;line&#39;` in `mpf.plot()`
-   OR set kwarg `warn_too_much_data=N` where N is an integer 
-   LARGER than the number of data points you want to plot.
-
- ================================================================ 
-  warnings.warn(&#39;\n\n ================================================================= &#39;+
-</pre></div>
-</div>
-<img alt="../../_images/e8b35d9f0f2078fd803c3482e27d45d3ae679d4062551579ee26a4e58cda2b0b.png" src="../../_images/e8b35d9f0f2078fd803c3482e27d45d3ae679d4062551579ee26a4e58cda2b0b.png" />
-</div>
 </div>
 <p>Analyze of rollover of XSB, basic facts</p>
 <p>2.74 years which is about 2 years and 8.2 months.</p>
@@ -728,12 +685,6 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="n">adjusted_yield_high</span><span class="p">)</span>
 <span class="c1"># 5.327868852459017</span>
 <span class="c1"># 7.377049180327869</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.327868852459017
-7.377049180327869
 </pre></div>
 </div>
 </div>
@@ -787,36 +738,6 @@ document.write(`
 <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Rates&quot;</span><span class="p">)</span>
 <span class="n">new_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;MA&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># create loop for this in the future</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">to_first_hike</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">last_date_in_csv</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">first_hike</span><span class="p">,</span><span class="n">closed</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">),</span> <span class="s1">&#39;V39079&#39;</span><span class="p">:</span> <span class="n">base_rate</span><span class="p">})</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_first_hike</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">to_first_hike</span><span class="p">])</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/pandas/core/indexes/datetimes.py:1009,</span> in <span class="ni">date_range</span><span class="nt">(start, end, periods, freq, tz, normalize, name, inclusive, unit, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1006</span> <span class="k">if</span> <span class="n">freq</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">com</span><span class="o">.</span><span class="n">any_none</span><span class="p">(</span><span class="n">periods</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1007</span>     <span class="n">freq</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1009</span> <span class="n">dtarr</span> <span class="o">=</span> <span class="n">DatetimeArray</span><span class="o">.</span><span class="n">_generate_range</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1010</span>     <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1011</span>     <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1012</span>     <span class="n">periods</span><span class="o">=</span><span class="n">periods</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1013</span>     <span class="n">freq</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">tz</span><span class="o">=</span><span class="n">tz</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">normalize</span><span class="o">=</span><span class="n">normalize</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1016</span>     <span class="n">inclusive</span><span class="o">=</span><span class="n">inclusive</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1017</span>     <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1018</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1019</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1020</span> <span class="k">return</span> <span class="n">DatetimeIndex</span><span class="o">.</span><span class="n">_simple_new</span><span class="p">(</span><span class="n">dtarr</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: DatetimeArray._generate_range() got an unexpected keyword argument &#39;closed&#39;
 </pre></div>
 </div>
 </div>
